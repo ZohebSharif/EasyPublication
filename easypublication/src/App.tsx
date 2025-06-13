@@ -2,7 +2,7 @@
 /// <reference types="./lbl-chrome" />
 import './lblChrome.js';
 import './global.css';
-import './index.css';
+
 import BerkeleyLabLogo from './assets/berkeley-lab-logo.svg';
 import DoeLogo from './assets/doe-logo.svg';
 import UcLogo from './assets/uc-logo.svg';
@@ -23,23 +23,25 @@ function App() {
       <lbl-header theme="homesuite">
         <div slot="logo">
           <a href="/" aria-label="EasyPublication - Berkeley Lab">
-            <img src={BerkeleyLabLogo} alt="Berkeley Lab Logo" style={{height: '40px'}} />
-            <div style={{marginTop: '8px', fontSize: '18px', fontWeight: 'bold', color: '#00313c'}}>
+            <img src={BerkeleyLabLogo} alt="Berkeley Lab Logo" style={{height: '40px', filter: 'brightness(0) invert(1)', color: '#FFFFFF'}} />
+            <div style={{marginTop: '8px', fontSize: '18px', fontWeight: 'bold', color: '#FFFFFF'}}>
             </div>
           </a>
         </div>
 
-      {/*  
+
         <nav slot="main-nav">
           <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/features">Features</a></li>
-            <li><a href="/templates">Templates</a></li>
-            <li><a href="/gallery">Gallery</a></li>
-            <li><a href="/support">Support</a></li>
+            <li><a href="https://als.lbl.gov/" style={{color: "#00313c"}}>ALS</a></li>
+            <li><a href="https://als.lbl.gov/beamlines/" style={{color: "#00313c"}}>Beamlines</a></li>
+            <li><a href="https://microct.lbl.gov/" style={{color: "#00313c"}}>Beamline 8.3.2</a></li>
+            {/*}
+            <li><a href="/gallery" style={{color: "#00313c"}}>Gallery</a></li>
+            <li><a href="/support" style={{color: "#00313c"}}>Support</a></li>
+            */}
           </ul>
         </nav>
-      */}
+      
 
 
         <lbl-search-form 
@@ -80,56 +82,69 @@ function App() {
       <lbl-bu-footer 
         logo-url="/" 
         logo-title="EasyPublication" 
-        logo-sub-title="Berkeley Lab Publishing Platform">
+        logo-sub-title="Berkeley Lab Publishing Platform"
+        style={{
+          '--lbl-color-dark-blue': '#00313c',
+          '--footer-title-color': '#FFCB70',
+          '--footer-text-color': '#FFFFFF'
+        }}>
+          <div slot="col-1">
+          <h4 style={{color: '#FFCB70'}}>Platform</h4>
+          <nav className="footer-nav" style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '10px'
+          }}>
+            <a href="/features" style={{color: '#FFFFFF', textDecoration: 'none'}}>Features</a>
+            <a href="/templates" style={{color: '#FFFFFF', textDecoration: 'none'}}>Templates</a>
+            <a href="/pricing" style={{color: '#FFFFFF', textDecoration: 'none'}}>Pricing</a>
+            <a href="/api" style={{color: '#FFFFFF', textDecoration: 'none'}}>API</a>          </nav>
+        </div>
         
-        <div slot="col-1">
-          <h4>Platform</h4>
-          <nav className="footer-nav">
-            <a href="/features">Features</a>
-            <a href="/templates">Templates</a>
-            <a href="/pricing">Pricing</a>
-            <a href="/api">API</a>
-          </nav>
-        </div>
-
         <div slot="col-2">
-          <h4>Resources</h4>
-          <nav className="footer-nav">
-            <a href="/documentation">Documentation</a>
-            <a href="/tutorials">Tutorials</a>
-            <a href="/support">Support</a>
-            <a href="/community">Community</a>
-          </nav>
+          <h4 style={{color: '#FFCB70'}}>Resources</h4>
+          <nav className="footer-nav" style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '10px'
+          }}>
+            <a href="/documentation" style={{color: '#FFFFFF', textDecoration: 'none'}}>Documentation</a>
+            <a href="/tutorials" style={{color: '#FFFFFF', textDecoration: 'none'}}>Tutorials</a>
+            <a href="/support" style={{color: '#FFFFFF', textDecoration: 'none'}}>Support</a>
+            <a href="/community" style={{color: '#FFFFFF', textDecoration: 'none'}}>Community</a>          </nav>
         </div>
-
+        
         <div slot="col-3">
-          <h4>Connect</h4>
-          <lbl-icon-list theme="footer">
+          <h4 style={{color: '#FFCB70'}}>Connect</h4>
+          <lbl-icon-list theme="footer" style={{marginTop: '10px', '--icon-settings-color': '#FFFFFF'}}>
             <lbl-icon-list-item 
               slot="icon-list-item"
               icon="email" 
               link-url="mailto:easypub@lbl.gov" 
               link-text="Email"
-              theme="footer">
+              theme="footer"
+              style={{'--icon-settings-color': '#FFFFFF'}}>
             </lbl-icon-list-item>
             <lbl-icon-list-item 
               slot="icon-list-item"
               icon="x" 
               link-url="https://twitter.com/berkeleylab" 
               link-text="Twitter"
-              theme="footer">
+              theme="footer"
+              style={{'--icon-settings-color': '#FFFFFF'}}>
             </lbl-icon-list-item>
             <lbl-icon-list-item 
               slot="icon-list-item"
               icon="youtube" 
               link-url="https://youtube.com/berkeleylab" 
               link-text="YouTube"
-              theme="footer">
+              theme="footer"
+              style={{'--icon-settings-color': '#FFFFFF'}}>
             </lbl-icon-list-item>
           </lbl-icon-list>
           
           <div style={{marginTop: '20px'}}>
-            <p style={{fontSize: '14px', color: '#b1b3b3', marginBottom: '10px'}}>
+            <p style={{fontSize: '14px', color: '#FFFFFF', marginBottom: '10px'}}>
               Powered by Lawrence Berkeley National Laboratory
             </p>
             <div style={{display: 'flex', gap: '15px', alignItems: 'center'}}>
@@ -141,7 +156,11 @@ function App() {
       </lbl-bu-footer>
 
       {/* Bottom Footer */}
-      <lbl-bottom-footer></lbl-bottom-footer>
+      <lbl-bottom-footer style={{
+        '--legal-color': '#FFFFFF',
+        '--footer-nav-link-color': '#FFFFFF',
+        '--utility-nav-link-color': '#FFFFFF'
+      }}></lbl-bottom-footer>
     </div>
   );
 }

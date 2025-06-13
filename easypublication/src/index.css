@@ -1,1 +1,18 @@
-/* (file intentionally left blank for plain HTML site) */
+/* Global styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Guardian Text Egyptian Web', georgia, serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure footer styles don't conflict */
+lbl-bu-footer {
+  width: 100%;
+}
