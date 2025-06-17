@@ -71,9 +71,9 @@ function App() {
               marginBottom: '20px',
               fontFamily: 'franklin-gothic-urw, sans-serif'
             }}>
-              Blah blah blah
+              Content here
             </h1>
-            <p>bluh bluh bluh</p>
+            <p>More content here</p>
           </div>
         </lbl-container>
       </main>
