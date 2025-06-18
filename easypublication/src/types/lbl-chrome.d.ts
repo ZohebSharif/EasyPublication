@@ -19,7 +19,7 @@ declare global {
       'lbl-search-form': {
         'placeholder-text'?: string;
         'search-url'?: string;
-        'search-query-parameter'?: string;
+        'search-query-parameter'?: string; 
         slot?: string;
         children?: React.ReactNode;
       };
