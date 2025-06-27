@@ -1,1 +1,62 @@
-/* (file intentionally left blank for plain HTML site) */
+.AppTopHeader{
+
+
+    width: auto;
+    height: 10vw;
+    max-height: 83.75px;
+    background: #00313c;
+    flex: auto;
+
+    right: 0;
+    top: 0;
+    left:0;
+    z-index: 10;
+}
+
+.AppTopHeader .headerImage svg{
+    height: 100%;
+    object-fit: contain;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+.App{
+    margin: 0;
+    padding: 0;
+}
+
+.Body{
+    width: auto;
+    height:  3664.3px;
+    fill: white;
+}
+
+.Footer{
+    width: auto;
+    height:868.7px;
+}
+
+.Footer .BoxOne{
+    width: auto;
+    height: 531px;
+    background-color: #00313C;
+}
+
+.Footer .BoxTwo
+{
+    width: auto;
+    height: 170px;
+    background-color: #FFFFFF;
+}
+
+.Footer .BoxThree
+{
+    width: auto;
+    height: 122px;
+    background-color: #E2E5E5;
+}

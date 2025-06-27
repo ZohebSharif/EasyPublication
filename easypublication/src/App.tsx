@@ -1,16 +1,51 @@
 // @ts-nocheck
-/// <reference types="./lbl-chrome" />
-import './lblChrome.js';
-import './global.css';
-
+import "./App.css";
 import BerkeleyLabLogo from './assets/berkeley-lab-logo.svg';
 import DoeLogo from './assets/doe-logo.svg';
 import UcLogo from './assets/uc-logo.svg';
 
 function App() {
   return (
-    <div className="app">
-      {/* Top Header */}
+    
+    <div className="App">
+      <div className = "AppTopHeader">
+        <img src={BerkeleyLabLogo} alt="logo" style={{filter:'brightness(0) invert(1)'}}className = "headerImage"></img>
+   
+      </div>
+    <div className="Body">
+
+    </div>
+
+    <div className="Footer">
+  
+    </div>
+    </div>
+  );
+}
+
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+/*    <div className="app">
+
       <lbl-top-header theme="cloud">
         <lbl-search-form 
           placeholder-text="Search Berkeley Lab" 
@@ -19,7 +54,7 @@ function App() {
         </lbl-search-form>
       </lbl-top-header>
 
-      {/* Main Header */}
+
       <lbl-header theme="homesuite">
         <div slot="logo">
           <a href="/" aria-label="EasyPublication - Berkeley Lab">
@@ -38,7 +73,7 @@ function App() {
             {/*}
             <li><a href="/gallery" style={{color: "#00313c"}}>Gallery</a></li>
             <li><a href="/support" style={{color: "#00313c"}}>Support</a></li>
-            */}
+            
           </ul>
         </nav>
       
@@ -52,7 +87,7 @@ function App() {
         </lbl-search-form>
       </lbl-header>
 
-      {/* main content here */}
+
       <main style={{
         minHeight: 'calc(100vh - 200px)', 
         padding: '40px 20px',
@@ -64,7 +99,6 @@ function App() {
             color: '#64666a',
             fontFamily: 'Guardian Text Egyptian Web, georgia, serif'
           }}>
-            {/* content here*/}
             <h1 style={{
               fontSize: '2rem',
               color: '#00313c',
@@ -78,7 +112,6 @@ function App() {
         </lbl-container>
       </main>
 
-      {/* Footer */}
       <lbl-bu-footer 
         logo-url="/" 
         logo-title="EasyPublication" 
@@ -155,7 +188,6 @@ function App() {
         </div>
       </lbl-bu-footer>
 
-      {/* Bottom Footer */}
       <lbl-bottom-footer style={{
         '--legal-color': '#FFFFFF',
         '--footer-nav-link-color': '#FFFFFF',
@@ -164,5 +196,5 @@ function App() {
     </div>
   );
 }
+*/
 
-export default App;
