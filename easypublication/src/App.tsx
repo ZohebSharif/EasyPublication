@@ -3,21 +3,56 @@ import "./App.css";
 import BerkeleyLabLogo from './assets/berkeley-lab-logo.svg';
 import DoeLogo from './assets/doe-logo.svg';
 import UcLogo from './assets/uc-logo.svg';
-
+import Card from "./Card.tsx"
 function App() {
   return (
     
     <div className="App">
       <div className = "AppTopHeader">
         <img src={BerkeleyLabLogo} alt="logo" style={{filter:'brightness(0) invert(1)'}}className = "headerImage"></img>
-   
+
       </div>
     <div className="Body">
+      <div className="Carousel">
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      </div>
 
-    </div>
+      <div className="Carousel">
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </div>
+     </div>
+
+      <div className="Carousel">
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </div>
+
+      <div className="Carousel">
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </div>
+
 
     <div className="Footer">
-  
+      <div className="BoxOne">
+
+      </div>
+      <div className="BoxTwo">
+
+      </div>
+      <div className="BoxThree">
+        
+      </div>
     </div>
     </div>
   );

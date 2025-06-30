@@ -23,40 +23,76 @@
 body, html{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .App{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .Body{
-    width: auto;
-    height:  3664.3px;
-    fill: white;
+    width: 100%;
+    min-height: 3664.3px;
+    background: white;
+    overflow-x: hidden;
+}
+
+.Carousel{
+    width: 100%;
+    min-height: 700px;
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(342px, 1fr));
+    gap: 160px;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .Carousel {
+        gap: 80px;
+        padding: 20px 10px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .Carousel {
+        gap: 40px;
+        padding: 20px 5px;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
 }
 
 .Footer{
-    width: auto;
-    height:868.7px;
+    width: 100%;
+    min-height:823px;
 }
 
 .Footer .BoxOne{
-    width: auto;
-    height: 531px;
+    width: 100%;
+    min-height: 531px;
     background-color: #00313C;
 }
 
 .Footer .BoxTwo
 {
-    width: auto;
-    height: 170px;
+    width: 100%;
+    min-height: 170px;
     background-color: #FFFFFF;
 }
 
 .Footer .BoxThree
 {
-    width: auto;
-    height: 122px;
+    width: 100%;
+    min-height: 122px;
     background-color: #E2E5E5;
 }
