@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 import "./App.css";
 import BerkeleyLabLogo from './assets/berkeley-lab-logo.svg';
 import DoeLogo from './assets/doe-logo.svg';
@@ -9,16 +9,54 @@ function App() {
     
     <div className="App">
       <div className = "AppTopHeader">
-        <img src={BerkeleyLabLogo} alt="logo" style={{filter:'brightness(0) invert(1)'}}className = "headerImage"></img>
+        <img src={BerkeleyLabLogo} alt="logo" style={{filter:'brightness(0) invert(1)'}} className="headerImage" />
    
       </div>
     <div className="Body">
-
+    <p>content goes here</p>
     </div>
 
     <div className="Footer">
-  
+      <div className="BoxOne">
+
+        <div className="naming">
+        <h1>Easy Publication</h1>
+        <h2>Berkeley Lab Publishing Platform</h2>
+      </div>
+
+        <div className="listOne">
+         <h2 style={{ color: "yellow" }}>Platform</h2>
+          <div style={{display:'flex', flexDirection:'column'}}>
+           <p>Features</p>
+           <p>Templates</p>
+           <p>About us</p>
+          <p>Admin Login</p>
+         </div>
+        </div>
+      
+        <div className="listTwo">
+          <h2 style={{color:"yellow"}}>Resources</h2>
+          <p>A-Z Index</p>
+          <p>CSA Staff Login</p>
+          <p>Report a Bug</p>
+        </div>
+
+        <div className="icons">
+          <h2 style={{color:"yellow"}}>Connect</h2>
+          <p>icons go here</p>
+        </div>
+
+      </div>
+    
+      <div className="BoxTwo">
+        <img src={BerkeleyLabLogo} alt="logo" className="footerImage" style={{color:"#00313C"}}/>
+
+        </div>
+
+      <div className="BoxThree">
+      </div>
     </div>
+    
     </div>
   );
 }
