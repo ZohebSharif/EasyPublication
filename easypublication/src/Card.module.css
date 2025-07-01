@@ -1,0 +1,211 @@
+/* Card Container */
+.card {
+  width: 342px;
+  height: 646px;
+  border: none;
+  outline: none;
+  padding-bottom: 124px;
+}
+
+.cardWrapper {
+  background-color: #e5e5e5;
+  height: 646px;
+  width: 342px;
+  border-radius: 16px;
+  padding: 0px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+/* Profile Section */
+.profileSection {
+  height: 61px;
+  width: 204px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.avatar {
+  background-color: #dedede;
+  height: 58px;
+  width: 58px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.userInfo {
+  height: 61px;
+  width: 138px;
+  position: relative;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.userName {
+  color: #000000;
+  text-align: left;
+  vertical-align: text-middle;
+  font-size: 18px;
+  font-family: 'Source Code Pro', monospace;
+  line-height: auto;
+  border: none;
+  outline: none;
+  width: 138px;
+}
+
+.userRole {
+  color: #666666;
+  text-align: left;
+  vertical-align: text-middle;
+  font-size: 14px;
+  font-family: 'Source Code Pro', monospace;
+  width: 101px;
+  height: 18px;
+  position: relative;
+  line-height: auto;
+  border: none;
+  outline: none;
+}
+/* Image Section */
+.imageSection {
+  background-color: #dedede;
+  height: 247px;
+  width: 342px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+/* Content Section */
+.contentSection {
+  background-color: rgba(112, 112, 112, 0);
+  height: 306px;
+  width: 342px;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.contentWrapper {
+  height: 258px;
+  width: 294px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.textContent {
+  height: 203px;
+  width: 294px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.titleSection {
+  height: 43px;
+  width: 291px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  color: #3c3c43;
+  text-align: left;
+  vertical-align: text-middle;
+  font-size: 18px;
+  font-family: 'Source Code Pro', monospace;
+  line-height: auto;
+  border: none;
+  outline: none;
+  width: 291px;
+}
+
+.subtitle {
+  color: #3c3c43;
+  text-align: left;
+  vertical-align: text-middle;
+  font-size: 14px;
+  font-family: 'Source Code Pro', monospace;
+  line-height: auto;
+  border: none;
+  outline: none;
+  width: 291px;
+}
+
+.description {
+  color: #666666;
+  text-align: left;
+  vertical-align: text-middle;
+  font-size: 14px;
+  font-family: 'Source Code Pro', monospace;
+  line-height: auto;
+  border: none;
+  outline: none;
+  width: 294px;
+}
+/* Buttons Section */
+.buttonContainer {
+  height: 31px;
+  width: 100px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  margin-left: auto;
+}
+
+.tag {
+  background-color: #3c3c43;
+  height: 31px;
+  width: 80px;
+  border-radius: 100px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.tagText {
+  color: #ffffff;
+  text-align: center;
+  vertical-align: text-middle;
+  font-size: 12px;
+  font-family: 'Source Code Pro', monospace;
+  line-height: auto;
+  border: none;
+  outline: none;
+  width: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

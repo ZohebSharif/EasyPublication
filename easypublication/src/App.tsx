@@ -3,22 +3,59 @@ import "./App.css";
 import BerkeleyLabLogo from './assets/berkeley-lab-logo.svg';
 import DoeLogo from './assets/doe-logo.svg';
 import UcLogo from './assets/uc-logo.svg';
-
+import Card from "./Card.tsx"
 function App() {
   return (
     
     <div className="App">
       <div className = "AppTopHeader">
+<<<<<<< HEAD
         <img src={BerkeleyLabLogo} alt="logo" style={{filter:'brightness(0) invert(1)'}} className="headerImage" />
    
       </div>
     <div className="Body">
     <p>content goes here</p>
     </div>
+=======
+        <img src={BerkeleyLabLogo} alt="logo" style={{filter:'brightness(0) invert(1)'}}className = "headerImage"></img>
+
+      </div>
+    <div className="Body">
+      <div className="Carousel">
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      </div>
+
+      <div className="Carousel">
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </div>
+     </div>
+
+      <div className="Carousel">
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </div>
+
+      <div className="Carousel">
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </div>
+
+>>>>>>> d8db81594407e98674e623d0a26db36c905815bb
 
     <div className="Footer">
       <div className="BoxOne">
 
+<<<<<<< HEAD
         <div className="naming">
         <h1>Easy Publication</h1>
         <h2>Berkeley Lab Publishing Platform</h2>
@@ -54,6 +91,14 @@ function App() {
         </div>
 
       <div className="BoxThree">
+=======
+      </div>
+      <div className="BoxTwo">
+
+      </div>
+      <div className="BoxThree">
+        
+>>>>>>> d8db81594407e98674e623d0a26db36c905815bb
       </div>
     </div>
     

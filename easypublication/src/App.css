@@ -27,27 +27,30 @@
 body, html{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .App{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .Body{
     width: auto;
-    min-height: 2000px;
+    height:  3664.3px;
     fill: white;
 }
 
 .Footer{
     width: auto;
-    height:auto;
+    height:868.7px;
 }
 
 .Footer .BoxOne{
     width: auto;
-    height: 420px;
+    height: 531px;
     background-color: #00313C;
     flex: auto;
     display: flex;
@@ -57,7 +60,7 @@ body, html{
 .Footer .BoxTwo
 {
     width: auto;
-    height: 151px;
+    height: 170px;
     background-color: #FFFFFF;
     flex: auto;
     display: flex;
@@ -66,50 +69,8 @@ body, html{
 .Footer .BoxThree
 {
     width: auto;
-    height: 80px;
-    background-color: #f1f3f3;
-    flex: auto;
-
-}
-
-.Footer .naming
-{
-    color: white;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:flex-start;
-    height: auto;   
-    padding-left: 20px;
-}
-
-.Footer .listOne
-{
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column; 
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
-    padding-bottom: 20px;
-    padding-top: 75px;
-    flex: 1;
-    flex-wrap: wrap;
-}
-
-.Footer .listTwo{
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column; 
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
-    padding-bottom: 20px;
-    padding-top: 75px;
-    flex: 1;
+    height: 122px;
+    background-color: #E2E5E5;
 }
 
 .Footer .icons{
