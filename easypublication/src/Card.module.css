@@ -1,16 +1,17 @@
 /* Card Container */
 .card {
-  width: 342px;
-  height: 646px;
+  width: 460px;
+  height: 600px;
   border: none;
   outline: none;
-  padding-bottom: 124px;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .cardWrapper {
   background-color: #e5e5e5;
   height: 646px;
-  width: 342px;
+  width: 480px;
   border-radius: 16px;
   padding: 0px;
   position: relative;
@@ -79,7 +80,7 @@
 .imageSection {
   background-color: #dedede;
   height: 247px;
-  width: 342px;
+  width: 100%;
   padding: 0px;
   display: flex;
   flex-direction: row;
@@ -95,7 +96,7 @@
 .contentSection {
   background-color: rgba(112, 112, 112, 0);
   height: 306px;
-  width: 342px;
+  width: 432px;
   border-radius: 24px;
   padding: 24px;
   display: flex;
@@ -106,7 +107,7 @@
 
 .contentWrapper {
   height: 258px;
-  width: 294px;
+  width: 100%;
   padding: 0px;
   display: flex;
   flex-direction: column;
@@ -116,7 +117,7 @@
 
 .textContent {
   height: 203px;
-  width: 294px;
+  width: 100%;
   padding: 0px;
   display: flex;
   flex-direction: column;
@@ -165,13 +166,13 @@
   line-height: auto;
   border: none;
   outline: none;
-  width: 294px;
+  width: 100%;
 }
 /* Buttons Section */
 .buttonContainer {
-  height: 31px;
-  width: 100px;
-  padding: 0px;
+  height: 24px;
+  width: 60px;
+  padding: 0px 40px 0px 0px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -183,10 +184,10 @@
 
 .tag {
   background-color: #3c3c43;
-  height: 31px;
-  width: 80px;
+  height: 24px;
+  width: 60px;
   border-radius: 100px;
-  padding: 8px 12px;
+  padding: 4px 8px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -199,12 +200,12 @@
   color: #ffffff;
   text-align: center;
   vertical-align: text-middle;
-  font-size: 12px;
+  font-size: 10px;
   font-family: 'Source Code Pro', monospace;
   line-height: auto;
   border: none;
   outline: none;
-  width: 76px;
+  width: 44px;
   display: flex;
   align-items: center;
   justify-content: center;

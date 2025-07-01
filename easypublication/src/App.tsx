@@ -3,281 +3,149 @@ import "./App.css";
 import BerkeleyLabLogo from './assets/berkeley-lab-logo.svg';
 import DoeLogo from './assets/doe-logo.svg';
 import UcLogo from './assets/uc-logo.svg';
+import FacebookIcon from './assets/facebook.svg';
+import InstagramIcon from './assets/instagram.svg';
+import XIcon from './assets/x.svg';
+import SearchIcon from './assets/search.svg';
+import YoutubeIcon from './assets/youtube.svg';
 import Card from "./Card.tsx"
 function App() {
   return (
-    
+
     <div className="App">
-      <div className = "AppTopHeader">
-<<<<<<< HEAD
-        <img src={BerkeleyLabLogo} alt="logo" style={{filter:'brightness(0) invert(1)'}} className="headerImage" />
-   
-      </div>
-    <div className="Body">
-    <p>content goes here</p>
-    </div>
-=======
-        <img src={BerkeleyLabLogo} alt="logo" style={{filter:'brightness(0) invert(1)'}}className = "headerImage"></img>
+      <div className="AppTopHeader">
+        <img src={BerkeleyLabLogo} alt="logo" style={{ filter: 'brightness(0) invert(1)' }} className="headerImage"></img>
 
       </div>
-    <div className="Body">
-      <div className="Carousel">
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      </div>
-
-      <div className="Carousel">
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-      </div>
-     </div>
-
-      <div className="Carousel">
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-      </div>
-
-      <div className="Carousel">
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-      </div>
-
->>>>>>> d8db81594407e98674e623d0a26db36c905815bb
-
-    <div className="Footer">
-      <div className="BoxOne">
-
-<<<<<<< HEAD
-        <div className="naming">
-        <h1>Easy Publication</h1>
-        <h2>Berkeley Lab Publishing Platform</h2>
-      </div>
-
-        <div className="listOne">
-         <h2 style={{ color: "yellow" }}>Platform</h2>
-          <div style={{display:'flex', flexDirection:'column'}}>
-           <p>Features</p>
-           <p>Templates</p>
-           <p>About us</p>
-          <p>Admin Login</p>
-         </div>
-        </div>
-      
-        <div className="listTwo">
-          <h2 style={{color:"yellow"}}>Resources</h2>
-          <p>A-Z Index</p>
-          <p>CSA Staff Login</p>
-          <p>Report a Bug</p>
+      <div className="header">
+        <div className="searchbox" >
+          <input className="inputBox" placeholder=" Search" ></input>
+          <img src={SearchIcon} alt="search" className="searchImage"></img>
         </div>
 
-        <div className="icons">
-          <h2 style={{color:"yellow"}}>Connect</h2>
-          <p>icons go here</p>
+        <div className="headerLinks">
+            <strong>ALS</strong>
+            <strong>Beamlines</strong>
+            <strong>Beamline 8.3.2</strong>
         </div>
-
-      </div>
-    
-      <div className="BoxTwo">
-        <img src={BerkeleyLabLogo} alt="logo" className="footerImage" style={{color:"#00313C"}}/>
-
-        </div>
-
-      <div className="BoxThree">
-=======
-      </div>
-      <div className="BoxTwo">
-
-      </div>
-      <div className="BoxThree">
         
->>>>>>> d8db81594407e98674e623d0a26db36c905815bb
+    
+
+        <p>buttons here</p>
+
+        <p>beamline here</p>
+      </div>
+      <div className="Body">
+        <div className="Carousel">
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+
+        </div>
+
+        <div className="Carousel">
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+        </div>
+
+        <div className="Carousel">
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+        </div>
+
+        <div className="Carousel">
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+        </div>
+
+
+        <div className="Buffer-Bottom"></div>
+        <div className="Footer">
+          <div className="footer-main">
+            <div className="footer-content">
+              <div className="footer-section">
+                <h1>EASY PUBLICATION</h1>
+                <h2>Berkeley Lab Publishing Platform</h2>
+              </div>
+
+              <div className="footer-section">
+                <h2>Platform</h2>
+                <div className="footer-links">
+                  <p>Features</p>
+                  <p>Templates</p>
+                  <p>About Us</p>
+                  <p>Admin Login</p>
+                </div>
+              </div>
+
+              <div className="footer-section">
+                <h2>Resources</h2>
+                <div className="footer-links">
+                  <p>A-Z Index</p>
+                  <p>CSA Staff Login</p>
+                  <p>Report a Bug</p>
+                </div>
+              </div>
+
+              <div className="footer-section">
+                <h2>Connect</h2>
+                <div className="social-icons">
+                  <div className="social-icon">
+                    <img src={FacebookIcon} alt="Facebook" className="social-svg" />
+                  </div>
+                  <div className="social-icon">
+                    <img src={InstagramIcon} alt="Instagram" className="social-svg" />
+                  </div>
+                  <div className="social-icon">
+                    <img src={XIcon} alt="X (Twitter)" className="social-svg" />
+                  </div>
+                  <div className="social-icon">
+                    <img src={YoutubeIcon} alt="YouTube" className="social-svg" />
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="footer-middle">
+            <img src={BerkeleyLabLogo} alt="Berkeley Lab Logo" className="footer-logo" />
+            <div className="footer-links-bottom">
+              <span>Contact  |  Visit Us  |  Subscribe</span>
+            </div>
+            <div className="partner-logos">
+              <img src={DoeLogo} alt="DOE Logo" className="partner-logo" />
+              <img src={UcLogo} alt="UC Logo" className="partner-logo" />
+
+            </div>
+          </div>
+
+          <div className="footer-bottom">
+            <div className="footer-bottom-content">
+              <p className="footer-description">
+                Lawrence Berkeley National Laboratory is a U.S. DOE Office of Science<br />
+                national laboratory managed by the University of California
+              </p>
+
+              <div className="footer-links-bottom">
+                <span>Staff Directory | For Employees | Emergency Status | Privacy & Security Notice | Site Feedback</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    
-    </div>
+
   );
 }
 
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-/*    <div className="app">
-
-      <lbl-top-header theme="cloud">
-        <lbl-search-form 
-          placeholder-text="Search Berkeley Lab" 
-          search-url="https://search.lbl.gov/" 
-          search-query-parameter="q">
-        </lbl-search-form>
-      </lbl-top-header>
-
-
-      <lbl-header theme="homesuite">
-        <div slot="logo">
-          <a href="/" aria-label="EasyPublication - Berkeley Lab">
-            <img src={BerkeleyLabLogo} alt="Berkeley Lab Logo" style={{height: '40px', filter: 'brightness(0) invert(1)', color: '#FFFFFF'}} />
-            <div style={{marginTop: '8px', fontSize: '18px', fontWeight: 'bold', color: '#FFFFFF'}}>
-            </div>
-          </a>
-        </div>
-
-
-        <nav slot="main-nav">
-          <ul>
-            <li><a href="https://als.lbl.gov/" style={{color: "#00313c"}}>ALS</a></li>
-            <li><a href="https://als.lbl.gov/beamlines/" style={{color: "#00313c"}}>Beamlines</a></li>
-            <li><a href="https://microct.lbl.gov/" style={{color: "#00313c"}}>Beamline 8.3.2</a></li>
-            {/*}
-            <li><a href="/gallery" style={{color: "#00313c"}}>Gallery</a></li>
-            <li><a href="/support" style={{color: "#00313c"}}>Support</a></li>
-            
-          </ul>
-        </nav>
-      
-
-
-        <lbl-search-form 
-          slot="search"
-          placeholder-text="Search" 
-          search-url="/search" 
-          search-query-parameter="q">
-        </lbl-search-form>
-      </lbl-header>
-
-
-      <main style={{
-        minHeight: 'calc(100vh - 200px)', 
-        padding: '40px 20px',
-        backgroundColor: '#ffffff'
-      }}>
-        <lbl-container>
-          <div style={{
-            textAlign: 'center',
-            color: '#64666a',
-            fontFamily: 'Guardian Text Egyptian Web, georgia, serif'
-          }}>
-            <h1 style={{
-              fontSize: '2rem',
-              color: '#00313c',
-              marginBottom: '20px',
-              fontFamily: 'franklin-gothic-urw, sans-serif'
-            }}>
-              Content here
-            </h1>
-            <p>More content here</p>
-          </div>
-        </lbl-container>
-      </main>
-
-      <lbl-bu-footer 
-        logo-url="/" 
-        logo-title="EasyPublication" 
-        logo-sub-title="Berkeley Lab Publishing Platform"
-        style={{
-          '--lbl-color-dark-blue': '#00313c',
-          '--footer-title-color': '#FFCB70',
-          '--footer-text-color': '#FFFFFF'
-        }}>
-          <div slot="col-1">
-          <h4 style={{color: '#FFCB70'}}>Platform</h4>
-          <nav className="footer-nav" style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '10px'
-          }}>
-            <a href="/features" style={{color: '#FFFFFF', textDecoration: 'none'}}>Features</a>
-            <a href="/templates" style={{color: '#FFFFFF', textDecoration: 'none'}}>Templates</a>
-            <a href="/pricing" style={{color: '#FFFFFF', textDecoration: 'none'}}>Pricing</a>
-            <a href="/api" style={{color: '#FFFFFF', textDecoration: 'none'}}>API</a>          </nav>
-        </div>
-        
-        <div slot="col-2">
-          <h4 style={{color: '#FFCB70'}}>Resources</h4>
-          <nav className="footer-nav" style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '10px'
-          }}>
-            <a href="/documentation" style={{color: '#FFFFFF', textDecoration: 'none'}}>Documentation</a>
-            <a href="/tutorials" style={{color: '#FFFFFF', textDecoration: 'none'}}>Tutorials</a>
-            <a href="/support" style={{color: '#FFFFFF', textDecoration: 'none'}}>Support</a>
-            <a href="/community" style={{color: '#FFFFFF', textDecoration: 'none'}}>Community</a>          </nav>
-        </div>
-        
-        <div slot="col-3">
-          <h4 style={{color: '#FFCB70'}}>Connect</h4>
-          <lbl-icon-list theme="footer" style={{marginTop: '10px', '--icon-settings-color': '#FFFFFF'}}>
-            <lbl-icon-list-item 
-              slot="icon-list-item"
-              icon="email" 
-              link-url="mailto:easypub@lbl.gov" 
-              link-text="Email"
-              theme="footer"
-              style={{'--icon-settings-color': '#FFFFFF'}}>
-            </lbl-icon-list-item>
-            <lbl-icon-list-item 
-              slot="icon-list-item"
-              icon="x" 
-              link-url="https://twitter.com/berkeleylab" 
-              link-text="Twitter"
-              theme="footer"
-              style={{'--icon-settings-color': '#FFFFFF'}}>
-            </lbl-icon-list-item>
-            <lbl-icon-list-item 
-              slot="icon-list-item"
-              icon="youtube" 
-              link-url="https://youtube.com/berkeleylab" 
-              link-text="YouTube"
-              theme="footer"
-              style={{'--icon-settings-color': '#FFFFFF'}}>
-            </lbl-icon-list-item>
-          </lbl-icon-list>
-          
-          <div style={{marginTop: '20px'}}>
-            <p style={{fontSize: '14px', color: '#FFFFFF', marginBottom: '10px'}}>
-              Powered by Lawrence Berkeley National Laboratory
-            </p>
-            <div style={{display: 'flex', gap: '15px', alignItems: 'center'}}>
-              <img src={DoeLogo} alt="DOE Logo" style={{height: '30px'}} />
-              <img src={UcLogo} alt="UC Logo" style={{height: '30px'}} />
-            </div>
-          </div>
-        </div>
-      </lbl-bu-footer>
-
-      <lbl-bottom-footer style={{
-        '--legal-color': '#FFFFFF',
-        '--footer-nav-link-color': '#FFFFFF',
-        '--utility-nav-link-color': '#FFFFFF'
-      }}></lbl-bottom-footer>
-    </div>
-  );
-}
-*/
-

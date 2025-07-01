@@ -1,4 +1,5 @@
 import styles from './Card.module.css';
+import osamasonImage from './assets/osamason.jpg';
 
 function Card() {
   return (
@@ -6,7 +7,9 @@ function Card() {
       <div className={styles.cardWrapper}>
         {/* Profile Section */}
         <div className={styles.profileSection}>
-          <div className={styles.avatar}></div>
+          <div className={styles.avatar}>
+          </div>
+
           <div className={styles.userInfo}>
             <div className={styles.userName}>Zoheb Sharif</div>
             <div className={styles.userRole}>Intern</div>
@@ -15,7 +18,7 @@ function Card() {
 
         {/* Image Section */}
         <div className={styles.imageSection}>
-          {/* Placeholder for image */}
+
         </div>
 
         {/* Content Section */}
