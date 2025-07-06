@@ -10,6 +10,8 @@ import SearchIcon from './assets/search.svg';
 import YoutubeIcon from './assets/youtube.svg';
 import Card from "./Card.tsx"
 function App() {
+
+  const currentBeamline = 'Beamline 8.3.2'
   return (
 
     <div className="App">
@@ -28,10 +30,26 @@ function App() {
             <strong>Beamlines</strong>
             <strong>Beamline 8.3.2</strong>
         </div>
-        
-    
 
-        <p>buttons here</p>
+
+        <div className="buttonContainer">
+        <button className="buttonOne">
+           <div className="textOne">
+            Web View
+            </div>
+          </button>
+
+         <button className="buttonTwo">
+          <div className="textTwo">
+            Slideshow View
+          </div>
+         </button>
+       </div>
+
+      <div className="selected">
+        <p>Selected:</p>
+         <u>{currentBeamline}</u>
+      </div>
 
         <p>beamline here</p>
       </div>
