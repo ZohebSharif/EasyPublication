@@ -1,5 +1,4 @@
 import styles from './Card.module.css';
-import osamasonImage from './assets/osamason.jpg';
 
 function Card() {
   return (

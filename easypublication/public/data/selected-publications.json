@@ -1,0 +1,46 @@
+[
+  {
+    "id": 3,
+    "title": "Halide segregation to boost all-solid-state lithium-chalcogen batteries",
+    "authors": "Lee, J., S. Zhou, V. Castagna Ferrari, C. Zhao, A. Sun, S.L. Nicholas, Y. Liu, C. Sun, D. Wierzbicki, D.Y. Parkinson, J. Bai, W. Xu, Y. Du, K. Amine, and G. Xu, ",
+    "journal": "Science",
+    "online_pub_date": "5/15/25",
+    "doi": "10.1126/science.adt1882",
+    "beamlines": "8.3.2",
+    "year": "2025",
+    "high_impact": 1
+  },
+  {
+    "id": 38,
+    "title": "Early Oligocene kelp holdfasts and stepwise evolution of the kelp ecosystem in the North Pacific",
+    "authors": "Kiel, S., J.L. Goedert, T.L. Huynh, M. Krings, D. Parkinson, R. Romero, and C.V. Looy, ",
+    "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+    "online_pub_date": "1/16/24",
+    "doi": "10.1073/pnas.2317054121",
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 1
+  },
+  {
+    "id": 15,
+    "title": "Energy absorption strategy in biological and bioinspired tubular and lamellar structures",
+    "authors": "Feng, B., J. Zhong, Y. Fu, W. Yang, Z. Li, J. Bao, Y. Wang, H. Zhou, R.O. Ritchie, X. Liang, and W. Huang, ",
+    "journal": "Matter",
+    "online_pub_date": "9/30/24",
+    "doi": "10.1016/j.matt.2024.09.006",
+    "beamlines": "8.3.2",
+    "year": "2025",
+    "high_impact": 0
+  },
+  {
+    "id": 4,
+    "title": "Enhancing synchrotron radiation micro-CT images using deep learning: an application of Noise2Inverse on bone imaging",
+    "authors": "Obata, Y., D.Y. Parkinson, D.M. Pelt, and C. Acevedo, ",
+    "journal": "Journal of Synchrotron Radiation",
+    "online_pub_date": "4/1/25",
+    "doi": "10.1107/S1600577525001833",
+    "beamlines": "8.3.2",
+    "year": "2025",
+    "high_impact": 0
+  }
+]

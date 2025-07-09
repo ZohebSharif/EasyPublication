@@ -8,7 +8,7 @@ import InstagramIcon from './assets/instagram.svg';
 import XIcon from './assets/x.svg';
 import SearchIcon from './assets/search.svg';
 import YoutubeIcon from './assets/youtube.svg';
-import Card from "./Card.tsx"
+import PublicationCarousel from "./PublicationCarousel";
 function App() {
 
   const currentBeamline = 'Beamline 8.3.2'
@@ -19,6 +19,7 @@ function App() {
         <img src={BerkeleyLabLogo} alt="logo" style={{ filter: 'brightness(0) invert(1)' }} className="headerImage"></img>
 
       </div>
+      
       <div className="header">
         <div className="searchbox" >
           <input className="inputBox" placeholder=" Search" ></input>
@@ -54,35 +55,7 @@ function App() {
         <p>beamline here</p>
       </div>
       <div className="Body">
-        <div className="Carousel">
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-
-        </div>
-
-        <div className="Carousel">
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-        </div>
-
-        <div className="Carousel">
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-        </div>
-
-        <div className="Carousel">
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-        </div>
-
+        <PublicationCarousel />
 
         <div className="Buffer-Bottom"></div>
         <div className="Footer">
