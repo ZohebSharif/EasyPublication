@@ -29,7 +29,7 @@ function App() {
         <div className="headerLinks">
             <strong>ALS</strong>
             <strong>Beamlines</strong>
-            <strong>Beamline 8.3.2</strong>
+          <strong>{currentBeamline}</strong>
         </div>
 
 

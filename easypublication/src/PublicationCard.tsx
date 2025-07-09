@@ -1,5 +1,5 @@
 import styles from './Card.module.css';
-
+import BerkeleyLabLogo from './assets/lblLogo.png';
 interface PublicationData {
   id: number;
   title: string;
@@ -10,6 +10,10 @@ interface PublicationData {
   beamlines: string;
   year: string;
   high_impact: number;
+  category?: string;
+  impact_factor?: number;
+  tags?: string;
+  images?: string; // JSON string containing array of PNG paths
 }
 
 interface PublicationCardProps {
@@ -21,6 +25,16 @@ function PublicationCard({ publication }: PublicationCardProps) {
   const truncateText = (text: string, maxLength: number) => {
     if (text.length <= maxLength) return text;
     return text.substring(0, maxLength) + '...';
+  };
+
+  // Helper function to get images array
+  const getImages = (imagesJson: string | undefined) => {
+    if (!imagesJson) return [];
+    try {
+      return JSON.parse(imagesJson);
+    } catch {
+      return [];
+    }
   };
 
   // Helper function to get first author
@@ -42,38 +56,84 @@ function PublicationCard({ publication }: PublicationCardProps) {
         {/* Profile Section */}
         <div className={styles.profileSection}>
           <div className={styles.avatar}>
-            {/* Display beamline as avatar text */}
-            <span style={{ fontSize: '12px', fontWeight: 'bold' }}>
-              {publication.beamlines}
-            </span>
+            {/* Display Logo (currently its Berkeley Lab as a placeholder*/}
+            <img 
+              src={BerkeleyLabLogo} 
+              alt="Berkeley Lab Logo"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'contain',
+                borderRadius: '50%'
+              }}
+            />
           </div>
 
           <div className={styles.userInfo}>
             <div className={styles.userName}>
-              {getFirstAuthor(publication.authors)}
+              {getFirstAuthor(publication.journal)}
             </div>
             <div className={styles.userRole}>
-              {publication.year} {publication.high_impact ? '⭐' : ''}
+              {publication.year} {publication.high_impact ? '- High Impact' : ''}
             </div>
           </div>
         </div>
 
         {/* Image Section - could add journal logo or placeholder */}
         <div className={styles.imageSection}>
-          <div style={{ 
-            width: '100%', 
-            height: '100%', 
-            backgroundColor: '#f0f0f0',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '12px',
-            color: '#666',
-            textAlign: 'center',
-            padding: '10px'
-          }}>
-            {publication.journal}
-          </div>
+          {(() => {
+            const images = getImages(publication.images);
+            if (images.length > 0) {
+              return (
+                <img 
+                  src={images[0]} 
+                  alt="Publication visual"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                  onError={(e) => {
+                    // Fallback to journal name if image fails to load
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.innerHTML = `
+                      <div style="
+                        width: 100%; 
+                        height: 100%; 
+                        backgroundColor: #f0f0f0;
+                        display: flex;
+                        alignItems: center;
+                        justifyContent: center;
+                        fontSize: 12px;
+                        color: #666;
+                        textAlign: center;
+                        padding: 10px;
+                      ">
+                        ${publication.journal}
+                      </div>
+                    `;
+                  }}
+                />
+              );
+            } else {
+              return (
+                <div style={{ 
+                  width: '100%', 
+                  height: '100%', 
+                  backgroundColor: '#f0f0f0',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '12px',
+                  color: '#666',
+                  textAlign: 'center',
+                  padding: '10px'
+                }}>
+                  {publication.journal}
+                </div>
+              );
+            }
+          })()}
         </div>
 
         {/* Content Section */}
@@ -94,6 +154,18 @@ function PublicationCard({ publication }: PublicationCardProps) {
                 <strong>Journal:</strong> {publication.journal}
                 <br />
                 <strong>Beamline:</strong> {publication.beamlines}
+                {(() => {
+                  const images = getImages(publication.images);
+                  if (images.length > 1) {
+                    return (
+                      <>
+                        <br />
+                        <strong>Images:</strong> {images.length} available
+                      </>
+                    );
+                  }
+                  return null;
+                })()}
               </div>
             </div>
             <div className={styles.buttonContainer}>
