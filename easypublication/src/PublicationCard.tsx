@@ -151,9 +151,6 @@ function PublicationCard({ publication }: PublicationCardProps) {
               <div className={styles.description}>
                 <strong>Authors:</strong> {truncateText(publication.authors, 100)}
                 <br />
-                <strong>Journal:</strong> {publication.journal}
-                <br />
-                <strong>Beamline:</strong> {publication.beamlines}
                 {(() => {
                   const images = getImages(publication.images);
                   if (images.length > 1) {

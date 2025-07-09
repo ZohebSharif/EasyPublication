@@ -36,28 +36,29 @@ function App() {
         <div className="buttonContainer">
         <button className="buttonOne">
            <div className="textOne">
-            Web View
+            <strong>Web View</strong>
             </div>
           </button>
 
          <button className="buttonTwo">
           <div className="textTwo">
-            Slideshow View
+            <strong>Slideshow View</strong>
           </div>
          </button>
+
+         <div className="selected">
+           <p style = {{color:"#676767"}}>Selected:</p>
+           <u style = {{color:"#676767"}}>{currentBeamline}</u>
+         </div>
        </div>
-
-      <div className="selected">
-        <p>Selected:</p>
-         <u>{currentBeamline}</u>
-      </div>
-
-        <p>beamline here</p>
       </div>
       <div className="Body">
         <PublicationCarousel />
+        <PublicationCarousel />
+        <PublicationCarousel />
+        <PublicationCarousel />
+        <div style={{ paddingTop: '20px' }}></div>
 
-        <div className="Buffer-Bottom"></div>
         <div className="Footer">
           <div className="footer-main">
             <div className="footer-content">
