@@ -71,11 +71,9 @@
     font-size: 20px;
 }
 
-.headerLinks p {
-    margin: 0;
-    padding: 8px 12px;
-    cursor: pointer;
-    transition: color 0.2s;
+.headerLinks a {
+    color: #00313C;
+    text-decoration: none;
 }
 
 .headerLinks p:hover {
@@ -352,6 +350,37 @@ body, html{
     color: #FFCB70;
 }
 
+.footer-links a {
+    margin: 0;
+    color: white !important;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-size: 18px;
+    font-family: "ATF Franklin Gothic", sans-serif;
+    text-decoration: none;
+    display: block;
+}
+
+.footer-links a:hover {
+    color: #FFCB70 !important;
+}
+
+.footer-links a:visited {
+    color: white !important;
+}
+
+.footer-links a:visited:hover {
+    color: #FFCB70 !important;
+}
+
+.footer-links a:link {
+    color: white !important;
+}
+
+.footer-links a:active {
+    color: white !important;
+}
+
 .social-icons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -380,14 +409,15 @@ body, html{
     background-color: #FFCB70;
 }
 
-.social-svg {
+.social-icon svg {
     width: 20px;
     height: 20px;
-    filter: brightness(0) invert(1);
+    fill: #00313c;
+    transition: fill 0.2s;
 }
 
-.social-icon:hover .social-svg {
-    filter: brightness(0) invert(0);
+.social-icon:hover svg {
+    fill: #ffffff;
 }
 
 /* Middle section with logos */
@@ -511,5 +541,46 @@ body, html{
     .social-icons {
         justify-content: center;
     }
+}
+
+/* SVG Color Utilities */
+.svg-white {
+    filter: brightness(0) invert(1);
+}
+
+.svg-black {
+    filter: brightness(0) invert(0);
+}
+
+.svg-blue {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+.svg-green {
+    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+.svg-red {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(97%) saturate(7404%) hue-rotate(356deg) brightness(91%) contrast(135%);
+}
+
+.svg-yellow {
+    filter: brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(1028%) hue-rotate(358deg) brightness(104%) contrast(98%);
+}
+
+.svg-orange {
+    filter: brightness(0) saturate(100%) invert(55%) sepia(89%) saturate(1353%) hue-rotate(357deg) brightness(119%) contrast(119%);
+}
+
+.svg-purple {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(2223%) hue-rotate(249deg) brightness(92%) contrast(143%);
+}
+
+.svg-gray {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(95%);
+}
+
+.svg-berkeley-teal {
+    filter: brightness(0) saturate(100%) invert(18%) sepia(25%) saturate(1011%) hue-rotate(160deg) brightness(96%) contrast(96%);
 }
 

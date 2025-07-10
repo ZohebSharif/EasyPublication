@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import PublicationCard from './PublicationCard';
 import LeftArrow from './assets/arrow-left-circle.png';
 import RightArrow from './assets/arrow-right-circle.png';
@@ -43,6 +43,16 @@ function PublicationCarousel() {
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
+    // Check if the click originated from an active (centered) card
+    let target = e.target as HTMLElement;
+    while (target && target !== e.currentTarget) {
+      if (target.dataset.isActive === 'true') {
+        // Don't start dragging if clicking on the active card
+        return;
+      }
+      target = target.parentElement as HTMLElement;
+    }
+    
     e.preventDefault();
     setIsDragging(true);
     setStartX(e.clientX);
@@ -94,6 +104,16 @@ function PublicationCarousel() {
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
+    // Check if the touch originated from an active (centered) card
+    let target = e.target as HTMLElement;
+    while (target && target !== e.currentTarget) {
+      if (target.dataset.isActive === 'true') {
+        // Don't start dragging if touching the active card
+        return;
+      }
+      target = target.parentElement as HTMLElement;
+    }
+    
     e.preventDefault();
     setIsDragging(true);
     setStartX(e.touches[0].clientX);
@@ -162,45 +182,7 @@ function PublicationCarousel() {
   }
 
   return (
-    <div className="Carousel" style={{ position: 'relative', paddingTop: '2vw', paddingBottom: '0px' }}>
-      {/* Navigation arrows at top right */}
-      <div style={{
-        position: 'absolute',
-        top: '3vw',
-        right: '11.5vw',
-        display: 'flex',
-        gap: '20px',
-        zIndex: 10
-      }}>
-        <img 
-          src={LeftArrow} 
-          alt="Previous"
-          onClick={handlePrevious}
-          style={{
-            width: '40px',
-            height: '40px',
-            cursor: 'pointer',
-            opacity: 0.7,
-            transition: 'opacity 0.2s ease'
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
-          onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}
-        />
-        <img 
-          src={RightArrow} 
-          alt="Next"
-          onClick={handleNext}
-          style={{
-            width: '40px',
-            height: '40px',
-            cursor: 'pointer',
-            opacity: 0.7,
-            transition: 'opacity 0.2s ease'
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
-          onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}
-        />
-      </div>
+    <div className="Carousel" style={{ position: 'relative', paddingTop: '2vw', paddingBottom: '6vw' }}>
       
       {/* Publication cards */}
       <div 
@@ -233,14 +215,14 @@ function PublicationCarousel() {
               return;
             }
             
-            if (!isActive) {
-              if (offset > 0) {
-                // Card is to the right, call handleNext
-                handleNext();
-              } else if (offset < 0) {
-                // Card is to the left, call handlePrevious
-                handlePrevious();
-              }
+            // This function should only be called for non-active cards
+            e.preventDefault(); // Prevent any default actions for non-active cards
+            if (offset > 0) {
+              // Card is to the right, call handleNext
+              handleNext();
+            } else if (offset < 0) {
+              // Card is to the left, call handlePrevious
+              handlePrevious();
             }
           };
           
@@ -264,7 +246,8 @@ function PublicationCarousel() {
           return (
             <div
               key={publication.id}
-              onClick={handleCardClick}
+              data-is-active={isActive}
+              onClick={isActive ? undefined : handleCardClick}
               style={{
                 position: 'absolute',
                 left: '50%',
@@ -281,6 +264,60 @@ function PublicationCarousel() {
             </div>
           );
         })}
+      </div>
+
+      {/* arrows at bottom center */}
+      <div style={{
+        position: 'absolute',
+        bottom: '80px',
+        left: 'calc(50% + 50px)',
+        transform: 'translateX(-50%)',
+        display: 'flex',
+        gap: '40px',
+        zIndex: 10,
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
+        <img 
+          src={LeftArrow} 
+          alt="Previous"
+          onClick={handlePrevious}
+          style={{
+            width: '40px',
+            height: '40px',
+            cursor: 'pointer',
+            opacity: 0.7,
+            transition: 'all 0.2s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.opacity = '1';
+            e.currentTarget.style.transform = 'scale(1.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.opacity = '0.7';
+            e.currentTarget.style.transform = 'scale(1)';
+          }}
+        />
+        <img 
+          src={RightArrow} 
+          alt="Next"
+          onClick={handleNext}
+          style={{
+            width: '40px',
+            height: '40px',
+            cursor: 'pointer',
+            opacity: 0.7,
+            transition: 'all 0.2s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.opacity = '1';
+            e.currentTarget.style.transform = 'scale(1.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.opacity = '0.7';
+            e.currentTarget.style.transform = 'scale(1)';
+          }}
+        />
       </div>
     </div>
   );
