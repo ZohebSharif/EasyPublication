@@ -16,6 +16,14 @@ function Home() {
   const currentBeamline = 'Beamline 8.3.2'
   const navigate = useNavigate();
 
+  // Category labels for the four carousels
+  const categories = [
+    "chemistry and energy",
+    "physics and condensed matter", 
+    "bioscience",
+    "geoscience and environment"
+  ];
+
   const handleCSALogin = () => {
     navigate('/admin');
   };
@@ -65,10 +73,10 @@ function Home() {
       </div>
       
       <div className="Body">
-        <PublicationCarousel />
-        <PublicationCarousel />
-        <PublicationCarousel />
-        <PublicationCarousel />
+        <PublicationCarousel category={categories[0]} />
+        <PublicationCarousel category={categories[1]} />
+        <PublicationCarousel category={categories[2]} />
+        <PublicationCarousel category={categories[3]} />
         <div style={{ paddingTop: '20px' }}></div>
 
         <div className="Footer">

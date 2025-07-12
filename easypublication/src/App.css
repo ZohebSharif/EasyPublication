@@ -1,12 +1,10 @@
 .AppTopHeader{
-
-
     width: auto;
     height: 10vw;
     max-height: 83.75px;
+    min-height: 60px;
     background: #00313c;
     flex: auto;
-
     right: 0;
     top: 0;
     left:0;
@@ -22,6 +20,7 @@
     padding-left: 135px;
     height: 47.7777777%;
     padding-top: 20px;
+    max-width: 300px;
 }
 
 .header{
@@ -34,7 +33,7 @@
 {
     display: grid;
     height: 40px;
-    width: 250px;
+    width: 200px;
     background-color: white;
     grid-template-columns: 1fr auto;
     position: absolute;
@@ -208,51 +207,95 @@ body, html{
 
 .Carousel{
     width: 100%;
+    height: auto;
     min-height: 700px;
     background: white;
     display: flex;
     flex-direction: row;
     gap: 160px;
     justify-content: flex-start;
-    padding: 0px 20px;
+    padding: 40px 20px 60px 120px; /* Increased top and bottom padding */
     box-sizing: border-box;
     overflow-x: auto;
-    overflow-y: hidden;
-    padding-left: 120px;
+    overflow-y: visible;
+    position: relative; /* Ensure proper positioning context */
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
 }
 
+.Carousel::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+/* Ensure cards have proper scroll snap alignment */
+.card {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+@media (max-width: 1600px) {
+    .Carousel {
+        gap: 120px;
+        padding: 35px 20px 55px 110px;
+        min-height: 650px;
+    }
+}
 
 @media (max-width: 1400px) {
     .Carousel {
-        gap: 40px;
-        padding-left: 100px;
-        padding-right: 100px;
+        gap: 80px;
+        padding: 30px 100px 50px 100px;
+        min-height: 600px;
     }
 }
 
 @media (max-width: 1200px) {
     .Carousel {
+        gap: 50px;
+        padding: 25px 80px 45px 80px;
+        min-height: 550px;
+    }
+}
+
+@media (max-width: 900px) {
+    .Carousel {
         gap: 30px;
-        padding-left: 80px;
-        padding-right: 80px;
+        padding: 20px 60px 40px 60px;
+        min-height: 500px;
     }
 }
 
 @media (max-width: 768px) {
     .Carousel {
         gap: 20px;
-        padding: 20px 40px;
-        padding-left: 60px;
-        padding-right: 60px;
+        padding: 15px 40px 35px 40px;
+        min-height: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+    .Carousel {
+        gap: 15px;
+        padding: 15px 30px 30px 30px;
+        min-height: 400px;
     }
 }
 
 @media (max-width: 480px) {
     .Carousel {
         gap: 10px;
-        padding: 20px 20px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 10px 20px 25px 20px;
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 360px) {
+    .Carousel {
+        gap: 5px;
+        padding: 10px 15px 20px 15px;
+        min-height: 300px;
     }
 }
 
@@ -514,32 +557,389 @@ body, html{
 }
 
 /* Responsive design */
+@media (max-width: 1400px) {
+    .footer-main {
+        padding: 65px 100px 45px;
+    }
+    
+    .footer-content {
+        padding: 0 100px;
+    }
+    
+    .footer-middle {
+        padding: 25px 100px;
+    }
+    
+    .footer-bottom {
+        padding: 8px 100px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer-main {
+        padding: 55px 80px 40px;
+    }
+    
+    .footer-content {
+        padding: 0 80px;
+    }
+    
+    .footer-middle {
+        padding: 20px 80px;
+    }
+    
+    .footer-bottom {
+        padding: 6px 80px;
+    }
+    
+    .footer-section h1 {
+        font-size: 22px;
+    }
+    
+    .footer-section h2 {
+        font-size: 20px;
+    }
+    
+    .footer-links p, .footer-links a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .footer-main {
+        padding: 45px 60px 35px;
+    }
+    
+    .footer-content {
+        padding: 0 60px;
+        gap: 15px;
+    }
+    
+    .footer-middle {
+        padding: 18px 60px;
+    }
+    
+    .footer-bottom {
+        padding: 5px 60px;
+    }
+    
+    .footer-section h1 {
+        font-size: 20px;
+    }
+    
+    .footer-section h2 {
+        font-size: 18px;
+    }
+    
+    .footer-links p, .footer-links a {
+        font-size: 14px;
+    }
+    
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
 @media (max-width: 768px) {
     .footer-main {
-        padding: 40px 20px;
+        padding: 40px 40px 30px;
     }
     
     .footer-content {
         flex-direction: column;
-        gap: 30px;
+        gap: 25px;
+        padding: 0 40px;
     }
     
     .footer-section {
         margin-right: 0;
+        text-align: center;
+    }
+    
+    .footer-section:first-child {
+        margin-left: 0;
+        padding-top: 0;
     }
     
     .footer-middle {
-        padding: 20px;
+        padding: 15px 40px;
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-middle .footer-links-bottom {
+        position: relative;
+        left: auto;
+        padding-top: 0;
     }
     
     .footer-bottom {
-        padding: 20px;
+        padding: 15px 40px;
+    }
+    
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
     }
     
     .social-icons {
         justify-content: center;
+        margin: 0 auto;
+    }
+    
+    .partner-logos {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-main {
+        padding: 30px 30px 25px;
+    }
+    
+    .footer-content {
+        padding: 0 30px;
+        gap: 20px;
+    }
+    
+    .footer-middle {
+        padding: 12px 30px;
+    }
+    
+    .footer-bottom {
+        padding: 12px 30px;
+    }
+    
+    .footer-section h1 {
+        font-size: 18px;
+    }
+    
+    .footer-section h2 {
+        font-size: 16px;
+    }
+    
+    .footer-links p, .footer-links a {
+        font-size: 12px;
+    }
+    
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .footer-logo, .partner-logo {
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-main {
+        padding: 25px 20px 20px;
+    }
+    
+    .footer-content {
+        padding: 0 20px;
+        gap: 15px;
+    }
+    
+    .footer-middle {
+        padding: 10px 20px;
+    }
+    
+    .footer-bottom {
+        padding: 10px 20px;
+    }
+    
+    .footer-section h1 {
+        font-size: 16px;
+    }
+    
+    .footer-section h2 {
+        font-size: 14px;
+    }
+    
+    .footer-links p, .footer-links a {
+        font-size: 11px;
+    }
+    
+    .footer-description {
+        font-size: 12px;
+    }
+    
+    .footer-legal span, .footer-links-bottom span {
+        font-size: 12px;
+    }
+    
+    .social-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .footer-logo, .partner-logo {
+        height: 40px;
+    }
+}
+
+/* Header Responsive Design */
+@media (max-width: 1400px) {
+    .AppTopHeader .headerImage {
+        padding-left: 100px;
+    }
+    
+    .headerLinks {
+        right: 20vw;
+        gap: 25px;
+        font-size: 18px;
+    }
+    
+    .searchbox {
+        width: 180px;
+        right: 4vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .AppTopHeader .headerImage {
+        padding-left: 80px;
+    }
+    
+    .headerLinks {
+        right: 18vw;
+        gap: 20px;
+        font-size: 16px;
+    }
+    
+    .searchbox {
+        width: 160px;
+        right: 3vw;
+    }
+    
+    .buttonContainer {
+        gap: 20px;
+        margin-left: 1.5vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .AppTopHeader {
+        height: 12vw;
+        min-height: 70px;
+    }
+    
+    .AppTopHeader .headerImage {
+        padding-left: 60px;
+        max-width: 250px;
+    }
+    
+    .headerLinks {
+        right: 15vw;
+        gap: 15px;
+        font-size: 14px;
+    }
+    
+    .searchbox {
+        width: 140px;
+        right: 2vw;
+        height: 35px;
+    }
+    
+    .buttonContainer {
+        gap: 15px;
+        margin-left: 1vw;
+        flex-wrap: wrap;
+    }
+    
+    .buttonOne, .buttonTwo {
+        height: 35px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 768px) {
+    .AppTopHeader {
+        height: 15vw;
+        min-height: 80px;
+    }
+    
+    .AppTopHeader .headerImage {
+        padding-left: 20px;
+        max-width: 200px;
+        padding-top: 15px;
+    }
+    
+    .headerLinks {
+        position: relative;
+        right: auto;
+        top: auto;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    
+    .searchbox {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 120px;
+        height: 30px;
+        margin: 10px auto;
+    }
+    
+    .header {
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .buttonContainer {
+        justify-content: center;
+        margin: 10px auto;
+        gap: 10px;
+    }
+    
+    .selected {
+        justify-content: center;
+        margin: 10px auto;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .AppTopHeader {
+        height: 20vw;
+        min-height: 90px;
+    }
+    
+    .AppTopHeader .headerImage {
+        padding-left: 10px;
+        max-width: 150px;
+        padding-top: 10px;
+    }
+    
+    .headerLinks {
+        font-size: 10px;
+        gap: 8px;
+    }
+    
+    .searchbox {
+        width: 100px;
+        height: 28px;
+    }
+    
+    .buttonOne, .buttonTwo {
+        height: 30px;
+        width: 70px;
+        font-size: 10px;
+        padding: 8px;
+    }
+    
+    .selected p, .selected u {
+        font-size: 12px;
     }
 }
 
@@ -582,5 +982,91 @@ body, html{
 
 .svg-berkeley-teal {
     filter: brightness(0) saturate(100%) invert(18%) sepia(25%) saturate(1011%) hue-rotate(160deg) brightness(96%) contrast(96%);
+}
+
+/* Category Labels */
+.carousel-category-label {
+    position: absolute;
+    top: 50px; /* Adjusted for new carousel padding */
+    left: 120px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.48px;
+    text-align: left;
+    color: #00313c;
+    z-index: 20;
+}
+
+@media (max-width: 1600px) {
+    .carousel-category-label {
+        left: 110px;
+        font-size: 23px;
+        letter-spacing: 0.46px;
+        top: 45px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .carousel-category-label {
+        left: 100px;
+        font-size: 22px;
+        letter-spacing: 0.44px;
+        top: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .carousel-category-label {
+        left: 80px;
+        font-size: 20px;
+        letter-spacing: 0.4px;
+        top: 35px;
+    }
+}
+
+@media (max-width: 900px) {
+    .carousel-category-label {
+        left: 60px;
+        font-size: 18px;
+        letter-spacing: 0.36px;
+        top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-category-label {
+        left: 40px;
+        font-size: 16px;
+        letter-spacing: 0.32px;
+        top: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-category-label {
+        left: 30px;
+        font-size: 14px;
+        letter-spacing: 0.28px;
+        top: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-category-label {
+        left: 20px;
+        font-size: 12px;
+        letter-spacing: 0.24px;
+        top: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .carousel-category-label {
+        left: 15px;
+        font-size: 10px;
+        letter-spacing: 0.2px;
+        top: 20px;
+    }
 }
 

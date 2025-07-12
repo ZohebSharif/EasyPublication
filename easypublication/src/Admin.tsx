@@ -13,7 +13,15 @@ import YoutubeIcon from './assets/youtube.svg?react';
 import EmailIcon from './assets/email.svg?react';
 import LinkedinIcon from './assets/linkedin.svg?react';
 import PublicationCarousel from "./PublicationCarousel";
+import DoiLiveSearch from "./DoiLiveSearch";
 
+ const categories = [
+    "chemistry and energy",
+    "physics and condensed matter", 
+    "bioscience",
+    "geoscience and environment"
+  ];
+  
 function Admin() {
   const currentBeamline = 'Beamline 8.3.2'
   const navigate = useNavigate();
@@ -25,7 +33,7 @@ function Admin() {
     title: '',
     abstract: '',
     authors: '',
-    categories: '',
+    categories: '', // Which category carousel to display this publication in
     files: [] as File[]
   });
   const [dragActive, setDragActive] = useState(false);
@@ -46,7 +54,7 @@ function Admin() {
       title: '',
       abstract: '',
       authors: '',
-      categories: '',
+      categories: '', // Reset category selection
       files: []
     });
   };
@@ -92,50 +100,54 @@ function Admin() {
     }
   };
 
+  const handlePublicationSelect = (publication: {
+    id: number;
+    title: string;
+    authors: string;
+    journal: string;
+    online_pub_date: string;
+    doi: string;
+    beamlines: string;
+    year: string;
+    high_impact: number;
+  }) => {
+    console.log('Auto-populating form from DOI search:', publication);
+    setFormData(prev => ({
+      ...prev,
+      doi: publication.doi || '',
+      title: publication.title || '',
+      authors: publication.authors || ''
+      // Note: categories remains unchanged - admin must select display category
+    }));
+  };
+
   const handleSubmit = () => {
-    // Add validation logic here
+    // Validate required fields
+    if (!formData.title.trim()) {
+      alert('Please enter a title for the publication.');
+      return;
+    }
+    if (!formData.abstract.trim()) {
+      alert('Please enter an abstract for the publication.');
+      return;
+    }
+    if (!formData.authors.trim()) {
+      alert('Please enter the author(s) for the publication.');
+      return;
+    }
+    if (!formData.categories.trim()) {
+      alert('Please select which category carousel should display this publication.');
+      return;
+    }
+
+    // Success feedback
     console.log('Submitting publication:', formData);
+    alert(`Publication "${formData.title}" will be added to the "${formData.categories.charAt(0).toUpperCase() + formData.categories.slice(1)}" category carousel and will be visible to users.`);
     handleCloseModal();
   };
   
   return (
     <div className="App">
-      {/* Back to User View Button */}
-      <div style={{
-        position: 'absolute',
-        top: '175px',
-        left: '2vw',
-        zIndex: 1000,
-        display: 'flex',
-        alignItems: 'center',
-        gap: '8px',
-        backgroundColor: '#00313c',
-        color: 'white',
-        padding: '10px 16px',
-        borderRadius: '8px',
-        cursor: 'pointer',
-        fontSize: '14px',
-        fontWeight: 'bold',
-        fontFamily: '"ATF Franklin Gothic", sans-serif',
-        textDecoration: 'none',
-        transition: 'all 0.2s ease',
-        border: 'none',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.2)'
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.backgroundColor = '#FFCB70';
-        e.currentTarget.style.color = '#00313c';
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.backgroundColor = '#00313c';
-        e.currentTarget.style.color = 'white';
-      }}
-      onClick={handleBackToUserView}
-      >
-        <span style={{ fontSize: '16px' }}>←</span>
-        Back to User View
-      </div>
-
       <div className="AppTopHeader">
         <img src={BerkeleyLabLogo} alt="logo" style={{ filter: 'brightness(0) invert(1)' }} className="headerImage"></img>
       </div>
@@ -207,12 +219,52 @@ function Admin() {
          </div>
        </div>
       </div>
+
+      {/* Back to User View Button */}
+      <div style={{
+        position: 'relative',
+        width: '100%',
+        padding: '15px 0 10px 2vw',
+        backgroundColor: 'white',
+        borderBottom: '1px solid #e0e0e0'
+      }}>
+        <button style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '8px',
+          backgroundColor: '#00313c',
+          color: 'white',
+          padding: '10px 16px',
+          borderRadius: '8px',
+          cursor: 'pointer',
+          fontSize: '14px',
+          fontWeight: 'bold',
+          fontFamily: '"ATF Franklin Gothic", sans-serif',
+          textDecoration: 'none',
+          transition: 'all 0.2s ease',
+          border: 'none',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.2)'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = '#FFCB70';
+          e.currentTarget.style.color = '#00313c';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = '#00313c';
+          e.currentTarget.style.color = 'white';
+        }}
+        onClick={handleBackToUserView}
+        >
+          <span style={{ fontSize: '16px' }}>←</span>
+          Back to User View
+        </button>
+      </div>
       
       <div className="Body">
-        <PublicationCarousel />
-        <PublicationCarousel />
-        <PublicationCarousel />
-        <PublicationCarousel />
+        <PublicationCarousel category={categories[0]}/>
+        <PublicationCarousel category={categories[1]}/>
+        <PublicationCarousel category={categories[2]}/>
+        <PublicationCarousel category={categories[3]}/>
         <div style={{ paddingTop: '20px' }}></div>
 
         <div className="Footer">
@@ -341,6 +393,7 @@ function Admin() {
             borderRadius: '16px',
             width: '700px',
             height: '90vh',
+            maxHeight: '900px',
             boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)',
             position: 'relative',
             fontFamily: '"Inter", sans-serif',
@@ -349,24 +402,24 @@ function Admin() {
           }}>
             {/* Header */}
             <div style={{
-              padding: '30px 30px 20px 30px',
+              padding: '20px 30px 15px 30px',
               borderBottom: '1px solid #e0e0e0',
               position: 'relative',
               flexShrink: 0
             }}>
               {/* Document Icon */}
               <div style={{
-                width: '48px',
-                height: '48px',
+                width: '40px',
+                height: '40px',
                 backgroundColor: '#f8f9fa',
-                borderRadius: '10px',
+                borderRadius: '8px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-                marginBottom: '15px'
+                marginBottom: '12px'
               }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" fill="#000000"/>
                   <path d="M14 2V8H20" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
@@ -387,6 +440,14 @@ function Admin() {
                 }}>
                   Add a Publication
                 </h2>
+                <p style={{
+                  margin: '4px 0 0 0',
+                  color: '#666',
+                  fontSize: '13px',
+                  fontWeight: '400'
+                }}>
+
+                </p>
                 
                 {/* DOI Input */}
                 <div style={{ width: '220px' }}>
@@ -400,31 +461,11 @@ function Admin() {
                     DOI
                   </label>
                   <div style={{ position: 'relative' }}>
-                    <input
-                      type="text"
-                      placeholder="Enter the DOI here"
+                    <DoiLiveSearch
                       value={formData.doi}
-                      onChange={(e) => handleInputChange('doi', e.target.value)}
-                      style={{
-                        width: '100%',
-                        padding: '6px 25px 6px 8px',
-                        border: '1px solid #e0e0e0',
-                        borderRadius: '5px',
-                        fontSize: '12px',
-                        outline: 'none',
-                        boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)'
-                      }}
+                      onChange={(value) => handleInputChange('doi', value)}
+                      onSelectPublication={handlePublicationSelect}
                     />
-                    <SearchIcon style={{
-                      position: 'absolute',
-                      right: '8px',
-                      top: '50%',
-                      transform: 'translateY(-50%)',
-                      width: '14px',
-                      height: '14px',
-                      fill: '#666',
-                      pointerEvents: 'none'
-                    }} />
                   </div>
                 </div>
               </div>
@@ -461,14 +502,14 @@ function Admin() {
 
             {/* Body */}
             <div style={{
-              padding: '30px',
+              padding: '20px 30px',
               flex: 1,
               overflow: 'hidden',
               display: 'flex',
               flexDirection: 'column'
             }}>
               {/* Title */}
-              <div style={{ marginBottom: '25px' }}>
+              <div style={{ marginBottom: '18px' }}>
                 <label style={{
                   display: 'block',
                   marginBottom: '6px',
@@ -497,7 +538,7 @@ function Admin() {
               </div>
 
               {/* Abstract */}
-              <div style={{ marginBottom: '25px' }}>
+              <div style={{ marginBottom: '18px' }}>
                 <label style={{
                   display: 'block',
                   marginBottom: '6px',
@@ -531,7 +572,7 @@ function Admin() {
               <div style={{
                 display: 'flex',
                 gap: '40px',
-                marginBottom: '25px'
+                marginBottom: '18px'
               }}>
                 {/* Authors */}
                 <div style={{ width: '35%' }}>
@@ -562,7 +603,7 @@ function Admin() {
                   />
                 </div>
 
-                {/* Categories */}
+                {/* Display Category */}
                 <div style={{ width: '35%' }}>
                   <label style={{
                     display: 'block',
@@ -571,46 +612,49 @@ function Admin() {
                     fontSize: '14px',
                     fontWeight: '500'
                   }}>
-                    Categories *
+                    Display Category *
                   </label>
-                  <div style={{ position: 'relative' }}>
-                    <input
-                      type="text"
-                      placeholder="Search for categories"
-                      value={formData.categories}
-                      onChange={(e) => handleInputChange('categories', e.target.value)}
-                      required
-                      style={{
-                        width: '100%',
-                        padding: '8px 32px 8px 12px',
-                        border: '1px solid #e0e0e0',
-                        borderRadius: '6px',
-                        fontSize: '14px',
-                        outline: 'none',
-                        boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)'
-                      }}
-                    />
-                    <SearchIcon style={{
-                      position: 'absolute',
-                      right: '12px',
-                      top: '50%',
-                      transform: 'translateY(-50%)',
-                      width: '20px',
-                      height: '20px',
-                      fill: '#666',
-                      pointerEvents: 'none'
-                    }} />
+                  <select
+                    value={formData.categories}
+                    onChange={(e) => handleInputChange('categories', e.target.value)}
+                    required
+                    style={{
+                      width: '100%',
+                      padding: '8px 12px',
+                      border: '1px solid #e0e0e0',
+                      borderRadius: '6px',
+                      fontSize: '14px',
+                      outline: 'none',
+                      boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
+                      backgroundColor: 'white',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <option value="" disabled>Choose Category</option>
+                    {categories.map((category, index) => (
+                      <option key={index} value={category}>
+                        {category.charAt(0).toUpperCase() + category.slice(1)}
+                      </option>
+                    ))}
+                  </select>
+                  <div style={{
+                    fontSize: '12px',
+                    color: '#666',
+                    marginTop: '4px',
+                    fontStyle: 'italic'
+                  }}>
+
                   </div>
                 </div>
               </div>
 
               {/* File Upload */}
-              <div style={{ marginBottom: '30px' }}>
+              <div style={{ marginBottom: '15px' }}>
                 <div
                   style={{
                     border: `2px dashed ${dragActive ? '#00313c' : '#ccc'}`,
-                    borderRadius: '10px',
-                    padding: '30px 20px',
+                    borderRadius: '8px',
+                    padding: '20px 15px',
                     textAlign: 'center',
                     backgroundColor: dragActive ? '#f8f9fa' : '#fafafa',
                     transition: 'all 0.2s ease',
@@ -623,9 +667,9 @@ function Admin() {
                 >
                   {/* Upload Icon */}
                   <div style={{
-                    fontSize: '48px',
+                    fontSize: '32px',
                     color: '#00313c',
-                    marginBottom: '15px'
+                    marginBottom: '8px'
                   }}>
                     ☁️
                   </div>
@@ -640,9 +684,9 @@ function Admin() {
                   </p>
                   
                   <p style={{
-                    margin: '0 0 20px 0',
+                    margin: '0 0 15px 0',
                     color: 'rgba(0, 0, 0, 0.4)',
-                    fontSize: '12px',
+                    fontSize: '11px',
                     fontFamily: 'Helvetica, sans-serif'
                   }}>
                     JPG, PNG or PDF, file size no more than 10MB
@@ -675,8 +719,8 @@ function Admin() {
                   
                   {formData.files.length > 0 && (
                     <div style={{
-                      marginTop: '15px',
-                      fontSize: '12px',
+                      marginTop: '10px',
+                      fontSize: '11px',
                       color: '#666'
                     }}>
                       {formData.files.length} file(s) selected
@@ -688,13 +732,17 @@ function Admin() {
               {/* Action Buttons */}
               <div style={{
                 display: 'flex',
-                gap: '12px',
-                justifyContent: 'flex-start'
+                gap: '20px',
+                justifyContent: 'center',
+                marginTop: 'auto',
+                paddingTop: '15px',
+                borderTop: '1px solid #e0e0e0',
+                flexShrink: 0
               }}>
                 <button
                   onClick={handleCloseModal}
                   style={{
-                    padding: '12px 20px',
+                    padding: '16px 32px',
                     backgroundColor: '#ffffff',
                     color: '#414651',
                     border: '1px solid #414651',
@@ -703,7 +751,15 @@ function Admin() {
                     fontFamily: 'Inter, sans-serif',
                     cursor: 'pointer',
                     boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
-                    minWidth: '120px'
+                    minWidth: '140px',
+                    fontWeight: '500',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#f5f5f5';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#ffffff';
                   }}
                 >
                   Cancel
@@ -712,7 +768,7 @@ function Admin() {
                 <button
                   onClick={handleSubmit}
                   style={{
-                    padding: '12px 20px',
+                    padding: '16px 32px',
                     backgroundColor: '#10303b',
                     color: '#ffffff',
                     border: 'none',
@@ -721,10 +777,18 @@ function Admin() {
                     fontFamily: 'Inter, sans-serif',
                     cursor: 'pointer',
                     boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
-                    minWidth: '120px'
+                    minWidth: '180px',
+                    fontWeight: '500',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#0d262f';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#10303b';
                   }}
                 >
-                  Confirm
+                  Add to Collection
                 </button>
               </div>
             </div>

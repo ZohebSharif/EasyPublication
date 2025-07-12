@@ -19,7 +19,11 @@ interface PublicationData {
   images?: string; // JSON string containing array of PNG paths
 }
 
-function PublicationCarousel() {
+interface PublicationCarouselProps {
+  category: string;
+}
+
+function PublicationCarousel({ category }: PublicationCarouselProps) {
   const [publications, setPublications] = useState<PublicationData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -184,17 +188,25 @@ function PublicationCarousel() {
   return (
     <div className="Carousel" style={{ position: 'relative', paddingTop: '2vw', paddingBottom: '6vw' }}>
       
+      {/* Category Label */}
+      <div className="carousel-category-label">
+        {category.toUpperCase()}
+      </div>
+      
       {/* Publication cards */}
       <div 
         style={{
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '670px',
+          height: 'auto',
+          minHeight: '600px',
           position: 'relative',
-          overflow: 'hidden',
+          overflow: 'visible',
           width: '100vw',
-          cursor: isDragging ? 'grabbing' : 'grab'
+          cursor: isDragging ? 'grabbing' : 'grab',
+          paddingTop: '50px',
+          paddingBottom: '50px'
         }}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}

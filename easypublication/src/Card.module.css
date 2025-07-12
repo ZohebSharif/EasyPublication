@@ -6,6 +6,8 @@
   flex-shrink: 0;
   flex-grow: 0;
   margin: 20px;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
 .cardWrapper {
@@ -17,7 +19,7 @@
   flex-direction: column;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border: 1px solid #e0e0e0;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Profile Section */
@@ -158,4 +160,105 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-weight: 500;
   margin: 0;
+}
+
+/* Responsive Card Styles */
+@media (max-width: 1600px) {
+  .card {
+    width: 380px;
+    margin: 18px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .card {
+    width: 360px;
+    margin: 16px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .card {
+    width: 340px;
+    margin: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    width: 320px;
+    margin: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 300px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 280px;
+    margin: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 260px;
+    margin: 6px;
+  }
+  
+  .cardWrapper {
+    padding: 0;
+  }
+  
+  .profileSection {
+    padding: 16px;
+  }
+  
+  .contentSection {
+    padding: 16px;
+  }
+  
+  .title {
+    font-size: 16px;
+  }
+  
+  .subtitle {
+    font-size: 13px;
+  }
+  
+  .description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .card {
+    width: 240px;
+    margin: 5px;
+  }
+  
+  .profileSection {
+    padding: 14px;
+  }
+  
+  .contentSection {
+    padding: 14px;
+  }
+  
+  .title {
+    font-size: 15px;
+  }
+  
+  .subtitle {
+    font-size: 12px;
+  }
+  
+  .description {
+    font-size: 12px;
+  }
 }
