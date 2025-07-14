@@ -18,9 +18,11 @@ interface PublicationData {
 
 interface PublicationCardProps {
   publication: PublicationData;
+  isAdminMode?: boolean;
+  onDelete?: (publicationId: number) => void;
 }
 
-function PublicationCard({ publication }: PublicationCardProps) {
+function PublicationCard({ publication, isAdminMode = false, onDelete }: PublicationCardProps) {
   // Helper function to truncate long text
   const truncateText = (text: string, maxLength: number) => {
     if (text.length <= maxLength) return text;
@@ -35,6 +37,31 @@ function PublicationCard({ publication }: PublicationCardProps) {
     } catch {
       return [];
     }
+  };
+
+  // Helper function to get actual image URL
+  const getImageUrl = (imagePath: string): string => {
+    // If it's already a full URL, use it as is
+    if (imagePath.startsWith('http')) {
+      return imagePath;
+    }
+    
+    // If it starts with /images/, it's a server-uploaded image
+    if (imagePath.startsWith('/images/')) {
+      return `http://localhost:3001${imagePath}`;
+    }
+    
+    // Check localStorage for uploaded files (fallback for old system)
+    const uploadedFiles = JSON.parse(localStorage.getItem('uploadedFiles') || '[]');
+    const fileName = imagePath.split('/').pop(); // Get filename from path
+    const uploadedFile = uploadedFiles.find((file: any) => file.name === fileName);
+    
+    if (uploadedFile) {
+      return uploadedFile.data; // Return base64 data URL
+    }
+    
+    // Return the original path as fallback
+    return imagePath;
   };
 
   // Helper function to get first author
@@ -53,6 +80,50 @@ function PublicationCard({ publication }: PublicationCardProps) {
   return (
     <div className={styles.card}>
       <div className={styles.cardWrapper}>
+        {/* Delete button for admin mode */}
+        {isAdminMode && onDelete && (
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              if (window.confirm(`Remove "${publication.title}" from this category?\n\nThis will reset the publication's category back to "General" in the database.`)) {
+                onDelete(publication.id);
+              }
+            }}
+            style={{
+              position: 'absolute',
+              top: '8px',
+              right: '8px',
+              width: '24px',
+              height: '24px',
+              borderRadius: '50%',
+              backgroundColor: '#ff4444',
+              color: 'white',
+              border: 'none',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '14px',
+              fontWeight: 'bold',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
+              zIndex: 10,
+              transition: 'all 0.2s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#cc0000';
+              e.currentTarget.style.transform = 'scale(1.1)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#ff4444';
+              e.currentTarget.style.transform = 'scale(1)';
+            }}
+            title={`Remove "${publication.title}"`}
+          >
+            ×
+          </button>
+        )}
+        
         {/* Profile Section */}
         <div className={styles.profileSection}>
           <div className={styles.avatar}>
@@ -71,10 +142,10 @@ function PublicationCard({ publication }: PublicationCardProps) {
 
           <div className={styles.userInfo}>
             <div className={styles.userName}>
-              {getFirstAuthor(publication.journal)}
+              {truncateText(publication.title, 50)}
             </div>
             <div className={styles.userRole}>
-              {publication.year} {publication.high_impact ? '- High Impact' : ''}
+              {publication.year}{publication.high_impact ? ' - High Impact' : ''}
             </div>
           </div>
         </div>
@@ -84,9 +155,10 @@ function PublicationCard({ publication }: PublicationCardProps) {
           {(() => {
             const images = getImages(publication.images);
             if (images.length > 0) {
+              const imageUrl = getImageUrl(images[0]);
               return (
                 <img 
-                  src={images[0]} 
+                  src={imageUrl} 
                   alt="Publication visual"
                   style={{
                     width: '100%',
@@ -94,7 +166,7 @@ function PublicationCard({ publication }: PublicationCardProps) {
                     objectFit: 'cover'
                   }}
                   onError={(e) => {
-                    // Fallback to journal name if image fails to load
+                    // Fallback to a generic placeholder if image fails to load
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = `
                       <div style="
@@ -109,7 +181,7 @@ function PublicationCard({ publication }: PublicationCardProps) {
                         textAlign: center;
                         padding: 10px;
                       ">
-                        ${publication.journal}
+                        ${publication.journal || 'Publication'}
                       </div>
                     `;
                   }}
@@ -129,7 +201,7 @@ function PublicationCard({ publication }: PublicationCardProps) {
                   textAlign: 'center',
                   padding: '10px'
                 }}>
-                  {publication.journal}
+                  {publication.journal || 'Publication'}
                 </div>
               );
             }
@@ -141,16 +213,18 @@ function PublicationCard({ publication }: PublicationCardProps) {
           <div className={styles.contentWrapper}>
             <div className={styles.textContent}>
               <div className={styles.titleSection}>
-                <div className={styles.title}>
-                  {truncateText(publication.title, 60)}
-                </div>
                 <div className={styles.subtitle}>
                   Published: {publication.online_pub_date}
                 </div>
               </div>
               <div className={styles.description}>
                 <strong>Authors:</strong> {truncateText(publication.authors, 100)}
-                <br />
+                {publication.journal && (
+                  <>
+                    <br />
+                    <strong>Journal:</strong> {publication.journal}
+                  </>
+                )}
                 {(() => {
                   const images = getImages(publication.images);
                   if (images.length > 1) {

@@ -22,7 +22,7 @@ async function getPublications() {
     const fileBuffer = readFileSync(dbPath);
     const db = new SQL.Database(fileBuffer);
     
-    // Query for specific fields
+    // Query for specific fields including tags and images
     const result = db.exec(`
       SELECT 
         id,
@@ -31,7 +31,11 @@ async function getPublications() {
         journal,
         online_pub_date,
         doi,
-        beamlines
+        beamlines,
+        year,
+        high_impact,
+        tags,
+        images
       FROM publications 
       ORDER BY id
     `);

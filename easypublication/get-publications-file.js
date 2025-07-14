@@ -26,7 +26,11 @@ async function getPublications() {
       journal,
       online_pub_date,
       doi,
-      beamlines
+      beamlines,
+      year,
+      high_impact,
+      tags,
+      images
     FROM publications 
     ORDER BY id
   `);

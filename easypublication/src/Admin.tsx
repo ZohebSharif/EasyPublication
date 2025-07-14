@@ -100,6 +100,26 @@ function Admin() {
     }
   };
 
+  const handleRemoveFile = (indexToRemove: number) => {
+    setFormData(prev => ({
+      ...prev,
+      files: prev.files.filter((_, index) => index !== indexToRemove)
+    }));
+  };
+
+  const getFileType = (file: File): 'image' | 'pdf' | 'other' => {
+    if (file.type.startsWith('image/')) return 'image';
+    if (file.type === 'application/pdf') return 'pdf';
+    return 'other';
+  };
+
+  const getFilePreviewUrl = (file: File): string | null => {
+    if (file.type.startsWith('image/')) {
+      return URL.createObjectURL(file);
+    }
+    return null;
+  };
+
   const handlePublicationSelect = (publication: {
     id: number;
     title: string;
@@ -121,7 +141,37 @@ function Admin() {
     }));
   };
 
-  const handleSubmit = () => {
+  // Function to upload files to the server
+  const uploadFilesToServer = async (files: File[]): Promise<string[]> => {
+    if (files.length === 0) return [];
+
+    try {
+      const formData = new FormData();
+      files.forEach(file => {
+        formData.append('files', file);
+      });
+
+      const response = await fetch('http://localhost:3001/api/upload', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!response.ok) {
+        throw new Error('Upload failed');
+      }
+
+      const result = await response.json();
+      console.log('Upload successful:', result);
+      
+      // Return the paths of uploaded files
+      return result.files.map((file: any) => file.path);
+    } catch (error) {
+      console.error('Upload error:', error);
+      throw error;
+    }
+  };
+
+  const handleSubmit = async () => {
     // Validate required fields
     if (!formData.title.trim()) {
       alert('Please enter a title for the publication.');
@@ -140,10 +190,76 @@ function Admin() {
       return;
     }
 
-    // Success feedback
-    console.log('Submitting publication:', formData);
-    alert(`Publication "${formData.title}" will be added to the "${formData.categories.charAt(0).toUpperCase() + formData.categories.slice(1)}" category carousel and will be visible to users.`);
-    handleCloseModal();
+    try {
+      // Upload files to server and get their paths
+      let imagePaths: string[] = [];
+      try {
+        imagePaths = await uploadFilesToServer(formData.files);
+        console.log('📁 Files uploaded successfully:', imagePaths);
+      } catch (error) {
+        console.warn('File upload failed (server may not be running):', error);
+        // Continue without images for now
+      }
+
+      // Update publication in database automatically via server API
+      console.log('🔄 Updating publication in database...');
+      const updateResponse = await fetch('http://localhost:3001/api/update-publication', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          title: formData.title.trim(),
+          authors: formData.authors.trim(),
+          category: formData.categories,
+          imagePaths: imagePaths
+        })
+      });
+
+      if (updateResponse.ok) {
+        const result = await updateResponse.json();
+        console.log('✅ Publication updated successfully:', result);
+        
+        alert(`🎉 Success! Publication "${result.publication.title}" has been assigned to the "${formData.categories}" category and will appear in the carousel immediately. The page will refresh to show the changes.`);
+        
+        // Refresh the page to show updated publications
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+        
+      } else {
+        const error = await updateResponse.json();
+        alert(`❌ Update failed: ${error.error}`);
+        return;
+      }
+      
+      // Close modal and reset form
+      setIsModalOpen(false);
+      setFormData({
+        doi: '',
+        title: '',
+        abstract: '',
+        authors: '',
+        categories: '',
+        files: []
+      });
+
+    } catch (error) {
+      console.error('Error processing publication:', error);
+      
+      // Check if server is running
+      try {
+        const healthCheck = await fetch('http://localhost:3001/api/health');
+        if (!healthCheck.ok) {
+          throw new Error('Server not responding');
+        }
+      } catch (serverError) {
+        alert('❌ Error: The server is not running. Please start the server with "npm run server" in a terminal, then try again.');
+        return;
+      }
+      
+      alert('❌ Error processing publication. Please try again.');
+    }
   };
   
   return (
@@ -261,10 +377,10 @@ function Admin() {
       </div>
       
       <div className="Body">
-        <PublicationCarousel category={categories[0]}/>
-        <PublicationCarousel category={categories[1]}/>
-        <PublicationCarousel category={categories[2]}/>
-        <PublicationCarousel category={categories[3]}/>
+        <PublicationCarousel category={categories[0]} isAdminMode={true}/>
+        <PublicationCarousel category={categories[1]} isAdminMode={true}/>
+        <PublicationCarousel category={categories[2]} isAdminMode={true}/>
+        <PublicationCarousel category={categories[3]} isAdminMode={true}/>
         <div style={{ paddingTop: '20px' }}></div>
 
         <div className="Footer">
@@ -671,7 +787,7 @@ function Admin() {
                     color: '#00313c',
                     marginBottom: '8px'
                   }}>
-                    ☁️
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke="#344054" d="M25 25v18.75m6.479-14.625L24.854 22.5l-6.334 6.333"/><path stroke="#000000" d="M12.5 31.48a13.73 13.73 0 1 1 20.833-15.084a9.6 9.6 0 0 1 1.73-.167A8.73 8.73 0 0 1 37.5 33.333"/></g></svg>
                   </div>
                   
                   <p style={{
@@ -689,7 +805,7 @@ function Admin() {
                     fontSize: '11px',
                     fontFamily: 'Helvetica, sans-serif'
                   }}>
-                    JPG, PNG or PDF, file size no more than 10MB
+                    JPG, PNG or PDF
                   </p>
                   
                   <input
@@ -728,6 +844,122 @@ function Admin() {
                   )}
                 </div>
               </div>
+
+              {/* File Thumbnails */}
+              {formData.files.length > 0 && (
+                <div style={{ marginBottom: '15px' }}>
+                  <div style={{
+                    display: 'flex',
+                    gap: '10px',
+                    padding: '10px',
+                    backgroundColor: '#f8f9fa',
+                    borderRadius: '8px',
+                    border: '1px solid #e0e0e0',
+                    flexWrap: 'wrap',
+                    maxHeight: '120px',
+                    overflowY: 'auto'
+                  }}>
+                    {formData.files.map((file, index) => {
+                      const fileType = getFileType(file);
+                      const previewUrl = getFilePreviewUrl(file);
+                      
+                      return (
+                        <div
+                          key={index}
+                          style={{
+                            position: 'relative',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            gap: '4px',
+                            padding: '8px',
+                            backgroundColor: 'white',
+                            borderRadius: '6px',
+                            border: '1px solid #ddd',
+                            minWidth: '80px',
+                            maxWidth: '80px'
+                          }}
+                        >
+                          {/* File Thumbnail/Icon */}
+                          <div style={{
+                            width: '50px',
+                            height: '50px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            backgroundColor: '#f5f5f5',
+                            borderRadius: '4px',
+                            overflow: 'hidden'
+                          }}>
+                            {fileType === 'image' && previewUrl ? (
+                              <img
+                                src={previewUrl}
+                                alt={file.name}
+                                style={{
+                                  width: '100%',
+                                  height: '100%',
+                                  objectFit: 'cover'
+                                }}
+                              />
+                            ) : fileType === 'pdf' ? (
+                              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" stroke="#d32f2f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="#ffebee"/>
+                                <polyline points="14,2 14,8 20,8" stroke="#d32f2f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                <text x="12" y="16" textAnchor="middle" fontSize="4" fill="#d32f2f" fontWeight="bold">PDF</text>
+                              </svg>
+                            ) : (
+                              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" stroke="#666" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="#f5f5f5"/>
+                                <polyline points="14,2 14,8 20,8" stroke="#666" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                              </svg>
+                            )}
+                          </div>
+                          
+                          {/* File Name */}
+                          <div style={{
+                            fontSize: '9px',
+                            color: '#666',
+                            textAlign: 'center',
+                            lineHeight: '1.2',
+                            maxWidth: '100%',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            whiteSpace: 'nowrap'
+                          }}>
+                            {file.name}
+                          </div>
+                          
+                          {/* Remove Button */}
+                          <button
+                            onClick={() => handleRemoveFile(index)}
+                            style={{
+                              position: 'absolute',
+                              top: '-5px',
+                              right: '-5px',
+                              width: '18px',
+                              height: '18px',
+                              borderRadius: '50%',
+                              backgroundColor: '#ff4444',
+                              color: 'white',
+                              border: 'none',
+                              cursor: 'pointer',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              fontSize: '12px',
+                              fontWeight: 'bold',
+                              boxShadow: '0 1px 3px rgba(0,0,0,0.3)'
+                            }}
+                            title="Remove file"
+                          >
+                            ×
+                          </button>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
 
               {/* Action Buttons */}
               <div style={{

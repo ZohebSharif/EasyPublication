@@ -21,9 +21,10 @@ interface PublicationData {
 
 interface PublicationCarouselProps {
   category: string;
+  isAdminMode?: boolean;
 }
 
-function PublicationCarousel({ category }: PublicationCarouselProps) {
+function PublicationCarousel({ category, isAdminMode = false }: PublicationCarouselProps) {
   const [publications, setPublications] = useState<PublicationData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -146,17 +147,52 @@ function PublicationCarousel({ category }: PublicationCarouselProps) {
   useEffect(() => {
     const loadPublications = async () => {
       try {
-        // Load the selected publications JSON file
-        const response = await fetch('/data/selected-publications.json');
+        // Load all publications from the database and filter by tags/category
+        const response = await fetch('/data/all-publications.json');
         if (!response.ok) {
           throw new Error('Failed to load publications data');
         }
-        const data = await response.json();
-        setPublications(data);
+        const allData = await response.json();
+        
+        // Get list of deleted publications from localStorage
+        const deletedIds = JSON.parse(localStorage.getItem('deletedPublications') || '[]');
+        
+        // Filter out deleted publications and only show non-"General" category publications
+        const activePublications = allData.filter((pub: PublicationData) => 
+          !deletedIds.includes(pub.id) && pub.category && pub.category.toLowerCase() !== 'general'
+        );
+        
+        // Map category names to match the selected category
+        const categoryToMatch: { [key: string]: string } = {
+          'chemistry and energy': 'chemistry and energy',
+          'physics and condensed matter': 'physics and condensed matter',
+          'bioscience': 'bioscience',
+          'geoscience and environment': 'geoscience and environment'
+        };
+        
+        const targetCategory = categoryToMatch[category] || category;
+        
+        // Filter publications that match the specific category
+        const filteredPublications = activePublications.filter((pub: PublicationData) => {
+          // Match publications by category (case-insensitive)
+          return pub.category && 
+                 pub.category.toLowerCase() === targetCategory.toLowerCase();
+        });
+        
+        // Sort by year (newest first) and then by title
+        filteredPublications.sort((a: PublicationData, b: PublicationData) => {
+          const yearDiff = parseInt(b.year) - parseInt(a.year);
+          if (yearDiff !== 0) return yearDiff;
+          return a.title.localeCompare(b.title);
+        });
+        
+        setPublications(filteredPublications);
         
         // Set default index to 1 (2nd card) if there are at least 2 publications
-        if (data.length >= 2) {
+        if (filteredPublications.length >= 2) {
           setCurrentIndex(1);
+        } else if (filteredPublications.length === 1) {
+          setCurrentIndex(0);
         }
         
         setLoading(false);
@@ -167,7 +203,75 @@ function PublicationCarousel({ category }: PublicationCarouselProps) {
     };
 
     loadPublications();
-  }, []);
+  }, [category]); // Re-load when category changes
+
+  // Handler for deleting publications in admin mode
+  const handleDeletePublication = async (publicationId: number) => {
+    try {
+      // Find the publication being deleted to get its title for the API call
+      const publicationToDelete = publications.find(pub => pub.id === publicationId);
+      if (!publicationToDelete) {
+        console.error('Publication not found');
+        return;
+      }
+
+      // Reset the publication's category back to "General" in the database
+      console.log(`🔄 Resetting publication ${publicationId} category to "General"`);
+      
+      try {
+        const resetResponse = await fetch('http://localhost:3001/api/update-publication', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            title: publicationToDelete.title,
+            authors: publicationToDelete.authors,
+            category: 'General'
+          })
+        });
+
+        if (resetResponse.ok) {
+          const result = await resetResponse.json();
+          console.log(`✅ Publication category reset to General:`, result);
+        } else {
+          const error = await resetResponse.json();
+          console.warn(`⚠️ Failed to reset category in database: ${error.error}`);
+        }
+      } catch (serverError) {
+        console.warn('⚠️ Server not available - publication will be removed from view only:', serverError);
+      }
+      
+      // Remove from local state
+      const updatedPublications = publications.filter(pub => pub.id !== publicationId);
+      setPublications(updatedPublications);
+      
+      // Add to deleted publications list in localStorage (for display purposes)
+      const deletedIds = JSON.parse(localStorage.getItem('deletedPublications') || '[]');
+      if (!deletedIds.includes(publicationId)) {
+        deletedIds.push(publicationId);
+        localStorage.setItem('deletedPublications', JSON.stringify(deletedIds));
+      }
+      
+      // Remove from localStorage if it's an admin-added publication
+      const adminPubs = JSON.parse(localStorage.getItem('adminAddedPublications') || '[]');
+      const newAdminPubs = adminPubs.filter((pub: any) => pub.id !== publicationId);
+      localStorage.setItem('adminAddedPublications', JSON.stringify(newAdminPubs));
+      
+      // Adjust currentIndex if necessary
+      if (currentIndex >= updatedPublications.length && updatedPublications.length > 0) {
+        setCurrentIndex(updatedPublications.length - 1);
+      } else if (updatedPublications.length === 0) {
+        setCurrentIndex(0);
+      }
+      
+      console.log(`📋 Publication "${publicationToDelete.title}" removed from ${category} category and reset to General`);
+      
+    } catch (error) {
+      console.error('Error deleting publication:', error);
+      alert('Error deleting publication. Please try again.');
+    }
+  };
 
   if (loading) {
     return (
@@ -181,6 +285,55 @@ function PublicationCarousel({ category }: PublicationCarouselProps) {
     return (
       <div style={{ padding: '20px', textAlign: 'center', color: 'red' }}>
         Error: {error}
+      </div>
+    );
+  }
+
+  if (publications.length === 0) {
+    return (
+      <div className="Carousel" style={{ position: 'relative', paddingTop: '2vw', paddingBottom: '6vw' }}>
+        {/* Category Label */}
+        <div className="carousel-category-label">
+          {category.toUpperCase()}
+        </div>
+        
+        <div style={{ 
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '400px',
+          width: '100%',
+          textAlign: 'center',
+          color: '#666',
+          flexDirection: 'column',
+          gap: '20px',
+          padding: '0 20px'
+        }}>
+          <div style={{ 
+            fontSize: '24px', 
+            fontWeight: 'bold',
+            color: '#333',
+            marginBottom: '10px'
+          }}>
+            No publications available
+          </div>
+          <div style={{ 
+            fontSize: '16px', 
+            maxWidth: '500px',
+            lineHeight: '1.5',
+            color: '#666'
+          }}>
+            Publications will appear here once they are uploaded and tagged with "{category.toLowerCase()}" category.
+          </div>
+          <div style={{ 
+            fontSize: '14px', 
+            fontStyle: 'italic',
+            color: '#888',
+            marginTop: '10px'
+          }}>
+            Use the Admin interface to add new publications to this category.
+          </div>
+        </div>
       </div>
     );
   }
@@ -272,7 +425,11 @@ function PublicationCarousel({ category }: PublicationCarouselProps) {
                 pointerEvents: Math.abs(offset) <= 2 ? 'auto' : 'none' // Only allow interaction with nearby cards
               }}
             >
-              <PublicationCard publication={publication} />
+              <PublicationCard 
+                publication={publication} 
+                isAdminMode={isAdminMode}
+                onDelete={isAdminMode ? handleDeletePublication : undefined}
+              />
             </div>
           );
         })}

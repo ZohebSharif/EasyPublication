@@ -6,7 +6,12 @@
     "journal": "The Journal of Supercomputing",
     "online_pub_date": "6/20/25",
     "doi": "10.1007/s11227-025-07413-5",
-    "beamlines": "8.3.2,Computing"
+    "beamlines": "8.3.2,Computing",
+    "year": "2025",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 2,
@@ -15,7 +20,12 @@
     "journal": "Surface Coatings and Technology",
     "online_pub_date": "6/6/25",
     "doi": "10.1016/j.surfcoat.2025.132376",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2025",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]\n"
   },
   {
     "id": 3,
@@ -24,7 +34,12 @@
     "journal": "Science",
     "online_pub_date": "5/15/25",
     "doi": "10.1126/science.adt1882",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2025",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 4,
@@ -33,7 +48,12 @@
     "journal": "Journal of Synchrotron Radiation",
     "online_pub_date": "4/1/25",
     "doi": "10.1107/S1600577525001833",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2025",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 5,
@@ -42,7 +62,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "1/6/25",
     "doi": "10.1149/1945-7111/ada63c",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2025",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 6,
@@ -51,7 +76,12 @@
     "journal": "Additive Manufacturing",
     "online_pub_date": "12/17/24",
     "doi": "10.1016/j.addma.2024.104612",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2025",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 7,
@@ -60,7 +90,12 @@
     "journal": "Crystal Growth & Design",
     "online_pub_date": "11/11/24",
     "doi": "10.1021/acs.cgd.4c01066",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 8,
@@ -69,7 +104,12 @@
     "journal": "PLoS ONE",
     "online_pub_date": "11/8/24",
     "doi": "10.1371/journal.pone.0313389",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 9,
@@ -78,7 +118,12 @@
     "journal": "Journal of Synchrotron Radiation",
     "online_pub_date": "10/29/24",
     "doi": "10.1107/S1600577524009305",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 10,
@@ -87,7 +132,12 @@
     "journal": "Integrative and Comparative Biology",
     "online_pub_date": "10/28/24",
     "doi": "10.1093/icb/icae154",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2025",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 11,
@@ -96,7 +146,12 @@
     "journal": "Plant, Cell and Environment",
     "online_pub_date": "10/27/24",
     "doi": "10.1111/pce.15208",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2025",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 12,
@@ -105,7 +160,12 @@
     "journal": "Geochimica et Cosmochimica Acta",
     "online_pub_date": "10/26/24",
     "doi": "10.1016/j.gca.2024.09.018",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 13,
@@ -114,7 +174,12 @@
     "journal": "Plant Physiology",
     "online_pub_date": "10/17/24",
     "doi": "10.1093/plphys/kiae551",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2025",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 14,
@@ -123,7 +188,12 @@
     "journal": "Journal of Morphology",
     "online_pub_date": "10/16/24",
     "doi": "10.1002/jmor.21784",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 15,
@@ -132,7 +202,12 @@
     "journal": "Matter",
     "online_pub_date": "9/30/24",
     "doi": "10.1016/j.matt.2024.09.006",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2025",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 16,
@@ -141,7 +216,12 @@
     "journal": "Applied Catalysis B: Environmental",
     "online_pub_date": "9/17/24",
     "doi": "10.1016/j.apcatb.2024.124616",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2025",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 17,
@@ -150,7 +230,12 @@
     "journal": "Journal of Materials Science",
     "online_pub_date": "9/14/24",
     "doi": "10.1007/s10853-024-10208-3",
-    "beamlines": "8.3.2,11.3.1"
+    "beamlines": "8.3.2,11.3.1",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 18,
@@ -159,7 +244,12 @@
     "journal": "New Phytologist",
     "online_pub_date": "9/12/24",
     "doi": "10.1111/nph.20115",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 19,
@@ -168,7 +258,12 @@
     "journal": "JCI Insight",
     "online_pub_date": "8/22/24",
     "doi": "10.1172/jci.insight.175103",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 20,
@@ -177,7 +272,12 @@
     "journal": "Cement and Concrete Composites",
     "online_pub_date": "8/21/24",
     "doi": "10.1016/j.cemconcomp.2024.105715",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 21,
@@ -186,7 +286,12 @@
     "journal": "Matrix Biology",
     "online_pub_date": "8/6/24",
     "doi": "10.1016/j.matbio.2024.07.005",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 22,
@@ -195,7 +300,12 @@
     "journal": "JOM Journal of the Minerals, Metals and Materials Society",
     "online_pub_date": "7/29/24",
     "doi": "10.1007/s11837-024-06716-x",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 23,
@@ -204,7 +314,12 @@
     "journal": "ACS Applied Energy Materials",
     "online_pub_date": "6/27/24",
     "doi": "10.1021/acsaem.4c00803",
-    "beamlines": "12.3.2,8.3.2"
+    "beamlines": "12.3.2,8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 24,
@@ -213,7 +328,12 @@
     "journal": "Scientific Reports",
     "online_pub_date": "6/25/24",
     "doi": "10.1038/s41598-024-63645-0",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 25,
@@ -222,7 +342,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "6/14/24",
     "doi": "10.1149/1945-7111/ad54f1",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 26,
@@ -231,7 +356,12 @@
     "journal": "Proceedings of the Royal Society A: Mathematical, Physical, and Engineering Sci",
     "online_pub_date": "6/11/24",
     "doi": "10.1098/rspa.2024.0379",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 27,
@@ -240,7 +370,12 @@
     "journal": "Scientific Reports",
     "online_pub_date": "6/11/24",
     "doi": "10.1038/s41598-024-63288-1",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 28,
@@ -249,7 +384,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "6/4/24",
     "doi": "10.1149/1945-7111/ad4fe6",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 29,
@@ -258,7 +398,12 @@
     "journal": "Acta Materialia",
     "online_pub_date": "5/28/24",
     "doi": "10.1016/j.actamat.2024.120053",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 30,
@@ -267,7 +412,12 @@
     "journal": "ACS Energy Letters",
     "online_pub_date": "5/21/24",
     "doi": "10.1021/acsenergylett.4c00800",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 31,
@@ -276,7 +426,12 @@
     "journal": "Physics and Chemistry of Minerals",
     "online_pub_date": "4/28/24",
     "doi": "10.1007/s00269-024-01278-5",
-    "beamlines": "12.2.2,12.3.2,8.3.2,2.4,1.4,5.4"
+    "beamlines": "12.2.2,12.3.2,8.3.2,2.4,1.4,5.4",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 32,
@@ -285,7 +440,12 @@
     "journal": "Tomography of Materials and Structures",
     "online_pub_date": "4/26/24",
     "doi": "10.1016/j.tmater.2024.100032",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 33,
@@ -294,7 +454,12 @@
     "journal": "Journal of Power Sources",
     "online_pub_date": "4/25/24",
     "doi": "10.1016/j.jpowsour.2024.234507",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 34,
@@ -303,7 +468,12 @@
     "journal": "ACS Applied Energy Materials",
     "online_pub_date": "3/25/24",
     "doi": "10.1021/acsaem.4c00402",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 35,
@@ -312,7 +482,12 @@
     "journal": "Journal of Materials Processing Technology",
     "online_pub_date": "2/27/24",
     "doi": "10.1016/j.jmatprotec.2024.118354",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 36,
@@ -321,7 +496,12 @@
     "journal": "Carbon",
     "online_pub_date": "2/15/24",
     "doi": "10.1016/j.carbon.2024.118924",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 37,
@@ -330,7 +510,12 @@
     "journal": "Annals of Botany",
     "online_pub_date": "2/9/24",
     "doi": "10.1093/aob/mcae016",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 38,
@@ -339,7 +524,12 @@
     "journal": "Proceedings of the National Academy of Sciences of the United States of America",
     "online_pub_date": "1/16/24",
     "doi": "10.1073/pnas.2317054121",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 39,
@@ -348,7 +538,12 @@
     "journal": "International Journal of Advanced Manufacturing Technology",
     "online_pub_date": "12/28/23",
     "doi": "10.1007/s00170-023-12771-6",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 40,
@@ -357,7 +552,12 @@
     "journal": "Advanced Energy Materials",
     "online_pub_date": "12/26/23",
     "doi": "10.1002/aenm.202303629",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 41,
@@ -366,7 +566,12 @@
     "journal": "Arthropod Systematics & Phylogeny",
     "online_pub_date": "12/13/23",
     "doi": "10.3897/asp.81.e104810",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 42,
@@ -375,7 +580,12 @@
     "journal": "Nature Communications",
     "online_pub_date": "12/11/23",
     "doi": "10.1038/s41467-023-43808-9",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 43,
@@ -384,7 +594,12 @@
     "journal": "Brain Stimulation",
     "online_pub_date": "12/3/23",
     "doi": "10.1016/j.brs.2023.11.014",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 44,
@@ -393,7 +608,12 @@
     "journal": "ACS Applied Energy Materials",
     "online_pub_date": "11/15/23",
     "doi": "10.1021/acsaem.3c02051",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 45,
@@ -402,7 +622,12 @@
     "journal": "Journal of Synchrotron Radiation",
     "online_pub_date": "11/10/23",
     "doi": "10.1107/S1600577523008962",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 46,
@@ -411,7 +636,12 @@
     "journal": "IEEE Transactions on Computational Imaging",
     "online_pub_date": "11/10/23",
     "doi": "10.1109/TCI.2023.3332007",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 47,
@@ -420,7 +650,12 @@
     "journal": "London Journal of Engineering Research",
     "online_pub_date": "11/4/23",
     "doi": "",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 48,
@@ -429,7 +664,12 @@
     "journal": "Combustion and Flame",
     "online_pub_date": "11/2/23",
     "doi": "10.1016/j.combustflame.2023.113132",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2024",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 49,
@@ -438,7 +678,12 @@
     "journal": "Bulletin of Volcanology",
     "online_pub_date": "10/25/23",
     "doi": "10.1007/s00445-023-01677-6",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 50,
@@ -447,7 +692,12 @@
     "journal": "ACS Applied Materials & Interfaces",
     "online_pub_date": "10/3/23",
     "doi": "10.1021/acsami.3c06899",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 51,
@@ -456,7 +706,12 @@
     "journal": "American Journal of Enology and Viticulture",
     "online_pub_date": "10/1/23",
     "doi": "10.5344/ajev.2023.23025",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 52,
@@ -465,7 +720,12 @@
     "journal": "Cement and Concrete Research",
     "online_pub_date": "9/30/23",
     "doi": "10.1016/j.cemconres.2023.107335",
-    "beamlines": "7.0.1.2,8.3.2"
+    "beamlines": "7.0.1.2,8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 53,
@@ -474,7 +734,12 @@
     "journal": "Materials & Design",
     "online_pub_date": "9/27/23",
     "doi": "10.1016/j.matdes.2023.112373",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 54,
@@ -483,7 +748,12 @@
     "journal": "ACS Nano",
     "online_pub_date": "9/19/23",
     "doi": "10.1021/acsnano.3c05470",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 55,
@@ -492,7 +762,12 @@
     "journal": "Journal of Morphology",
     "online_pub_date": "9/3/23",
     "doi": "10.1002/jmor.21639",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 56,
@@ -501,7 +776,12 @@
     "journal": "AoB Plants",
     "online_pub_date": "8/30/23",
     "doi": "10.1093/aobpla/plad062",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 57,
@@ -510,7 +790,12 @@
     "journal": "Frontiers in Earth Science",
     "online_pub_date": "8/15/23",
     "doi": "10.3389/feart.2023.1058984",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 58,
@@ -519,7 +804,12 @@
     "journal": "Chemical Reviews",
     "online_pub_date": "8/14/23",
     "doi": "10.1021/acs.chemrev.2c00873",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 59,
@@ -528,7 +818,12 @@
     "journal": "Science Advances",
     "online_pub_date": "8/11/23",
     "doi": "10.1126/sciadv.adh9020",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 60,
@@ -537,7 +832,12 @@
     "journal": "Nature Communications",
     "online_pub_date": "7/31/23",
     "doi": "10.1038/s41467-023-40375-x",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 61,
@@ -546,7 +846,12 @@
     "journal": "Nature Catalysis",
     "online_pub_date": "7/27/23",
     "doi": "10.1038/s41929-023-00993-6",
-    "beamlines": "12.3.2,8.3.2"
+    "beamlines": "12.3.2,8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 62,
@@ -555,7 +860,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "7/12/23",
     "doi": "10.1149/1945-7111/ace12f",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 63,
@@ -564,7 +874,12 @@
     "journal": "Nature Communications",
     "online_pub_date": "6/3/23",
     "doi": "10.1038/s41467-023-38823-9",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 64,
@@ -573,7 +888,12 @@
     "journal": "JOM Journal of the Minerals, Metals and Materials Society",
     "online_pub_date": "6/2/23",
     "doi": "10.1007/s11837-023-05882-8",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 65,
@@ -582,7 +902,12 @@
     "journal": "Frontiers in Chemistry",
     "online_pub_date": "6/2/23",
     "doi": "10.3389/fchem.2023.1199677",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 66,
@@ -591,7 +916,12 @@
     "journal": "npj Computational Materials",
     "online_pub_date": "6/1/23",
     "doi": "10.1038/s41524-023-01039-y",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 67,
@@ -600,7 +930,12 @@
     "journal": "Polymer Degradation and Stability",
     "online_pub_date": "5/16/23",
     "doi": "10.1016/j.polymdegradstab.2023.110403",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 68,
@@ -609,7 +944,12 @@
     "journal": "Small Structures",
     "online_pub_date": "5/1/23",
     "doi": "10.1002/sstr.202200402",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 69,
@@ -618,7 +958,12 @@
     "journal": "Cement and Concrete Composites",
     "online_pub_date": "4/25/23",
     "doi": "10.1016/j.cemconcomp.2023.105106",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 70,
@@ -627,7 +972,12 @@
     "journal": "Cement and Concrete Research",
     "online_pub_date": "4/11/23",
     "doi": "10.1016/j.cemconres.2023.107164",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 71,
@@ -636,7 +986,12 @@
     "journal": "Nature Communications",
     "online_pub_date": "3/21/23",
     "doi": "10.1038/s41467-023-36942-x",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 72,
@@ -645,7 +1000,12 @@
     "journal": "Applied Energy",
     "online_pub_date": "2/28/23",
     "doi": "10.1016/j.apenergy.2023.120853",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 73,
@@ -654,7 +1014,12 @@
     "journal": "Materials & Design",
     "online_pub_date": "2/21/23",
     "doi": "10.1016/j.matdes.2023.111784",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 74,
@@ -663,7 +1028,12 @@
     "journal": "ACS Applied Materials & Interfaces",
     "online_pub_date": "1/31/23",
     "doi": "10.1021/acsami.2c20787",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 75,
@@ -672,7 +1042,12 @@
     "journal": "Computational Materials Science",
     "online_pub_date": "1/18/23",
     "doi": "10.1016/j.commatsci.2023.112021",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 76,
@@ -681,7 +1056,12 @@
     "journal": "Journal of Power Sources",
     "online_pub_date": "1/12/23",
     "doi": "10.1016/j.jpowsour.2022.232606",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2023",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 77,
@@ -690,7 +1070,12 @@
     "journal": "Journal of Materials Chemistry A",
     "online_pub_date": "10/27/22",
     "doi": "10.1039/d2ta04847g",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 78,
@@ -699,7 +1084,12 @@
     "journal": "Communications Materials",
     "online_pub_date": "10/21/22",
     "doi": "10.1038/s43246-022-00296-6",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 79,
@@ -708,7 +1098,12 @@
     "journal": "IEEE Transactions on Computational Imaging",
     "online_pub_date": "10/17/22",
     "doi": "10.1109/TCI.2022.3215096",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 80,
@@ -717,7 +1112,12 @@
     "journal": "Physical Chemistry Chemical Physics",
     "online_pub_date": "9/16/22",
     "doi": "10.1039/D2CP02622H",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 81,
@@ -726,7 +1126,12 @@
     "journal": "Frontiers in Plant Science",
     "online_pub_date": "9/13/22",
     "doi": "10.3389/fpls.2022.893140",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 82,
@@ -735,7 +1140,12 @@
     "journal": "ACS Applied Energy Materials",
     "online_pub_date": "7/27/22",
     "doi": "10.1021/acsaem.2c00655",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 83,
@@ -744,7 +1154,12 @@
     "journal": "Geology",
     "online_pub_date": "7/27/22",
     "doi": "10.1130/G50180.1",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 84,
@@ -753,7 +1168,12 @@
     "journal": "Plant, Cell and Environment",
     "online_pub_date": "6/23/22",
     "doi": "10.1111/pce.14381",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 85,
@@ -762,7 +1182,12 @@
     "journal": "Journal of Materials Processing Technology",
     "online_pub_date": "6/10/22",
     "doi": "10.1016/j.jmatprotec.2022.117656",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 86,
@@ -771,7 +1196,12 @@
     "journal": "Plant, Cell and Environment",
     "online_pub_date": "6/1/22",
     "doi": "10.1111/pce.14370",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 87,
@@ -780,7 +1210,12 @@
     "journal": "Experimental Eye Research",
     "online_pub_date": "5/27/22",
     "doi": "10.1016/j.exer.2022.109132",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 88,
@@ -789,7 +1224,12 @@
     "journal": "Additive Manufacturing",
     "online_pub_date": "5/13/22",
     "doi": "10.1016/j.addma.2022.102735",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 89,
@@ -798,7 +1238,12 @@
     "journal": "Cement and Concrete Research",
     "online_pub_date": "4/10/22",
     "doi": "10.1016/j.cemconres.2022.106799",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 90,
@@ -807,7 +1252,12 @@
     "journal": "Composites Science and Technology",
     "online_pub_date": "4/9/22",
     "doi": "10.1016/j.compscitech.2022.109453",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 91,
@@ -816,7 +1266,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "4/4/22",
     "doi": "10.1149/1945-7111/ac613b",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 92,
@@ -825,7 +1280,12 @@
     "journal": "Advances in Artificial Intelligence and Machine Learning",
     "online_pub_date": "3/31/22",
     "doi": "10.54364/AAIML.2022.1119",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 93,
@@ -834,7 +1294,12 @@
     "journal": "The Journal of Supercritical Fluids",
     "online_pub_date": "3/30/22",
     "doi": "10.1016/j.supflu.2022.105583",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 94,
@@ -843,7 +1308,12 @@
     "journal": "Materials & Design",
     "online_pub_date": "3/25/22",
     "doi": "10.1016/j.matdes.2022.110533",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 95,
@@ -852,7 +1322,12 @@
     "journal": "ACS Energy Letters",
     "online_pub_date": "2/24/22",
     "doi": "10.1021/acsenergylett.2c00255",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 96,
@@ -861,7 +1336,12 @@
     "journal": "Applied Catalysis B: Environmental",
     "online_pub_date": "2/18/22",
     "doi": "10.1016/j.apcatb.2022.121213",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 97,
@@ -870,7 +1350,12 @@
     "journal": "Journal of Composites Science",
     "online_pub_date": "2/18/22",
     "doi": "10.3390/jcs6020060",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 98,
@@ -879,7 +1364,12 @@
     "journal": "Materials Today",
     "online_pub_date": "2/16/22",
     "doi": "10.1016/j.mattod.2022.01.016",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 99,
@@ -888,7 +1378,12 @@
     "journal": "Plant, Cell and Environment",
     "online_pub_date": "2/10/22",
     "doi": "10.1111/pce.14287",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 100,
@@ -897,7 +1392,12 @@
     "journal": "Annals of Botany",
     "online_pub_date": "2/10/22",
     "doi": "10.1093/aob/mcac016",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 101,
@@ -906,7 +1406,12 @@
     "journal": "Composites Science and Technology",
     "online_pub_date": "1/26/22",
     "doi": "10.1016/j.compscitech.2022.109288",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 102,
@@ -915,7 +1420,12 @@
     "journal": "Journal of the American Ceramic Society",
     "online_pub_date": "1/20/22",
     "doi": "10.1111/jace.18326",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 103,
@@ -924,7 +1434,12 @@
     "journal": "Journal of Synchrotron Radiation",
     "online_pub_date": "1/19/22",
     "doi": "10.1107/S160057752101287X",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 104,
@@ -933,7 +1448,12 @@
     "journal": "New Phytologist",
     "online_pub_date": "1/17/22",
     "doi": "10.1111/nph.17971",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 105,
@@ -942,7 +1462,12 @@
     "journal": "PhytoFrontiers",
     "online_pub_date": "1/12/22",
     "doi": "10.1094/PHYTOFR-06-21-0041-R",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 106,
@@ -951,7 +1476,12 @@
     "journal": "New Phytologist",
     "online_pub_date": "1/4/22",
     "doi": "10.1111/nph.17874",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 107,
@@ -960,7 +1490,12 @@
     "journal": "ACS Applied Energy Materials",
     "online_pub_date": "12/22/21",
     "doi": "10.1021/acsaem.1c03288",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 108,
@@ -969,7 +1504,12 @@
     "journal": "SOIL",
     "online_pub_date": "12/21/21",
     "doi": "10.5194/soil-7-811-2021",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 109,
@@ -978,7 +1518,12 @@
     "journal": "Materials Science and Engineering A",
     "online_pub_date": "12/10/21",
     "doi": "10.1016/j.msea.2021.142427",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 110,
@@ -987,7 +1532,12 @@
     "journal": "Frontiers in Earth Science",
     "online_pub_date": "12/10/21",
     "doi": "10.3389/feart.2021.742895",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 111,
@@ -996,7 +1546,12 @@
     "journal": "Bulletin of Volcanology",
     "online_pub_date": "12/6/21",
     "doi": "10.1007/s00445-021-01514-8",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 112,
@@ -1005,7 +1560,12 @@
     "journal": "Computational Materials Science",
     "online_pub_date": "12/3/21",
     "doi": "10.1016/j.commatsci.2021.111030",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 113,
@@ -1014,7 +1574,12 @@
     "journal": "Granular Matter",
     "online_pub_date": "11/11/21",
     "doi": "10.1007/s10035-021-01169-4",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 114,
@@ -1023,7 +1588,12 @@
     "journal": "Journal of Volcanology and Geothermal Research",
     "online_pub_date": "10/31/21",
     "doi": "10.1016/j.jvolgeores.2021.107418",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 115,
@@ -1032,7 +1602,12 @@
     "journal": "Integrative Organismal Biology",
     "online_pub_date": "10/13/21",
     "doi": "10.1093/iob/obab027",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 116,
@@ -1041,7 +1616,12 @@
     "journal": "New Phytologist",
     "online_pub_date": "10/6/21",
     "doi": "10.1111/nph.17772",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 117,
@@ -1050,7 +1630,12 @@
     "journal": "Advanced Science",
     "online_pub_date": "9/26/21",
     "doi": "10.1002/advs.202102950",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 118,
@@ -1059,7 +1644,12 @@
     "journal": "eLife",
     "online_pub_date": "9/16/21",
     "doi": "10.7554/eLife.68920",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 119,
@@ -1068,7 +1658,12 @@
     "journal": "The Planetary Science Journal",
     "online_pub_date": "9/6/21",
     "doi": "10.3847/PSJ/ac1749",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 120,
@@ -1077,7 +1672,12 @@
     "journal": "Scientific Reports",
     "online_pub_date": "8/31/21",
     "doi": "10.1038/s41598-021-96867-7",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 121,
@@ -1086,7 +1686,12 @@
     "journal": "Composites Science and Technology",
     "online_pub_date": "8/19/21",
     "doi": "10.1016/j.compscitech.2021.109004",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 122,
@@ -1095,7 +1700,12 @@
     "journal": "Plant Physiology",
     "online_pub_date": "8/2/21",
     "doi": "10.1093/plphys/kiab361",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 123,
@@ -1104,7 +1714,12 @@
     "journal": "Advanced Energy Materials",
     "online_pub_date": "7/29/21",
     "doi": "10.1002/aenm.202101794",
-    "beamlines": "12.3.2,8.3.2"
+    "beamlines": "12.3.2,8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 124,
@@ -1113,7 +1728,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "7/26/21",
     "doi": "10.1149/1945-7111/ac154e",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 125,
@@ -1122,7 +1742,12 @@
     "journal": "Journal of the American Ceramic Society",
     "online_pub_date": "7/17/21",
     "doi": "10.1111/jace.18037",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2022",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 126,
@@ -1131,7 +1756,12 @@
     "journal": "Polymers",
     "online_pub_date": "7/8/21",
     "doi": "10.3390/polym13142239",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 127,
@@ -1140,7 +1770,12 @@
     "journal": "Materials & Design",
     "online_pub_date": "6/19/21",
     "doi": "10.1016/j.matdes.2021.109899",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 128,
@@ -1149,7 +1784,12 @@
     "journal": "ACS Nano",
     "online_pub_date": "6/10/21",
     "doi": "10.1021/acsnano.1c02942",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 129,
@@ -1158,7 +1798,12 @@
     "journal": "ACS Applied Materials & Interfaces",
     "online_pub_date": "6/7/21",
     "doi": "10.1021/acsami.1c04582",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 130,
@@ -1167,7 +1812,12 @@
     "journal": "Plants",
     "online_pub_date": "6/1/21",
     "doi": "10.3390/plants10061121",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 131,
@@ -1176,7 +1826,12 @@
     "journal": "Fuel",
     "online_pub_date": "5/9/21",
     "doi": "10.1016/j.fuel.2021.120987",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 132,
@@ -1185,7 +1840,12 @@
     "journal": "Macromolecules",
     "online_pub_date": "4/27/21",
     "doi": "10.1021/acs.macromol.1c00425",
-    "beamlines": "8.3.2,11.0.1.2"
+    "beamlines": "8.3.2,11.0.1.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 133,
@@ -1194,7 +1854,12 @@
     "journal": "International Journal of Greenhouse Gas Control",
     "online_pub_date": "4/24/21",
     "doi": "10.1016/j.ijggc.2021.103340",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 134,
@@ -1203,7 +1868,12 @@
     "journal": "ACS Applied Materials & Interfaces",
     "online_pub_date": "4/21/21",
     "doi": "10.1021/acsami.1c00849",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 135,
@@ -1212,7 +1882,12 @@
     "journal": "Nature",
     "online_pub_date": "4/7/21",
     "doi": "10.1038/s41586-021-03377-7",
-    "beamlines": "12.2.1,7.3.3,8.3.2"
+    "beamlines": "12.2.1,7.3.3,8.3.2",
+    "year": "2021",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 136,
@@ -1221,7 +1896,12 @@
     "journal": "Carbon",
     "online_pub_date": "4/6/21",
     "doi": "10.1016/j.carbon.2021.04.017",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 137,
@@ -1230,7 +1910,12 @@
     "journal": "Materials Today",
     "online_pub_date": "3/31/21",
     "doi": "10.1016/j.mattod.2021.02.006",
-    "beamlines": "12.2.2,8.3.2"
+    "beamlines": "12.2.2,8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 138,
@@ -1239,7 +1924,12 @@
     "journal": "Nature Geoscience",
     "online_pub_date": "3/29/21",
     "doi": "10.1038/s41561-021-00709-0",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 139,
@@ -1248,7 +1938,12 @@
     "journal": "Journal of Morphology",
     "online_pub_date": "3/12/21",
     "doi": "10.1002/jmor.21347",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 140,
@@ -1257,7 +1952,12 @@
     "journal": "Proceedings of the Royal Society B: Biological Sciences",
     "online_pub_date": "2/24/21",
     "doi": "10.1098/rspb.2020.3145",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 141,
@@ -1266,7 +1966,12 @@
     "journal": "Lubricants",
     "online_pub_date": "2/20/21",
     "doi": "10.3390/lubricants9020020",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 142,
@@ -1275,7 +1980,12 @@
     "journal": "Plant Physiology",
     "online_pub_date": "2/12/21",
     "doi": "10.1093/plphys/kiab045",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 143,
@@ -1284,7 +1994,12 @@
     "journal": "ACS Applied Energy Materials",
     "online_pub_date": "2/9/21",
     "doi": "10.1021/acsaem.0c02607",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 144,
@@ -1293,7 +2008,12 @@
     "journal": "Journal of the European Ceramic Society",
     "online_pub_date": "2/8/21",
     "doi": "10.1016/j.jeurceramsoc.2021.01.030",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 145,
@@ -1302,7 +2022,12 @@
     "journal": "Energies",
     "online_pub_date": "1/27/21",
     "doi": "10.3390/en14030641",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 146,
@@ -1311,7 +2036,12 @@
     "journal": "Journal of Power Sources",
     "online_pub_date": "1/20/21",
     "doi": "10.1016/j.jpowsour.2020.229439",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 147,
@@ -1320,7 +2050,12 @@
     "journal": "New Phytologist",
     "online_pub_date": "1/18/21",
     "doi": "10.1111/nph.17212",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 148,
@@ -1329,7 +2064,12 @@
     "journal": "Cement and Concrete Research",
     "online_pub_date": "1/16/21",
     "doi": "10.1016/j.cemconres.2020.106321",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 149,
@@ -1338,7 +2078,12 @@
     "journal": "Geomechanics and Geophysics for Geo-Energy and Geo-Resources",
     "online_pub_date": "1/12/21",
     "doi": "10.1007/s40948-021-00215-y",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 150,
@@ -1347,7 +2092,12 @@
     "journal": "AoB Plants",
     "online_pub_date": "1/9/21",
     "doi": "10.1093/aobpla/plab003",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 151,
@@ -1356,7 +2106,12 @@
     "journal": "Journal of Petroleum Science and Engineering",
     "online_pub_date": "1/9/21",
     "doi": "10.1016/j.petrol.2021.108375",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 152,
@@ -1365,7 +2120,12 @@
     "journal": "Proceedings of the National Academy of Sciences of the United States of America",
     "online_pub_date": "12/14/20",
     "doi": "10.1073/pnas.2001337117",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 153,
@@ -1374,7 +2134,12 @@
     "journal": "Journal of Experimental Botany",
     "online_pub_date": "12/11/20",
     "doi": "10.1093/jxb/eraa392",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 154,
@@ -1383,7 +2148,12 @@
     "journal": "Composites Part A: Applied Science and Manufacturing",
     "online_pub_date": "12/8/20",
     "doi": "10.1016/j.compositesa.2020.106200",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 155,
@@ -1392,7 +2162,12 @@
     "journal": "Scientific Reports",
     "online_pub_date": "11/30/20",
     "doi": "10.1038/s41598-020-77796-3",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 156,
@@ -1401,7 +2176,12 @@
     "journal": "Molecular Plant Pathology",
     "online_pub_date": "11/20/20",
     "doi": "10.1111/mpp.13016",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 157,
@@ -1410,7 +2190,12 @@
     "journal": "Journal of Synchrotron Radiation",
     "online_pub_date": "11/13/20",
     "doi": "10.1107/S1600577520013314",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 158,
@@ -1419,7 +2204,12 @@
     "journal": "iScience",
     "online_pub_date": "11/9/20",
     "doi": "10.1016/j.isci.2020.101783",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 159,
@@ -1428,7 +2218,12 @@
     "journal": "Cement and Concrete Research",
     "online_pub_date": "11/7/20",
     "doi": "10.1016/j.cemconres.2020.106282",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 160,
@@ -1437,7 +2232,12 @@
     "journal": "Canadian Journal of Zoology",
     "online_pub_date": "10/29/20",
     "doi": "10.1139/cjz-2019-0295",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 161,
@@ -1446,7 +2246,12 @@
     "journal": "Acta Materialia",
     "online_pub_date": "10/21/20",
     "doi": "10.1016/j.actamat.2020.10.036",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 162,
@@ -1455,7 +2260,12 @@
     "journal": "Nature",
     "online_pub_date": "10/21/20",
     "doi": "10.1038/s41586-020-2813-8",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 163,
@@ -1464,7 +2274,12 @@
     "journal": "Frontiers in Plant Science",
     "online_pub_date": "10/21/20",
     "doi": "10.3389/fpls.2020.567918",
-    "beamlines": "10.3.2,8.3.2"
+    "beamlines": "10.3.2,8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 164,
@@ -1473,7 +2288,12 @@
     "journal": "Additive Manufacturing",
     "online_pub_date": "10/15/20",
     "doi": "10.1016/j.addma.2020.101659",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 165,
@@ -1482,7 +2302,12 @@
     "journal": "3D Printing and Additive Manufacturing",
     "online_pub_date": "10/9/20",
     "doi": "10.1089/3dp.2019.0200",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 166,
@@ -1491,7 +2316,12 @@
     "journal": "Journal of Physics: Energy",
     "online_pub_date": "10/7/20",
     "doi": "10.1088/2515-7655/abb783",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 167,
@@ -1500,7 +2330,12 @@
     "journal": "Insects",
     "online_pub_date": "9/23/20",
     "doi": "10.3390/insects11100651",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 168,
@@ -1509,7 +2344,12 @@
     "journal": "ACS Applied Energy Materials",
     "online_pub_date": "9/14/20",
     "doi": "10.1021/acsaem.0c01175",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 169,
@@ -1518,7 +2358,12 @@
     "journal": "Journal of Materials Science",
     "online_pub_date": "9/8/20",
     "doi": "10.1007/s10853-020-05148-7",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 170,
@@ -1527,7 +2372,12 @@
     "journal": "Computational Materials Science",
     "online_pub_date": "8/29/20",
     "doi": "10.1016/j.commatsci.2020.109956",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 171,
@@ -1536,7 +2386,12 @@
     "journal": "Geology",
     "online_pub_date": "8/19/20",
     "doi": "10.1130/G47811.1",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 172,
@@ -1545,7 +2400,12 @@
     "journal": "American Journal of Botany",
     "online_pub_date": "8/8/20",
     "doi": "10.1002/ajb2.1517",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 173,
@@ -1554,7 +2414,12 @@
     "journal": "Additive Manufacturing",
     "online_pub_date": "8/4/20",
     "doi": "10.1016/j.addma.2020.101464",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 174,
@@ -1563,7 +2428,12 @@
     "journal": "Applications in Plant Sciences",
     "online_pub_date": "7/31/20",
     "doi": "10.1002/aps3.11380",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 175,
@@ -1572,7 +2442,12 @@
     "journal": "Journal of Power Sources",
     "online_pub_date": "7/27/20",
     "doi": "10.1016/j.jpowsour.2020.228618",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 176,
@@ -1581,7 +2456,12 @@
     "journal": "Nature Communications",
     "online_pub_date": "7/16/20",
     "doi": "10.1038/s41467-020-17370-7",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 177,
@@ -1590,7 +2470,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "6/25/20",
     "doi": "10.1149/1945-7111/ab9d62",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 178,
@@ -1599,7 +2484,12 @@
     "journal": "Journal of the Mechanical Behavior of Biomedical Materials",
     "online_pub_date": "6/25/20",
     "doi": "10.1016/j.jmbbm.2020.103887",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 179,
@@ -1608,7 +2498,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "6/24/20",
     "doi": "10.1149/1945-7111/ab9d13",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 180,
@@ -1617,7 +2512,12 @@
     "journal": "Frontiers in Earth Science",
     "online_pub_date": "6/16/20",
     "doi": "10.3389/feart.2020.00207",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 181,
@@ -1626,7 +2526,12 @@
     "journal": "Marine Biology Research",
     "online_pub_date": "6/3/20",
     "doi": "10.1080/17451000.2020.1761027",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 182,
@@ -1635,7 +2540,12 @@
     "journal": "Materials Today",
     "online_pub_date": "5/22/20",
     "doi": "10.1016/j.mattod.2020.04.028",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 183,
@@ -1644,7 +2554,12 @@
     "journal": "Additive Manufacturing",
     "online_pub_date": "5/20/20",
     "doi": "10.1016/j.addma.2020.101336",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 184,
@@ -1653,7 +2568,12 @@
     "journal": "Chemosphere",
     "online_pub_date": "5/10/20",
     "doi": "10.1016/j.chemosphere.2020.126951",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 185,
@@ -1662,7 +2582,12 @@
     "journal": "Environmental Science & Technology",
     "online_pub_date": "5/6/20",
     "doi": "10.1021/acs.est.0c01755",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 186,
@@ -1671,7 +2596,12 @@
     "journal": "Pediatric Dentistry",
     "online_pub_date": "5/1/20",
     "doi": "",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 187,
@@ -1680,7 +2610,12 @@
     "journal": "Nature Materials",
     "online_pub_date": "4/27/20",
     "doi": "10.1038/s41563-020-0655-2",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 188,
@@ -1689,7 +2624,12 @@
     "journal": "Journal of Bone and Mineral Research",
     "online_pub_date": "4/13/20",
     "doi": "10.1002/jbmr.4023",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 189,
@@ -1698,7 +2638,12 @@
     "journal": "Plant Journal",
     "online_pub_date": "4/11/20",
     "doi": "10.1111/tpj.14770",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 190,
@@ -1707,7 +2652,12 @@
     "journal": "Frontiers in Materials",
     "online_pub_date": "4/8/20",
     "doi": "10.3389/fmats.2020.00075",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 191,
@@ -1716,7 +2666,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "3/19/20",
     "doi": "10.1149/1945-7111/ab7c6c",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 192,
@@ -1725,7 +2680,12 @@
     "journal": "New Phytologist",
     "online_pub_date": "3/14/20",
     "doi": "10.1111/nph.16542",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2021",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 193,
@@ -1734,7 +2694,12 @@
     "journal": "MRS Advances",
     "online_pub_date": "2/24/20",
     "doi": "10.1557/adv.2020.131",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 194,
@@ -1743,7 +2708,12 @@
     "journal": "Earth and Space Science",
     "online_pub_date": "2/3/20",
     "doi": "10.1029/2019EA000876",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 195,
@@ -1752,7 +2722,12 @@
     "journal": "Journal of the American Ceramic Society",
     "online_pub_date": "1/15/20",
     "doi": "10.1111/jace.17017",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 196,
@@ -1761,7 +2736,12 @@
     "journal": "Journal of Materials Chemistry C",
     "online_pub_date": "1/11/20",
     "doi": "10.1039/C9TC05811G",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 197,
@@ -1770,7 +2750,12 @@
     "journal": "Journal of Applied Electrochemistry",
     "online_pub_date": "1/4/20",
     "doi": "10.1007/s10800-019-01378-z",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 198,
@@ -1779,7 +2764,12 @@
     "journal": "ACS Applied Energy Materials",
     "online_pub_date": "1/2/20",
     "doi": "10.1021/acsaem.9b02101",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 199,
@@ -1788,7 +2778,12 @@
     "journal": "Journal of Petroleum Science and Engineering",
     "online_pub_date": "12/27/19",
     "doi": "10.1016/j.petrol.2019.106861",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 200,
@@ -1797,7 +2792,12 @@
     "journal": "ACS Applied Materials & Interfaces",
     "online_pub_date": "12/20/19",
     "doi": "10.1021/acsami.9b11780",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 201,
@@ -1806,7 +2806,12 @@
     "journal": "Nature Communications",
     "online_pub_date": "12/10/19",
     "doi": "10.1038/s41467-019-13673-6",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 202,
@@ -1815,7 +2820,12 @@
     "journal": "ACS Sustainable Chemistry & Engineering",
     "online_pub_date": "12/6/19",
     "doi": "10.1021/acssuschemeng.9b05880",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 203,
@@ -1824,7 +2834,12 @@
     "journal": "Thin Solid Films",
     "online_pub_date": "12/5/19",
     "doi": "10.1016/j.tsf.2019.137739",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 204,
@@ -1833,7 +2848,12 @@
     "journal": "Sustainable Energy & Fuels",
     "online_pub_date": "12/2/19",
     "doi": "10.1039/C9SE00364A",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 205,
@@ -1842,7 +2862,12 @@
     "journal": "ACS Applied Materials & Interfaces",
     "online_pub_date": "11/26/19",
     "doi": "10.1021/acsami.9b15606",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 206,
@@ -1851,7 +2876,12 @@
     "journal": "Materials & Design",
     "online_pub_date": "11/23/19",
     "doi": "10.1016/j.matdes.2019.108382",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 207,
@@ -1860,7 +2890,12 @@
     "journal": "Cement and Concrete Research",
     "online_pub_date": "11/22/19",
     "doi": "10.1016/j.cemconres.2019.105824",
-    "beamlines": "8.3.2,7.0.1.2"
+    "beamlines": "8.3.2,7.0.1.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 208,
@@ -1869,7 +2904,12 @@
     "journal": "ACS Applied Energy Materials",
     "online_pub_date": "11/7/19",
     "doi": "10.1021/acsaem.9b01685",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 209,
@@ -1878,7 +2918,12 @@
     "journal": "Materials Horizons",
     "online_pub_date": "10/15/19",
     "doi": "10.1039/C9MH01224A",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 210,
@@ -1887,7 +2932,12 @@
     "journal": "Frontiers in Earth Science",
     "online_pub_date": "9/27/19",
     "doi": "10.3389/feart.2019.00250",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 211,
@@ -1896,7 +2946,12 @@
     "journal": "Bone",
     "online_pub_date": "8/21/19",
     "doi": "10.1016/j.bone.2019.115043",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 212,
@@ -1905,7 +2960,12 @@
     "journal": "Journal of Materials Chemistry A",
     "online_pub_date": "8/20/19",
     "doi": "10.1039/C9TA06520B",
-    "beamlines": "8.3.2,12.3.2"
+    "beamlines": "8.3.2,12.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 213,
@@ -1914,7 +2974,12 @@
     "journal": "Zoological Journal of the Linnean Society",
     "online_pub_date": "8/14/19",
     "doi": "10.1093/zoolinnean/zlz060",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 214,
@@ -1923,7 +2988,12 @@
     "journal": "Micromachines",
     "online_pub_date": "7/31/19",
     "doi": "10.3390/mi10080506",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 215,
@@ -1932,7 +3002,12 @@
     "journal": "Bone Research",
     "online_pub_date": "7/29/19",
     "doi": "10.1038/s41413-019-0070-y",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 216,
@@ -1941,7 +3016,12 @@
     "journal": "Annals of Botany",
     "online_pub_date": "7/23/19",
     "doi": "10.1093/aob/mcz076",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 217,
@@ -1950,7 +3030,12 @@
     "journal": "Icarus",
     "online_pub_date": "7/20/19",
     "doi": "10.1016/j.icarus.2019.07.015",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 218,
@@ -1959,7 +3044,12 @@
     "journal": "American Journal of Botany",
     "online_pub_date": "7/11/19",
     "doi": "10.1002/ajb2.1323",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 219,
@@ -1968,7 +3058,12 @@
     "journal": "Vadose Zone Journal",
     "online_pub_date": "6/27/19",
     "doi": "10.2136/vzj2018.12.0211",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 220,
@@ -1977,7 +3072,12 @@
     "journal": "Nano Letters",
     "online_pub_date": "6/25/19",
     "doi": "10.1021/acs.nanolett.9b01805",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 221,
@@ -1986,7 +3086,12 @@
     "journal": "Geochemistry, Geophysics, Geosystems",
     "online_pub_date": "6/22/19",
     "doi": "10.1029/2019GC008304",
-    "beamlines": "12.3.2,8.3.2"
+    "beamlines": "12.3.2,8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 222,
@@ -1995,7 +3100,12 @@
     "journal": "Angewandte Chemie International Edition",
     "online_pub_date": "6/21/19",
     "doi": "10.1002/anie.201903553",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 223,
@@ -2004,7 +3114,12 @@
     "journal": "Bulletin of Volcanology",
     "online_pub_date": "6/20/19",
     "doi": "10.1007/s00445-019-1298-5",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 224,
@@ -2013,7 +3128,12 @@
     "journal": "Advanced Functional Materials",
     "online_pub_date": "6/10/19",
     "doi": "10.1002/adfm.201902238",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 225,
@@ -2022,7 +3142,12 @@
     "journal": "Geology",
     "online_pub_date": "5/22/19",
     "doi": "10.1130/G46275.1",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 226,
@@ -2031,7 +3156,12 @@
     "journal": "Journal of the European Ceramic Society",
     "online_pub_date": "5/19/19",
     "doi": "10.1016/j.jeurceramsoc.2019.05.027",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 227,
@@ -2040,7 +3170,12 @@
     "journal": "International Journal of Greenhouse Gas Control",
     "online_pub_date": "5/17/19",
     "doi": "10.1016/j.ijggc.2019.05.008",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 228,
@@ -2049,7 +3184,12 @@
     "journal": "ACS Applied Energy Materials",
     "online_pub_date": "4/16/19",
     "doi": "10.1021/acsaem.9b00292",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 229,
@@ -2058,7 +3198,12 @@
     "journal": "Acta Biomaterialia",
     "online_pub_date": "4/3/19",
     "doi": "10.1016/j.actbio.2019.04.003",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 230,
@@ -2067,7 +3212,12 @@
     "journal": "Plant Physiology",
     "online_pub_date": "4/2/19",
     "doi": "10.1104/pp.18.01303",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 231,
@@ -2076,7 +3226,12 @@
     "journal": "Acta Zoologica",
     "online_pub_date": "3/18/19",
     "doi": "10.1111/azo.12289",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2020",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 232,
@@ -2085,7 +3240,12 @@
     "journal": "IEEE Computer Graphics and Applications",
     "online_pub_date": "3/8/19",
     "doi": "10.1109/MCG.2018.2880818",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 233,
@@ -2094,7 +3254,12 @@
     "journal": "Energy & Fuels",
     "online_pub_date": "2/21/19",
     "doi": "10.1021/acs.energyfuels.8b04294",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 234,
@@ -2103,7 +3268,12 @@
     "journal": "Journal of Morphology",
     "online_pub_date": "1/17/19",
     "doi": "10.1002/jmor.20939",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 235,
@@ -2112,7 +3282,12 @@
     "journal": "Progress in Materials Science",
     "online_pub_date": "1/10/19",
     "doi": "10.1016/j.pmatsci.2019.01.002",
-    "beamlines": "8.3.2,7.3.3"
+    "beamlines": "8.3.2,7.3.3",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 236,
@@ -2121,7 +3296,12 @@
     "journal": "Journal of Dynamic Behavior of Materials",
     "online_pub_date": "1/2/19",
     "doi": "10.1007/s40870-018-00179-3",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 237,
@@ -2130,7 +3310,12 @@
     "journal": "Catalysis Today",
     "online_pub_date": "12/11/18",
     "doi": "10.1016/j.cattod.2018.12.012",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 238,
@@ -2139,7 +3324,12 @@
     "journal": "Composites Part A: Applied Science and Manufacturing",
     "online_pub_date": "11/22/18",
     "doi": "10.1016/j.compositesa.2018.11.021",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 239,
@@ -2148,7 +3338,12 @@
     "journal": "The Journal of Physical Chemistry C",
     "online_pub_date": "11/13/18",
     "doi": "10.1021/acs.jpcc.8b06355",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 240,
@@ -2157,7 +3352,12 @@
     "journal": "Functional Plant Biology",
     "online_pub_date": "11/12/18",
     "doi": "10.1071/FP18110",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 241,
@@ -2166,7 +3366,12 @@
     "journal": "International Journal of Heat and Mass Transfer",
     "online_pub_date": "11/9/18",
     "doi": "10.1016/j.ijheatmasstransfer.2018.11.006",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 242,
@@ -2175,7 +3380,12 @@
     "journal": "Plant Physiology",
     "online_pub_date": "10/26/18",
     "doi": "10.1104/pp.18.00743",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 243,
@@ -2184,7 +3394,12 @@
     "journal": "Trends in Plant Science",
     "online_pub_date": "10/9/18",
     "doi": "10.1016/j.tplants.2018.09.005",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 244,
@@ -2193,7 +3408,12 @@
     "journal": "ACS Applied Energy Materials",
     "online_pub_date": "9/28/18",
     "doi": "10.1021/acsaem.8b01059",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 245,
@@ -2202,7 +3422,12 @@
     "journal": "Electrochimica Acta",
     "online_pub_date": "9/15/18",
     "doi": "10.1016/j.electacta.2018.09.089",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 246,
@@ -2211,7 +3436,12 @@
     "journal": "Chemical Communications",
     "online_pub_date": "8/29/18",
     "doi": "10.1039/C8CC05368E",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 247,
@@ -2220,7 +3450,12 @@
     "journal": "International Journal of Heat and Mass Transfer",
     "online_pub_date": "7/30/18",
     "doi": "10.1016/j.ijheatmasstransfer.2018.07.030",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 248,
@@ -2229,7 +3464,12 @@
     "journal": "Plant Physiology",
     "online_pub_date": "7/24/18",
     "doi": "10.1104/pp.18.00550",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 249,
@@ -2238,7 +3478,12 @@
     "journal": "Sustainable Energy & Fuels",
     "online_pub_date": "7/20/18",
     "doi": "10.1039/C8SE00261D",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 250,
@@ -2247,7 +3492,12 @@
     "journal": "Tree Physiology",
     "online_pub_date": "5/30/18",
     "doi": "10.1093/treephys/tpy049",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 251,
@@ -2256,7 +3506,12 @@
     "journal": "Materials Today Energy",
     "online_pub_date": "5/25/18",
     "doi": "10.1016/j.mtener.2018.05.011",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 252,
@@ -2265,7 +3520,12 @@
     "journal": "Electrochimica Acta",
     "online_pub_date": "4/25/18",
     "doi": "10.1016/j.electacta.2018.04.144",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 253,
@@ -2274,7 +3534,12 @@
     "journal": "Fuel Processing Technology",
     "online_pub_date": "4/5/18",
     "doi": "10.1016/j.fuproc.2018.03.023",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 254,
@@ -2283,7 +3548,12 @@
     "journal": "Plant, Cell and Environment",
     "online_pub_date": "3/30/18",
     "doi": "10.1111/pce.13205",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 255,
@@ -2292,7 +3562,12 @@
     "journal": "SoftwareX",
     "online_pub_date": "3/27/18",
     "doi": "10.1016/j.softx.2018.03.001",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 256,
@@ -2301,7 +3576,12 @@
     "journal": "New Phytologist",
     "online_pub_date": "3/8/18",
     "doi": "10.1111/nph.15068",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 257,
@@ -2310,7 +3590,12 @@
     "journal": "Earth and Planetary Science Letters",
     "online_pub_date": "3/7/18",
     "doi": "10.1016/j.epsl.2018.02.025",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 258,
@@ -2319,7 +3604,12 @@
     "journal": "Journal of Volcanology and Geothermal Research",
     "online_pub_date": "3/2/18",
     "doi": "10.1016/j.jvolgeores.2018.02.019",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 259,
@@ -2328,7 +3618,12 @@
     "journal": "New Phytologist",
     "online_pub_date": "2/20/18",
     "doi": "10.1111/nph.15032",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 260,
@@ -2337,7 +3632,12 @@
     "journal": "ACS Central Science",
     "online_pub_date": "1/9/18",
     "doi": "10.1021/acscentsci.8b00700",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 261,
@@ -2346,7 +3646,12 @@
     "journal": "Composites Part A: Applied Science and Manufacturing",
     "online_pub_date": "12/24/17",
     "doi": "10.1016/j.compositesa.2017.12.024",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 262,
@@ -2355,7 +3660,12 @@
     "journal": "Journal of Structural Geology",
     "online_pub_date": "12/16/17",
     "doi": "10.1016/j.jsg.2017.12.009",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 263,
@@ -2364,7 +3674,12 @@
     "journal": "Cell Reports",
     "online_pub_date": "11/28/17",
     "doi": "10.1016/j.celrep.2017.10.115",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 264,
@@ -2373,7 +3688,12 @@
     "journal": "Acta Materialia",
     "online_pub_date": "10/31/17",
     "doi": "10.1016/j.actamat.2017.10.054",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 265,
@@ -2382,7 +3702,12 @@
     "journal": "International Journal of Greenhouse Gas Control",
     "online_pub_date": "10/21/17",
     "doi": "10.1016/j.ijggc.2017.10.002",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 266,
@@ -2391,7 +3716,12 @@
     "journal": "ACS Nano",
     "online_pub_date": "10/20/17",
     "doi": "10.1021/acsnano.7b05044",
-    "beamlines": "8.3.2,11.0.1.1,12.3.2"
+    "beamlines": "8.3.2,11.0.1.1,12.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 267,
@@ -2400,7 +3730,12 @@
     "journal": "Advanced Functional Materials",
     "online_pub_date": "9/27/17",
     "doi": "10.1002/adfm.201702425",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 268,
@@ -2409,7 +3744,12 @@
     "journal": "New Phytologist",
     "online_pub_date": "9/20/17",
     "doi": "10.1111/nph.14811",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 269,
@@ -2418,7 +3758,12 @@
     "journal": "American Journal of Botany",
     "online_pub_date": "9/18/17",
     "doi": "10.3732/ajb.1700199",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 270,
@@ -2427,7 +3772,12 @@
     "journal": "Journal of Biomechanics",
     "online_pub_date": "9/14/17",
     "doi": "10.1016/j.jbiomech.2017.09.003",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 271,
@@ -2436,7 +3786,12 @@
     "journal": "Energy Procedia",
     "online_pub_date": "8/18/17",
     "doi": "10.1016/j.egypro.2017.03.1628",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 272,
@@ -2445,7 +3800,12 @@
     "journal": "Journal of Applied Polymer Science",
     "online_pub_date": "8/6/17",
     "doi": "10.1002/app.45399",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 273,
@@ -2454,7 +3814,12 @@
     "journal": "Geoderma",
     "online_pub_date": "7/10/17",
     "doi": "10.1016/j.geoderma.2017.06.005",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 274,
@@ -2463,7 +3828,12 @@
     "journal": "New Phytologist",
     "online_pub_date": "7/10/17",
     "doi": "10.1111/nph.14687",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 275,
@@ -2472,7 +3842,12 @@
     "journal": "Environmental Science & Technology",
     "online_pub_date": "7/6/17",
     "doi": "10.1021/acs.est.7b02063",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 276,
@@ -2481,7 +3856,12 @@
     "journal": "Carbon",
     "online_pub_date": "6/7/17",
     "doi": "10.1016/j.carbon.2017.06.013",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 277,
@@ -2490,7 +3870,12 @@
     "journal": "Advances in Water Resources",
     "online_pub_date": "4/12/17",
     "doi": "10.1016/j.advwatres.2017.04.006",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 278,
@@ -2499,7 +3884,12 @@
     "journal": "Composite Structures",
     "online_pub_date": "4/5/17",
     "doi": "10.1016/j.compstruct.2017.03.107",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 279,
@@ -2508,7 +3898,12 @@
     "journal": "Tribology International",
     "online_pub_date": "3/1/17",
     "doi": "10.1016/j.triboint.2017.02.038",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 280,
@@ -2517,7 +3912,12 @@
     "journal": "Geochimica et Cosmochimica Acta",
     "online_pub_date": "2/16/17",
     "doi": "10.1016/j.gca.2017.02.006",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 281,
@@ -2526,7 +3926,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "1/5/17",
     "doi": "10.1149/2.1171702jes",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 282,
@@ -2535,7 +3940,12 @@
     "journal": "Plant Physiology",
     "online_pub_date": "1/3/17",
     "doi": "10.1104/pp.16.01643",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 283,
@@ -2544,7 +3954,12 @@
     "journal": "International Journal of Heat and Mass Transfer",
     "online_pub_date": "1/2/17",
     "doi": "10.1016/j.ijheatmasstransfer.2016.12.048",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 284,
@@ -2553,7 +3968,12 @@
     "journal": "International Journal of Greenhouse Gas Control",
     "online_pub_date": "1/2/17",
     "doi": "10.1016/j.ijggc.2016.12.004",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 285,
@@ -2562,7 +3982,12 @@
     "journal": "ACS Applied Materials & Interfaces",
     "online_pub_date": "12/9/16",
     "doi": "10.1021/acsami.6b13956",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 286,
@@ -2571,7 +3996,12 @@
     "journal": "The Journal of Physical Chemistry C",
     "online_pub_date": "11/21/16",
     "doi": "10.1021/acs.jpcc.6b10658",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 287,
@@ -2580,7 +4010,12 @@
     "journal": "New Phytologist",
     "online_pub_date": "11/11/16",
     "doi": "10.1111/nph.14256",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 288,
@@ -2589,7 +4024,12 @@
     "journal": "International Journal of Heat and Mass Transfer",
     "online_pub_date": "11/9/16",
     "doi": "10.1016/j.ijheatmasstransfer.2016.10.113",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 289,
@@ -2598,7 +4038,12 @@
     "journal": "Earth and Planetary Science Letters",
     "online_pub_date": "10/17/16",
     "doi": "10.1016/j.epsl.2016.09.030",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 290,
@@ -2607,7 +4052,12 @@
     "journal": "Journal of Petroleum Science and Engineering",
     "online_pub_date": "10/5/16",
     "doi": "10.1016/j.petrol.2016.10.011",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 291,
@@ -2616,7 +4066,12 @@
     "journal": "Geological Society of America Bulletin",
     "online_pub_date": "9/27/16",
     "doi": "10.1130/B31448.1",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 292,
@@ -2625,7 +4080,12 @@
     "journal": "Plant Physiology",
     "online_pub_date": "9/12/16",
     "doi": "10.1104/pp.16.00923",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 293,
@@ -2634,7 +4094,12 @@
     "journal": "JOM Journal of the Minerals, Metals and Materials Society",
     "online_pub_date": "9/12/16",
     "doi": "10.1007/s11837-016-2098-4",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 294,
@@ -2643,7 +4108,12 @@
     "journal": "Journal of Power Sources",
     "online_pub_date": "8/15/16",
     "doi": "10.1016/j.jpowsour.2016.08.020",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 295,
@@ -2652,7 +4122,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "8/10/16",
     "doi": "10.1149/2.0191610jes",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 296,
@@ -2661,7 +4136,12 @@
     "journal": "Plant Physiology",
     "online_pub_date": "4/22/16",
     "doi": "10.1104/pp.16.00136",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 297,
@@ -2670,7 +4150,12 @@
     "journal": "Journal of Visualized Experiments",
     "online_pub_date": "4/13/16",
     "doi": "10.3791/53683",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 298,
@@ -2679,7 +4164,12 @@
     "journal": "Current Biology",
     "online_pub_date": "4/7/16",
     "doi": "10.1016/j.cub.2016.02.029",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 299,
@@ -2688,7 +4178,12 @@
     "journal": "Fuel Cells",
     "online_pub_date": "4/6/16",
     "doi": "10.1002/fuce.201500213",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 300,
@@ -2697,7 +4192,12 @@
     "journal": "Bone",
     "online_pub_date": "4/3/16",
     "doi": "10.1016/j.bone.2016.04.010",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 301,
@@ -2706,7 +4206,12 @@
     "journal": "Composites Part A: Applied Science and Manufacturing",
     "online_pub_date": "3/4/16",
     "doi": "10.1016/j.compositesa.2016.02.030",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 302,
@@ -2715,7 +4220,12 @@
     "journal": "Plant, Cell and Environment",
     "online_pub_date": "2/12/16",
     "doi": "10.1111/pce.12688",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 303,
@@ -2724,7 +4234,12 @@
     "journal": "International Journal of Heat and Mass Transfer",
     "online_pub_date": "12/31/15",
     "doi": "10.1016/j.ijheatmasstransfer.2015.12.004",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 304,
@@ -2733,7 +4248,12 @@
     "journal": "Science Advances",
     "online_pub_date": "12/11/15",
     "doi": "10.1126/sciadv.1500849",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 305,
@@ -2742,7 +4262,12 @@
     "journal": "Advances in Water Resources",
     "online_pub_date": "11/30/15",
     "doi": "10.1016/j.advwatres.2015.11.013",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 306,
@@ -2751,7 +4276,12 @@
     "journal": "Plant, Cell and Environment",
     "online_pub_date": "11/14/15",
     "doi": "10.1111/pce.12618",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 307,
@@ -2760,7 +4290,12 @@
     "journal": "Plant, Cell and Environment",
     "online_pub_date": "11/9/15",
     "doi": "10.1111/pce.12612",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 308,
@@ -2769,7 +4304,12 @@
     "journal": "Materials Science and Engineering A",
     "online_pub_date": "10/30/15",
     "doi": "10.1016/j.msea.2015.10.073",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 309,
@@ -2778,7 +4318,12 @@
     "journal": "Bone",
     "online_pub_date": "8/5/15",
     "doi": "10.1016/j.bone.2015.08.002",
-    "beamlines": "7.3.3,8.3.2,1.4"
+    "beamlines": "7.3.3,8.3.2,1.4",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 310,
@@ -2787,7 +4332,12 @@
     "journal": "Tree Physiology",
     "online_pub_date": "6/9/15",
     "doi": "10.1093/treephys/tpv040",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 311,
@@ -2796,7 +4346,12 @@
     "journal": "Advanced Healthcare Materials",
     "online_pub_date": "4/10/15",
     "doi": "10.1002/adhm.201500070",
-    "beamlines": "7.3.3,8.3.2"
+    "beamlines": "7.3.3,8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 312,
@@ -2805,7 +4360,12 @@
     "journal": "Communications in Applied Mathematics and Computational Science",
     "online_pub_date": "3/27/15",
     "doi": "10.2140/camcos.2015.10.43",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 313,
@@ -2814,7 +4374,12 @@
     "journal": "PLoS ONE",
     "online_pub_date": "3/23/15",
     "doi": "10.1371/journal.pone.0121828",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 314,
@@ -2823,7 +4388,12 @@
     "journal": "Palaeontologia Electronica",
     "online_pub_date": "3/1/15",
     "doi": "10.26879/492",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 315,
@@ -2832,7 +4402,12 @@
     "journal": "Journal of Volcanology and Geothermal Research",
     "online_pub_date": "2/21/15",
     "doi": "10.1016/j.jvolgeores.2015.02.004",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 316,
@@ -2841,7 +4416,12 @@
     "journal": "Plant, Cell and Environment",
     "online_pub_date": "1/31/15",
     "doi": "10.1111/pce.12497",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 317,
@@ -2850,7 +4430,12 @@
     "journal": "Geochemistry, Geophysics, Geosystems",
     "online_pub_date": "12/10/14",
     "doi": "10.1002/2014GC005442",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 318,
@@ -2859,7 +4444,12 @@
     "journal": "Soil Science Society of America Journal",
     "online_pub_date": "11/14/14",
     "doi": "10.2136/sssaj2014.04.0135",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 319,
@@ -2868,7 +4458,12 @@
     "journal": "Composites Part A: Applied Science and Manufacturing",
     "online_pub_date": "11/13/14",
     "doi": "10.1016/j.compositesa.2014.11.008",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 320,
@@ -2877,7 +4472,12 @@
     "journal": "New Phytologist",
     "online_pub_date": "11/10/14",
     "doi": "10.1111/nph.13110",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 321,
@@ -2886,7 +4486,12 @@
     "journal": "Environmental Science & Technology",
     "online_pub_date": "11/7/14",
     "doi": "10.1021/es502654q",
-    "beamlines": "7.3.3,8.3.2"
+    "beamlines": "7.3.3,8.3.2",
+    "year": "2014",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 322,
@@ -2895,7 +4500,12 @@
     "journal": "Plant Physiology",
     "online_pub_date": "11/6/14",
     "doi": "10.1104/pp.114.249706",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 323,
@@ -2904,7 +4514,12 @@
     "journal": "Journal of Environmental Chemical Engineering",
     "online_pub_date": "10/22/14",
     "doi": "10.1016/j.jece.2014.10.013",
-    "beamlines": "8.3.2,12.3.2"
+    "beamlines": "8.3.2,12.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 324,
@@ -2913,7 +4528,12 @@
     "journal": "Review of Scientific Instruments",
     "online_pub_date": "8/14/14",
     "doi": "10.1063/1.4892437",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 325,
@@ -2922,7 +4542,12 @@
     "journal": "Review of Scientific Instruments",
     "online_pub_date": "6/19/14",
     "doi": "10.1063/1.4882337",
-    "beamlines": "8.3.2,Instrumentation"
+    "beamlines": "8.3.2,Instrumentation",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 326,
@@ -2931,7 +4556,12 @@
     "journal": "Bone",
     "online_pub_date": "6/11/14",
     "doi": "10.1016/j.bone.2014.05.022",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 327,
@@ -2940,7 +4570,12 @@
     "journal": "Environmental Science & Technology",
     "online_pub_date": "5/28/14",
     "doi": "10.1021/es4055737",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 328,
@@ -2949,7 +4584,12 @@
     "journal": "Environmental Science & Technology",
     "online_pub_date": "5/27/14",
     "doi": "10.1021/es5013438",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 329,
@@ -2958,7 +4598,12 @@
     "journal": "Advances in Water Resources",
     "online_pub_date": "9/25/13",
     "doi": "10.1016/j.advwatres.2013.09.009",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 330,
@@ -2967,7 +4612,12 @@
     "journal": "Bone",
     "online_pub_date": "2/18/10",
     "doi": "10.1016/j.bone.2010.02.014",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2010",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 331,
@@ -2976,7 +4626,12 @@
     "journal": "Bone",
     "online_pub_date": "10/21/09",
     "doi": "10.1016/j.bone.2009.10.015",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2010",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 332,
@@ -2985,7 +4640,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "00/00/00",
     "doi": "10.1149/2.0011907jes",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 333,
@@ -2994,7 +4654,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "00/00/00",
     "doi": "10.1149/2.1041902jes",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 334,
@@ -3003,7 +4668,12 @@
     "journal": "Measurement Science and Technology",
     "online_pub_date": "00/00/00",
     "doi": "10.1088/1361-6501/aa9dd9",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 335,
@@ -3012,7 +4682,12 @@
     "journal": "PLoS ONE",
     "online_pub_date": "00/00/00",
     "doi": "10.1371/journal.pone.0204984",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 336,
@@ -3021,7 +4696,12 @@
     "journal": "Journal of Synchrotron Radiation",
     "online_pub_date": "00/00/00",
     "doi": "10.1107/S1600577518015606",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 337,
@@ -3030,7 +4710,12 @@
     "journal": "Journal of Synchrotron Radiation",
     "online_pub_date": "00/00/00",
     "doi": "10.1107/S1600577518005787",
-    "beamlines": "4.0.2,8.3.2,6.3.1.1"
+    "beamlines": "4.0.2,8.3.2,6.3.1.1",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 338,
@@ -3039,7 +4724,12 @@
     "journal": "International Journal of Greenhouse Gas Control",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.ijggc.2018.12.013",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2019",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 339,
@@ -3048,7 +4738,12 @@
     "journal": "Zootaxa",
     "online_pub_date": "00/00/00",
     "doi": "10.11646/zootaxa.4457.1.3",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 340,
@@ -3057,7 +4752,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "00/00/00",
     "doi": "10.1149/2.0301816jes",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 341,
@@ -3066,7 +4766,12 @@
     "journal": "Frontiers in Environmental Science",
     "online_pub_date": "00/00/00",
     "doi": "10.3389/fenvs.2018.00065",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 342,
@@ -3075,7 +4780,12 @@
     "journal": "Geology",
     "online_pub_date": "00/00/00",
     "doi": "10.1130/G39256.1",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 343,
@@ -3084,7 +4794,12 @@
     "journal": "Proceedings of the Royal Society B: Biological Sciences",
     "online_pub_date": "00/00/00",
     "doi": "10.1098/rspb.2018.1099",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2018",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 344,
@@ -3093,7 +4808,12 @@
     "journal": "Nature Communications",
     "online_pub_date": "00/00/00",
     "doi": "10.1038/ncomms15942",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 345,
@@ -3102,7 +4822,12 @@
     "journal": "Scientific Reports",
     "online_pub_date": "00/00/00",
     "doi": "10.1038/srep44618",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 346,
@@ -3111,7 +4836,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "00/00/00",
     "doi": "10.1149/2.0391711jes",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 347,
@@ -3120,7 +4850,12 @@
     "journal": "Electrochimica Acta",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.electacta.2017.10.012",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 348,
@@ -3129,7 +4864,12 @@
     "journal": "Journal of Synchrotron Radiation",
     "online_pub_date": "00/00/00",
     "doi": "10.1107/S1600577517012449",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 349,
@@ -3138,7 +4878,12 @@
     "journal": "Journal of Synchrotron Radiation",
     "online_pub_date": "00/00/00",
     "doi": "10.1107/S1600577517010955",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 350,
@@ -3147,7 +4892,12 @@
     "journal": "Cement and Concrete Composites",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.cemconcomp.2017.03.002",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 351,
@@ -3156,7 +4906,12 @@
     "journal": "Earth and Planetary Science Letters",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.epsl.2016.11.055",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 352,
@@ -3165,7 +4920,12 @@
     "journal": "Frontiers in Plant Science",
     "online_pub_date": "00/00/00",
     "doi": "10.3389/fpls.2016.01665",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 353,
@@ -3174,7 +4934,12 @@
     "journal": "Nano Letters",
     "online_pub_date": "00/00/00",
     "doi": "10.1021/acs.nanolett.6b02156",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 354,
@@ -3183,7 +4948,12 @@
     "journal": "Environmental Science & Technology",
     "online_pub_date": "00/00/00",
     "doi": "10.1021/acs.est.6b02184",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 355,
@@ -3192,7 +4962,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "00/00/00",
     "doi": "10.1149/2.1331610jes",
-    "beamlines": "7.3.3,8.3.2"
+    "beamlines": "7.3.3,8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 356,
@@ -3201,7 +4976,12 @@
     "journal": "Journal of Applied Physics",
     "online_pub_date": "00/00/00",
     "doi": "10.1063/1.4961219",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 357,
@@ -3210,7 +4990,12 @@
     "journal": "Bulletin of Volcanology",
     "online_pub_date": "00/00/00",
     "doi": "10.1007/s00445-016-1053-0",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 358,
@@ -3219,7 +5004,12 @@
     "journal": "Journal of Volcanology and Geothermal Research",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.jvolgeores.2016.06.026",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 359,
@@ -3228,7 +5018,12 @@
     "journal": "Journal of Synchrotron Radiation",
     "online_pub_date": "00/00/00",
     "doi": "10.1107/S1600577516009942",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 360,
@@ -3237,7 +5032,12 @@
     "journal": "Applied Physics Letters",
     "online_pub_date": "00/00/00",
     "doi": "10.1063/1.4960020",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 361,
@@ -3246,7 +5046,12 @@
     "journal": "Journal of Synchrotron Radiation",
     "online_pub_date": "00/00/00",
     "doi": "10.1107/S1600577516002198",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 362,
@@ -3255,7 +5060,12 @@
     "journal": "Cement and Concrete Research",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.cemconres.2015.11.010",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 363,
@@ -3264,7 +5074,12 @@
     "journal": "Journal of the European Ceramic Society",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.jeurceramsoc.2015.08.021",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 364,
@@ -3273,7 +5088,12 @@
     "journal": "American Journal of Botany",
     "online_pub_date": "00/00/00",
     "doi": "10.3732/ajb.1500532",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 365,
@@ -3282,7 +5102,12 @@
     "journal": "Cement and Concrete Composites",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.cemconcomp.2016.02.003",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 366,
@@ -3291,7 +5116,12 @@
     "journal": "Acta Biomaterialia",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.actbio.2015.04.007",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 367,
@@ -3300,7 +5130,12 @@
     "journal": "Plant Physiology",
     "online_pub_date": "00/00/00",
     "doi": "10.1104/pp.15.00031",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 368,
@@ -3309,7 +5144,12 @@
     "journal": "Journal of Power Sources",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.jpowsour.2015.07.034",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 369,
@@ -3318,7 +5158,12 @@
     "journal": "ECS Transactions",
     "online_pub_date": "00/00/00",
     "doi": "10.1149/06917.1253ecst",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 370,
@@ -3327,7 +5172,12 @@
     "journal": "Journal of Bone and Mineral Research",
     "online_pub_date": "00/00/00",
     "doi": "10.1002/jbmr.2340",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 371,
@@ -3336,7 +5186,12 @@
     "journal": "Advanced Healthcare Materials",
     "online_pub_date": "00/00/00",
     "doi": "10.1002/adhm.201500447",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 372,
@@ -3345,7 +5200,12 @@
     "journal": "Journal of Materials Science",
     "online_pub_date": "00/00/00",
     "doi": "10.1007/s10853-014-8766-2",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 373,
@@ -3354,7 +5214,12 @@
     "journal": "Bulletin of Volcanology",
     "online_pub_date": "00/00/00",
     "doi": "10.1007/s00445-014-0822-x",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 374,
@@ -3363,7 +5228,12 @@
     "journal": "American Journal of Botany",
     "online_pub_date": "00/00/00",
     "doi": "10.3732/ajb.1300271",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 375,
@@ -3372,7 +5242,12 @@
     "journal": "Materials Research Society Bulletin",
     "online_pub_date": "00/00/00",
     "doi": "10.1557/mrs.2014.197",
-    "beamlines": "7.3.3,8.3.2"
+    "beamlines": "7.3.3,8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 376,
@@ -3381,7 +5256,12 @@
     "journal": "Journal of Nanobiotechnology",
     "online_pub_date": "00/00/00",
     "doi": "10.1186/s12951-016-0175-z",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 377,
@@ -3390,7 +5270,12 @@
     "journal": "Journal of Geophysical Research: Solid Earth",
     "online_pub_date": "00/00/00",
     "doi": "10.1002/2015JB012061",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 378,
@@ -3399,7 +5284,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "00/00/00",
     "doi": "10.1149/2.0321514jes",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 379,
@@ -3408,7 +5298,12 @@
     "journal": "Journal of Applied Physics",
     "online_pub_date": "00/00/00",
     "doi": "10.1063/1.4927614",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 380,
@@ -3417,7 +5312,12 @@
     "journal": "American Mineralogist",
     "online_pub_date": "00/00/00",
     "doi": "10.2138/am-2015-5205",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 381,
@@ -3426,7 +5326,12 @@
     "journal": "Carbon",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.carbon.2015.08.113",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2016",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 382,
@@ -3435,7 +5340,12 @@
     "journal": "Journal of Visualized Experiments",
     "online_pub_date": "00/00/00",
     "doi": "10.3791/53021",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 383,
@@ -3444,7 +5354,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "00/00/00",
     "doi": "10.1149/2.0721507jes",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 384,
@@ -3453,7 +5368,12 @@
     "journal": "International Journal of Heat and Mass Transfer",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.ijheatmasstransfer.2015.02.073",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 385,
@@ -3462,7 +5382,12 @@
     "journal": "Electrochemistry Communications",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.elecom.2015.02.005",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 386,
@@ -3471,7 +5396,12 @@
     "journal": "Journal of Electronic Materials",
     "online_pub_date": "00/00/00",
     "doi": "10.1007/s11664-014-3375-z",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 387,
@@ -3480,7 +5410,12 @@
     "journal": "Journal of Synchrotron Radiation",
     "online_pub_date": "00/00/00",
     "doi": "10.1107/S160057751401604X",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 388,
@@ -3489,7 +5424,12 @@
     "journal": "IEEE Transactions on Visualization and Computer Graphics",
     "online_pub_date": "00/00/00",
     "doi": "10.1109/TVCG.2012.200",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2012",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 389,
@@ -3498,7 +5438,12 @@
     "journal": "Reviews in Mineralogy and Geochemistry",
     "online_pub_date": "00/00/00",
     "doi": "10.2138/rmg.2013.77.8",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 390,
@@ -3507,7 +5452,12 @@
     "journal": "Computing in Science and Engineering",
     "online_pub_date": "00/00/00",
     "doi": "10.1109/MCSE.2014.77",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 391,
@@ -3516,7 +5466,12 @@
     "journal": "Corrosion Science",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.corsci.2014.03.010",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 392,
@@ -3525,7 +5480,12 @@
     "journal": "Advanced Functional Materials",
     "online_pub_date": "00/00/00",
     "doi": "10.1002/adfm.201400451",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 393,
@@ -3534,7 +5494,12 @@
     "journal": "Journal of Materials Processing Technology",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.jmatprotec.2014.06.005",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 394,
@@ -3543,7 +5508,12 @@
     "journal": "International Journal of Greenhouse Gas Control",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.ijggc.2014.04.001",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 395,
@@ -3552,7 +5522,12 @@
     "journal": "International Journal of Greenhouse Gas Control",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.ijggc.2014.01.004",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 396,
@@ -3561,7 +5536,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "00/00/00",
     "doi": "10.1149/2.0511503jes",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2015",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 397,
@@ -3570,7 +5550,12 @@
     "journal": "Materials Letters",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.matlet.2013.04.048",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 398,
@@ -3579,7 +5564,12 @@
     "journal": "Applied Materials and Interfaces",
     "online_pub_date": "00/00/00",
     "doi": "10.1021/am403793x",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 399,
@@ -3588,7 +5578,12 @@
     "journal": "Journal of Bone and Mineral Research",
     "online_pub_date": "00/00/00",
     "doi": "10.1002/jbmr.2172",
-    "beamlines": "7.3.3,8.3.2"
+    "beamlines": "7.3.3,8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 400,
@@ -3597,7 +5592,12 @@
     "journal": "Annals of Botany",
     "online_pub_date": "00/00/00",
     "doi": "10.1093/aob/mct294",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 401,
@@ -3606,7 +5606,12 @@
     "journal": "Journal of Synchrotron Radiation",
     "online_pub_date": "00/00/00",
     "doi": "10.1107/S1600577513024715",
-    "beamlines": "5.3.1,3.2.1,8.3.2,5.0.2"
+    "beamlines": "5.3.1,3.2.1,8.3.2,5.0.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 402,
@@ -3615,7 +5620,12 @@
     "journal": "Journal of the Electrochemical Society",
     "online_pub_date": "00/00/00",
     "doi": "10.1149/2.0501711jes",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2017",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 403,
@@ -3624,7 +5634,12 @@
     "journal": "Nature Materials",
     "online_pub_date": "00/00/00",
     "doi": "10.1038/nmat3793",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 404,
@@ -3633,7 +5648,12 @@
     "journal": "IAWA Journal",
     "online_pub_date": "00/00/00",
     "doi": "10.1163/22941932-00000033",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 405,
@@ -3642,7 +5662,12 @@
     "journal": "Contributions to Minerology and Petrology",
     "online_pub_date": "00/00/00",
     "doi": "10.1007/s00410-013-0961-7",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2014",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 406,
@@ -3651,7 +5676,12 @@
     "journal": "Precambrian Research",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.precamres.2013.05.015",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 407,
@@ -3660,7 +5690,12 @@
     "journal": "Journal of Materials Science",
     "online_pub_date": "00/00/00",
     "doi": "10.1007/s10853-013-7738-2",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 408,
@@ -3669,7 +5704,12 @@
     "journal": "Advances in Water Resources",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.advwatres.2013.09.008",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 409,
@@ -3678,7 +5718,12 @@
     "journal": "Advanced Functional Materials",
     "online_pub_date": "00/00/00",
     "doi": "10.1002/adfm.201301121",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 410,
@@ -3687,7 +5732,12 @@
     "journal": "Acta Biomaterialia",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.actbio.2012.08.029",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 411,
@@ -3696,7 +5746,12 @@
     "journal": "Advanced Functional Materials",
     "online_pub_date": "00/00/00",
     "doi": "10.1002/adfm.201002030",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2011",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 412,
@@ -3705,7 +5760,12 @@
     "journal": "Acta Biomaterialia",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.actbio.2011.06.030",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2011",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 413,
@@ -3714,7 +5774,12 @@
     "journal": "Applied Physics Letters",
     "online_pub_date": "00/00/00",
     "doi": "10.1063/1.3628342",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2011",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 414,
@@ -3723,7 +5788,12 @@
     "journal": "Journal of Volcanology and Geothermal Research",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.jvolgeores.2013.04.001",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 415,
@@ -3732,7 +5802,12 @@
     "journal": "Journal of Applied Physics",
     "online_pub_date": "00/00/00",
     "doi": "10.1063/1.4813518",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 416,
@@ -3741,7 +5816,12 @@
     "journal": "Science Translational Medicine ",
     "online_pub_date": "00/00/00",
     "doi": "10.1126/scitranslmed.3006286",
-    "beamlines": "8.3.2,1.4,5.4"
+    "beamlines": "8.3.2,1.4,5.4",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 417,
@@ -3750,7 +5830,12 @@
     "journal": "Frontiers in Plant Science",
     "online_pub_date": "00/00/00",
     "doi": "10.3389/fpls.2013.00285",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 418,
@@ -3759,7 +5844,12 @@
     "journal": "Journal of Theoretical Biology",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.jtbi.2013.05.021",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 419,
@@ -3768,7 +5858,12 @@
     "journal": "Journal of Visualized Experiments",
     "online_pub_date": "00/00/00",
     "doi": "10.3791/50162",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 420,
@@ -3777,7 +5872,12 @@
     "journal": "Plant Physiology",
     "online_pub_date": "00/00/00",
     "doi": "10.1104/pp.112.212712",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 421,
@@ -3786,7 +5886,12 @@
     "journal": "Geology",
     "online_pub_date": "00/00/00",
     "doi": "10.1130/G33685.1",
-    "beamlines": "8.3.2,1.4"
+    "beamlines": "8.3.2,1.4",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 422,
@@ -3795,7 +5900,12 @@
     "journal": "ACS Macro Letters",
     "online_pub_date": "00/00/00",
     "doi": "10.1021/mz300651a",
-    "beamlines": "8.3.2,7.3.3"
+    "beamlines": "8.3.2,7.3.3",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 423,
@@ -3804,7 +5914,12 @@
     "journal": "Acta Biomaterialia",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.actbio.2012.12.026",
-    "beamlines": "7.3.3,8.3.2"
+    "beamlines": "7.3.3,8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 424,
@@ -3813,7 +5928,12 @@
     "journal": "Journal of the American Ceramic Society",
     "online_pub_date": "00/00/00",
     "doi": "10.1111/j.1551-2916.2011.04802.x",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2012",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 425,
@@ -3822,7 +5942,12 @@
     "journal": "Journal of Synchrotron Radiation",
     "online_pub_date": "00/00/00",
     "doi": "10.1107/S0909049512044354",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 426,
@@ -3831,7 +5956,12 @@
     "journal": "Nature Materials",
     "online_pub_date": "00/00/00",
     "doi": "10.1038/nmat3497",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 427,
@@ -3840,7 +5970,12 @@
     "journal": "Rock Mechanics and Rock Engineering ",
     "online_pub_date": "00/00/00",
     "doi": "10.1007/s00603-012-0336-9",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2012",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 428,
@@ -3849,7 +5984,12 @@
     "journal": "International Journal of Greenhouse Gas Control",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.ijggc.2012.12.026",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 429,
@@ -3858,7 +5998,12 @@
     "journal": "New Phytologist",
     "online_pub_date": "00/00/00",
     "doi": "10.1111/j.1469-8137.2012.04244.x",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2012",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 430,
@@ -3867,7 +6012,12 @@
     "journal": "American Journal of Botany",
     "online_pub_date": "00/00/00",
     "doi": "10.3732/ajb.1100606",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 431,
@@ -3876,7 +6026,12 @@
     "journal": "Acta Materialia",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.actamat.2012.07.053",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2012",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 432,
@@ -3885,7 +6040,12 @@
     "journal": "International Journal of Greenhouse Gas Control",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.ijggc.2012.12.031",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2013",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 433,
@@ -3894,7 +6054,12 @@
     "journal": "Journal of Geophysical Research: Solid Earth",
     "online_pub_date": "00/00/00",
     "doi": "10.1029/2012JB009496",
-    "beamlines": "8.3.2,1.4"
+    "beamlines": "8.3.2,1.4",
+    "year": "2012",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 434,
@@ -3903,7 +6068,12 @@
     "journal": "EMBO Reports",
     "online_pub_date": "00/00/00",
     "doi": "10.1038/embor.2010.135",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2010",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 435,
@@ -3912,7 +6082,12 @@
     "journal": "American Journal of Physical Anthropology",
     "online_pub_date": "00/00/00",
     "doi": "10.1002/ajpa.22103",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2012",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 436,
@@ -3921,7 +6096,12 @@
     "journal": "Environmental Science & Technology",
     "online_pub_date": "00/00/00",
     "doi": "10.1021/es3012723",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2012",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 437,
@@ -3930,7 +6110,12 @@
     "journal": "Chemical Geology",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.chemgeo.2012.05.010",
-    "beamlines": "8.3.2,10.3.2"
+    "beamlines": "8.3.2,10.3.2",
+    "year": "2012",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 438,
@@ -3939,7 +6124,12 @@
     "journal": "Chemical Geology",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.chemgeo.2012.05.014",
-    "beamlines": "8.3.2,10.3.2"
+    "beamlines": "8.3.2,10.3.2",
+    "year": "2012",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 439,
@@ -3948,7 +6138,12 @@
     "journal": "Journal of Vertebrate Paleontology",
     "online_pub_date": "00/00/00",
     "doi": "10.1080/02724634.2012.672388",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2012",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 440,
@@ -3957,7 +6152,12 @@
     "journal": "Journal of Materials Science",
     "online_pub_date": "00/00/00",
     "doi": "10.1007/s10853-012-6598-5",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2012",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 441,
@@ -3966,7 +6166,12 @@
     "journal": "Journal of Materials Research",
     "online_pub_date": "00/00/00",
     "doi": "10.1007/s11837-012-0298-0",
-    "beamlines": "7.3.3,8.3.2"
+    "beamlines": "7.3.3,8.3.2",
+    "year": "2012",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 442,
@@ -3975,7 +6180,12 @@
     "journal": "Nuclear Fusion",
     "online_pub_date": "00/00/00",
     "doi": "10.1088/0029-5515/52/6/062001",
-    "beamlines": "8.3.2,8.0.1.1"
+    "beamlines": "8.3.2,8.0.1.1",
+    "year": "2012",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 443,
@@ -3984,7 +6194,12 @@
     "journal": "Plant, Cell and Environment",
     "online_pub_date": "00/00/00",
     "doi": "10.1111/j.1365-3040.2012.02524.x",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2012",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 444,
@@ -3993,7 +6208,12 @@
     "journal": "Scripta Materialia",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.scriptamat.2011.07.002",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2011",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 445,
@@ -4002,7 +6222,12 @@
     "journal": "Journal of the Mechanical Behavior of Biomedical Materials",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.jmbbm.2011.05.020",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2011",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 446,
@@ -4011,7 +6236,12 @@
     "journal": "Environmental Science & Technology",
     "online_pub_date": "00/00/00",
     "doi": "10.1021/es104312h",
-    "beamlines": "10.3.2,8.3.2"
+    "beamlines": "10.3.2,8.3.2",
+    "year": "2011",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 447,
@@ -4020,7 +6250,12 @@
     "journal": "New Phytologist",
     "online_pub_date": "00/00/00",
     "doi": "10.1111/j.1469-8137.2011.03754.x",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2011",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 448,
@@ -4029,7 +6264,12 @@
     "journal": "Physics of the Earth and Planetary Interiors",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.pepi.2011.03.009",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2011",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 449,
@@ -4038,7 +6278,12 @@
     "journal": "Geophysical Research Letters",
     "online_pub_date": "00/00/00",
     "doi": "10.1029/2011GL046916",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2011",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 450,
@@ -4047,7 +6292,12 @@
     "journal": "Vadose Zone Journal",
     "online_pub_date": "00/00/00",
     "doi": "10.2136/vzj2008.0090",
-    "beamlines": "10.3.2,8.3.2"
+    "beamlines": "10.3.2,8.3.2",
+    "year": "2009",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 451,
@@ -4056,7 +6306,12 @@
     "journal": "Biomaterials",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.biomaterials.2011.08.013",
-    "beamlines": "7.3.3,8.3.2,1.4,5.4"
+    "beamlines": "7.3.3,8.3.2,1.4,5.4",
+    "year": "2011",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 452,
@@ -4065,7 +6320,12 @@
     "journal": "Proceedings of the National Academy of Sciences of the United States of America",
     "online_pub_date": "00/00/00",
     "doi": "10.1073/pnas.1107966108",
-    "beamlines": "7.3.3,8.3.2"
+    "beamlines": "7.3.3,8.3.2",
+    "year": "2011",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 453,
@@ -4074,7 +6334,12 @@
     "journal": "Environmental Science & Technology",
     "online_pub_date": "00/00/00",
     "doi": "10.1021/es102566j",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2011",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 454,
@@ -4083,7 +6348,12 @@
     "journal": "Rock Mechanics and Rock Engineering ",
     "online_pub_date": "00/00/00",
     "doi": "10.1007/s00603-009-0071-z",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2010",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 455,
@@ -4092,7 +6362,12 @@
     "journal": "Geochemical Transactions",
     "online_pub_date": "00/00/00",
     "doi": "10.1186/1467-4866-12-7",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2011",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 456,
@@ -4101,7 +6376,12 @@
     "journal": "Transportation Research Record ",
     "online_pub_date": "00/00/00",
     "doi": "10.1007/s11242-010-9636-2",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2010",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 457,
@@ -4110,7 +6390,12 @@
     "journal": "Acta Biomaterialia",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.actbio.2010.08.025",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2011",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 458,
@@ -4119,7 +6404,12 @@
     "journal": "Water Resources Research",
     "online_pub_date": "00/00/00",
     "doi": "10.1029/2009WR008375",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2010",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 459,
@@ -4128,7 +6418,12 @@
     "journal": "Biomaterials",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.biomaterials.2009.06.017",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2009",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 460,
@@ -4137,7 +6432,12 @@
     "journal": "Annals of the New York Academy of Sciences",
     "online_pub_date": "00/00/00",
     "doi": "10.1111/j.1749-6632.2009.05232.x",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2010",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 461,
@@ -4146,7 +6446,12 @@
     "journal": "Plant Physiology",
     "online_pub_date": "00/00/00",
     "doi": "10.1104/pp.110.162396",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2010",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 462,
@@ -4155,7 +6460,12 @@
     "journal": "Acta Biomaterialia",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.actbio.2009.11.026",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2010",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 463,
@@ -4164,7 +6474,12 @@
     "journal": "Acta Materialia",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.actamat.2009.03.003",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2009",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 464,
@@ -4173,7 +6488,12 @@
     "journal": "Bone",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.bone.2010.02.025",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2010",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 465,
@@ -4182,7 +6502,12 @@
     "journal": "Geology",
     "online_pub_date": "00/00/00",
     "doi": "10.1130/G30199A.1",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2009",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 466,
@@ -4191,7 +6516,12 @@
     "journal": "Journal of Biomedical Materials Research Part A",
     "online_pub_date": "00/00/00",
     "doi": "10.1002/jbm.a.31237",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2007",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 467,
@@ -4200,7 +6530,12 @@
     "journal": "Journal of Geophysical Research: Solid Earth",
     "online_pub_date": "00/00/00",
     "doi": "10.1029/2008JF001060",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2009",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 468,
@@ -4209,7 +6544,12 @@
     "journal": "Cement and Concrete Composites",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.cemconcomp.2008.12.007",
-    "beamlines": "6.1.2,8.3.2"
+    "beamlines": "6.1.2,8.3.2",
+    "year": "2009",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 469,
@@ -4218,7 +6558,12 @@
     "journal": "Journal of the Mechanics and Physics of Solids",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.jmps.2011.11.010",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2012",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 470,
@@ -4227,7 +6572,12 @@
     "journal": "Geosphere",
     "online_pub_date": "00/00/00",
     "doi": "10.1130/GES00560.1",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2011",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 471,
@@ -4236,7 +6586,12 @@
     "journal": "Environmental Science & Technology",
     "online_pub_date": "00/00/00",
     "doi": "10.1021/es8020827",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2009",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 472,
@@ -4245,7 +6600,12 @@
     "journal": "PLoS ONE",
     "online_pub_date": "00/00/00",
     "doi": "10.1371/journal.pone.0005275",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2009",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 473,
@@ -4254,7 +6614,12 @@
     "journal": "Applied Geochemistry",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.apgeochem.2008.08.011",
-    "beamlines": "8.3.2,12.3.2"
+    "beamlines": "8.3.2,12.3.2",
+    "year": "2008",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 474,
@@ -4263,7 +6628,12 @@
     "journal": "Computational Geosciences",
     "online_pub_date": "00/00/00",
     "doi": "10.1007/s10596-009-9130-5",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2009",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 475,
@@ -4272,7 +6642,12 @@
     "journal": "Nature Materials",
     "online_pub_date": "00/00/00",
     "doi": "10.1038/nmat2221",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2008",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 476,
@@ -4281,7 +6656,12 @@
     "journal": "Arthritis & Rheumatism",
     "online_pub_date": "00/00/00",
     "doi": "10.1002/art.22976",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2007",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 477,
@@ -4290,7 +6670,12 @@
     "journal": "Strain",
     "online_pub_date": "00/00/00",
     "doi": "10.1111/j.1475-1305.2006.00282.x",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2006",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 478,
@@ -4299,7 +6684,12 @@
     "journal": "Materials Science and Engineering C",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.msec.2005.08.021",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2006",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 479,
@@ -4308,7 +6698,12 @@
     "journal": "Development",
     "online_pub_date": "00/00/00",
     "doi": "10.1242/dev.015081",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2008",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 480,
@@ -4317,7 +6712,12 @@
     "journal": "Geophysical Research Letters",
     "online_pub_date": "00/00/00",
     "doi": "10.1029/2007GL030497",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2007",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 481,
@@ -4326,7 +6726,12 @@
     "journal": "Geophysical Research Letters",
     "online_pub_date": "00/00/00",
     "doi": "10.1029/2006GL027224",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2006",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 482,
@@ -4335,7 +6740,12 @@
     "journal": "Bone",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.bone.2006.03.008",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2006",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 483,
@@ -4344,7 +6754,12 @@
     "journal": "Bone",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.bone.2004.09.023",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2005",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 484,
@@ -4353,7 +6768,12 @@
     "journal": "Proceedings of the National Academy of Sciences of the United States of America",
     "online_pub_date": "00/00/00",
     "doi": "10.1073/pnas.0507417102",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2005",
+    "high_impact": 1,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 485,
@@ -4362,7 +6782,12 @@
     "journal": "Biomaterials",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.biomaterials.2004.09.004",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2005",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   },
   {
     "id": 486,
@@ -4371,6 +6796,11 @@
     "journal": "Bone",
     "online_pub_date": "00/00/00",
     "doi": "10.1016/j.bone.2004.07.016",
-    "beamlines": "8.3.2"
+    "beamlines": "8.3.2",
+    "year": "2004",
+    "high_impact": 0,
+    "category": "General",
+    "tags": null,
+    "images": "[]"
   }
 ]
