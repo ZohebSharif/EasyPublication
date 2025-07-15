@@ -288,7 +288,7 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
         Error: {error}
       </div>
     );
-  }
+  } 
 
   if (publications.length === 0) {
     return (
