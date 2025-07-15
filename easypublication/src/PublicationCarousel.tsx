@@ -16,7 +16,7 @@ interface PublicationData {
   category?: string;
   impact_factor?: number;
   tags?: string;
-  images?: string; // JSON string containing array of PNG paths
+  images?: string | string[]; // Can be JSON string (from database) or array (from parsed JSON)
 }
 
 interface PublicationCarouselProps {
@@ -215,8 +215,8 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
         return;
       }
 
-      // Reset the publication's category back to "General" in the database
-      console.log(`🔄 Resetting publication ${publicationId} category to "General"`);
+      // Reset the publication's category back to "General" and clear images in the database
+      console.log(`🔄 Resetting publication ${publicationId} category to "General" and clearing images`);
       
       try {
         const resetResponse = await fetch('http://localhost:3001/api/update-publication', {
@@ -227,16 +227,17 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
           body: JSON.stringify({
             title: publicationToDelete.title,
             authors: publicationToDelete.authors,
-            category: 'General'
+            category: 'General',
+            imagePaths: [] // Reset images to empty array
           })
         });
 
         if (resetResponse.ok) {
           const result = await resetResponse.json();
-          console.log(`✅ Publication category reset to General:`, result);
+          console.log(`✅ Publication category reset to General and images cleared:`, result);
         } else {
           const error = await resetResponse.json();
-          console.warn(`⚠️ Failed to reset category in database: ${error.error}`);
+          console.warn(`⚠️ Failed to reset category and images in database: ${error.error}`);
         }
       } catch (serverError) {
         console.warn('⚠️ Server not available - publication will be removed from view only:', serverError);
@@ -265,7 +266,7 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
         setCurrentIndex(0);
       }
       
-      console.log(`📋 Publication "${publicationToDelete.title}" removed from ${category} category and reset to General`);
+      console.log(`📋 Publication "${publicationToDelete.title}" removed from ${category} category, reset to General, and images cleared`);
       
     } catch (error) {
       console.error('Error deleting publication:', error);

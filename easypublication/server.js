@@ -5,6 +5,18 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { readFileSync, writeFileSync } from 'fs';
 import initSqlJs from 'sql.js';
+import { v2 as cloudinary } from 'cloudinary';
+import dotenv from 'dotenv';
+
+// Load environment variables
+dotenv.config();
+
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,19 +28,35 @@ const PORT = 3001;
 app.use(cors());
 app.use(express.json());
 
-// Configure multer for file uploads
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, 'public', 'images'));
-  },
-  filename: (req, file, cb) => {
-    // Generate unique filename with timestamp
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-    cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
-  }
-});
-
+// Configure multer for file uploads (using memory storage for Cloudinary)
+const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
+
+// Helper function to upload file to Cloudinary
+async function uploadToCloudinary(fileBuffer, originalName) {
+  return new Promise((resolve, reject) => {
+    const uploadStream = cloudinary.uploader.upload_stream(
+      {
+        folder: 'easypublication', // Organize uploads in a folder
+        resource_type: 'auto', // Automatically detect file type
+        public_id: `publication_${Date.now()}_${Math.round(Math.random() * 1E9)}`, // Unique ID
+        use_filename: true,
+        unique_filename: false,
+      },
+      (error, result) => {
+        if (error) {
+          console.error('Cloudinary upload error:', error);
+          reject(error);
+        } else {
+          console.log('📁 File uploaded to Cloudinary:', result.secure_url);
+          resolve(result);
+        }
+      }
+    );
+    
+    uploadStream.end(fileBuffer);
+  });
+}
 
 // Database helper function
 async function updatePublicationInDatabase(publicationId, newCategory, imagePaths = []) {
@@ -39,14 +67,8 @@ async function updatePublicationInDatabase(publicationId, newCategory, imagePath
     const db = new SQL.Database(fileBuffer);
     
     // Update the publication category and images
-    let query = 'UPDATE publications SET category = ?';
-    let params = [newCategory];
-    
-    // Add images if provided
-    if (imagePaths.length > 0) {
-      query += ', images = ?';
-      params.push(JSON.stringify(imagePaths));
-    }
+    let query = 'UPDATE publications SET category = ?, images = ?';
+    let params = [newCategory, JSON.stringify(imagePaths)];
     
     query += ' WHERE id = ?';
     params.push(publicationId);
@@ -132,23 +154,33 @@ async function exportDatabaseToJson() {
 }
 
 // File upload endpoint
-app.post('/api/upload', upload.array('files'), (req, res) => {
+app.post('/api/upload', upload.array('files'), async (req, res) => {
   try {
     if (!req.files || req.files.length === 0) {
       return res.status(400).json({ error: 'No files uploaded' });
     }
 
-    const files = req.files.map(file => ({
-      originalname: file.originalname,
-      filename: file.filename,
-      path: `/images/${file.filename}`,
-      size: file.size
+    console.log(`📁 Uploading ${req.files.length} files to Cloudinary...`);
+
+    // Upload all files to Cloudinary
+    const uploadPromises = req.files.map(file => 
+      uploadToCloudinary(file.buffer, file.originalname)
+    );
+
+    const uploadResults = await Promise.all(uploadPromises);
+
+    const files = uploadResults.map((result, index) => ({
+      originalname: req.files[index].originalname,
+      filename: result.public_id,
+      path: result.secure_url, // Cloudinary URL
+      size: req.files[index].size,
+      cloudinary_id: result.public_id
     }));
 
-    console.log('📁 Files uploaded successfully:', files.map(f => f.filename));
+    console.log('✅ All files uploaded successfully to Cloudinary');
 
     res.json({
-      message: 'Files uploaded successfully',
+      message: 'Files uploaded successfully to Cloudinary',
       files: files
     });
   } catch (error) {
@@ -280,5 +312,6 @@ app.get('/api/health', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`📁 File uploads will be saved to: ${path.join(__dirname, 'public', 'images')}`);
+  console.log(`☁️  Files will be uploaded to Cloudinary (${process.env.CLOUDINARY_CLOUD_NAME || 'not configured'})`);
+  console.log(`📄 Make sure to set CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, and CLOUDINARY_API_SECRET in .env`);
 });

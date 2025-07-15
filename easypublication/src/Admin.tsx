@@ -502,23 +502,34 @@ function Admin() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          zIndex: 10000
+          zIndex: 10000,
+          padding: '10px' // Add padding for mobile
         }}>
           <div style={{
             backgroundColor: 'white',
             borderRadius: '16px',
-            width: '700px',
+            width: '100%',
+            maxWidth: '700px', // Maximum width for larger screens
             height: '90vh',
             maxHeight: '900px',
+            minHeight: '400px', // Minimum height to ensure usability
             boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)',
             position: 'relative',
             fontFamily: '"Inter", sans-serif',
             display: 'flex',
-            flexDirection: 'column'
+            flexDirection: 'column',
+            overflow: 'hidden', // Prevent content from spilling out
+            // Responsive adjustments
+            ...(window.innerWidth <= 768 ? {
+              width: 'calc(100vw - 20px)',
+              height: 'calc(100vh - 20px)',
+              minHeight: '350px',
+              borderRadius: '12px'
+            } : {})
           }}>
             {/* Header */}
             <div style={{
-              padding: '20px 30px 15px 30px',
+              padding: window.innerWidth <= 768 ? '15px 20px 12px 20px' : '20px 30px 15px 30px',
               borderBottom: '1px solid #e0e0e0',
               position: 'relative',
               flexShrink: 0
@@ -544,29 +555,25 @@ function Admin() {
               {/* Title and DOI Row */}
               <div style={{
                 display: 'flex',
-                alignItems: 'center',
-                gap: '30px'
+                alignItems: window.innerWidth <= 768 ? 'flex-start' : 'center',
+                flexDirection: window.innerWidth <= 768 ? 'column' : 'row',
+                gap: window.innerWidth <= 768 ? '15px' : '30px'
               }}>
                 <h2 style={{
                   margin: '0',
                   color: '#181d27',
-                  fontSize: '18px',
+                  fontSize: window.innerWidth <= 768 ? '16px' : '18px',
                   fontWeight: '600',
                   flexShrink: 0
                 }}>
                   Add a Publication
                 </h2>
-                <p style={{
-                  margin: '4px 0 0 0',
-                  color: '#666',
-                  fontSize: '13px',
-                  fontWeight: '400'
-                }}>
-
-                </p>
                 
                 {/* DOI Input */}
-                <div style={{ width: '220px' }}>
+                <div style={{ 
+                  width: window.innerWidth <= 768 ? '100%' : '220px',
+                  maxWidth: window.innerWidth <= 768 ? '280px' : '220px'
+                }}>
                   <label style={{
                     display: 'block',
                     marginBottom: '6px',
@@ -616,14 +623,23 @@ function Admin() {
               </button>
             </div>
 
-            {/* Body */}
+            {/* Body - Scrollable Content */}
             <div style={{
-              padding: '20px 30px',
               flex: 1,
               overflow: 'hidden',
               display: 'flex',
               flexDirection: 'column'
             }}>
+              {/* Scrollable Form Content */}
+              <div style={{
+                padding: window.innerWidth <= 768 ? '15px 20px' : '20px 30px',
+                flex: 1,
+                overflowY: 'auto', // Enable vertical scrolling
+                overflowX: 'hidden', // Prevent horizontal scrolling
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '18px'
+              }}>
               {/* Title */}
               <div style={{ marginBottom: '18px' }}>
                 <label style={{
@@ -642,13 +658,14 @@ function Admin() {
                   onChange={(e) => handleInputChange('title', e.target.value)}
                   required
                   style={{
-                    width: '70%',
+                    width: window.innerWidth <= 768 ? '100%' : '70%',
                     padding: '8px 12px',
                     border: '1px solid #e0e0e0',
                     borderRadius: '6px',
                     fontSize: '14px',
                     outline: 'none',
-                    boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)'
+                    boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
+                    boxSizing: 'border-box'
                   }}
                 />
               </div>
@@ -669,9 +686,9 @@ function Admin() {
                   value={formData.abstract}
                   onChange={(e) => handleInputChange('abstract', e.target.value)}
                   required
-                  rows={3}
+                  rows={window.innerWidth <= 768 ? 2 : 3}
                   style={{
-                    width: '70%',
+                    width: window.innerWidth <= 768 ? '100%' : '70%',
                     padding: '8px 12px',
                     border: '1px solid #e0e0e0',
                     borderRadius: '6px',
@@ -679,7 +696,8 @@ function Admin() {
                     outline: 'none',
                     resize: 'vertical',
                     fontFamily: 'inherit',
-                    boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)'
+                    boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
+                    boxSizing: 'border-box'
                   }}
                 />
               </div>
@@ -687,11 +705,14 @@ function Admin() {
               {/* Authors and Categories Row */}
               <div style={{
                 display: 'flex',
-                gap: '40px',
+                flexDirection: window.innerWidth <= 768 ? 'column' : 'row',
+                gap: window.innerWidth <= 768 ? '18px' : '40px',
                 marginBottom: '18px'
               }}>
                 {/* Authors */}
-                <div style={{ width: '35%' }}>
+                <div style={{ 
+                  width: window.innerWidth <= 768 ? '100%' : '35%'
+                }}>
                   <label style={{
                     display: 'block',
                     marginBottom: '6px',
@@ -714,13 +735,16 @@ function Admin() {
                       borderRadius: '6px',
                       fontSize: '14px',
                       outline: 'none',
-                      boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)'
+                      boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
+                      boxSizing: 'border-box'
                     }}
                   />
                 </div>
 
                 {/* Display Category */}
-                <div style={{ width: '35%' }}>
+                <div style={{ 
+                  width: window.innerWidth <= 768 ? '100%' : '35%'
+                }}>
                   <label style={{
                     display: 'block',
                     marginBottom: '6px',
@@ -743,7 +767,8 @@ function Admin() {
                       outline: 'none',
                       boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
                       backgroundColor: 'white',
-                      cursor: 'pointer'
+                      cursor: 'pointer',
+                      boxSizing: 'border-box'
                     }}
                   >
                     <option value="" disabled>Choose Category</option>
@@ -753,14 +778,6 @@ function Admin() {
                       </option>
                     ))}
                   </select>
-                  <div style={{
-                    fontSize: '12px',
-                    color: '#666',
-                    marginTop: '4px',
-                    fontStyle: 'italic'
-                  }}>
-
-                  </div>
                 </div>
               </div>
 
@@ -770,7 +787,7 @@ function Admin() {
                   style={{
                     border: `2px dashed ${dragActive ? '#00313c' : '#ccc'}`,
                     borderRadius: '8px',
-                    padding: '20px 15px',
+                    padding: window.innerWidth <= 768 ? '15px 10px' : '20px 15px',
                     textAlign: 'center',
                     backgroundColor: dragActive ? '#f8f9fa' : '#fafafa',
                     transition: 'all 0.2s ease',
@@ -787,13 +804,13 @@ function Admin() {
                     color: '#00313c',
                     marginBottom: '8px'
                   }}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke="#344054" d="M25 25v18.75m6.479-14.625L24.854 22.5l-6.334 6.333"/><path stroke="#000000" d="M12.5 31.48a13.73 13.73 0 1 1 20.833-15.084a9.6 9.6 0 0 1 1.73-.167A8.73 8.73 0 0 1 37.5 33.333"/></g></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width={window.innerWidth <= 768 ? "40" : "50"} height={window.innerWidth <= 768 ? "40" : "50"} viewBox="0 0 50 50"><g fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path stroke="#344054" d="M25 25v18.75m6.479-14.625L24.854 22.5l-6.334 6.333"/><path stroke="#000000" d="M12.5 31.48a13.73 13.73 0 1 1 20.833-15.084a9.6 9.6 0 0 1 1.73-.167A8.73 8.73 0 0 1 37.5 33.333"/></g></svg>
                   </div>
                   
                   <p style={{
                     margin: '0 0 5px 0',
                     color: '#000',
-                    fontSize: '13px',
+                    fontSize: window.innerWidth <= 768 ? '12px' : '13px',
                     fontFamily: 'Helvetica, sans-serif'
                   }}>
                     Select a file or drag and drop here
@@ -802,7 +819,7 @@ function Admin() {
                   <p style={{
                     margin: '0 0 15px 0',
                     color: 'rgba(0, 0, 0, 0.4)',
-                    fontSize: '11px',
+                    fontSize: window.innerWidth <= 768 ? '10px' : '11px',
                     fontFamily: 'Helvetica, sans-serif'
                   }}>
                     JPG, PNG or PDF
@@ -820,12 +837,12 @@ function Admin() {
                     htmlFor="file-input"
                     style={{
                       display: 'inline-block',
-                      padding: '8px 16px',
+                      padding: window.innerWidth <= 768 ? '6px 12px' : '8px 16px',
                       backgroundColor: '#fbfdfe',
                       color: '#0f91d1',
                       borderRadius: '5px',
                       cursor: 'pointer',
-                      fontSize: '10px',
+                      fontSize: window.innerWidth <= 768 ? '9px' : '10px',
                       fontFamily: 'Helvetica, sans-serif',
                       border: '1px solid #0f91d1'
                     }}
@@ -856,12 +873,14 @@ function Admin() {
                     borderRadius: '8px',
                     border: '1px solid #e0e0e0',
                     flexWrap: 'wrap',
-                    maxHeight: '120px',
+                    maxHeight: window.innerWidth <= 768 ? '100px' : '120px',
                     overflowY: 'auto'
                   }}>
                     {formData.files.map((file, index) => {
                       const fileType = getFileType(file);
                       const previewUrl = getFilePreviewUrl(file);
+                      const thumbnailSize = window.innerWidth <= 768 ? '60px' : '80px';
+                      const imageSize = window.innerWidth <= 768 ? '40px' : '50px';
                       
                       return (
                         <div
@@ -876,14 +895,14 @@ function Admin() {
                             backgroundColor: 'white',
                             borderRadius: '6px',
                             border: '1px solid #ddd',
-                            minWidth: '80px',
-                            maxWidth: '80px'
+                            minWidth: thumbnailSize,
+                            maxWidth: thumbnailSize
                           }}
                         >
                           {/* File Thumbnail/Icon */}
                           <div style={{
-                            width: '50px',
-                            height: '50px',
+                            width: imageSize,
+                            height: imageSize,
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
@@ -902,13 +921,13 @@ function Admin() {
                                 }}
                               />
                             ) : fileType === 'pdf' ? (
-                              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <svg width={window.innerWidth <= 768 ? "25" : "30"} height={window.innerWidth <= 768 ? "25" : "30"} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" stroke="#d32f2f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="#ffebee"/>
                                 <polyline points="14,2 14,8 20,8" stroke="#d32f2f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                 <text x="12" y="16" textAnchor="middle" fontSize="4" fill="#d32f2f" fontWeight="bold">PDF</text>
                               </svg>
                             ) : (
-                              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <svg width={window.innerWidth <= 768 ? "25" : "30"} height={window.innerWidth <= 768 ? "25" : "30"} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" stroke="#666" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="#f5f5f5"/>
                                 <polyline points="14,2 14,8 20,8" stroke="#666" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                               </svg>
@@ -917,7 +936,7 @@ function Admin() {
                           
                           {/* File Name */}
                           <div style={{
-                            fontSize: '9px',
+                            fontSize: window.innerWidth <= 768 ? '8px' : '9px',
                             color: '#666',
                             textAlign: 'center',
                             lineHeight: '1.2',
@@ -936,8 +955,8 @@ function Admin() {
                               position: 'absolute',
                               top: '-5px',
                               right: '-5px',
-                              width: '18px',
-                              height: '18px',
+                              width: window.innerWidth <= 768 ? '16px' : '18px',
+                              height: window.innerWidth <= 768 ? '16px' : '18px',
                               borderRadius: '50%',
                               backgroundColor: '#ff4444',
                               color: 'white',
@@ -946,7 +965,7 @@ function Admin() {
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
-                              fontSize: '12px',
+                              fontSize: window.innerWidth <= 768 ? '10px' : '12px',
                               fontWeight: 'bold',
                               boxShadow: '0 1px 3px rgba(0,0,0,0.3)'
                             }}
@@ -961,67 +980,75 @@ function Admin() {
                 </div>
               )}
 
-              {/* Action Buttons */}
+              </div>
+              
+              {/* Action Buttons - Fixed at bottom, outside scrollable area */}
               <div style={{
-                display: 'flex',
-                gap: '20px',
-                justifyContent: 'center',
-                marginTop: 'auto',
-                paddingTop: '15px',
+                padding: window.innerWidth <= 768 ? '15px 20px' : '20px 30px',
                 borderTop: '1px solid #e0e0e0',
-                flexShrink: 0
+                backgroundColor: 'white',
+                borderBottomLeftRadius: '16px',
+                borderBottomRightRadius: '16px',
+                flexShrink: 0 // Prevent shrinking
               }}>
-                <button
-                  onClick={handleCloseModal}
-                  style={{
-                    padding: '16px 32px',
-                    backgroundColor: '#ffffff',
-                    color: '#414651',
-                    border: '1px solid #414651',
-                    borderRadius: '8px',
-                    fontSize: '16px',
-                    fontFamily: 'Inter, sans-serif',
-                    cursor: 'pointer',
-                    boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
-                    minWidth: '140px',
-                    fontWeight: '500',
-                    transition: 'all 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = '#f5f5f5';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = '#ffffff';
-                  }}
-                >
-                  Cancel
-                </button>
-                
-                <button
-                  onClick={handleSubmit}
-                  style={{
-                    padding: '16px 32px',
-                    backgroundColor: '#10303b',
-                    color: '#ffffff',
-                    border: 'none',
-                    borderRadius: '8px',
-                    fontSize: '16px',
-                    fontFamily: 'Inter, sans-serif',
-                    cursor: 'pointer',
-                    boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
-                    minWidth: '180px',
-                    fontWeight: '500',
-                    transition: 'all 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = '#0d262f';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = '#10303b';
-                  }}
-                >
-                  Add to Collection
-                </button>
+                <div style={{
+                  display: 'flex',
+                  flexDirection: window.innerWidth <= 768 ? 'column' : 'row',
+                  gap: window.innerWidth <= 768 ? '12px' : '20px',
+                  justifyContent: 'center'
+                }}>
+                  <button
+                    onClick={handleCloseModal}
+                    style={{
+                      padding: window.innerWidth <= 768 ? '12px 24px' : '16px 32px',
+                      backgroundColor: '#ffffff',
+                      color: '#414651',
+                      border: '1px solid #414651',
+                      borderRadius: '8px',
+                      fontSize: window.innerWidth <= 768 ? '14px' : '16px',
+                      fontFamily: 'Inter, sans-serif',
+                      cursor: 'pointer',
+                      boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
+                      minWidth: window.innerWidth <= 768 ? '100%' : '140px',
+                      fontWeight: '500',
+                      transition: 'all 0.2s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = '#f5f5f5';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = '#ffffff';
+                    }}
+                  >
+                    Cancel
+                  </button>
+                  
+                  <button
+                    onClick={handleSubmit}
+                    style={{
+                      padding: window.innerWidth <= 768 ? '12px 24px' : '16px 32px',
+                      backgroundColor: '#10303b',
+                      color: '#ffffff',
+                      border: 'none',
+                      borderRadius: '8px',
+                      fontSize: window.innerWidth <= 768 ? '14px' : '16px',
+                      fontFamily: 'Inter, sans-serif',
+                      cursor: 'pointer',
+                      boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
+                      minWidth: window.innerWidth <= 768 ? '100%' : '180px',
+                      fontWeight: '500',
+                      transition: 'all 0.2s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = '#0d262f';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = '#10303b';
+                    }}
+                  >
+                    Add to Collection
+                  </button>
+                </div>
               </div>
             </div>
           </div>

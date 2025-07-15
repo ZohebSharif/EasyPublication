@@ -13,7 +13,7 @@ interface PublicationData {
   category?: string;
   impact_factor?: number;
   tags?: string;
-  images?: string; // JSON string containing array of PNG paths
+  images?: string | string[]; // Can be JSON string (from database) or array (from parsed JSON)
 }
 
 interface PublicationCardProps {
@@ -30,45 +30,47 @@ function PublicationCard({ publication, isAdminMode = false, onDelete }: Publica
   };
 
   // Helper function to get images array
-  const getImages = (imagesJson: string | undefined) => {
+  const getImages = (imagesJson: string | string[] | undefined) => {
     if (!imagesJson) return [];
+    
+    // If it's already an array (from JSON parsing), return it
+    if (Array.isArray(imagesJson)) {
+      return imagesJson;
+    }
+    
+    // If it's a string (from database), parse it
     try {
-      return JSON.parse(imagesJson);
+      const parsed = JSON.parse(imagesJson);
+      return Array.isArray(parsed) ? parsed : [];
     } catch {
       return [];
     }
   };
 
-  // Helper function to get actual image URL
-  const getImageUrl = (imagePath: string): string => {
-    // If it's already a full URL, use it as is
-    if (imagePath.startsWith('http')) {
-      return imagePath;
+  // Helper function to get the first (primary) image URL
+  const getPrimaryImageUrl = (imagesJson: string | string[] | undefined): string | null => {
+    const images = getImages(imagesJson);
+    if (images.length === 0) return null;
+    
+    const firstImage = images[0];
+    
+    // Cloudinary URLs (already full URLs)
+    if (firstImage.startsWith('https://res.cloudinary.com/')) {
+      return firstImage;
     }
     
-    // If it starts with /images/, it's a server-uploaded image
-    if (imagePath.startsWith('/images/')) {
-      return `http://localhost:3001${imagePath}`;
+    // Other full URLs
+    if (firstImage.startsWith('http')) {
+      return firstImage;
     }
     
-    // Check localStorage for uploaded files (fallback for old system)
-    const uploadedFiles = JSON.parse(localStorage.getItem('uploadedFiles') || '[]');
-    const fileName = imagePath.split('/').pop(); // Get filename from path
-    const uploadedFile = uploadedFiles.find((file: any) => file.name === fileName);
-    
-    if (uploadedFile) {
-      return uploadedFile.data; // Return base64 data URL
+    // Legacy local server paths
+    if (firstImage.startsWith('/images/')) {
+      return `http://localhost:3001${firstImage}`;
     }
     
-    // Return the original path as fallback
-    return imagePath;
-  };
-
-  // Helper function to get first author
-  const getFirstAuthor = (authors: string) => {
-    if (!authors) return 'Unknown Author';
-    const firstAuthor = authors.split(',')[0];
-    return firstAuthor.trim();
+    // Fallback - return the path as-is
+    return firstImage;
   };
 
   // Helper function to format DOI link
@@ -150,15 +152,14 @@ function PublicationCard({ publication, isAdminMode = false, onDelete }: Publica
           </div>
         </div>
 
-        {/* Image Section - could add journal logo or placeholder */}
+        {/* Image Section - Display first uploaded image from database */}
         <div className={styles.imageSection}>
           {(() => {
-            const images = getImages(publication.images);
-            if (images.length > 0) {
-              const imageUrl = getImageUrl(images[0]);
+            const primaryImageUrl = getPrimaryImageUrl(publication.images);
+            if (primaryImageUrl) {
               return (
                 <img 
-                  src={imageUrl} 
+                  src={primaryImageUrl} 
                   alt="Publication visual"
                   style={{
                     width: '100%',
@@ -167,6 +168,7 @@ function PublicationCard({ publication, isAdminMode = false, onDelete }: Publica
                   }}
                   onError={(e) => {
                     // Fallback to a generic placeholder if image fails to load
+                    console.warn('Failed to load image:', primaryImageUrl);
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = `
                       <div style="
@@ -232,6 +234,13 @@ function PublicationCard({ publication, isAdminMode = false, onDelete }: Publica
                       <>
                         <br />
                         <strong>Images:</strong> {images.length} available
+                      </>
+                    );
+                  } else if (images.length === 1) {
+                    return (
+                      <>
+                        <br />
+                        <strong>Image:</strong> Available
                       </>
                     );
                   }
