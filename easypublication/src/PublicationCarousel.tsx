@@ -157,10 +157,20 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
         // Get list of deleted publications from localStorage
         const deletedIds = JSON.parse(localStorage.getItem('deletedPublications') || '[]');
         
-        // Filter out deleted publications and only show non-"General" category publications
-        const activePublications = allData.filter((pub: PublicationData) => 
-          !deletedIds.includes(pub.id) && pub.category && pub.category.toLowerCase() !== 'general'
-        );
+        // Filter publications: show non-"General" category publications
+        // If a publication was previously deleted but now has a non-General category, show it
+        const activePublications = allData.filter((pub: PublicationData) => {
+          // Always show publications that have a specific (non-General) category
+          const hasSpecificCategory = pub.category && pub.category.toLowerCase() !== 'general';
+          
+          // If publication has a specific category, show it regardless of deletion history
+          if (hasSpecificCategory) {
+            return true;
+          }
+          
+          // If publication is still in General category, check if it was deleted
+          return !deletedIds.includes(pub.id);
+        });
         
         // Map category names to match the selected category
         const categoryToMatch: { [key: string]: string } = {
@@ -235,6 +245,12 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
         if (resetResponse.ok) {
           const result = await resetResponse.json();
           console.log(`✅ Publication category reset to General and images cleared:`, result);
+          
+          // Remove from deleted list since it's now properly reset to General
+          const deletedIds = JSON.parse(localStorage.getItem('deletedPublications') || '[]');
+          const updatedDeletedIds = deletedIds.filter((id: number) => id !== publicationId);
+          localStorage.setItem('deletedPublications', JSON.stringify(updatedDeletedIds));
+          
         } else {
           const error = await resetResponse.json();
           console.warn(`⚠️ Failed to reset category and images in database: ${error.error}`);

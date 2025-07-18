@@ -58,6 +58,47 @@ async function uploadToCloudinary(fileBuffer, originalName) {
   });
 }
 
+// Helper function to delete images from Cloudinary
+async function deleteFromCloudinary(imageUrls) {
+  if (!imageUrls || imageUrls.length === 0) {
+    return { deleted: [], errors: [] };
+  }
+
+  const deletedImages = [];
+  const errors = [];
+
+  for (const imageUrl of imageUrls) {
+    try {
+      // Extract public_id from Cloudinary URL
+      // URL format: https://res.cloudinary.com/[cloud_name]/image/upload/v[version]/[folder]/[public_id].[format]
+      // Example: https://res.cloudinary.com/dv7kssxdi/image/upload/v1752613508/easypublication/publication_1752613508436_90692893.png
+      const matches = imageUrl.match(/\/v\d+\/(.+?)\./);
+      if (matches && matches[1]) {
+        const publicId = matches[1]; // This already includes the folder path
+        
+        console.log(`🗑️ Deleting image from Cloudinary: ${publicId}`);
+        const result = await cloudinary.uploader.destroy(publicId);
+        
+        if (result.result === 'ok') {
+          deletedImages.push(publicId);
+          console.log(`✅ Successfully deleted: ${publicId}`);
+        } else {
+          console.warn(`⚠️ Failed to delete: ${publicId} - ${result.result}`);
+          errors.push({ publicId, error: result.result });
+        }
+      } else {
+        console.warn(`⚠️ Could not extract public_id from URL: ${imageUrl}`);
+        errors.push({ url: imageUrl, error: 'Invalid URL format' });
+      }
+    } catch (error) {
+      console.error(`❌ Error deleting image: ${imageUrl}`, error);
+      errors.push({ url: imageUrl, error: error.message });
+    }
+  }
+
+  return { deleted: deletedImages, errors };
+}
+
 // Database helper function
 async function updatePublicationInDatabase(publicationId, newCategory, imagePaths = []) {
   try {
@@ -65,6 +106,37 @@ async function updatePublicationInDatabase(publicationId, newCategory, imagePath
     const dbPath = path.join(__dirname, 'als-publications.db');
     const fileBuffer = readFileSync(dbPath);
     const db = new SQL.Database(fileBuffer);
+    
+    // Get current images before updating (so we can delete them from Cloudinary)
+    const currentResult = db.exec(`
+      SELECT images FROM publications WHERE id = ?
+    `, [publicationId]);
+    
+    let currentImages = [];
+    if (currentResult && currentResult.length > 0) {
+      const [{ values }] = currentResult;
+      if (values.length > 0 && values[0][0]) {
+        try {
+          currentImages = JSON.parse(values[0][0]) || [];
+        } catch (e) {
+          console.warn('Failed to parse current images:', e);
+          currentImages = [];
+        }
+      }
+    }
+    
+    // If we're clearing images (imagePaths is empty) and there are current images, delete them from Cloudinary
+    if (imagePaths.length === 0 && currentImages.length > 0) {
+      console.log(`🗑️ Deleting ${currentImages.length} images from Cloudinary for publication ${publicationId}`);
+      const deleteResult = await deleteFromCloudinary(currentImages);
+      
+      if (deleteResult.deleted.length > 0) {
+        console.log(`✅ Successfully deleted ${deleteResult.deleted.length} images from Cloudinary`);
+      }
+      if (deleteResult.errors.length > 0) {
+        console.warn(`⚠️ Failed to delete ${deleteResult.errors.length} images:`, deleteResult.errors);
+      }
+    }
     
     // Update the publication category and images
     let query = 'UPDATE publications SET category = ?, images = ?';
@@ -310,8 +382,88 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'Server is running', timestamp: new Date().toISOString() });
 });
 
+// Publication deletion endpoint (completely removes publication and images)
+app.post('/api/delete-publication', async (req, res) => {
+  try {
+    const { publicationId } = req.body;
+    
+    if (!publicationId) {
+      return res.status(400).json({ error: 'Publication ID is required' });
+    }
+    
+    const SQL = await initSqlJs();
+    const dbPath = path.join(__dirname, 'als-publications.db');
+    const fileBuffer = readFileSync(dbPath);
+    const db = new SQL.Database(fileBuffer);
+    
+    // Get publication details and images before deletion
+    const getResult = db.exec(`
+      SELECT id, title, images FROM publications WHERE id = ?
+    `, [publicationId]);
+    
+    if (!getResult || getResult.length === 0 || getResult[0].values.length === 0) {
+      db.close();
+      return res.status(404).json({ error: 'Publication not found' });
+    }
+    
+    const [id, title, images] = getResult[0].values[0];
+    let imageUrls = [];
+    
+    // Parse images if they exist
+    if (images) {
+      try {
+        imageUrls = JSON.parse(images) || [];
+      } catch (e) {
+        console.warn('Failed to parse images for deletion:', e);
+      }
+    }
+    
+    // Delete images from Cloudinary
+    if (imageUrls.length > 0) {
+      console.log(`🗑️ Deleting ${imageUrls.length} images from Cloudinary for publication ${id}`);
+      const deleteResult = await deleteFromCloudinary(imageUrls);
+      
+      if (deleteResult.deleted.length > 0) {
+        console.log(`✅ Successfully deleted ${deleteResult.deleted.length} images from Cloudinary`);
+      }
+      if (deleteResult.errors.length > 0) {
+        console.warn(`⚠️ Failed to delete ${deleteResult.errors.length} images:`, deleteResult.errors);
+      }
+    }
+    
+    // Delete publication from database
+    db.exec('DELETE FROM publications WHERE id = ?', [publicationId]);
+    
+    // Save the database back to file
+    const data = db.export();
+    writeFileSync(dbPath, data);
+    db.close();
+    
+    // Export updated data to JSON
+    await exportDatabaseToJson();
+    
+    console.log(`✅ Publication ${id} ("${title}") completely deleted with all associated images`);
+    
+    res.json({
+      message: 'Publication and associated images deleted successfully',
+      deletedPublication: { id, title },
+      deletedImages: imageUrls.length
+    });
+    
+  } catch (error) {
+    console.error('Publication deletion error:', error);
+    res.status(500).json({ error: 'Failed to delete publication' });
+  }
+});
+
+// Start the server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`☁️  Files will be uploaded to Cloudinary (${process.env.CLOUDINARY_CLOUD_NAME || 'not configured'})`);
-  console.log(`📄 Make sure to set CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, and CLOUDINARY_API_SECRET in .env`);
+  console.log(`🚀 Server is running on http://localhost:${PORT}`);
+  console.log('📂 Available endpoints:');
+  console.log('  GET  /api/health - Health check');
+  console.log('  POST /api/upload - Upload files to Cloudinary');
+  console.log('  POST /api/update-publication - Update publication category and images');
+  console.log('  GET  /api/search-publications - Search publications');
+  console.log('  POST /api/export-database - Export database to JSON');
+  console.log('  POST /api/delete-publication - Delete publication and associated images');
 });
