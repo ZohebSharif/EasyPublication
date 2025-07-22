@@ -459,9 +459,13 @@
     "beamlines": "8.3.2",
     "year": "2024",
     "high_impact": 0,
-    "category": "General",
+    "category": "geoscience and environment",
     "tags": null,
-    "images": []
+    "images": [
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753223296/easypublication/publication_1753223296121_968126091.webp",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753223296/easypublication/publication_1753223296247_651648784.webp",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753223296/easypublication/publication_1753223296250_217595625.jpg"
+    ]
   },
   {
     "id": 34,

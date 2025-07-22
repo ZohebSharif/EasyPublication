@@ -59,7 +59,7 @@ function Home() {
             </div>
           </button>
 
-         <button className="buttonTwo">
+         <button className="buttonTwo" onClick={() => navigate('/slideshow')}>
           <div className="textTwo">
             <strong>Slideshow View</strong>
           </div>
