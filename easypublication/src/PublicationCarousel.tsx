@@ -35,16 +35,31 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
   const [startDragIndex, setStartDragIndex] = useState(0);
   const [hasDragged, setHasDragged] = useState(false);
 
-  const handlePrevious = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? publications.length - 1 : prevIndex - 1
-    );
+  const navigateToIndex = (newIndex: number) => {
+    console.log('Navigating from', currentIndex, 'to', newIndex, 'of', publications.length - 1);
+    setCurrentIndex(newIndex);
   };
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === publications.length - 1 ? 0 : prevIndex + 1
-    );
+  const handlePrevious = (e?: React.MouseEvent) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    if (publications.length > 0) {
+      const newIndex = currentIndex === 0 ? publications.length - 1 : currentIndex - 1;
+      navigateToIndex(newIndex);
+    }
+  };
+
+  const handleNext = (e?: React.MouseEvent) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    if (publications.length > 0) {
+      const newIndex = currentIndex === publications.length - 1 ? 0 : currentIndex + 1;
+      navigateToIndex(newIndex);
+    }
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -356,10 +371,25 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
   }
 
   return (
-    <div className="Carousel" style={{ position: 'relative', paddingTop: '2vw', paddingBottom: '6vw' }}>
+    <div className="Carousel" style={{ 
+      position: 'relative', 
+      paddingTop: '2vw', 
+      paddingBottom: '6vw',
+      maxWidth: '100vw',
+      overflow: 'hidden',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center'
+    }}>
       
       {/* Category Label */}
-      <div className="carousel-category-label">
+      <div className="carousel-category-label" style={{
+        marginBottom: '20px',
+        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+        padding: '8px 16px',
+        borderRadius: '4px',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+      }}>
         {category.toUpperCase()}
       </div>
       
@@ -370,13 +400,13 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
           justifyContent: 'center',
           alignItems: 'center',
           height: 'auto',
-          minHeight: '600px',
+          minHeight: '700px',
           position: 'relative',
           overflow: 'visible',
-          width: '100vw',
+          width: '100%',
           cursor: isDragging ? 'grabbing' : 'grab',
-          paddingTop: '50px',
-          paddingBottom: '50px'
+          paddingTop: '40px',
+          paddingBottom: '40px'
         }}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
@@ -391,39 +421,28 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
           const offset = index - currentIndex;
           
           const handleCardClick = (e: React.MouseEvent) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
             // Prevent click if we just finished dragging
             if (hasDragged) {
-              e.preventDefault();
               return;
             }
             
-            // This function should only be called for non-active cards
-            e.preventDefault(); // Prevent any default actions for non-active cards
-            if (offset > 0) {
-              // Card is to the right, call handleNext
-              handleNext();
-            } else if (offset < 0) {
-              // Card is to the left, call handlePrevious
-              handlePrevious();
+            // Navigate directly to this index if it's not the active card
+            if (!isActive) {
+              navigateToIndex(index);
             }
           };
           
           // Calculate position with drag offset
-          const baseTransform = offset * 500;
+          const baseTransform = offset * 600; // Space between cards
           const dragTransform = isDragging ? dragOffset : 0;
           const totalTransform = baseTransform + dragTransform;
           
-          // Show all cards but with different opacity levels - PRELOAD ALL CARDS
-          let opacity = 1;
-          if (!isActive) {
-            if (Math.abs(offset) <= 1) {
-              opacity = 0.6; // Adjacent cards
-            } else if (Math.abs(offset) <= 2) {
-              opacity = 0.3; // Next level cards
-            } else {
-              opacity = 0.1; // Far cards
-            }
-          }
+          // Show all cards but with different opacity levels
+          let opacity = isActive ? 1 : 0.6; // Make inactive cards more visible
+          let scale = isActive ? 1.1 : 0.85; // Increase scale difference
           
           return (
             <div
@@ -433,11 +452,11 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
               style={{
                 position: 'absolute',
                 left: '50%',
-                transform: `translateX(calc(-50% + ${totalTransform}px)) scale(${isActive && !isDragging ? 1.05 : 0.9})`,
+                transform: `translateX(calc(-50% + ${totalTransform}px)) scale(${scale})`,
                 opacity: opacity,
                 transition: isDragging ? 'transform 0.1s ease-out' : 'all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
                 zIndex: isActive ? 10 : Math.max(1, 10 - Math.abs(offset)),
-                filter: isActive && !isDragging ? 'drop-shadow(0 10px 20px rgba(0,0,0,0.2))' : 'none',
+                filter: isActive && !isDragging ? 'drop-shadow(0 15px 30px rgba(0,0,0,0.2))' : 'none', // Enhanced shadow
                 cursor: isActive ? 'default' : 'pointer',
                 pointerEvents: Math.abs(offset) <= 2 ? 'auto' : 'none' // Only allow interaction with nearby cards
               }}
@@ -452,58 +471,131 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
         })}
       </div>
 
-      {/* arrows at bottom center */}
+      {/* Navigation and Title Unit */}
       <div style={{
-        position: 'absolute',
-        bottom: '80px',
-        left: 'calc(50% + 50px)',
-        transform: 'translateX(-50%)',
         display: 'flex',
-        gap: '40px',
-        zIndex: 10,
+        flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center'
+        gap: '15px',
+        marginTop: '0',
+        backgroundColor: 'white',
+        padding: '15px 0',
+        borderRadius: '8px',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+        maxWidth: '800px',
+        margin: '0 auto',
+        transform: 'translateY(-80px)',
+        position: 'relative',
+        zIndex: 20
       }}>
-        <img 
-          src={LeftArrow} 
-          alt="Previous"
-          onClick={handlePrevious}
-          style={{
-            width: '40px',
-            height: '40px',
-            cursor: 'pointer',
-            opacity: 0.7,
-            transition: 'all 0.2s ease'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.opacity = '1';
-            e.currentTarget.style.transform = 'scale(1.1)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.opacity = '0.7';
-            e.currentTarget.style.transform = 'scale(1)';
-          }}
-        />
-        <img 
-          src={RightArrow} 
-          alt="Next"
-          onClick={handleNext}
-          style={{
-            width: '40px',
-            height: '40px',
-            cursor: 'pointer',
-            opacity: 0.7,
-            transition: 'all 0.2s ease'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.opacity = '1';
-            e.currentTarget.style.transform = 'scale(1.1)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.opacity = '0.7';
-            e.currentTarget.style.transform = 'scale(1)';
-          }}
-        />
+        {/* Current Publication Title */}
+        <div style={{
+          fontSize: '16px',
+          color: '#333',
+          textAlign: 'center',
+          maxWidth: '600px',
+          padding: '0 20px',
+          fontWeight: '500',
+          lineHeight: '1.4'
+        }}>
+          {publications[currentIndex]?.title || ''}
+        </div>
+
+        {/* Navigation Controls */}
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '20px'
+        }}>
+          {/* Left Arrow */}
+          <button
+            type="button"
+            onClick={handlePrevious}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '40px',
+              height: '40px',
+              borderRadius: '50%',
+              backgroundColor: '#f5f5f5',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              padding: '8px',
+              border: 'none',
+              outline: 'none'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'scale(1.1)';
+              e.currentTarget.style.backgroundColor = '#e0e0e0';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.backgroundColor = '#f5f5f5';
+            }}
+          >
+            <img 
+              src={LeftArrow} 
+              alt="Previous"
+              style={{
+                width: '25px',
+                height: '25px',
+                opacity: 0.8,
+                pointerEvents: 'none'
+              }}
+            />
+          </button>
+
+          {/* Publication Counter */}
+          <div style={{
+            fontSize: '14px',
+            color: '#666',
+            fontWeight: 500,
+            minWidth: '80px',
+            textAlign: 'center'
+          }}>
+            {currentIndex + 1} of {publications.length}
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            type="button"
+            onClick={handleNext}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '40px',
+              height: '40px',
+              borderRadius: '50%',
+              backgroundColor: '#f5f5f5',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              padding: '8px',
+              border: 'none',
+              outline: 'none'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'scale(1.1)';
+              e.currentTarget.style.backgroundColor = '#e0e0e0';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.backgroundColor = '#f5f5f5';
+            }}
+          >
+            <img 
+              src={RightArrow} 
+              alt="Next"
+              style={{
+                width: '25px',
+                height: '25px',
+                opacity: 0.8,
+                pointerEvents: 'none'
+              }}
+            />
+          </button>
+        </div>
       </div>
     </div>
   );

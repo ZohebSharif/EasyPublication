@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ArrowLeft from './assets/arrow-left-circle.png';
-import ArrowRight from './assets/arrow-right-circle.png';
-import './App.css';
 
 interface Publication {
   id: number;
@@ -25,12 +22,36 @@ function SlideshowView() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    fetch('/public/data/all-publications.json')
-      .then(res => res.json())
-      .then((data: Publication[]) => {
-        const filtered = data.filter(pub => pub.images && pub.images.length > 0);
+    const loadPublications = async () => {
+      try {
+        // Try both paths
+        let response = await fetch('/data/all-publications.json');
+        if (!response.ok) {
+          response = await fetch('/public/data/all-publications.json');
+        }
+        if (!response.ok) {
+          throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
+        }
+        const data = await response.json();
+        const filtered = data.filter((pub: Publication) => {
+          if (!pub.images) return false;
+          
+          // Handle both string and array formats
+          const images = typeof pub.images === 'string' ? JSON.parse(pub.images) : pub.images;
+          return images && images.length > 0;
+        }).map((pub: Publication) => ({
+          ...pub,
+          // Ensure images is always an array
+          images: typeof pub.images === 'string' ? JSON.parse(pub.images) : pub.images
+        }));
+        
         setPublications(filtered);
-      });
+      } catch (error) {
+        console.error('Error loading publications:', error);
+      }
+    };
+
+    loadPublications();
   }, []);
 
   useEffect(() => {
@@ -40,10 +61,14 @@ function SlideshowView() {
   const currentPub = publications[currentIndex];
 
   const handlePrev = () => {
-    setCurrentIndex(idx => idx > 0 ? idx - 1 : publications.length - 1);
+    if (publications.length === 0) return;
+    const newIndex = currentIndex > 0 ? currentIndex - 1 : publications.length - 1;
+    setCurrentIndex(newIndex);
   };
   const handleNext = () => {
-    setCurrentIndex(idx => idx < publications.length - 1 ? idx + 1 : 0);
+    if (publications.length === 0) return;
+    const newIndex = currentIndex < publications.length - 1 ? currentIndex + 1 : 0;
+    setCurrentIndex(newIndex);
   };
   const handleClose = () => {
     navigate('/');
@@ -65,9 +90,21 @@ function SlideshowView() {
   };
 
   return (
-    <div className="App" style={{ overflow: 'hidden', height: '100vh', background: isDark ? '#181d27' : '#fff', color: isDark ? '#fff' : '#181d27' }}>
+    <div style={{ 
+      overflow: 'hidden', 
+      height: '100vh', 
+      background: isDark ? '#181d27' : '#fff', 
+      color: isDark ? '#fff' : '#181d27',
+      fontFamily: 'Inter, Arial, sans-serif'
+    }}>
       {/* Header with Title and View Buttons */}
-      <div className="header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px', position: 'relative' }}>
+      <div style={{ 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center', 
+        padding: '20px', 
+        position: 'relative' 
+      }}>
         <h1 style={{ 
           fontSize: '2em',
           margin: 0,
@@ -84,29 +121,42 @@ function SlideshowView() {
           lineHeight: '1.2',
           maxHeight: '2.4em',
           textAlign: 'left'
-        }}>{currentPub?.title || '3D Data Visual'}</h1>
+        }}>
+          {currentPub?.title || '3D Data Visual'}
+        </h1>
 
-        <div className="buttonContainer" style={{ position: 'absolute', left: '20px', zIndex: 2 }}>
-          <button className="buttonOne" onClick={handleWebView} style={{ 
+        <div style={{ position: 'absolute', left: '20px', zIndex: 2 }}>
+          <button onClick={handleWebView} style={{ 
             background: isDark ? '#181d27' : '#fff', 
             color: isDark ? '#fff' : '#181d27', 
             border: isDark ? '2px solid #fff' : '2px solid #181d27', 
             fontWeight: 700, 
             fontFamily: 'Inter, Arial, sans-serif',
-            minWidth: 'fit-content'
-          }}>Web View</button>
-          <button className="buttonTwo" onClick={handleSlideshowView} style={{ 
+            minWidth: 'fit-content',
+            padding: '8px 16px',
+            borderRadius: '6px',
+            cursor: 'pointer',
+            marginRight: '8px'
+          }}>
+            Web View
+          </button>
+          <button onClick={handleSlideshowView} style={{ 
             background: isDark ? '#fff' : '#181d27', 
             color: isDark ? '#181d27' : '#fff', 
             border: isDark ? '2px solid #fff' : '2px solid #181d27', 
             fontWeight: 700, 
             fontFamily: 'Inter, Arial, sans-serif',
-            minWidth: 'fit-content'
-          }}>Slideshow View</button>
+            minWidth: 'fit-content',
+            padding: '8px 16px',
+            borderRadius: '6px',
+            cursor: 'pointer'
+          }}>
+            Slideshow View
+          </button>
         </div>
       </div>
 
-      {/* Slideshow Box */}
+      {/* Main Content Container */}
       <div style={{
         position: 'relative',
         display: 'flex', 
@@ -114,7 +164,8 @@ function SlideshowView() {
         justifyContent: 'center',
         gap: '24px',
         padding: '0 24px',
-        marginTop: '-5px' // Changed from -20px to -5px to drop boxes by 15px
+        marginTop: '-5px',
+        height: 'calc(100vh - 140px)'
       }}>
         {/* Navigation Arrows */}
         <button onClick={handlePrev} style={{
@@ -125,10 +176,16 @@ function SlideshowView() {
           background: 'none',
           border: 'none',
           cursor: 'pointer',
-          zIndex: 10
+          zIndex: 10,
+          padding: '8px'
         }}>
-          <img src={ArrowLeft} alt="Previous" style={{ width: '48px', height: '48px', filter: isDark ? 'invert(1)' : 'none' }} />
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke={isDark ? '#fff' : '#181d27'} strokeWidth="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12,8 8,12 12,16"/>
+            <line x1="16" y1="12" x2="8" y2="12"/>
+          </svg>
         </button>
+        
         <button onClick={handleNext} style={{
           position: 'absolute',
           right: '24px',
@@ -137,9 +194,14 @@ function SlideshowView() {
           background: 'none',
           border: 'none',
           cursor: 'pointer',
-          zIndex: 10
+          zIndex: 10,
+          padding: '8px'
         }}>
-          <img src={ArrowRight} alt="Next" style={{ width: '48px', height: '48px', filter: isDark ? 'invert(1)' : 'none' }} />
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke={isDark ? '#fff' : '#181d27'} strokeWidth="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12,8 16,12 12,16"/>
+            <line x1="8" y1="12" x2="16" y2="12"/>
+          </svg>
         </button>
 
         {/* Main Content Box */}
@@ -150,14 +212,13 @@ function SlideshowView() {
           boxShadow: '0 8px 32px rgba(0,0,0,0.12)', 
           width: '800px',
           maxWidth: '65vw', 
-          minHeight: '500px', 
+          height: 'fit-content',
+          maxHeight: '100%',
           position: 'relative', 
           display: 'flex', 
           flexDirection: 'column', 
-          justifyContent: 'space-between', 
-          padding: '32px 32px 24px 32px', 
-          fontSize: '1rem', 
-          fontFamily: 'Inter, Arial, sans-serif'
+          padding: '32px', 
+          fontSize: '1rem'
         }}>
           {/* Category and Close Button */}
           <div style={{ 
@@ -172,8 +233,11 @@ function SlideshowView() {
               fontSize: '24px',
               cursor: 'pointer',
               color: isDark ? '#fff' : '#000',
-              padding: '0'
-            }}>×</button>
+              padding: '0',
+              lineHeight: '1'
+            }}>
+              ×
+            </button>
             <a href="#" style={{ 
               color: isDark ? '#bfc6d1' : '#414651',
               textDecoration: 'none',
@@ -185,57 +249,165 @@ function SlideshowView() {
             </a>
           </div>
 
-          {/* Image/Carousel Row */}
-          <div style={{ width: '100%', position: 'relative', marginBottom: '32px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            {/* Large Image */}
-            <div style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '480px', height: '480px', maxHeight: '65vh' }}>
+          {/* Image Section */}
+          <div style={{ 
+            width: '100%', 
+            display: 'flex', 
+            flexDirection: 'column',
+            marginBottom: '24px'
+          }}>
+            {/* Main Image */}
+            <div style={{ 
+              width: '100%', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              minHeight: '400px', 
+              height: '400px',
+              marginBottom: '16px'
+            }}>
               {currentPub?.images && currentPub.images.length > 0 && (
-                <img src={currentPub.images[imageIndex]} alt={`Figure ${imageIndex + 1}`} style={{ 
-                  height: '100%', 
-                  maxHeight: '480px', 
-                  maxWidth: '100%', 
-                  borderRadius: '12px', 
-                  boxShadow: '0 2px 12px rgba(0,0,0,0.08)', 
-                  objectFit: 'contain' 
-                }} />
+                <img 
+                  src={currentPub.images[imageIndex]} 
+                  alt={`Figure ${imageIndex + 1}`} 
+                  style={{ 
+                    height: '100%', 
+                    maxHeight: '400px', 
+                    maxWidth: '100%', 
+                    borderRadius: '12px', 
+                    boxShadow: '0 4px 20px rgba(0,0,0,0.1)', 
+                    objectFit: 'contain' 
+                  }} 
+                />
               )}
             </div>
-            {/* Figure Number bottom left, Arrows bottom right */}
-            <div style={{ width: '100%', position: 'absolute', left: 0, bottom: 0, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', pointerEvents: 'none' }}>
+            
+            {/* Image Controls Row */}
+            <div style={{ 
+              display: 'flex', 
+              justifyContent: 'space-between', 
+              alignItems: 'center',
+              paddingTop: '8px'
+            }}>
               {/* Figure Number */}
-              <div style={{ fontWeight: 600, fontSize: '1.1rem', color: isDark ? '#fff' : '#181d27', padding: '4px 12px', borderRadius: '8px', background: isDark ? '#23283a' : '#f5f5f5', boxShadow: '0 1px 4px rgba(0,0,0,0.06)', marginLeft: '8px', marginBottom: '8px', pointerEvents: 'auto' }}>
-                {currentPub?.images && currentPub.images.length > 0 ? `Figure ${imageIndex + 1}` : ''}
+              <div style={{ 
+                fontWeight: 600, 
+                fontSize: '1.1rem', 
+                color: isDark ? '#fff' : '#181d27', 
+                padding: '8px 16px', 
+                borderRadius: '8px', 
+                background: isDark ? '#23283a' : '#f5f5f5', 
+                boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+              }}>
+                {currentPub?.images && currentPub.images.length > 0 ? `Figure ${imageIndex + 1} of ${currentPub.images.length}` : ''}
               </div>
-              {/* Arrows bottom right */}
-              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '4px', marginRight: '8px', marginBottom: '8px', pointerEvents: 'auto' }}>
-                <button onClick={handleImagePrev} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
-                  <img src={ArrowLeft} alt="Prev" style={{ width: '28px', height: '28px', filter: isDark ? 'invert(1)' : 'none' }} />
+              
+              {/* Image Navigation Arrows */}
+              <div style={{ 
+                display: 'flex', 
+                gap: '8px', 
+                alignItems: 'center'
+              }}>
+                <button onClick={handleImagePrev} style={{ 
+                  background: isDark ? '#23283a' : '#f5f5f5', 
+                  border: 'none', 
+                  cursor: 'pointer', 
+                  padding: '8px',
+                  borderRadius: '6px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={isDark ? '#fff' : '#181d27'} strokeWidth="2">
+                    <polyline points="15,18 9,12 15,6"/>
+                  </svg>
                 </button>
-                <button onClick={handleImageNext} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
-                  <img src={ArrowRight} alt="Next" style={{ width: '28px', height: '28px', filter: isDark ? 'invert(1)' : 'none' }} />
+                <button onClick={handleImageNext} style={{ 
+                  background: isDark ? '#23283a' : '#f5f5f5', 
+                  border: 'none', 
+                  cursor: 'pointer', 
+                  padding: '8px',
+                  borderRadius: '6px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={isDark ? '#fff' : '#181d27'} strokeWidth="2">
+                    <polyline points="9,18 15,12 9,6"/>
+                  </svg>
                 </button>
               </div>
             </div>
           </div>
 
-          {/* Abstract below image row */}
+          {/* Abstract */}
           <div style={{ 
-            marginTop: '12px', 
-            minHeight: '60px', 
+            marginBottom: '24px',
             color: isDark ? '#bfc6d1' : '#414651', 
             fontSize: '1rem', 
             textAlign: 'left',
-            lineHeight: '1.5'
+            lineHeight: '1.5',
+            flexGrow: 1
           }}>
             {currentPub?.abstract || 'No abstract available.'}
           </div>
 
-          {/* Logos/Images at Bottom Left */}
-          <div style={{ position: 'absolute', left: '32px', bottom: '24px', display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-            {currentPub?.logos?.slice(0, MAX_LOGOS).map((logo, idx) => (
-              <img key={idx} src={logo} alt={`Logo ${idx + 1}`} style={{ width: '38px', height: '38px', objectFit: 'contain', borderRadius: '6px', background: '#f5f5f5', border: '1px solid #eee' }} />
-            ))}
+          {/* Bottom Row: Logos */}
+          <div style={{ 
+            display: 'flex', 
+            alignItems: 'flex-end',
+            marginTop: 'auto'
+          }}>
+            {/* Logos */}
+            <div style={{ 
+              display: 'flex', 
+              gap: '8px', 
+              flexWrap: 'wrap',
+              alignItems: 'center'
+            }}>
+              {currentPub?.logos?.slice(0, MAX_LOGOS).map((logo, idx) => (
+                <img 
+                  key={idx} 
+                  src={logo} 
+                  alt={`Logo ${idx + 1}`} 
+                  style={{ 
+                    width: '38px', 
+                    height: '38px', 
+                    objectFit: 'contain', 
+                    borderRadius: '6px', 
+                    background: '#f5f5f5', 
+                    border: '1px solid #eee',
+                    padding: '4px'
+                  }} 
+                />
+              ))}
+            </div>
           </div>
+        </div>
+
+        {/* QR Code - Fixed to bottom right of screen */}
+        <div style={{
+          position: 'fixed',
+          bottom: '24px',
+          right: '24px',
+          width: '80px',
+          height: '80px',
+          background: isDark ? '#23283a' : '#f5f5f5',
+          borderRadius: '8px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          border: `2px dashed ${isDark ? '#3a4553' : '#d1d5db'}`,
+          zIndex: 20,
+          boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
+        }}>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={isDark ? '#bfc6d1' : '#6b7280'} strokeWidth="1.5">
+            <rect x="3" y="3" width="5" height="5"/>
+            <rect x="16" y="3" width="5" height="5"/>
+            <rect x="3" y="16" width="5" height="5"/>
+            <path d="m21 16-3.5-3.5-2.5 2.5"/>
+            <path d="m8 11 2 2 4.5-4.5"/>
+          </svg>
         </div>
 
         {/* Right: Bullet Points */}
@@ -246,20 +418,35 @@ function SlideshowView() {
           boxShadow: '0 8px 32px rgba(0,0,0,0.12)', 
           width: '280px',
           maxWidth: '25vw', 
-          minHeight: '500px', 
-          padding: '32px 32px 24px 32px', 
+          height: 'fit-content',
+          maxHeight: '100%',
+          padding: '32px', 
           display: 'flex', 
-          flexDirection: 'column', 
-          justifyContent: 'flex-start', 
-          alignItems: 'flex-start', 
-          gap: '18px', 
-          fontSize: '1rem', 
-          fontFamily: 'Inter, Arial, sans-serif'
+          flexDirection: 'column'
         }}>
-          <h3 style={{ fontWeight: 600, fontSize: '1.2rem', marginBottom: '12px', color: isDark ? '#fff' : '#181d27' }}>Key Points</h3>
-          <ul style={{ listStyle: 'disc', paddingLeft: '18px', margin: 0 }}>
+          <h3 style={{ 
+            fontWeight: 600, 
+            fontSize: '1.2rem', 
+            marginBottom: '20px', 
+            color: isDark ? '#fff' : '#181d27',
+            marginTop: 0
+          }}>
+            Key Points
+          </h3>
+          <ul style={{ 
+            listStyle: 'disc', 
+            paddingLeft: '18px', 
+            margin: 0,
+            lineHeight: '1.6'
+          }}>
             {(currentPub?.bulletPoints || []).slice(0, MAX_BULLETS).map((point, idx) => (
-              <li key={idx} style={{ fontSize: '1rem', color: isDark ? '#bfc6d1' : '#414651', marginBottom: '10px' }}>{point}</li>
+              <li key={idx} style={{ 
+                fontSize: '1rem', 
+                color: isDark ? '#bfc6d1' : '#414651', 
+                marginBottom: '12px'
+              }}>
+                {point}
+              </li>
             ))}
           </ul>
         </div>

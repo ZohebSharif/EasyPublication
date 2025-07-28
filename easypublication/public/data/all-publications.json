@@ -11,9 +11,7 @@
     "high_impact": 0,
     "category": "geoscience and environment",
     "tags": null,
-    "images": [
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1752703766/easypublication/publication_1752703765497_848759970.webp"
-    ]
+    "images": []
   },
   {
     "id": 2,
@@ -179,7 +177,7 @@
     "beamlines": "8.3.2",
     "year": "2025",
     "high_impact": 0,
-    "category": "General",
+    "category": "bioscience",
     "tags": null,
     "images": []
   },
@@ -1093,9 +1091,11 @@
     "beamlines": "8.3.2",
     "year": "2022",
     "high_impact": 0,
-    "category": "General",
+    "category": "geoscience and environment",
     "tags": null,
-    "images": []
+    "images": [
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753738622/easypublication/publication_1753738622151_955051086.png"
+    ]
   },
   {
     "id": 79,
@@ -1457,9 +1457,11 @@
     "beamlines": "8.3.2",
     "year": "2022",
     "high_impact": 0,
-    "category": "General",
+    "category": "geoscience and environment",
     "tags": null,
-    "images": []
+    "images": [
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753738985/easypublication/publication_1753738984600_96057653.webp"
+    ]
   },
   {
     "id": 105,
@@ -5293,9 +5295,11 @@
     "beamlines": "8.3.2",
     "year": "2015",
     "high_impact": 0,
-    "category": "General",
+    "category": "geoscience and environment",
     "tags": null,
-    "images": []
+    "images": [
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753738604/easypublication/publication_1753738603815_649187161.png"
+    ]
   },
   {
     "id": 379,
@@ -5783,9 +5787,11 @@
     "beamlines": "8.3.2",
     "year": "2011",
     "high_impact": 1,
-    "category": "General",
+    "category": "geoscience and environment",
     "tags": null,
-    "images": []
+    "images": [
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753738662/easypublication/publication_1753738662043_41914891.jpg"
+    ]
   },
   {
     "id": 414,

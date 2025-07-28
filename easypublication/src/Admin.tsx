@@ -1,6 +1,6 @@
 import "./App.css";
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import BerkeleyLabLogo from './assets/berkeley-lab-logo.svg';
 import DoeLogo from './assets/doe-logo.svg';
 import UcLogo from './assets/uc-logo.svg';
@@ -22,21 +22,50 @@ import DoiLiveSearch from "./DoiLiveSearch";
     "geoscience and environment"
   ];
   
+const GROQ_API_ENDPOINT = 'https://api.groq.com/openai/v1/completions';
+
 function Admin() {
   const currentBeamline = 'Beamline 8.3.2'
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [groqApiKey, setGroqApiKey] = useState<string | null>(null);
+  const [apiKeyError, setApiKeyError] = useState<string | null>(null);
   
   // Form state
   const [formData, setFormData] = useState({
     doi: '',
     title: '',
     abstract: '',
+    keyPoints: [] as string[],
     authors: '',
     categories: '', // Which category carousel to display this publication in
     files: [] as File[]
   });
   const [dragActive, setDragActive] = useState(false);
+
+  // Load OpenAI API key on component mount
+  useEffect(() => {
+    const loadApiKey = async () => {
+      try {
+        console.log('🔄 Fetching GROQ API key from server...');
+        const response = await fetch('http://localhost:3001/api/groq-key');
+        if (!response.ok) {
+          const errorText = await response.text();
+          console.error('❌ Server response:', errorText);
+          throw new Error('Failed to load GROQ API key');
+        }
+        const data = await response.json();
+        console.log('✅ GROQ API key loaded successfully');
+        setGroqApiKey(data.key);
+      } catch (error) {
+        console.error('❌ Error loading GROQ API key:', error);
+        setApiKeyError('Failed to load GROQ API key. Some features may be unavailable.');
+      }
+    };
+
+    loadApiKey();
+  }, []);
 
   const handleBackToUserView = () => {
     navigate('/');
@@ -53,6 +82,7 @@ function Admin() {
       doi: '',
       title: '',
       abstract: '',
+      keyPoints: [],
       authors: '',
       categories: '', // Reset category selection
       files: []
@@ -120,7 +150,81 @@ function Admin() {
     return null;
   };
 
-  const handlePublicationSelect = (publication: {
+  const generateGroqContent = async (doi: string, title: string, authors: string) => {
+    if (!groqApiKey) {
+      console.error('GROQ API key not available');
+      return null;
+    }
+
+    try {
+      console.log('🔄 Generating content with GROQ for:', { doi, title });
+      setIsLoading(true);
+      const response = await fetch(GROQ_API_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${groqApiKey}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          model: "llama-3.1-8b-instant",
+          prompt: `Generate an abstract and key points for this scientific publication:
+            DOI: ${doi}
+            Title: ${title}
+            Authors: ${authors}
+            
+            Return ONLY a JSON object with these exact fields:
+            {
+              "abstract": "A concise summary (200-300 words)",
+              "keyPoints": ["Point 1", "Point 2", "Point 3"]
+            }`,
+          temperature: 0.3,
+          max_tokens: 1024,
+          stop: ["}"]
+        })
+      });
+
+      console.log('📥 GROQ response status:', response.status);
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('❌ GROQ API error:', errorText);
+        throw new Error('Failed to generate content');
+      }
+
+      const data = await response.json();
+      console.log('📄 GROQ raw response:', data);
+      
+      // Extract the content and ensure it ends with }
+      const messageContent = (data.choices[0].text + '}').trim();
+      console.log('📝 Message content:', messageContent);
+
+      try {
+        // Parse the JSON content
+        const content = JSON.parse(messageContent);
+        console.log('✅ Parsed content:', content);
+
+        if (!content.abstract || !Array.isArray(content.keyPoints)) {
+          throw new Error('Invalid content structure');
+        }
+
+        return {
+          abstract: content.abstract.trim(),
+          keyPoints: content.keyPoints.map((point: string) => point.trim())
+        };
+      } catch (e) {
+        console.error('❌ Failed to parse GROQ response:', e);
+        alert('Failed to parse the generated content. Please try again.');
+        return null;
+      }
+    } catch (error) {
+      console.error('❌ Error generating content:', error);
+      alert('Failed to generate content. Please try again.');
+      return null;
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handlePublicationSelect = async (publication: {
     id: number;
     title: string;
     authors: string;
@@ -131,14 +235,36 @@ function Admin() {
     year: string;
     high_impact: number;
   }) => {
-    console.log('Auto-populating form from DOI search:', publication);
+    console.log('📚 Selected publication:', publication);
+    
+    // First update basic info
     setFormData(prev => ({
       ...prev,
-      doi: publication.doi || '',
-      title: publication.title || '',
-      authors: publication.authors || ''
-      // Note: categories remains unchanged - admin must select display category
+      doi: publication.doi,
+      title: publication.title,
+      authors: publication.authors,
+      // Clear existing content while loading
+      abstract: '',
+      keyPoints: []
     }));
+
+    // Generate content using OpenAI
+    console.log('🔄 Calling OpenAI for content generation...');
+    const content = await generateGroqContent(
+      publication.doi,
+      publication.title,
+      publication.authors
+    );
+
+    console.log('📝 Generated content:', content);
+    if (content) {
+      console.log('✍️ Updating form with generated content');
+      setFormData(prev => ({
+        ...prev,
+        abstract: content.abstract,
+        keyPoints: content.keyPoints
+      }));
+    }
   };
 
   // Function to upload files to the server
@@ -212,7 +338,9 @@ function Admin() {
           title: formData.title.trim(),
           authors: formData.authors.trim(),
           category: formData.categories,
-          imagePaths: imagePaths
+          imagePaths: imagePaths,
+          abstract: formData.abstract.trim(),
+          keyPoints: formData.keyPoints.filter(point => point.trim())
         })
       });
 
@@ -235,14 +363,15 @@ function Admin() {
       
       // Close modal and reset form
       setIsModalOpen(false);
-      setFormData({
-        doi: '',
-        title: '',
-        abstract: '',
-        authors: '',
-        categories: '',
-        files: []
-      });
+          setFormData({
+      doi: '',
+      title: '',
+      abstract: '',
+      keyPoints: [],
+      authors: '',
+      categories: '',
+      files: []
+    });
 
     } catch (error) {
       console.error('Error processing publication:', error);
@@ -490,7 +619,25 @@ function Admin() {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Show error if OpenAI key failed to load */}
+      {apiKeyError && (
+        <div style={{
+          position: 'fixed',
+          top: '20px',
+          right: '20px',
+          backgroundColor: '#fff3cd',
+          color: '#856404',
+          padding: '12px 20px',
+          borderRadius: '4px',
+          boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+          zIndex: 1000,
+          maxWidth: '300px'
+        }}>
+          {apiKeyError}
+        </div>
+      )}
+
+      {/* Main Modal */}
       {isModalOpen && (
         <div style={{
           position: 'fixed',
@@ -503,23 +650,22 @@ function Admin() {
           alignItems: 'center',
           justifyContent: 'center',
           zIndex: 10000,
-          padding: '10px' // Add padding for mobile
+          padding: '10px'
         }}>
           <div style={{
             backgroundColor: 'white',
             borderRadius: '16px',
             width: '100%',
-            maxWidth: '700px', // Maximum width for larger screens
+            maxWidth: '700px',
             height: '90vh',
             maxHeight: '900px',
-            minHeight: '400px', // Minimum height to ensure usability
+            minHeight: '400px',
             boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)',
             position: 'relative',
             fontFamily: '"Inter", sans-serif',
             display: 'flex',
             flexDirection: 'column',
-            overflow: 'hidden', // Prevent content from spilling out
-            // Responsive adjustments
+            overflow: 'hidden',
             ...(window.innerWidth <= 768 ? {
               width: 'calc(100vw - 20px)',
               height: 'calc(100vh - 20px)',
@@ -700,6 +846,94 @@ function Admin() {
                     boxSizing: 'border-box'
                   }}
                 />
+              </div>
+
+              {/* Key Points */}
+              <div style={{ marginBottom: '18px' }}>
+                <label style={{
+                  display: 'block',
+                  marginBottom: '6px',
+                  color: '#414651',
+                  fontSize: '14px',
+                  fontWeight: '500'
+                }}>
+                  Key Points
+                </label>
+                <div style={{
+                  width: window.innerWidth <= 768 ? '100%' : '70%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '8px'
+                }}>
+                  {formData.keyPoints.map((point, index) => (
+                    <div key={index} style={{
+                      display: 'flex',
+                      gap: '8px',
+                      alignItems: 'flex-start'
+                    }}>
+                      <textarea
+                        value={point}
+                        onChange={(e) => {
+                          const newPoints = [...formData.keyPoints];
+                          newPoints[index] = e.target.value;
+                          setFormData(prev => ({ ...prev, keyPoints: newPoints }));
+                        }}
+                        rows={2}
+                        style={{
+                          flex: 1,
+                          padding: '8px 12px',
+                          border: '1px solid #e0e0e0',
+                          borderRadius: '6px',
+                          fontSize: '14px',
+                          outline: 'none',
+                          resize: 'vertical',
+                          fontFamily: 'inherit',
+                          boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
+                          boxSizing: 'border-box'
+                        }}
+                      />
+                      <button
+                        onClick={() => {
+                          const newPoints = formData.keyPoints.filter((_, i) => i !== index);
+                          setFormData(prev => ({ ...prev, keyPoints: newPoints }));
+                        }}
+                        style={{
+                          padding: '4px 8px',
+                          backgroundColor: '#ff4444',
+                          color: 'white',
+                          border: 'none',
+                          borderRadius: '4px',
+                          cursor: 'pointer',
+                          fontSize: '14px'
+                        }}
+                      >
+                        ×
+                      </button>
+                    </div>
+                  ))}
+                  <button
+                    onClick={() => {
+                      setFormData(prev => ({
+                        ...prev,
+                        keyPoints: [...prev.keyPoints, '']
+                      }));
+                    }}
+                    style={{
+                      alignSelf: 'flex-start',
+                      padding: '8px 16px',
+                      backgroundColor: '#f5f5f5',
+                      border: '1px solid #e0e0e0',
+                      borderRadius: '4px',
+                      cursor: 'pointer',
+                      fontSize: '14px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px'
+                    }}
+                  >
+                    <span>+</span> Add Key Point
+                  </button>
+                </div>
               </div>
 
               {/* Authors and Categories Row */}

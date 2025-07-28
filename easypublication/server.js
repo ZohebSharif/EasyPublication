@@ -7,9 +7,12 @@ import { readFileSync, writeFileSync } from 'fs';
 import initSqlJs from 'sql.js';
 import { v2 as cloudinary } from 'cloudinary';
 import dotenv from 'dotenv';
+import { PublicationSummaryService } from './services/PublicationSummaryService.js';
 
 // Load environment variables
 dotenv.config();
+
+const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 // Configure Cloudinary
 cloudinary.config({
@@ -18,6 +21,9 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+// Initialize PublicationSummaryService
+const summaryService = new PublicationSummaryService(process.env.OPENAI_API_KEY);
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -25,7 +31,11 @@ const app = express();
 const PORT = 3001;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173', 'http://localhost:3000'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 
 // Configure multer for file uploads (using memory storage for Cloudinary)
@@ -99,82 +109,41 @@ async function deleteFromCloudinary(imageUrls) {
   return { deleted: deletedImages, errors };
 }
 
-// Database helper function
-async function updatePublicationInDatabase(publicationId, newCategory, imagePaths = []) {
+// Update publication in database
+async function updatePublicationInDatabase(publicationId, newCategory, imagePaths = [], abstract = '', keyPoints = []) {
   try {
     const SQL = await initSqlJs();
     const dbPath = path.join(__dirname, 'als-publications.db');
     const fileBuffer = readFileSync(dbPath);
     const db = new SQL.Database(fileBuffer);
-    
-    // Get current images before updating (so we can delete them from Cloudinary)
-    const currentResult = db.exec(`
-      SELECT images FROM publications WHERE id = ?
-    `, [publicationId]);
-    
-    let currentImages = [];
-    if (currentResult && currentResult.length > 0) {
-      const [{ values }] = currentResult;
-      if (values.length > 0 && values[0][0]) {
-        try {
-          currentImages = JSON.parse(values[0][0]) || [];
-        } catch (e) {
-          console.warn('Failed to parse current images:', e);
-          currentImages = [];
-        }
-      }
-    }
-    
-    // If we're clearing images (imagePaths is empty) and there are current images, delete them from Cloudinary
-    if (imagePaths.length === 0 && currentImages.length > 0) {
-      console.log(`🗑️ Deleting ${currentImages.length} images from Cloudinary for publication ${publicationId}`);
-      const deleteResult = await deleteFromCloudinary(currentImages);
-      
-      if (deleteResult.deleted.length > 0) {
-        console.log(`✅ Successfully deleted ${deleteResult.deleted.length} images from Cloudinary`);
-      }
-      if (deleteResult.errors.length > 0) {
-        console.warn(`⚠️ Failed to delete ${deleteResult.errors.length} images:`, deleteResult.errors);
-      }
-    }
-    
-    // Update the publication category and images
-    let query = 'UPDATE publications SET category = ?, images = ?';
-    let params = [newCategory, JSON.stringify(imagePaths)];
-    
-    query += ' WHERE id = ?';
-    params.push(publicationId);
-    
-    db.exec(query, params);
-    
-    // Verify the update
-    const verifyResult = db.exec(`
-      SELECT id, title, category, images 
-      FROM publications 
+
+    // Update the publication with new data
+    db.exec(`
+      UPDATE publications 
+      SET category = ?, 
+          images = ?,
+          abstract = ?,
+          key_points = ?
       WHERE id = ?
-    `, [publicationId]);
-    
-    let updatedPublication = null;
-    if (verifyResult && verifyResult.length > 0) {
-      const [{ values }] = verifyResult;
-      if (values.length > 0) {
-        const [id, title, category, images] = values[0];
-        updatedPublication = { id, title, category, images };
-      }
-    }
-    
-    // Save the database back to file
+    `, [
+      newCategory,
+      JSON.stringify(imagePaths),
+      abstract,
+      JSON.stringify(keyPoints),
+      publicationId
+    ]);
+
+    // Write the changes back to the file
     const data = db.export();
-    writeFileSync(dbPath, data);
-    db.close();
+    writeFileSync(dbPath, Buffer.from(data));
     
     // Export updated data to JSON
     await exportDatabaseToJson();
-    
-    return updatedPublication;
+
+    return { success: true };
   } catch (error) {
-    console.error('Database update error:', error);
-    throw error;
+    console.error('Error updating publication:', error);
+    return { success: false, error: error.message };
   }
 }
 
@@ -264,59 +233,47 @@ app.post('/api/upload', upload.array('files'), async (req, res) => {
 // Publication update endpoint
 app.post('/api/update-publication', async (req, res) => {
   try {
-    const { title, authors, category, imagePaths = [] } = req.body;
+    const { title, authors, category, imagePaths = [], abstract = '', keyPoints = [] } = req.body;
     
     if (!title || !category) {
       return res.status(400).json({ error: 'Title and category are required' });
     }
     
-    // Find matching publication in database
+    // Find the publication ID using title and authors
     const SQL = await initSqlJs();
     const dbPath = path.join(__dirname, 'als-publications.db');
     const fileBuffer = readFileSync(dbPath);
     const db = new SQL.Database(fileBuffer);
-    
-    // Search for publication by title (case-insensitive partial match)
-    const searchResult = db.exec(`
-      SELECT id, title, authors 
-      FROM publications 
-      WHERE LOWER(title) LIKE LOWER(?) OR LOWER(?) LIKE LOWER(title)
-    `, [`%${title}%`, `%${title}%`]);
-    
-    let matchingPub = null;
-    if (searchResult && searchResult.length > 0) {
-      const [{ values }] = searchResult;
-      if (values.length > 0) {
-        const [id, pubTitle, pubAuthors] = values[0];
-        matchingPub = { id, title: pubTitle, authors: pubAuthors };
-      }
+
+    const result = db.exec(`
+      SELECT id FROM publications 
+      WHERE title = ? AND authors = ?
+    `, [title, authors]);
+
+    if (!result || !result[0] || !result[0].values || !result[0].values[0]) {
+      throw new Error('Publication not found');
     }
-    
-    db.close();
-    
-    if (!matchingPub) {
-      return res.status(404).json({ 
-        error: `No matching publication found for "${title}". Please check the title and try again.` 
-      });
-    }
+
+    const publicationId = result[0].values[0][0];
     
     // Update the publication
-    const updatedPublication = await updatePublicationInDatabase(
-      matchingPub.id, 
-      category, 
-      imagePaths
+    const updateResult = await updatePublicationInDatabase(
+      publicationId,
+      category,
+      imagePaths,
+      abstract,
+      keyPoints
     );
-    
-    console.log(`✅ Publication ${matchingPub.id} updated to category: ${category}`);
-    
-    res.json({
-      message: 'Publication updated successfully',
-      publication: updatedPublication
-    });
+
+    if (!updateResult.success) {
+      throw new Error(updateResult.error || 'Failed to update publication');
+    }
+
+    res.json({ success: true });
     
   } catch (error) {
-    console.error('Publication update error:', error);
-    res.status(500).json({ error: 'Failed to update publication' });
+    console.error('Error in /api/update-publication:', error);
+    res.status(500).json({ error: error.message });
   }
 });
 
@@ -454,6 +411,60 @@ app.post('/api/delete-publication', async (req, res) => {
     console.error('Publication deletion error:', error);
     res.status(500).json({ error: 'Failed to delete publication' });
   }
+});
+
+// Generate summary endpoint
+app.post('/api/generate-summary', async (req, res) => {
+  try {
+    const { doi } = req.body;
+    
+    if (!doi) {
+      return res.status(400).json({ error: 'DOI is required' });
+    }
+
+    console.log(`📚 Generating summary for DOI: ${doi}`);
+    try {
+      const summary = await summaryService.summarizePublication(doi);
+      console.log('✅ Summary generated:', summary);
+      res.json(summary);
+    } catch (error) {
+      console.error('❌ Error generating summary:', error);
+      throw error;
+    }
+  } catch (error) {
+    console.error('Summary generation error:', error);
+    res.status(500).json({ error: 'Failed to generate summary' });
+  }
+});
+
+// Add new endpoint to get GROQ API key
+app.get('/api/groq-key', (req, res) => {
+  console.log('🔑 GROQ API key requested');
+  console.log('Environment variable exists:', !!process.env.GROQ_API_KEY);
+  
+  if (!GROQ_API_KEY) {
+    console.error('❌ GROQ API key not configured in environment');
+    res.status(500).json({ error: 'GROQ API key not configured' });
+    return;
+  }
+  
+  console.log('✅ Sending GROQ API key to client');
+  res.json({ key: GROQ_API_KEY });
+});
+
+// Add new endpoint to get OpenAI API key
+app.get('/api/openai-key', (req, res) => {
+  console.log('🔑 OpenAI API key requested');
+  console.log('Environment variable exists:', !!process.env.OPENAI_API_KEY);
+  
+  if (!process.env.OPENAI_API_KEY) {
+    console.error('❌ OpenAI API key not configured in environment');
+    res.status(500).json({ error: 'OpenAI API key not configured' });
+    return;
+  }
+  
+  console.log('✅ Sending OpenAI API key to client');
+  res.json({ key: process.env.OPENAI_API_KEY });
 });
 
 // Start the server
