@@ -36,12 +36,13 @@ function DoiLiveSearch({ value, onChange, onSelectPublication }: DoiSearchProps)
     const loadPublications = async () => {
       try {
         const response = await fetch('/data/all-publications.json');
-        if (response.ok) {
-          const data = await response.json();
-          setPublications(data);
+        if (!response.ok) {
+          throw new Error('Failed to load publications data');
         }
+        const data = await response.json();
+        setPublications(data);
       } catch (error) {
-        console.error('Failed to load publications:', error);
+        setError(error instanceof Error ? error.message : 'Failed to load publications');
       }
     };
 

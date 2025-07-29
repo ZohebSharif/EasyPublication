@@ -1,28 +1,30 @@
 import styles from './Card.module.css';
 import BerkeleyLabLogo from './assets/lblLogo.png';
-interface PublicationData {
+import { useNavigate } from 'react-router-dom';
+interface Publication {
   id: number;
   title: string;
   authors: string;
-  journal: string;
   online_pub_date: string;
   doi: string;
   beamlines: string;
   year: string;
   high_impact: number;
   category?: string;
-  impact_factor?: number;
   tags?: string;
-  images?: string | string[]; // Can be JSON string (from database) or array (from parsed JSON)
+  images?: string | string[];
+  abstract?: string;
+  key_points?: string[];
 }
 
 interface PublicationCardProps {
-  publication: PublicationData;
+  publication: Publication;
   isAdminMode?: boolean;
   onDelete?: (publicationId: number) => void;
 }
 
 function PublicationCard({ publication, isAdminMode = false, onDelete }: PublicationCardProps) {
+  const navigate = useNavigate();
   // Helper function to truncate long text
   const truncateText = (text: string, maxLength: number) => {
     if (text.length <= maxLength) return text;
@@ -82,6 +84,7 @@ function PublicationCard({ publication, isAdminMode = false, onDelete }: Publica
   return (
     <div className={styles.card}>
       <div className={styles.cardWrapper}>
+        
         {/* Delete button for admin mode */}
         {isAdminMode && onDelete && (
           <button
@@ -153,7 +156,45 @@ function PublicationCard({ publication, isAdminMode = false, onDelete }: Publica
         </div>
 
         {/* Image Section - Display first uploaded image from database */}
-        <div className={styles.imageSection}>
+        <div className={styles.imageSection} style={{ position: 'relative' }}>
+          {/* Slideshow button */}
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              navigate('/slideshow', { state: { initialPublication: publication } });
+            }}
+            style={{
+              position: 'absolute',
+              top: '8px',
+              right: '8px',
+              padding: '6px 12px',
+              backgroundColor: 'rgba(128, 128, 128, 0.8)',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontSize: '12px',
+              fontWeight: '500',
+              zIndex: 10,
+              transition: 'all 0.2s ease',
+              backdropFilter: 'blur(2px)',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = 'rgba(128, 128, 128, 0.9)';
+              e.currentTarget.style.transform = 'scale(1.05)';
+              e.currentTarget.style.cursor = 'zoom-in';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = 'rgba(128, 128, 128, 0.8)';
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.cursor = 'pointer';
+            }}
+            title="Open in slideshow view"
+          >
+            Open in Slideshow
+          </button>
+
           {(() => {
             const primaryImageUrl = getPrimaryImageUrl(publication.images);
             if (primaryImageUrl) {
@@ -168,7 +209,6 @@ function PublicationCard({ publication, isAdminMode = false, onDelete }: Publica
                   }}
                   onError={(e) => {
                     // Fallback to a generic placeholder if image fails to load
-                    console.warn('Failed to load image:', primaryImageUrl);
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = `
                       <div style="
@@ -183,7 +223,7 @@ function PublicationCard({ publication, isAdminMode = false, onDelete }: Publica
                         textAlign: center;
                         padding: 10px;
                       ">
-                        ${publication.journal || 'Publication'}
+                        ${publication.title || 'Publication'}
                       </div>
                     `;
                   }}
@@ -203,7 +243,7 @@ function PublicationCard({ publication, isAdminMode = false, onDelete }: Publica
                   textAlign: 'center',
                   padding: '10px'
                 }}>
-                  {publication.journal || 'Publication'}
+                  {publication.title || 'Publication'}
                 </div>
               );
             }
@@ -215,39 +255,56 @@ function PublicationCard({ publication, isAdminMode = false, onDelete }: Publica
           <div className={styles.contentWrapper}>
             <div className={styles.textContent}>
               <div className={styles.titleSection}>
-                <div className={styles.subtitle}>
-                  Published: {publication.online_pub_date}
+            
+                <div style={{
+                  display: 'flex',
+                  justifyContent: 'flex-end',  // Changed from space-between to flex-end
+                  alignItems: 'center',
+                  fontSize: '0.85rem',
+                  color: '#666',
+                  marginTop: '8px'
+                }}>
+                  {publication.online_pub_date !== '00/00/00' && (
+                    <div style={{ marginRight: 'auto' }}>Published: {publication.online_pub_date}</div>
+                  )}
+                  <div>DOI: {publication.doi}</div>
                 </div>
               </div>
-              <div className={styles.description}>
-                <strong>Authors:</strong> {truncateText(publication.authors, 100)}
-                {publication.journal && (
-                  <>
-                    <br />
-                    <strong>Journal:</strong> {publication.journal}
-                  </>
-                )}
-                {(() => {
-                  const images = getImages(publication.images);
-                  if (images.length > 1) {
-                    return (
-                      <>
-                        <br />
-                        <strong>Images:</strong> {images.length} available
-                      </>
-                    );
-                  } else if (images.length === 1) {
-                    return (
-                      <>
-                        <br />
-                        <strong>Image:</strong> Available
-                      </>
-                    );
-                  }
-                  return null;
-                })()}
+
+              {/* Abstract */}
+              <div style={{
+                padding: '20px',
+                paddingTop: '12px'
+              }}>
+                <div style={{
+                  fontSize: '0.9rem',
+                  color: '#414651',
+                  lineHeight: '1.5',
+                  maxHeight: '120px',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  display: '-webkit-box',
+                  WebkitLineClamp: 3,  // Changed from 4 to 3
+                  WebkitBoxOrient: 'vertical'
+                }}>
+                  <strong>Abstract: </strong>
+                  <span style={{ fontStyle: 'italic' }}>
+                    {publication.abstract || 'No abstract available.'}
+                  </span>
+                </div>
+
+                {/* Authors (truncated) */}
+                <div style={{
+                  fontSize: '0.9rem',
+                  color: '#666',
+                  marginTop: '16px',
+                  lineHeight: '1.4'
+                }}>
+                  <strong>Authors:</strong> {truncateText(publication.authors, 100)}
+                </div>
               </div>
             </div>
+
             <div className={styles.buttonContainer}>
               <div className={styles.tag}>
                 <a 

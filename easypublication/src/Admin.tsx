@@ -22,7 +22,7 @@ import DoiLiveSearch from "./DoiLiveSearch";
     "geoscience and environment"
   ];
   
-const GROQ_API_ENDPOINT = 'https://api.groq.com/openai/v1/completions';
+const GROQ_API_ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
 
 function Admin() {
   const currentBeamline = 'Beamline 8.3.2'
@@ -48,22 +48,17 @@ function Admin() {
   useEffect(() => {
     const loadApiKey = async () => {
       try {
-        console.log('🔄 Fetching GROQ API key from server...');
         const response = await fetch('http://localhost:3001/api/groq-key');
         if (!response.ok) {
           const errorText = await response.text();
-          console.error('❌ Server response:', errorText);
-          throw new Error('Failed to load GROQ API key');
+          throw new Error(errorText);
         }
         const data = await response.json();
-        console.log('✅ GROQ API key loaded successfully');
         setGroqApiKey(data.key);
       } catch (error) {
-        console.error('❌ Error loading GROQ API key:', error);
-        setApiKeyError('Failed to load GROQ API key. Some features may be unavailable.');
+        setApiKeyError(error instanceof Error ? error.message : 'Failed to load API key');
       }
     };
-
     loadApiKey();
   }, []);
 
@@ -149,16 +144,15 @@ function Admin() {
     }
     return null;
   };
-
   const generateGroqContent = async (doi: string, title: string, authors: string) => {
     if (!groqApiKey) {
-      console.error('GROQ API key not available');
+      setApiKeyError('GROQ API key not available');
       return null;
     }
-
+  
     try {
-      console.log('🔄 Generating content with GROQ for:', { doi, title });
       setIsLoading(true);
+  
       const response = await fetch(GROQ_API_ENDPOINT, {
         method: 'POST',
         headers: {
@@ -166,63 +160,56 @@ function Admin() {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          model: "llama-3.1-8b-instant",
-          prompt: `Generate an abstract and key points for this scientific publication:
-            DOI: ${doi}
-            Title: ${title}
-            Authors: ${authors}
-            
-            Return ONLY a JSON object with these exact fields:
-            {
-              "abstract": "A concise summary (200-300 words)",
-              "keyPoints": ["Point 1", "Point 2", "Point 3"]
-            }`,
-          temperature: 0.3,
-          max_tokens: 1024,
-          stop: ["}"]
+          model: 'llama-3.1-8b-instant',
+          messages: [{
+            role: 'system',
+            content: 'You are a scientific publication assistant specializing in engaging research summaries. Create concise abstracts that subtly hook readers by highlighting the research\'s significance or real-world impact, while maintaining academic tone. Keep abstracts under 430 characters.'
+          }, {
+            role: 'user',
+            content: `Write an engaging abstract and key points for this publication:
+      DOI: ${doi}
+      Title: ${title}
+      Authors: ${authors}
+      
+      Return ONLY a JSON object with these exact fields:
+      {
+        "abstract": "A concise, engaging summary that subtly hooks readers (max 430 chars)",
+        "keyPoints": ["Point 1", "Point 2", "Point 3"]
+      }`
+          }],
+          temperature: 0.4,  // Slightly increased for more engaging language
+          max_tokens: 1024
         })
       });
-
-      console.log('📥 GROQ response status:', response.status);
+  
       if (!response.ok) {
         const errorText = await response.text();
-        console.error('❌ GROQ API error:', errorText);
-        throw new Error('Failed to generate content');
+        throw new Error(`GROQ API error: ${errorText}`);
       }
-
+  
       const data = await response.json();
-      console.log('📄 GROQ raw response:', data);
+      const messageContent = data.choices?.[0]?.message?.content;
       
-      // Extract the content and ensure it ends with }
-      const messageContent = (data.choices[0].text + '}').trim();
-      console.log('📝 Message content:', messageContent);
-
-      try {
-        // Parse the JSON content
-        const content = JSON.parse(messageContent);
-        console.log('✅ Parsed content:', content);
-
-        if (!content.abstract || !Array.isArray(content.keyPoints)) {
-          throw new Error('Invalid content structure');
-        }
-
-        return {
-          abstract: content.abstract.trim(),
-          keyPoints: content.keyPoints.map((point: string) => point.trim())
-        };
-      } catch (e) {
-        console.error('❌ Failed to parse GROQ response:', e);
-        alert('Failed to parse the generated content. Please try again.');
-        return null;
+      if (!messageContent) {
+        throw new Error('No content in GROQ response');
       }
-    } catch (error) {
-      console.error('❌ Error generating content:', error);
-      alert('Failed to generate content. Please try again.');
+
+      const content = JSON.parse(messageContent);
+      if (!content.abstract || !content.keyPoints) {
+        throw new Error('Invalid content format in GROQ response');
+      }
+  
+      return content;
+    } catch (e) {
+      if (e instanceof Error) {
+        setApiKeyError(e.message);
+      }
       return null;
     } finally {
       setIsLoading(false);
     }
   };
+  
 
   const handlePublicationSelect = async (publication: {
     id: number;
@@ -235,7 +222,6 @@ function Admin() {
     year: string;
     high_impact: number;
   }) => {
-    console.log('📚 Selected publication:', publication);
     
     // First update basic info
     setFormData(prev => ({
@@ -248,22 +234,42 @@ function Admin() {
       keyPoints: []
     }));
 
-    // Generate content using OpenAI
-    console.log('🔄 Calling OpenAI for content generation...');
+    // Generate content using GROQ
     const content = await generateGroqContent(
       publication.doi,
       publication.title,
       publication.authors
     );
 
-    console.log('📝 Generated content:', content);
     if (content) {
-      console.log('✍️ Updating form with generated content');
       setFormData(prev => ({
         ...prev,
         abstract: content.abstract,
         keyPoints: content.keyPoints
       }));
+
+      // Automatically update the publication in the database with the generated content
+      try {
+        const updateResponse = await fetch('http://localhost:3001/api/update-publication', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            title: publication.title,
+            authors: publication.authors,
+            category: publication.category || 'General',
+            abstract: content.abstract,
+            keyPoints: content.keyPoints
+          })
+        });
+
+        if (!updateResponse.ok) {
+          throw new Error('Failed to save generated content');
+        }
+      } catch (error) {
+        setApiKeyError(error instanceof Error ? error.message : 'Failed to save content');
+      }
     }
   };
 
@@ -287,13 +293,10 @@ function Admin() {
       }
 
       const result = await response.json();
-      console.log('Upload successful:', result);
-      
-      // Return the paths of uploaded files
       return result.files.map((file: any) => file.path);
     } catch (error) {
-      console.error('Upload error:', error);
-      throw error;
+      setApiKeyError(error instanceof Error ? error.message : 'Upload failed');
+      return [];
     }
   };
 
@@ -321,14 +324,12 @@ function Admin() {
       let imagePaths: string[] = [];
       try {
         imagePaths = await uploadFilesToServer(formData.files);
-        console.log('📁 Files uploaded successfully:', imagePaths);
       } catch (error) {
-        console.warn('File upload failed (server may not be running):', error);
-        // Continue without images for now
+        setApiKeyError(error instanceof Error ? error.message : 'File upload failed');
+        return;
       }
 
       // Update publication in database automatically via server API
-      console.log('🔄 Updating publication in database...');
       const updateResponse = await fetch('http://localhost:3001/api/update-publication', {
         method: 'POST',
         headers: {
@@ -346,9 +347,7 @@ function Admin() {
 
       if (updateResponse.ok) {
         const result = await updateResponse.json();
-        console.log('✅ Publication updated successfully:', result);
-        
-        alert(`🎉 Success! Publication "${result.publication.title}" has been assigned to the "${formData.categories}" category and will appear in the carousel immediately. The page will refresh to show the changes.`);
+        alert(`🎉 Success! Publication has been assigned to the "${formData.categories}" category and will appear in the carousel immediately. The page will refresh to show the changes.`);
         
         // Refresh the page to show updated publications
         setTimeout(() => {
@@ -374,7 +373,7 @@ function Admin() {
     });
 
     } catch (error) {
-      console.error('Error processing publication:', error);
+      setApiKeyError(error instanceof Error ? error.message : 'Error processing publication');
       
       // Check if server is running
       try {

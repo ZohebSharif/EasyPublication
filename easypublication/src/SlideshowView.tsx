@@ -1,64 +1,80 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import styles from './SlideshowView.module.css';
 
 interface Publication {
   id: number;
   title: string;
+  authors: string;
+  online_pub_date: string;
+  doi: string;
+  doi_url: string;  // Added this field
+  beamlines: string;
+  year: string;
+  high_impact: number;
   category?: string;
+  tags?: string;
   images: string[];
-  logos?: string[];
-  bulletPoints?: string[];
   abstract?: string;
+  key_points?: string[];
+  doi_qr_code?: string;
 }
 
-const MAX_LOGOS = 8;
 const MAX_BULLETS = 4;
 
-function SlideshowView() {
+export default function SlideshowView() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const initialPublication = location.state?.initialPublication;
+
   const [publications, setPublications] = useState<Publication[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
   const [isDark, setIsDark] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const currentPub = publications[currentIndex];
+
+  // Helper function to format DOI link - same as PublicationCard
+  const getDoiLink = (doi: string) => {
+    if (!doi) return '#';
+    return doi.startsWith('http') ? doi : `https://doi.org/${doi}`;
+  };
 
   useEffect(() => {
-    const loadPublications = async () => {
+    const fetchPublications = async () => {
       try {
-        // Try both paths
-        let response = await fetch('/data/all-publications.json');
+        const response = await fetch('/public/data/all-publications.json');
         if (!response.ok) {
-          response = await fetch('/public/data/all-publications.json');
-        }
-        if (!response.ok) {
-          throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
+          throw new Error('Failed to load publications');
         }
         const data = await response.json();
-        const filtered = data.filter((pub: Publication) => {
-          if (!pub.images) return false;
-          
-          // Handle both string and array formats
+        
+        // Filter publications with images
+        const pubsWithImages = data.filter((pub: Publication) => {
           const images = typeof pub.images === 'string' ? JSON.parse(pub.images) : pub.images;
           return images && images.length > 0;
-        }).map((pub: Publication) => ({
-          ...pub,
-          // Ensure images is always an array
-          images: typeof pub.images === 'string' ? JSON.parse(pub.images) : pub.images
-        }));
-        
-        setPublications(filtered);
-      } catch (error) {
-        console.error('Error loading publications:', error);
+        });
+
+        setPublications(pubsWithImages);
+
+        // Set initial index if initialPublication is provided
+        if (initialPublication) {
+          const index = pubsWithImages.findIndex((pub: Publication) => pub.id === initialPublication.id);
+          if (index !== -1) {
+            setCurrentIndex(index);
+          }
+        }
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'An error occurred');
       }
     };
 
-    loadPublications();
-  }, []);
+    fetchPublications();
+  }, [initialPublication]);
 
   useEffect(() => {
     setImageIndex(0);
   }, [currentIndex]);
-
-  const currentPub = publications[currentIndex];
 
   const handlePrev = () => {
     if (publications.length === 0) return;
@@ -78,7 +94,7 @@ function SlideshowView() {
     navigate('/');
   };
   const handleSlideshowView = () => {
-    setIsDark(true);
+    setIsDark(false);
   };
   const handleImagePrev = () => {
     if (!currentPub?.images) return;
@@ -90,13 +106,7 @@ function SlideshowView() {
   };
 
   return (
-    <div style={{ 
-      overflow: 'hidden', 
-      height: '100vh', 
-      background: isDark ? '#181d27' : '#fff', 
-      color: isDark ? '#fff' : '#181d27',
-      fontFamily: 'Inter, Arial, sans-serif'
-    }}>
+    <div className={styles.slideshowContainer}>
       {/* Header with Title and View Buttons */}
       <div style={{ 
         display: 'flex', 
@@ -347,7 +357,8 @@ function SlideshowView() {
             fontSize: '1rem', 
             textAlign: 'left',
             lineHeight: '1.5',
-            flexGrow: 1
+            flexGrow: 1,
+            whiteSpace: 'pre-wrap'
           }}>
             {currentPub?.abstract || 'No abstract available.'}
           </div>
@@ -365,52 +376,50 @@ function SlideshowView() {
               flexWrap: 'wrap',
               alignItems: 'center'
             }}>
-              {currentPub?.logos?.slice(0, MAX_LOGOS).map((logo, idx) => (
-                <img 
-                  key={idx} 
-                  src={logo} 
-                  alt={`Logo ${idx + 1}`} 
-                  style={{ 
-                    width: '38px', 
-                    height: '38px', 
-                    objectFit: 'contain', 
-                    borderRadius: '6px', 
-                    background: '#f5f5f5', 
-                    border: '1px solid #eee',
-                    padding: '4px'
-                  }} 
-                />
-              ))}
+
+
             </div>
           </div>
         </div>
 
         {/* QR Code - Fixed to bottom right of screen */}
-        <div style={{
-          position: 'fixed',
-          bottom: '24px',
-          right: '24px',
-          width: '80px',
-          height: '80px',
-          background: isDark ? '#23283a' : '#f5f5f5',
-          borderRadius: '8px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          border: `2px dashed ${isDark ? '#3a4553' : '#d1d5db'}`,
-          zIndex: 20,
-          boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
-        }}>
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={isDark ? '#bfc6d1' : '#6b7280'} strokeWidth="1.5">
-            <rect x="3" y="3" width="5" height="5"/>
-            <rect x="16" y="3" width="5" height="5"/>
-            <rect x="3" y="16" width="5" height="5"/>
-            <path d="m21 16-3.5-3.5-2.5 2.5"/>
-            <path d="m8 11 2 2 4.5-4.5"/>
-          </svg>
-        </div>
+        {currentPub && (
+          <div style={{
+            position: 'absolute',
+            bottom: '20px',
+            right: '20px',
+            backgroundColor: 'white',
+            padding: '10px',
+            borderRadius: '8px',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+            zIndex: 10,
+            cursor: 'pointer',
+            transition: 'transform 0.2s ease',
+          }}
+          onClick={() => {
+            window.open(getDoiLink(currentPub.doi), '_blank', 'noopener,noreferrer');
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'scale(1.05)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'scale(1)';
+          }}
+          title="Click to view publication"
+          >
+            <img 
+              src={`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(getDoiLink(currentPub.doi))}&size=100x100`}
+              alt="DOI QR Code"
+              style={{
+                width: '100px',
+                height: '100px',
+                display: 'block'
+              }}
+            />
+          </div>
+        )}
 
-        {/* Right: Bullet Points */}
+        {/* Right: Key Points */}
         <div style={{
           background: isDark ? '#181d27' : 'white', 
           color: isDark ? '#fff' : '#181d27', 
@@ -439,20 +448,29 @@ function SlideshowView() {
             margin: 0,
             lineHeight: '1.6'
           }}>
-            {(currentPub?.bulletPoints || []).slice(0, MAX_BULLETS).map((point, idx) => (
+            {(currentPub?.key_points || []).slice(0, MAX_BULLETS).map((point, idx) => (
               <li key={idx} style={{ 
                 fontSize: '1rem', 
                 color: isDark ? '#bfc6d1' : '#414651', 
-                marginBottom: '12px'
+                marginBottom: '12px',
+                whiteSpace: 'pre-wrap'
               }}>
                 {point}
               </li>
             ))}
+            {(!currentPub?.key_points || currentPub.key_points.length === 0) && (
+              <li style={{ 
+                fontSize: '1rem', 
+                color: isDark ? '#bfc6d1' : '#414651', 
+                marginBottom: '12px',
+                fontStyle: 'italic'
+              }}>
+                No key points available.
+              </li>
+            )}
           </ul>
         </div>
       </div>
     </div>
   );
 }
-
-export default SlideshowView;

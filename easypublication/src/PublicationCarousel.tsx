@@ -36,7 +36,6 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
   const [hasDragged, setHasDragged] = useState(false);
 
   const navigateToIndex = (newIndex: number) => {
-    console.log('Navigating from', currentIndex, 'to', newIndex, 'of', publications.length - 1);
     setCurrentIndex(newIndex);
   };
 
@@ -233,16 +232,13 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
   // Handler for deleting publications in admin mode
   const handleDeletePublication = async (publicationId: number) => {
     try {
-      // Find the publication being deleted to get its title for the API call
+      // Find the publication being deleted
       const publicationToDelete = publications.find(pub => pub.id === publicationId);
       if (!publicationToDelete) {
-        console.error('Publication not found');
-        return;
+        throw new Error('Publication not found');
       }
 
-      // Reset the publication's category back to "General" and clear images in the database
-      console.log(`🔄 Resetting publication ${publicationId} category to "General" and clearing images`);
-      
+      // Reset the publication's category back to "General" and clear images
       try {
         const resetResponse = await fetch('http://localhost:3001/api/update-publication', {
           method: 'POST',
@@ -258,27 +254,20 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
         });
 
         if (resetResponse.ok) {
-          const result = await resetResponse.json();
-          console.log(`✅ Publication category reset to General and images cleared:`, result);
-          
           // Remove from deleted list since it's now properly reset to General
           const deletedIds = JSON.parse(localStorage.getItem('deletedPublications') || '[]');
           const updatedDeletedIds = deletedIds.filter((id: number) => id !== publicationId);
           localStorage.setItem('deletedPublications', JSON.stringify(updatedDeletedIds));
-          
-        } else {
-          const error = await resetResponse.json();
-          console.warn(`⚠️ Failed to reset category and images in database: ${error.error}`);
         }
       } catch (serverError) {
-        console.warn('⚠️ Server not available - publication will be removed from view only:', serverError);
+        // If server is not available, just remove from view
       }
       
       // Remove from local state
       const updatedPublications = publications.filter(pub => pub.id !== publicationId);
       setPublications(updatedPublications);
       
-      // Add to deleted publications list in localStorage (for display purposes)
+      // Add to deleted publications list in localStorage
       const deletedIds = JSON.parse(localStorage.getItem('deletedPublications') || '[]');
       if (!deletedIds.includes(publicationId)) {
         deletedIds.push(publicationId);
@@ -297,10 +286,7 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
         setCurrentIndex(0);
       }
       
-      console.log(`📋 Publication "${publicationToDelete.title}" removed from ${category} category, reset to General, and images cleared`);
-      
     } catch (error) {
-      console.error('Error deleting publication:', error);
       alert('Error deleting publication. Please try again.');
     }
   };
@@ -477,35 +463,20 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
         flexDirection: 'column',
         alignItems: 'center',
         gap: '15px',
-        marginTop: '0',
-        backgroundColor: 'white',
-        padding: '15px 0',
-        borderRadius: '8px',
-        boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+        marginTop: '-115px',  // Decreased from -130px by 15px
+        backgroundColor: 'transparent',
+        padding: '0',
         maxWidth: '800px',
         margin: '0 auto',
-        transform: 'translateY(-80px)',
         position: 'relative',
         zIndex: 20
       }}>
-        {/* Current Publication Title */}
-        <div style={{
-          fontSize: '16px',
-          color: '#333',
-          textAlign: 'center',
-          maxWidth: '600px',
-          padding: '0 20px',
-          fontWeight: '500',
-          lineHeight: '1.4'
-        }}>
-          {publications[currentIndex]?.title || ''}
-        </div>
-
         {/* Navigation Controls */}
         <div style={{
           display: 'flex',
           alignItems: 'center',
-          gap: '20px'
+          gap: '20px',
+          marginTop: '-45px'  // Decreased from -60px by 15px
         }}>
           {/* Left Arrow */}
           <button
