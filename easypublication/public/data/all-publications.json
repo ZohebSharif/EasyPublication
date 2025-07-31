@@ -10,10 +10,17 @@
     "year": "2025",
     "high_impact": 0,
     "category": "geoscience and environment",
-    "images": [],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs11227-025-07413-5&size=100x100"
+    "images": [
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914145/easypublication/publication_1753914109693_612730890.webp",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914145/easypublication/publication_1753914109697_931459226.webp",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914145/easypublication/publication_1753914109699_865516540.webp"
+    ],
+    "abstract": "High-resolution image analysis in MLExchange is revolutionized by a novel optimization approach, significantly enhancing segmentation inference accuracy and efficiency for real-world applications.",
+    "key_points": [
+      "Develops a novel optimization approach for high-resolution image analysis in MLExchange",
+      "Improves segmentation inference accuracy by up to 25% and efficiency by up to 30%",
+      "Employs a machine learning framework to optimize image processing pipelines"
+    ]
   },
   {
     "id": 2,
@@ -28,8 +35,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.surfcoat.2025.132376&size=100x100"
+    "key_points": null
   },
   {
     "id": 3,
@@ -41,11 +47,18 @@
     "beamlines": "8.3.2",
     "year": "2025",
     "high_impact": 1,
-    "category": "General",
-    "images": [],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1126%2Fscience.adt1882&size=100x100"
+    "category": "chemistry and energy",
+    "images": [
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914310/easypublication/publication_1753914275300_86867827.jpg",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914311/easypublication/publication_1753914275302_594168946.jpg",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914311/easypublication/publication_1753914275305_764323628.jpg"
+    ],
+    "abstract": "Boosting all-solid-state lithium-chalcogen batteries: Researchers develop a novel halide segregation method, significantly improving battery performance and lifespan, and paving the way for safer, more efficient energy storage.",
+    "key_points": [
+      "Halide segregation method enhances battery performance by 30%",
+      "Significant reduction in battery degradation and lifespan extension",
+      "Breakthrough technology for safer, more efficient all-solid-state lithium-chalcogen batteries"
+    ]
   },
   {
     "id": 4,
@@ -60,8 +73,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1107%2FS1600577525001833&size=100x100"
+    "key_points": null
   },
   {
     "id": 5,
@@ -76,8 +88,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F1945-7111%2Fada63c&size=100x100"
+    "key_points": null
   },
   {
     "id": 6,
@@ -92,8 +103,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.addma.2024.104612&size=100x100"
+    "key_points": null
   },
   {
     "id": 7,
@@ -108,8 +118,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facs.cgd.4c01066&size=100x100"
+    "key_points": null
   },
   {
     "id": 8,
@@ -124,8 +133,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1371%2Fjournal.pone.0313389&size=100x100"
+    "key_points": null
   },
   {
     "id": 9,
@@ -140,8 +148,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1107%2FS1600577524009305&size=100x100"
+    "key_points": null
   },
   {
     "id": 10,
@@ -155,9 +162,12 @@
     "high_impact": 0,
     "category": "General",
     "images": [],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1093%2Ficb%2Ficae154&size=100x100"
+    "abstract": "Unveiling the hidden structures of leaves and flowers, researchers reveal distinct mesophyll arrangements, challenging our understanding of plant development and function. Implications for agriculture and conservation.",
+    "key_points": [
+      "Leaf and flower mesophyll exhibit unique structural differences",
+      "Implications for plant development, function, and evolution",
+      "Potential applications in agriculture, conservation, and biotechnology"
+    ]
   },
   {
     "id": 11,
@@ -172,8 +182,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fpce.15208&size=100x100"
+    "key_points": null
   },
   {
     "id": 12,
@@ -188,8 +197,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.gca.2024.09.018&size=100x100"
+    "key_points": null
   },
   {
     "id": 13,
@@ -201,11 +209,10 @@
     "beamlines": "8.3.2",
     "year": "2025",
     "high_impact": 0,
-    "category": "bioscience",
+    "category": "General",
     "images": [],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1093%2Fplphys%2Fkiae551&size=100x100"
+    "abstract": "",
+    "key_points": []
   },
   {
     "id": 14,
@@ -217,17 +224,10 @@
     "beamlines": "8.3.2",
     "year": "2024",
     "high_impact": 0,
-    "category": "physics and condensed matter",
-    "images": [
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753827518/easypublication/publication_1753827517435_306523114.png"
-    ],
-    "abstract": "Chiton clades exhibit diverse aesthete patterns, balancing sensory structures with valve strength. This study reveals the intricate relationships between these features, shedding light on the evolution of these enigmatic mollusks.",
-    "key_points": [
-      "Diverse aesthete patterns in Chiton clades are linked to sensory and structural adaptations",
-      "Valve architecture is optimized for strength while maintaining sensory capabilities",
-      "Evolutionary trade-offs between sensory structures and valve strength are identified"
-    ],
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fjmor.21784&size=100x100"
+    "category": "General",
+    "images": [],
+    "abstract": "",
+    "key_points": []
   },
   {
     "id": 15,
@@ -241,9 +241,8 @@
     "high_impact": 0,
     "category": "General",
     "images": [],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.matt.2024.09.006&size=100x100"
+    "abstract": "",
+    "key_points": []
   },
   {
     "id": 16,
@@ -255,11 +254,17 @@
     "beamlines": "8.3.2",
     "year": "2025",
     "high_impact": 0,
-    "category": "General",
-    "images": [],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.apcatb.2024.124616&size=100x100"
+    "category": "chemistry and energy",
+    "images": [
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914639/easypublication/publication_1753914604035_670302740.jpg",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914639/easypublication/publication_1753914604038_980848523.jpg"
+    ],
+    "abstract": "Porous transport layers significantly impact overpotentials in PEM water electrolysis, particularly at low anode catalyst loadings. Optimizing these layers can improve efficiency and reduce costs in hydrogen production.",
+    "key_points": [
+      "Porous transport layers influence overpotentials in PEM water electrolysis",
+      "Optimization of these layers improves efficiency at low anode catalyst loadings",
+      "Reducing overpotentials can lower costs in hydrogen production"
+    ]
   },
   {
     "id": 17,
@@ -271,11 +276,19 @@
     "beamlines": "8.3.2,11.3.1",
     "year": "2024",
     "high_impact": 0,
-    "category": "General",
-    "images": [],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs10853-024-10208-3&size=100x100"
+    "category": "physics and condensed matter",
+    "images": [
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914511/easypublication/publication_1753914475658_627070647.webp",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914511/easypublication/publication_1753914475661_108916231.webp",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914511/easypublication/publication_1753914475663_981258542.webp",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914511/easypublication/publication_1753914475666_587205465.webp"
+    ],
+    "abstract": "Researchers develop Aluminum/SmCo[d5] composites for structural and magnetic applications, exhibiting superior strength, corrosion resistance, and magnetic properties. This breakthrough has the potential to revolutionize industries reliant on high-performance materials.",
+    "key_points": [
+      "Composites exhibit enhanced strength and corrosion resistance compared to traditional materials.",
+      "Magnetic properties of SmCo[d5] are preserved in the composite, enabling diverse applications.",
+      "Aluminum/SmCo[d5] composites show promise for aerospace, automotive, and renewable energy sectors."
+    ]
   },
   {
     "id": 18,
@@ -290,8 +303,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fnph.20115&size=100x100"
+    "key_points": null
   },
   {
     "id": 19,
@@ -306,8 +318,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1172%2Fjci.insight.175103&size=100x100"
+    "key_points": null
   },
   {
     "id": 20,
@@ -322,8 +333,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.cemconcomp.2024.105715&size=100x100"
+    "key_points": null
   },
   {
     "id": 21,
@@ -338,8 +348,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.matbio.2024.07.005&size=100x100"
+    "key_points": null
   },
   {
     "id": 22,
@@ -354,8 +363,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs11837-024-06716-x&size=100x100"
+    "key_points": null
   },
   {
     "id": 23,
@@ -370,8 +378,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsaem.4c00803&size=100x100"
+    "key_points": null
   },
   {
     "id": 24,
@@ -386,8 +393,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41598-024-63645-0&size=100x100"
+    "key_points": null
   },
   {
     "id": 25,
@@ -402,8 +408,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F1945-7111%2Fad54f1&size=100x100"
+    "key_points": null
   },
   {
     "id": 26,
@@ -415,11 +420,18 @@
     "beamlines": "8.3.2",
     "year": "2024",
     "high_impact": 0,
-    "category": "General",
-    "images": [],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1098%2Frspa.2024.0379&size=100x100"
+    "category": "physics and condensed matter",
+    "images": [
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914794/easypublication/publication_1753914758619_301127215.jpg",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914794/easypublication/publication_1753914758621_685838093.jpg",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914794/easypublication/publication_1753914758624_179060794.jpg"
+    ],
+    "abstract": "A novel method for detecting damage in composite materials is presented, leveraging volume decomposition analysis of tomographic data. This breakthrough enables non-destructive evaluation of complex structures, with far-reaching implications for aerospace, automotive, and energy industries.",
+    "key_points": [
+      "Volume decomposition analysis enhances tomographic data for damage detection",
+      "Non-destructive evaluation of complex composite structures is now possible",
+      "Method has significant implications for aerospace, automotive, and energy industries"
+    ]
   },
   {
     "id": 27,
@@ -434,8 +446,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41598-024-63288-1&size=100x100"
+    "key_points": null
   },
   {
     "id": 28,
@@ -450,8 +461,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F1945-7111%2Fad4fe6&size=100x100"
+    "key_points": null
   },
   {
     "id": 29,
@@ -466,8 +476,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.actamat.2024.120053&size=100x100"
+    "key_points": null
   },
   {
     "id": 30,
@@ -482,8 +491,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsenergylett.4c00800&size=100x100"
+    "key_points": null
   },
   {
     "id": 31,
@@ -498,8 +506,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs00269-024-01278-5&size=100x100"
+    "key_points": null
   },
   {
     "id": 32,
@@ -514,8 +521,7 @@
     "category": "General",
     "images": [],
     "abstract": "",
-    "key_points": [],
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.tmater.2024.100032&size=100x100"
+    "key_points": []
   },
   {
     "id": 33,
@@ -527,15 +533,10 @@
     "beamlines": "8.3.2",
     "year": "2024",
     "high_impact": 0,
-    "category": "geoscience and environment",
-    "images": [
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753223296/easypublication/publication_1753223296121_968126091.webp",
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753223296/easypublication/publication_1753223296247_651648784.webp",
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753223296/easypublication/publication_1753223296250_217595625.jpg"
-    ],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jpowsour.2024.234507&size=100x100"
+    "category": "General",
+    "images": [],
+    "abstract": "",
+    "key_points": []
   },
   {
     "id": 34,
@@ -550,8 +551,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsaem.4c00402&size=100x100"
+    "key_points": null
   },
   {
     "id": 35,
@@ -566,8 +566,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jmatprotec.2024.118354&size=100x100"
+    "key_points": null
   },
   {
     "id": 36,
@@ -582,8 +581,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.carbon.2024.118924&size=100x100"
+    "key_points": null
   },
   {
     "id": 37,
@@ -598,8 +596,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1093%2Faob%2Fmcae016&size=100x100"
+    "key_points": null
   },
   {
     "id": 38,
@@ -611,11 +608,18 @@
     "beamlines": "8.3.2",
     "year": "2024",
     "high_impact": 1,
-    "category": "General",
-    "images": [],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1073%2Fpnas.2317054121&size=100x100"
+    "category": "bioscience",
+    "images": [
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914895/easypublication/publication_1753914859044_932328649.jpg",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914895/easypublication/publication_1753914859047_963155606.jpg",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753914895/easypublication/publication_1753914859049_833921767.jpg"
+    ],
+    "abstract": "Kelp forests in the North Pacific underwent a stepwise evolution, with early Oligocene kelp holdfasts marking a pivotal shift towards modern ecosystems. This study sheds light on the origins of these critical coastal habitats.",
+    "key_points": [
+      "Early Oligocene kelp holdfasts discovered in the North Pacific",
+      "Stepwise evolution of kelp ecosystems over millions of years",
+      "Insights into the origins of critical coastal habitats"
+    ]
   },
   {
     "id": 39,
@@ -630,8 +634,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs00170-023-12771-6&size=100x100"
+    "key_points": null
   },
   {
     "id": 40,
@@ -646,8 +649,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Faenm.202303629&size=100x100"
+    "key_points": null
   },
   {
     "id": 41,
@@ -659,17 +661,10 @@
     "beamlines": "8.3.2",
     "year": "2023",
     "high_impact": 0,
-    "category": "geoscience and environment",
-    "images": [
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753745350/easypublication/publication_1753745350232_448588595.png"
-    ],
-    "abstract": "The Leptanillinae subfamily of ants (Hymenoptera: Formicidae) is characterized by its unique morphology, particularly in the male genitalia. This study provides a comprehensive comparison of the skeletomusculature of male genitalia across 14 Leptanillinae species. The authors developed a standardized muscular terminology for the male genitalia of Hymenoptera, which is essential for understanding the evolution and diversity of these structures. The study reveals significant variations in the morphology of male genitalia among Leptanillinae species, including differences in the shape and size of the genital capsule, the presence and shape of the parameres, and the structure of the phallomere. The standardized terminology and comparative morphology provided in this study will facilitate future research on the evolution and systematics of Hymenoptera.",
-    "key_points": [
-      "Comprehensive comparison of male genital skeletomusculature across 14 Leptanillinae species",
-      "Development of a standardized muscular terminology for the male genitalia of Hymenoptera",
-      "Significant variations in male genital morphology among Leptanillinae species"
-    ],
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3897%2Fasp.81.e104810&size=100x100"
+    "category": "General",
+    "images": [],
+    "abstract": "",
+    "key_points": []
   },
   {
     "id": 42,
@@ -681,19 +676,10 @@
     "beamlines": "8.3.2",
     "year": "2023",
     "high_impact": 0,
-    "category": "geoscience and environment",
-    "images": [
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753745811/easypublication/publication_1753745810480_585538900.jpg",
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753745811/easypublication/publication_1753745810483_795880065.jpg",
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753745811/easypublication/publication_1753745810486_862185062.jpg"
-    ],
-    "abstract": "A nonintrusive thermal-wave sensor enables real-time monitoring of battery degradation, offering insights into the electrochemical processes driving commercial battery performance.",
-    "key_points": [
-      "Develops a nonintrusive thermal-wave sensor for operando battery degradation monitoring",
-      "Provides real-time insights into electrochemical processes driving commercial battery performance",
-      "Offers potential for improved battery lifespan, safety, and overall efficiency"
-    ],
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41467-023-43808-9&size=100x100"
+    "category": "General",
+    "images": [],
+    "abstract": "",
+    "key_points": []
   },
   {
     "id": 43,
@@ -708,8 +694,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.brs.2023.11.014&size=100x100"
+    "key_points": null
   },
   {
     "id": 44,
@@ -724,8 +709,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsaem.3c02051&size=100x100"
+    "key_points": null
   },
   {
     "id": 45,
@@ -740,8 +724,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1107%2FS1600577523008962&size=100x100"
+    "key_points": null
   },
   {
     "id": 46,
@@ -756,8 +739,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1109%2FTCI.2023.3332007&size=100x100"
+    "key_points": null
   },
   {
     "id": 47,
@@ -772,8 +754,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=&size=100x100"
+    "key_points": null
   },
   {
     "id": 48,
@@ -785,17 +766,10 @@
     "beamlines": "8.3.2",
     "year": "2024",
     "high_impact": 0,
-    "category": "physics and condensed matter",
-    "images": [
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753827746/easypublication/publication_1753827745381_512247466.jpg"
-    ],
-    "abstract": "This study integrates synchrotron micro-computed tomography, infrared imaging, and pore-resolved simulations to elucidate combustion mechanisms in porous media, providing new insights into complex reactive systems.",
-    "key_points": [
-      "Experimental and computational techniques combined to study combustion in porous media",
-      "Synchrotron μCT and IR-imaging provided detailed spatial and temporal information",
-      "Pore-resolved simulations validated experimental results and revealed underlying combustion mechanisms"
-    ],
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.combustflame.2023.113132&size=100x100"
+    "category": "General",
+    "images": [],
+    "abstract": "",
+    "key_points": []
   },
   {
     "id": 49,
@@ -810,8 +784,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs00445-023-01677-6&size=100x100"
+    "key_points": null
   },
   {
     "id": 50,
@@ -826,8 +799,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsami.3c06899&size=100x100"
+    "key_points": null
   },
   {
     "id": 51,
@@ -839,11 +811,17 @@
     "beamlines": "8.3.2",
     "year": "2023",
     "high_impact": 0,
-    "category": "General",
-    "images": [],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.5344%2Fajev.2023.23025&size=100x100"
+    "category": "geoscience and environment",
+    "images": [
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753915433/easypublication/publication_1753915397192_157542829.png",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753915433/easypublication/publication_1753915397194_830405826.png"
+    ],
+    "abstract": "Fermentation of red wine significantly alters grape seed morphology and internal porosity, impacting wine quality and seed functionality. This study reveals the effects of fermentation on grape seed structure and its potential implications for wine production.",
+    "key_points": [
+      "Grape seed morphology and internal porosity are altered during red wine fermentation",
+      "Fermentation impacts wine quality and seed functionality",
+      "Study provides new insights into the effects of fermentation on grape seed structure"
+    ]
   },
   {
     "id": 52,
@@ -858,8 +836,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.cemconres.2023.107335&size=100x100"
+    "key_points": null
   },
   {
     "id": 53,
@@ -874,8 +851,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.matdes.2023.112373&size=100x100"
+    "key_points": null
   },
   {
     "id": 54,
@@ -890,8 +866,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsnano.3c05470&size=100x100"
+    "key_points": null
   },
   {
     "id": 55,
@@ -906,8 +881,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fjmor.21639&size=100x100"
+    "key_points": null
   },
   {
     "id": 56,
@@ -922,8 +896,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1093%2Faobpla%2Fplad062&size=100x100"
+    "key_points": null
   },
   {
     "id": 57,
@@ -938,8 +911,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3389%2Ffeart.2023.1058984&size=100x100"
+    "key_points": null
   },
   {
     "id": 58,
@@ -954,8 +926,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facs.chemrev.2c00873&size=100x100"
+    "key_points": null
   },
   {
     "id": 59,
@@ -970,8 +941,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1126%2Fsciadv.adh9020&size=100x100"
+    "key_points": null
   },
   {
     "id": 60,
@@ -986,8 +956,7 @@
     "category": "General",
     "images": [],
     "abstract": "",
-    "key_points": [],
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41467-023-40375-x&size=100x100"
+    "key_points": []
   },
   {
     "id": 61,
@@ -1002,8 +971,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41929-023-00993-6&size=100x100"
+    "key_points": null
   },
   {
     "id": 62,
@@ -1018,8 +986,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F1945-7111%2Face12f&size=100x100"
+    "key_points": null
   },
   {
     "id": 63,
@@ -1034,8 +1001,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41467-023-38823-9&size=100x100"
+    "key_points": null
   },
   {
     "id": 64,
@@ -1050,8 +1016,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs11837-023-05882-8&size=100x100"
+    "key_points": null
   },
   {
     "id": 65,
@@ -1066,8 +1031,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3389%2Ffchem.2023.1199677&size=100x100"
+    "key_points": null
   },
   {
     "id": 66,
@@ -1082,8 +1046,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41524-023-01039-y&size=100x100"
+    "key_points": null
   },
   {
     "id": 67,
@@ -1098,8 +1061,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.polymdegradstab.2023.110403&size=100x100"
+    "key_points": null
   },
   {
     "id": 68,
@@ -1114,8 +1076,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fsstr.202200402&size=100x100"
+    "key_points": null
   },
   {
     "id": 69,
@@ -1130,8 +1091,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.cemconcomp.2023.105106&size=100x100"
+    "key_points": null
   },
   {
     "id": 70,
@@ -1146,8 +1106,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.cemconres.2023.107164&size=100x100"
+    "key_points": null
   },
   {
     "id": 71,
@@ -1162,8 +1121,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41467-023-36942-x&size=100x100"
+    "key_points": null
   },
   {
     "id": 72,
@@ -1178,8 +1136,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.apenergy.2023.120853&size=100x100"
+    "key_points": null
   },
   {
     "id": 73,
@@ -1194,8 +1151,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.matdes.2023.111784&size=100x100"
+    "key_points": null
   },
   {
     "id": 74,
@@ -1210,8 +1166,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsami.2c20787&size=100x100"
+    "key_points": null
   },
   {
     "id": 75,
@@ -1226,8 +1181,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.commatsci.2023.112021&size=100x100"
+    "key_points": null
   },
   {
     "id": 76,
@@ -1242,8 +1196,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jpowsour.2022.232606&size=100x100"
+    "key_points": null
   },
   {
     "id": 77,
@@ -1258,8 +1211,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1039%2Fd2ta04847g&size=100x100"
+    "key_points": null
   },
   {
     "id": 78,
@@ -1271,13 +1223,10 @@
     "beamlines": "8.3.2",
     "year": "2022",
     "high_impact": 0,
-    "category": "geoscience and environment",
-    "images": [
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753738622/easypublication/publication_1753738622151_955051086.png"
-    ],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs43246-022-00296-6&size=100x100"
+    "category": "General",
+    "images": [],
+    "abstract": "",
+    "key_points": []
   },
   {
     "id": 79,
@@ -1292,8 +1241,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1109%2FTCI.2022.3215096&size=100x100"
+    "key_points": null
   },
   {
     "id": 80,
@@ -1308,8 +1256,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1039%2FD2CP02622H&size=100x100"
+    "key_points": null
   },
   {
     "id": 81,
@@ -1324,8 +1271,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3389%2Ffpls.2022.893140&size=100x100"
+    "key_points": null
   },
   {
     "id": 82,
@@ -1340,8 +1286,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsaem.2c00655&size=100x100"
+    "key_points": null
   },
   {
     "id": 83,
@@ -1356,8 +1301,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1130%2FG50180.1&size=100x100"
+    "key_points": null
   },
   {
     "id": 84,
@@ -1372,8 +1316,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fpce.14381&size=100x100"
+    "key_points": null
   },
   {
     "id": 85,
@@ -1388,8 +1331,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jmatprotec.2022.117656&size=100x100"
+    "key_points": null
   },
   {
     "id": 86,
@@ -1404,8 +1346,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fpce.14370&size=100x100"
+    "key_points": null
   },
   {
     "id": 87,
@@ -1420,8 +1361,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.exer.2022.109132&size=100x100"
+    "key_points": null
   },
   {
     "id": 88,
@@ -1436,8 +1376,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.addma.2022.102735&size=100x100"
+    "key_points": null
   },
   {
     "id": 89,
@@ -1452,8 +1391,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.cemconres.2022.106799&size=100x100"
+    "key_points": null
   },
   {
     "id": 90,
@@ -1468,8 +1406,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.compscitech.2022.109453&size=100x100"
+    "key_points": null
   },
   {
     "id": 91,
@@ -1484,8 +1421,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F1945-7111%2Fac613b&size=100x100"
+    "key_points": null
   },
   {
     "id": 92,
@@ -1500,8 +1436,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.54364%2FAAIML.2022.1119&size=100x100"
+    "key_points": null
   },
   {
     "id": 93,
@@ -1516,8 +1451,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.supflu.2022.105583&size=100x100"
+    "key_points": null
   },
   {
     "id": 94,
@@ -1532,8 +1466,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.matdes.2022.110533&size=100x100"
+    "key_points": null
   },
   {
     "id": 95,
@@ -1548,8 +1481,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsenergylett.2c00255&size=100x100"
+    "key_points": null
   },
   {
     "id": 96,
@@ -1564,8 +1496,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.apcatb.2022.121213&size=100x100"
+    "key_points": null
   },
   {
     "id": 97,
@@ -1580,8 +1511,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3390%2Fjcs6020060&size=100x100"
+    "key_points": null
   },
   {
     "id": 98,
@@ -1596,8 +1526,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.mattod.2022.01.016&size=100x100"
+    "key_points": null
   },
   {
     "id": 99,
@@ -1612,8 +1541,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fpce.14287&size=100x100"
+    "key_points": null
   },
   {
     "id": 100,
@@ -1628,8 +1556,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1093%2Faob%2Fmcac016&size=100x100"
+    "key_points": null
   },
   {
     "id": 101,
@@ -1644,8 +1571,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.compscitech.2022.109288&size=100x100"
+    "key_points": null
   },
   {
     "id": 102,
@@ -1660,8 +1586,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fjace.18326&size=100x100"
+    "key_points": null
   },
   {
     "id": 103,
@@ -1676,8 +1601,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1107%2FS160057752101287X&size=100x100"
+    "key_points": null
   },
   {
     "id": 104,
@@ -1689,13 +1613,10 @@
     "beamlines": "8.3.2",
     "year": "2022",
     "high_impact": 0,
-    "category": "geoscience and environment",
-    "images": [
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753738985/easypublication/publication_1753738984600_96057653.webp"
-    ],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fnph.17971&size=100x100"
+    "category": "General",
+    "images": [],
+    "abstract": "",
+    "key_points": []
   },
   {
     "id": 105,
@@ -1710,8 +1631,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1094%2FPHYTOFR-06-21-0041-R&size=100x100"
+    "key_points": null
   },
   {
     "id": 106,
@@ -1726,8 +1646,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fnph.17874&size=100x100"
+    "key_points": null
   },
   {
     "id": 107,
@@ -1742,8 +1661,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsaem.1c03288&size=100x100"
+    "key_points": null
   },
   {
     "id": 108,
@@ -1758,8 +1676,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.5194%2Fsoil-7-811-2021&size=100x100"
+    "key_points": null
   },
   {
     "id": 109,
@@ -1774,8 +1691,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.msea.2021.142427&size=100x100"
+    "key_points": null
   },
   {
     "id": 110,
@@ -1787,11 +1703,18 @@
     "beamlines": "8.3.2",
     "year": "2021",
     "high_impact": 0,
-    "category": "General",
-    "images": [],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3389%2Ffeart.2021.742895&size=100x100"
+    "category": "chemistry and energy",
+    "images": [
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753998492/easypublication/publication_1753998491776_466739585.jpg",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753998492/easypublication/publication_1753998491866_864404170.jpg",
+      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753998492/easypublication/publication_1753998491868_276007286.jpg"
+    ],
+    "abstract": "Unveiling the secrets of quartz-hosted embayments, researchers discover multiple disequilibrium textures, challenging traditional understanding of these geological formations. Implications for mineral exploration and climate modeling.",
+    "key_points": [
+      "Multiple disequilibrium textures identified in quartz-hosted embayments",
+      "Challenges traditional understanding of these geological formations",
+      "Implications for mineral exploration and climate modeling"
+    ]
   },
   {
     "id": 111,
@@ -1806,8 +1729,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs00445-021-01514-8&size=100x100"
+    "key_points": null
   },
   {
     "id": 112,
@@ -1822,8 +1744,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.commatsci.2021.111030&size=100x100"
+    "key_points": null
   },
   {
     "id": 113,
@@ -1838,8 +1759,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs10035-021-01169-4&size=100x100"
+    "key_points": null
   },
   {
     "id": 114,
@@ -1854,8 +1774,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jvolgeores.2021.107418&size=100x100"
+    "key_points": null
   },
   {
     "id": 115,
@@ -1870,8 +1789,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1093%2Fiob%2Fobab027&size=100x100"
+    "key_points": null
   },
   {
     "id": 116,
@@ -1886,8 +1804,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fnph.17772&size=100x100"
+    "key_points": null
   },
   {
     "id": 117,
@@ -1902,8 +1819,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fadvs.202102950&size=100x100"
+    "key_points": null
   },
   {
     "id": 118,
@@ -1918,8 +1834,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.7554%2FeLife.68920&size=100x100"
+    "key_points": null
   },
   {
     "id": 119,
@@ -1934,8 +1849,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3847%2FPSJ%2Fac1749&size=100x100"
+    "key_points": null
   },
   {
     "id": 120,
@@ -1950,8 +1864,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41598-021-96867-7&size=100x100"
+    "key_points": null
   },
   {
     "id": 121,
@@ -1963,18 +1876,10 @@
     "beamlines": "8.3.2",
     "year": "2021",
     "high_impact": 0,
-    "category": "chemistry and energy",
-    "images": [
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753765403/easypublication/publication_1753765402550_807159453.jpg",
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753765403/easypublication/publication_1753765402650_158808739.jpg"
-    ],
-    "abstract": "Researchers develop a novel approach to model fiber-reinforced microstructures using X-ray microcomputed tomography, enabling accurate simulations of composite materials' behavior and optimizing their performance in real-world applications.",
-    "key_points": [
-      "Utilizes X-ray microcomputed tomography to capture detailed fiber-reinforced microstructures",
-      "Develops a computational model to simulate the behavior of composite materials",
-      "Enhances the accuracy of material performance predictions and optimizes design"
-    ],
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.compscitech.2021.109004&size=100x100"
+    "category": "General",
+    "images": [],
+    "abstract": "",
+    "key_points": []
   },
   {
     "id": 122,
@@ -1989,8 +1894,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1093%2Fplphys%2Fkiab361&size=100x100"
+    "key_points": null
   },
   {
     "id": 123,
@@ -2005,8 +1909,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Faenm.202101794&size=100x100"
+    "key_points": null
   },
   {
     "id": 124,
@@ -2021,8 +1924,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F1945-7111%2Fac154e&size=100x100"
+    "key_points": null
   },
   {
     "id": 125,
@@ -2037,8 +1939,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fjace.18037&size=100x100"
+    "key_points": null
   },
   {
     "id": 126,
@@ -2053,8 +1954,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3390%2Fpolym13142239&size=100x100"
+    "key_points": null
   },
   {
     "id": 127,
@@ -2069,8 +1969,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.matdes.2021.109899&size=100x100"
+    "key_points": null
   },
   {
     "id": 128,
@@ -2085,8 +1984,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsnano.1c02942&size=100x100"
+    "key_points": null
   },
   {
     "id": 129,
@@ -2101,8 +1999,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsami.1c04582&size=100x100"
+    "key_points": null
   },
   {
     "id": 130,
@@ -2117,8 +2014,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3390%2Fplants10061121&size=100x100"
+    "key_points": null
   },
   {
     "id": 131,
@@ -2133,8 +2029,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.fuel.2021.120987&size=100x100"
+    "key_points": null
   },
   {
     "id": 132,
@@ -2149,8 +2044,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facs.macromol.1c00425&size=100x100"
+    "key_points": null
   },
   {
     "id": 133,
@@ -2165,8 +2059,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.ijggc.2021.103340&size=100x100"
+    "key_points": null
   },
   {
     "id": 134,
@@ -2181,8 +2074,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsami.1c00849&size=100x100"
+    "key_points": null
   },
   {
     "id": 135,
@@ -2197,8 +2089,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41586-021-03377-7&size=100x100"
+    "key_points": null
   },
   {
     "id": 136,
@@ -2213,8 +2104,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.carbon.2021.04.017&size=100x100"
+    "key_points": null
   },
   {
     "id": 137,
@@ -2229,8 +2119,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.mattod.2021.02.006&size=100x100"
+    "key_points": null
   },
   {
     "id": 138,
@@ -2245,8 +2134,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41561-021-00709-0&size=100x100"
+    "key_points": null
   },
   {
     "id": 139,
@@ -2258,17 +2146,10 @@
     "beamlines": "8.3.2",
     "year": "2021",
     "high_impact": 0,
-    "category": "geoscience and environment",
-    "images": [
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753745279/easypublication/publication_1753745278418_261696283.png"
-    ],
-    "abstract": "The evolution of eggshell structure in non-avian reptiles is closely tied to their nesting ecology. This study examines the relationship between eggshell structure and nesting habits in 14 species of non-avian reptiles. The researchers found that eggshell structure varies significantly across species, with some species having thicker, more porous shells, while others have thinner, more dense shells. The study shows that the thickness and porosity of the eggshell are adaptations to the nesting environment, with species that nest in dry, hot environments having thicker, more porous shells to help retain moisture and regulate temperature. In contrast, species that nest in cooler, more humid environments have thinner, more dense shells. The study also found that the shape and size of the eggshell are influenced by the shape and size of the nesting burrow. The findings of this study provide new insights into the evolution of eggshell structure in non-avian reptiles and highlight the importance of considering the nesting ecology of these species when studying their biology and ecology.",
-    "key_points": [
-      "Eggshell structure varies significantly across non-avian reptile species",
-      "Thickness and porosity of eggshell are adaptations to nesting environment",
-      "Shape and size of eggshell influenced by nesting burrow"
-    ],
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fjmor.21347&size=100x100"
+    "category": "General",
+    "images": [],
+    "abstract": "",
+    "key_points": []
   },
   {
     "id": 140,
@@ -2283,8 +2164,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1098%2Frspb.2020.3145&size=100x100"
+    "key_points": null
   },
   {
     "id": 141,
@@ -2299,8 +2179,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3390%2Flubricants9020020&size=100x100"
+    "key_points": null
   },
   {
     "id": 142,
@@ -2315,8 +2194,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1093%2Fplphys%2Fkiab045&size=100x100"
+    "key_points": null
   },
   {
     "id": 143,
@@ -2331,8 +2209,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsaem.0c02607&size=100x100"
+    "key_points": null
   },
   {
     "id": 144,
@@ -2347,8 +2224,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jeurceramsoc.2021.01.030&size=100x100"
+    "key_points": null
   },
   {
     "id": 145,
@@ -2363,8 +2239,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3390%2Fen14030641&size=100x100"
+    "key_points": null
   },
   {
     "id": 146,
@@ -2379,8 +2254,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jpowsour.2020.229439&size=100x100"
+    "key_points": null
   },
   {
     "id": 147,
@@ -2395,8 +2269,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fnph.17212&size=100x100"
+    "key_points": null
   },
   {
     "id": 148,
@@ -2411,8 +2284,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.cemconres.2020.106321&size=100x100"
+    "key_points": null
   },
   {
     "id": 149,
@@ -2427,8 +2299,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs40948-021-00215-y&size=100x100"
+    "key_points": null
   },
   {
     "id": 150,
@@ -2443,8 +2314,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1093%2Faobpla%2Fplab003&size=100x100"
+    "key_points": null
   },
   {
     "id": 151,
@@ -2459,8 +2329,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.petrol.2021.108375&size=100x100"
+    "key_points": null
   },
   {
     "id": 152,
@@ -2475,8 +2344,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1073%2Fpnas.2001337117&size=100x100"
+    "key_points": null
   },
   {
     "id": 153,
@@ -2491,8 +2359,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1093%2Fjxb%2Feraa392&size=100x100"
+    "key_points": null
   },
   {
     "id": 154,
@@ -2507,8 +2374,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.compositesa.2020.106200&size=100x100"
+    "key_points": null
   },
   {
     "id": 155,
@@ -2523,8 +2389,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41598-020-77796-3&size=100x100"
+    "key_points": null
   },
   {
     "id": 156,
@@ -2539,8 +2404,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fmpp.13016&size=100x100"
+    "key_points": null
   },
   {
     "id": 157,
@@ -2555,8 +2419,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1107%2FS1600577520013314&size=100x100"
+    "key_points": null
   },
   {
     "id": 158,
@@ -2571,8 +2434,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.isci.2020.101783&size=100x100"
+    "key_points": null
   },
   {
     "id": 159,
@@ -2587,8 +2449,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.cemconres.2020.106282&size=100x100"
+    "key_points": null
   },
   {
     "id": 160,
@@ -2603,8 +2464,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1139%2Fcjz-2019-0295&size=100x100"
+    "key_points": null
   },
   {
     "id": 161,
@@ -2619,8 +2479,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.actamat.2020.10.036&size=100x100"
+    "key_points": null
   },
   {
     "id": 162,
@@ -2635,8 +2494,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41586-020-2813-8&size=100x100"
+    "key_points": null
   },
   {
     "id": 163,
@@ -2651,8 +2509,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3389%2Ffpls.2020.567918&size=100x100"
+    "key_points": null
   },
   {
     "id": 164,
@@ -2667,8 +2524,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.addma.2020.101659&size=100x100"
+    "key_points": null
   },
   {
     "id": 165,
@@ -2683,8 +2539,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1089%2F3dp.2019.0200&size=100x100"
+    "key_points": null
   },
   {
     "id": 166,
@@ -2699,8 +2554,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1088%2F2515-7655%2Fabb783&size=100x100"
+    "key_points": null
   },
   {
     "id": 167,
@@ -2715,8 +2569,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3390%2Finsects11100651&size=100x100"
+    "key_points": null
   },
   {
     "id": 168,
@@ -2731,8 +2584,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsaem.0c01175&size=100x100"
+    "key_points": null
   },
   {
     "id": 169,
@@ -2747,8 +2599,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs10853-020-05148-7&size=100x100"
+    "key_points": null
   },
   {
     "id": 170,
@@ -2763,8 +2614,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.commatsci.2020.109956&size=100x100"
+    "key_points": null
   },
   {
     "id": 171,
@@ -2779,8 +2629,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1130%2FG47811.1&size=100x100"
+    "key_points": null
   },
   {
     "id": 172,
@@ -2795,8 +2644,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fajb2.1517&size=100x100"
+    "key_points": null
   },
   {
     "id": 173,
@@ -2811,8 +2659,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.addma.2020.101464&size=100x100"
+    "key_points": null
   },
   {
     "id": 174,
@@ -2827,8 +2674,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Faps3.11380&size=100x100"
+    "key_points": null
   },
   {
     "id": 175,
@@ -2843,8 +2689,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jpowsour.2020.228618&size=100x100"
+    "key_points": null
   },
   {
     "id": 176,
@@ -2859,8 +2704,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41467-020-17370-7&size=100x100"
+    "key_points": null
   },
   {
     "id": 177,
@@ -2875,8 +2719,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F1945-7111%2Fab9d62&size=100x100"
+    "key_points": null
   },
   {
     "id": 178,
@@ -2891,8 +2734,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jmbbm.2020.103887&size=100x100"
+    "key_points": null
   },
   {
     "id": 179,
@@ -2907,8 +2749,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F1945-7111%2Fab9d13&size=100x100"
+    "key_points": null
   },
   {
     "id": 180,
@@ -2923,8 +2764,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3389%2Ffeart.2020.00207&size=100x100"
+    "key_points": null
   },
   {
     "id": 181,
@@ -2939,8 +2779,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1080%2F17451000.2020.1761027&size=100x100"
+    "key_points": null
   },
   {
     "id": 182,
@@ -2955,8 +2794,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.mattod.2020.04.028&size=100x100"
+    "key_points": null
   },
   {
     "id": 183,
@@ -2971,8 +2809,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.addma.2020.101336&size=100x100"
+    "key_points": null
   },
   {
     "id": 184,
@@ -2987,8 +2824,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.chemosphere.2020.126951&size=100x100"
+    "key_points": null
   },
   {
     "id": 185,
@@ -3003,8 +2839,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facs.est.0c01755&size=100x100"
+    "key_points": null
   },
   {
     "id": 186,
@@ -3019,8 +2854,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=&size=100x100"
+    "key_points": null
   },
   {
     "id": 187,
@@ -3035,8 +2869,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41563-020-0655-2&size=100x100"
+    "key_points": null
   },
   {
     "id": 188,
@@ -3051,8 +2884,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fjbmr.4023&size=100x100"
+    "key_points": null
   },
   {
     "id": 189,
@@ -3067,8 +2899,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Ftpj.14770&size=100x100"
+    "key_points": null
   },
   {
     "id": 190,
@@ -3083,8 +2914,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3389%2Ffmats.2020.00075&size=100x100"
+    "key_points": null
   },
   {
     "id": 191,
@@ -3099,8 +2929,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F1945-7111%2Fab7c6c&size=100x100"
+    "key_points": null
   },
   {
     "id": 192,
@@ -3115,8 +2944,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fnph.16542&size=100x100"
+    "key_points": null
   },
   {
     "id": 193,
@@ -3131,8 +2959,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1557%2Fadv.2020.131&size=100x100"
+    "key_points": null
   },
   {
     "id": 194,
@@ -3147,8 +2974,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1029%2F2019EA000876&size=100x100"
+    "key_points": null
   },
   {
     "id": 195,
@@ -3163,8 +2989,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fjace.17017&size=100x100"
+    "key_points": null
   },
   {
     "id": 196,
@@ -3179,8 +3004,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1039%2FC9TC05811G&size=100x100"
+    "key_points": null
   },
   {
     "id": 197,
@@ -3195,8 +3019,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs10800-019-01378-z&size=100x100"
+    "key_points": null
   },
   {
     "id": 198,
@@ -3211,8 +3034,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsaem.9b02101&size=100x100"
+    "key_points": null
   },
   {
     "id": 199,
@@ -3227,8 +3049,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.petrol.2019.106861&size=100x100"
+    "key_points": null
   },
   {
     "id": 200,
@@ -3243,8 +3064,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsami.9b11780&size=100x100"
+    "key_points": null
   },
   {
     "id": 201,
@@ -3259,8 +3079,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41467-019-13673-6&size=100x100"
+    "key_points": null
   },
   {
     "id": 202,
@@ -3275,8 +3094,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facssuschemeng.9b05880&size=100x100"
+    "key_points": null
   },
   {
     "id": 203,
@@ -3291,8 +3109,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.tsf.2019.137739&size=100x100"
+    "key_points": null
   },
   {
     "id": 204,
@@ -3307,8 +3124,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1039%2FC9SE00364A&size=100x100"
+    "key_points": null
   },
   {
     "id": 205,
@@ -3323,8 +3139,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsami.9b15606&size=100x100"
+    "key_points": null
   },
   {
     "id": 206,
@@ -3339,8 +3154,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.matdes.2019.108382&size=100x100"
+    "key_points": null
   },
   {
     "id": 207,
@@ -3355,8 +3169,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.cemconres.2019.105824&size=100x100"
+    "key_points": null
   },
   {
     "id": 208,
@@ -3371,8 +3184,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsaem.9b01685&size=100x100"
+    "key_points": null
   },
   {
     "id": 209,
@@ -3387,8 +3199,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1039%2FC9MH01224A&size=100x100"
+    "key_points": null
   },
   {
     "id": 210,
@@ -3403,8 +3214,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3389%2Ffeart.2019.00250&size=100x100"
+    "key_points": null
   },
   {
     "id": 211,
@@ -3419,8 +3229,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.bone.2019.115043&size=100x100"
+    "key_points": null
   },
   {
     "id": 212,
@@ -3435,8 +3244,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1039%2FC9TA06520B&size=100x100"
+    "key_points": null
   },
   {
     "id": 213,
@@ -3451,8 +3259,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1093%2Fzoolinnean%2Fzlz060&size=100x100"
+    "key_points": null
   },
   {
     "id": 214,
@@ -3467,8 +3274,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3390%2Fmi10080506&size=100x100"
+    "key_points": null
   },
   {
     "id": 215,
@@ -3483,8 +3289,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fs41413-019-0070-y&size=100x100"
+    "key_points": null
   },
   {
     "id": 216,
@@ -3499,8 +3304,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1093%2Faob%2Fmcz076&size=100x100"
+    "key_points": null
   },
   {
     "id": 217,
@@ -3515,8 +3319,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.icarus.2019.07.015&size=100x100"
+    "key_points": null
   },
   {
     "id": 218,
@@ -3531,8 +3334,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fajb2.1323&size=100x100"
+    "key_points": null
   },
   {
     "id": 219,
@@ -3547,8 +3349,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.2136%2Fvzj2018.12.0211&size=100x100"
+    "key_points": null
   },
   {
     "id": 220,
@@ -3563,8 +3364,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facs.nanolett.9b01805&size=100x100"
+    "key_points": null
   },
   {
     "id": 221,
@@ -3579,8 +3379,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1029%2F2019GC008304&size=100x100"
+    "key_points": null
   },
   {
     "id": 222,
@@ -3595,8 +3394,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fanie.201903553&size=100x100"
+    "key_points": null
   },
   {
     "id": 223,
@@ -3611,8 +3409,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs00445-019-1298-5&size=100x100"
+    "key_points": null
   },
   {
     "id": 224,
@@ -3627,8 +3424,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fadfm.201902238&size=100x100"
+    "key_points": null
   },
   {
     "id": 225,
@@ -3643,8 +3439,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1130%2FG46275.1&size=100x100"
+    "key_points": null
   },
   {
     "id": 226,
@@ -3659,8 +3454,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jeurceramsoc.2019.05.027&size=100x100"
+    "key_points": null
   },
   {
     "id": 227,
@@ -3675,8 +3469,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.ijggc.2019.05.008&size=100x100"
+    "key_points": null
   },
   {
     "id": 228,
@@ -3691,8 +3484,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsaem.9b00292&size=100x100"
+    "key_points": null
   },
   {
     "id": 229,
@@ -3707,8 +3499,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.actbio.2019.04.003&size=100x100"
+    "key_points": null
   },
   {
     "id": 230,
@@ -3723,8 +3514,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1104%2Fpp.18.01303&size=100x100"
+    "key_points": null
   },
   {
     "id": 231,
@@ -3739,8 +3529,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fazo.12289&size=100x100"
+    "key_points": null
   },
   {
     "id": 232,
@@ -3755,8 +3544,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1109%2FMCG.2018.2880818&size=100x100"
+    "key_points": null
   },
   {
     "id": 233,
@@ -3771,8 +3559,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facs.energyfuels.8b04294&size=100x100"
+    "key_points": null
   },
   {
     "id": 234,
@@ -3787,8 +3574,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fjmor.20939&size=100x100"
+    "key_points": null
   },
   {
     "id": 235,
@@ -3803,8 +3589,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.pmatsci.2019.01.002&size=100x100"
+    "key_points": null
   },
   {
     "id": 236,
@@ -3819,8 +3604,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs40870-018-00179-3&size=100x100"
+    "key_points": null
   },
   {
     "id": 237,
@@ -3835,8 +3619,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.cattod.2018.12.012&size=100x100"
+    "key_points": null
   },
   {
     "id": 238,
@@ -3851,8 +3634,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.compositesa.2018.11.021&size=100x100"
+    "key_points": null
   },
   {
     "id": 239,
@@ -3867,8 +3649,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facs.jpcc.8b06355&size=100x100"
+    "key_points": null
   },
   {
     "id": 240,
@@ -3883,8 +3664,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1071%2FFP18110&size=100x100"
+    "key_points": null
   },
   {
     "id": 241,
@@ -3899,8 +3679,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.ijheatmasstransfer.2018.11.006&size=100x100"
+    "key_points": null
   },
   {
     "id": 242,
@@ -3915,8 +3694,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1104%2Fpp.18.00743&size=100x100"
+    "key_points": null
   },
   {
     "id": 243,
@@ -3931,8 +3709,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.tplants.2018.09.005&size=100x100"
+    "key_points": null
   },
   {
     "id": 244,
@@ -3947,8 +3724,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsaem.8b01059&size=100x100"
+    "key_points": null
   },
   {
     "id": 245,
@@ -3963,8 +3739,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.electacta.2018.09.089&size=100x100"
+    "key_points": null
   },
   {
     "id": 246,
@@ -3979,8 +3754,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1039%2FC8CC05368E&size=100x100"
+    "key_points": null
   },
   {
     "id": 247,
@@ -3995,8 +3769,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.ijheatmasstransfer.2018.07.030&size=100x100"
+    "key_points": null
   },
   {
     "id": 248,
@@ -4011,8 +3784,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1104%2Fpp.18.00550&size=100x100"
+    "key_points": null
   },
   {
     "id": 249,
@@ -4027,8 +3799,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1039%2FC8SE00261D&size=100x100"
+    "key_points": null
   },
   {
     "id": 250,
@@ -4043,8 +3814,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1093%2Ftreephys%2Ftpy049&size=100x100"
+    "key_points": null
   },
   {
     "id": 251,
@@ -4059,8 +3829,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.mtener.2018.05.011&size=100x100"
+    "key_points": null
   },
   {
     "id": 252,
@@ -4075,8 +3844,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.electacta.2018.04.144&size=100x100"
+    "key_points": null
   },
   {
     "id": 253,
@@ -4091,8 +3859,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.fuproc.2018.03.023&size=100x100"
+    "key_points": null
   },
   {
     "id": 254,
@@ -4107,8 +3874,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fpce.13205&size=100x100"
+    "key_points": null
   },
   {
     "id": 255,
@@ -4123,8 +3889,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.softx.2018.03.001&size=100x100"
+    "key_points": null
   },
   {
     "id": 256,
@@ -4139,8 +3904,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fnph.15068&size=100x100"
+    "key_points": null
   },
   {
     "id": 257,
@@ -4155,8 +3919,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.epsl.2018.02.025&size=100x100"
+    "key_points": null
   },
   {
     "id": 258,
@@ -4171,8 +3934,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jvolgeores.2018.02.019&size=100x100"
+    "key_points": null
   },
   {
     "id": 259,
@@ -4187,8 +3949,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fnph.15032&size=100x100"
+    "key_points": null
   },
   {
     "id": 260,
@@ -4203,8 +3964,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facscentsci.8b00700&size=100x100"
+    "key_points": null
   },
   {
     "id": 261,
@@ -4219,8 +3979,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.compositesa.2017.12.024&size=100x100"
+    "key_points": null
   },
   {
     "id": 262,
@@ -4235,8 +3994,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jsg.2017.12.009&size=100x100"
+    "key_points": null
   },
   {
     "id": 263,
@@ -4251,8 +4009,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.celrep.2017.10.115&size=100x100"
+    "key_points": null
   },
   {
     "id": 264,
@@ -4267,8 +4024,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.actamat.2017.10.054&size=100x100"
+    "key_points": null
   },
   {
     "id": 265,
@@ -4283,8 +4039,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.ijggc.2017.10.002&size=100x100"
+    "key_points": null
   },
   {
     "id": 266,
@@ -4299,8 +4054,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsnano.7b05044&size=100x100"
+    "key_points": null
   },
   {
     "id": 267,
@@ -4315,8 +4069,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fadfm.201702425&size=100x100"
+    "key_points": null
   },
   {
     "id": 268,
@@ -4331,8 +4084,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fnph.14811&size=100x100"
+    "key_points": null
   },
   {
     "id": 269,
@@ -4347,8 +4099,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3732%2Fajb.1700199&size=100x100"
+    "key_points": null
   },
   {
     "id": 270,
@@ -4363,8 +4114,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jbiomech.2017.09.003&size=100x100"
+    "key_points": null
   },
   {
     "id": 271,
@@ -4379,8 +4129,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.egypro.2017.03.1628&size=100x100"
+    "key_points": null
   },
   {
     "id": 272,
@@ -4395,8 +4144,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fapp.45399&size=100x100"
+    "key_points": null
   },
   {
     "id": 273,
@@ -4411,8 +4159,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.geoderma.2017.06.005&size=100x100"
+    "key_points": null
   },
   {
     "id": 274,
@@ -4427,8 +4174,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fnph.14687&size=100x100"
+    "key_points": null
   },
   {
     "id": 275,
@@ -4443,8 +4189,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facs.est.7b02063&size=100x100"
+    "key_points": null
   },
   {
     "id": 276,
@@ -4459,8 +4204,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.carbon.2017.06.013&size=100x100"
+    "key_points": null
   },
   {
     "id": 277,
@@ -4475,8 +4219,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.advwatres.2017.04.006&size=100x100"
+    "key_points": null
   },
   {
     "id": 278,
@@ -4491,8 +4234,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.compstruct.2017.03.107&size=100x100"
+    "key_points": null
   },
   {
     "id": 279,
@@ -4507,8 +4249,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.triboint.2017.02.038&size=100x100"
+    "key_points": null
   },
   {
     "id": 280,
@@ -4523,8 +4264,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.gca.2017.02.006&size=100x100"
+    "key_points": null
   },
   {
     "id": 281,
@@ -4539,8 +4279,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F2.1171702jes&size=100x100"
+    "key_points": null
   },
   {
     "id": 282,
@@ -4555,8 +4294,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1104%2Fpp.16.01643&size=100x100"
+    "key_points": null
   },
   {
     "id": 283,
@@ -4571,8 +4309,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.ijheatmasstransfer.2016.12.048&size=100x100"
+    "key_points": null
   },
   {
     "id": 284,
@@ -4587,8 +4324,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.ijggc.2016.12.004&size=100x100"
+    "key_points": null
   },
   {
     "id": 285,
@@ -4603,8 +4339,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facsami.6b13956&size=100x100"
+    "key_points": null
   },
   {
     "id": 286,
@@ -4619,8 +4354,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facs.jpcc.6b10658&size=100x100"
+    "key_points": null
   },
   {
     "id": 287,
@@ -4635,8 +4369,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fnph.14256&size=100x100"
+    "key_points": null
   },
   {
     "id": 288,
@@ -4651,8 +4384,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.ijheatmasstransfer.2016.10.113&size=100x100"
+    "key_points": null
   },
   {
     "id": 289,
@@ -4667,8 +4399,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.epsl.2016.09.030&size=100x100"
+    "key_points": null
   },
   {
     "id": 290,
@@ -4683,8 +4414,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.petrol.2016.10.011&size=100x100"
+    "key_points": null
   },
   {
     "id": 291,
@@ -4699,8 +4429,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1130%2FB31448.1&size=100x100"
+    "key_points": null
   },
   {
     "id": 292,
@@ -4715,8 +4444,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1104%2Fpp.16.00923&size=100x100"
+    "key_points": null
   },
   {
     "id": 293,
@@ -4731,8 +4459,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs11837-016-2098-4&size=100x100"
+    "key_points": null
   },
   {
     "id": 294,
@@ -4747,8 +4474,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jpowsour.2016.08.020&size=100x100"
+    "key_points": null
   },
   {
     "id": 295,
@@ -4763,8 +4489,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F2.0191610jes&size=100x100"
+    "key_points": null
   },
   {
     "id": 296,
@@ -4779,8 +4504,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1104%2Fpp.16.00136&size=100x100"
+    "key_points": null
   },
   {
     "id": 297,
@@ -4795,8 +4519,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3791%2F53683&size=100x100"
+    "key_points": null
   },
   {
     "id": 298,
@@ -4811,8 +4534,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.cub.2016.02.029&size=100x100"
+    "key_points": null
   },
   {
     "id": 299,
@@ -4827,8 +4549,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Ffuce.201500213&size=100x100"
+    "key_points": null
   },
   {
     "id": 300,
@@ -4843,8 +4564,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.bone.2016.04.010&size=100x100"
+    "key_points": null
   },
   {
     "id": 301,
@@ -4859,8 +4579,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.compositesa.2016.02.030&size=100x100"
+    "key_points": null
   },
   {
     "id": 302,
@@ -4875,8 +4594,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fpce.12688&size=100x100"
+    "key_points": null
   },
   {
     "id": 303,
@@ -4891,8 +4609,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.ijheatmasstransfer.2015.12.004&size=100x100"
+    "key_points": null
   },
   {
     "id": 304,
@@ -4907,8 +4624,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1126%2Fsciadv.1500849&size=100x100"
+    "key_points": null
   },
   {
     "id": 305,
@@ -4923,8 +4639,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.advwatres.2015.11.013&size=100x100"
+    "key_points": null
   },
   {
     "id": 306,
@@ -4939,8 +4654,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fpce.12618&size=100x100"
+    "key_points": null
   },
   {
     "id": 307,
@@ -4955,8 +4669,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fpce.12612&size=100x100"
+    "key_points": null
   },
   {
     "id": 308,
@@ -4971,8 +4684,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.msea.2015.10.073&size=100x100"
+    "key_points": null
   },
   {
     "id": 309,
@@ -4987,8 +4699,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.bone.2015.08.002&size=100x100"
+    "key_points": null
   },
   {
     "id": 310,
@@ -5003,8 +4714,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1093%2Ftreephys%2Ftpv040&size=100x100"
+    "key_points": null
   },
   {
     "id": 311,
@@ -5019,8 +4729,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fadhm.201500070&size=100x100"
+    "key_points": null
   },
   {
     "id": 312,
@@ -5035,8 +4744,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.2140%2Fcamcos.2015.10.43&size=100x100"
+    "key_points": null
   },
   {
     "id": 313,
@@ -5051,8 +4759,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1371%2Fjournal.pone.0121828&size=100x100"
+    "key_points": null
   },
   {
     "id": 314,
@@ -5067,8 +4774,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.26879%2F492&size=100x100"
+    "key_points": null
   },
   {
     "id": 315,
@@ -5083,8 +4789,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jvolgeores.2015.02.004&size=100x100"
+    "key_points": null
   },
   {
     "id": 316,
@@ -5099,8 +4804,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fpce.12497&size=100x100"
+    "key_points": null
   },
   {
     "id": 317,
@@ -5115,8 +4819,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2F2014GC005442&size=100x100"
+    "key_points": null
   },
   {
     "id": 318,
@@ -5131,8 +4834,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.2136%2Fsssaj2014.04.0135&size=100x100"
+    "key_points": null
   },
   {
     "id": 319,
@@ -5147,8 +4849,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.compositesa.2014.11.008&size=100x100"
+    "key_points": null
   },
   {
     "id": 320,
@@ -5163,8 +4864,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fnph.13110&size=100x100"
+    "key_points": null
   },
   {
     "id": 321,
@@ -5179,8 +4879,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Fes502654q&size=100x100"
+    "key_points": null
   },
   {
     "id": 322,
@@ -5195,8 +4894,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1104%2Fpp.114.249706&size=100x100"
+    "key_points": null
   },
   {
     "id": 323,
@@ -5211,8 +4909,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jece.2014.10.013&size=100x100"
+    "key_points": null
   },
   {
     "id": 324,
@@ -5227,8 +4924,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1063%2F1.4892437&size=100x100"
+    "key_points": null
   },
   {
     "id": 325,
@@ -5243,8 +4939,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1063%2F1.4882337&size=100x100"
+    "key_points": null
   },
   {
     "id": 326,
@@ -5259,8 +4954,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.bone.2014.05.022&size=100x100"
+    "key_points": null
   },
   {
     "id": 327,
@@ -5275,8 +4969,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Fes4055737&size=100x100"
+    "key_points": null
   },
   {
     "id": 328,
@@ -5291,8 +4984,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Fes5013438&size=100x100"
+    "key_points": null
   },
   {
     "id": 329,
@@ -5307,8 +4999,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.advwatres.2013.09.009&size=100x100"
+    "key_points": null
   },
   {
     "id": 330,
@@ -5323,8 +5014,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.bone.2010.02.014&size=100x100"
+    "key_points": null
   },
   {
     "id": 331,
@@ -5339,8 +5029,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.bone.2009.10.015&size=100x100"
+    "key_points": null
   },
   {
     "id": 332,
@@ -5355,8 +5044,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F2.0011907jes&size=100x100"
+    "key_points": null
   },
   {
     "id": 333,
@@ -5371,8 +5059,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F2.1041902jes&size=100x100"
+    "key_points": null
   },
   {
     "id": 334,
@@ -5387,8 +5074,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1088%2F1361-6501%2Faa9dd9&size=100x100"
+    "key_points": null
   },
   {
     "id": 335,
@@ -5400,17 +5086,10 @@
     "beamlines": "8.3.2",
     "year": "2018",
     "high_impact": 0,
-    "category": "chemistry and energy",
-    "images": [
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753827922/easypublication/publication_1753827921498_218296529.png"
-    ],
-    "abstract": "Laser surgery reveals the hidden world of aphid siphunculi, shedding light on their biomechanical and chemical signaling functions. This groundbreaking study unlocks the secrets of these mysterious structures, with far-reaching implications for our understanding of insect communication and behavior.",
-    "key_points": [
-      "Aphid siphunculi (cornicles) play a crucial role in insect communication and defense",
-      "Laser surgery technique allows for precise examination of siphunculi structure and function",
-      "Biomechanical and chemical signaling functions of siphunculi are revealed, challenging current understanding of aphid biology"
-    ],
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1371%2Fjournal.pone.0204984&size=100x100"
+    "category": "General",
+    "images": [],
+    "abstract": "",
+    "key_points": []
   },
   {
     "id": 336,
@@ -5425,8 +5104,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1107%2FS1600577518015606&size=100x100"
+    "key_points": null
   },
   {
     "id": 337,
@@ -5438,17 +5116,10 @@
     "beamlines": "4.0.2,8.3.2,6.3.1.1",
     "year": "2018",
     "high_impact": 0,
-    "category": "physics and condensed matter",
-    "images": [
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753827628/easypublication/publication_1753827627681_350354868.png"
-    ],
-    "abstract": "Xi-cam presents a versatile interface for data visualization and analysis, bridging the gap between experimental and computational techniques in materials science and nanotechnology.",
-    "key_points": [
-      "Provides a user-friendly interface for visualizing and analyzing data from various experimental techniques",
-      "Combines data from different sources, enabling a comprehensive understanding of material properties and behavior",
-      "Enhances collaboration and reproducibility in scientific research through open-source software and data sharing"
-    ],
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1107%2FS1600577518005787&size=100x100"
+    "category": "General",
+    "images": [],
+    "abstract": "",
+    "key_points": []
   },
   {
     "id": 338,
@@ -5463,8 +5134,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.ijggc.2018.12.013&size=100x100"
+    "key_points": null
   },
   {
     "id": 339,
@@ -5479,8 +5149,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.11646%2Fzootaxa.4457.1.3&size=100x100"
+    "key_points": null
   },
   {
     "id": 340,
@@ -5495,8 +5164,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F2.0301816jes&size=100x100"
+    "key_points": null
   },
   {
     "id": 341,
@@ -5511,8 +5179,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3389%2Ffenvs.2018.00065&size=100x100"
+    "key_points": null
   },
   {
     "id": 342,
@@ -5527,8 +5194,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1130%2FG39256.1&size=100x100"
+    "key_points": null
   },
   {
     "id": 343,
@@ -5543,8 +5209,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1098%2Frspb.2018.1099&size=100x100"
+    "key_points": null
   },
   {
     "id": 344,
@@ -5559,8 +5224,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fncomms15942&size=100x100"
+    "key_points": null
   },
   {
     "id": 345,
@@ -5575,8 +5239,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fsrep44618&size=100x100"
+    "key_points": null
   },
   {
     "id": 346,
@@ -5591,8 +5254,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F2.0391711jes&size=100x100"
+    "key_points": null
   },
   {
     "id": 347,
@@ -5607,8 +5269,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.electacta.2017.10.012&size=100x100"
+    "key_points": null
   },
   {
     "id": 348,
@@ -5623,8 +5284,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1107%2FS1600577517012449&size=100x100"
+    "key_points": null
   },
   {
     "id": 349,
@@ -5639,8 +5299,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1107%2FS1600577517010955&size=100x100"
+    "key_points": null
   },
   {
     "id": 350,
@@ -5655,8 +5314,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.cemconcomp.2017.03.002&size=100x100"
+    "key_points": null
   },
   {
     "id": 351,
@@ -5671,8 +5329,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.epsl.2016.11.055&size=100x100"
+    "key_points": null
   },
   {
     "id": 352,
@@ -5687,8 +5344,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3389%2Ffpls.2016.01665&size=100x100"
+    "key_points": null
   },
   {
     "id": 353,
@@ -5703,8 +5359,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facs.nanolett.6b02156&size=100x100"
+    "key_points": null
   },
   {
     "id": 354,
@@ -5719,8 +5374,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Facs.est.6b02184&size=100x100"
+    "key_points": null
   },
   {
     "id": 355,
@@ -5735,8 +5389,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F2.1331610jes&size=100x100"
+    "key_points": null
   },
   {
     "id": 356,
@@ -5751,8 +5404,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1063%2F1.4961219&size=100x100"
+    "key_points": null
   },
   {
     "id": 357,
@@ -5767,8 +5419,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs00445-016-1053-0&size=100x100"
+    "key_points": null
   },
   {
     "id": 358,
@@ -5783,8 +5434,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jvolgeores.2016.06.026&size=100x100"
+    "key_points": null
   },
   {
     "id": 359,
@@ -5799,8 +5449,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1107%2FS1600577516009942&size=100x100"
+    "key_points": null
   },
   {
     "id": 360,
@@ -5815,8 +5464,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1063%2F1.4960020&size=100x100"
+    "key_points": null
   },
   {
     "id": 361,
@@ -5831,8 +5479,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1107%2FS1600577516002198&size=100x100"
+    "key_points": null
   },
   {
     "id": 362,
@@ -5847,8 +5494,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.cemconres.2015.11.010&size=100x100"
+    "key_points": null
   },
   {
     "id": 363,
@@ -5863,8 +5509,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jeurceramsoc.2015.08.021&size=100x100"
+    "key_points": null
   },
   {
     "id": 364,
@@ -5879,8 +5524,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3732%2Fajb.1500532&size=100x100"
+    "key_points": null
   },
   {
     "id": 365,
@@ -5895,8 +5539,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.cemconcomp.2016.02.003&size=100x100"
+    "key_points": null
   },
   {
     "id": 366,
@@ -5911,8 +5554,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.actbio.2015.04.007&size=100x100"
+    "key_points": null
   },
   {
     "id": 367,
@@ -5927,8 +5569,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1104%2Fpp.15.00031&size=100x100"
+    "key_points": null
   },
   {
     "id": 368,
@@ -5943,8 +5584,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jpowsour.2015.07.034&size=100x100"
+    "key_points": null
   },
   {
     "id": 369,
@@ -5959,8 +5599,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F06917.1253ecst&size=100x100"
+    "key_points": null
   },
   {
     "id": 370,
@@ -5975,8 +5614,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fjbmr.2340&size=100x100"
+    "key_points": null
   },
   {
     "id": 371,
@@ -5991,8 +5629,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fadhm.201500447&size=100x100"
+    "key_points": null
   },
   {
     "id": 372,
@@ -6007,8 +5644,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs10853-014-8766-2&size=100x100"
+    "key_points": null
   },
   {
     "id": 373,
@@ -6023,8 +5659,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs00445-014-0822-x&size=100x100"
+    "key_points": null
   },
   {
     "id": 374,
@@ -6039,8 +5674,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3732%2Fajb.1300271&size=100x100"
+    "key_points": null
   },
   {
     "id": 375,
@@ -6055,8 +5689,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1557%2Fmrs.2014.197&size=100x100"
+    "key_points": null
   },
   {
     "id": 376,
@@ -6071,8 +5704,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1186%2Fs12951-016-0175-z&size=100x100"
+    "key_points": null
   },
   {
     "id": 377,
@@ -6087,8 +5719,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2F2015JB012061&size=100x100"
+    "key_points": null
   },
   {
     "id": 378,
@@ -6100,13 +5731,10 @@
     "beamlines": "8.3.2",
     "year": "2015",
     "high_impact": 0,
-    "category": "geoscience and environment",
-    "images": [
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753738604/easypublication/publication_1753738603815_649187161.png"
-    ],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F2.0321514jes&size=100x100"
+    "category": "General",
+    "images": [],
+    "abstract": "",
+    "key_points": []
   },
   {
     "id": 379,
@@ -6121,8 +5749,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1063%2F1.4927614&size=100x100"
+    "key_points": null
   },
   {
     "id": 380,
@@ -6137,8 +5764,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.2138%2Fam-2015-5205&size=100x100"
+    "key_points": null
   },
   {
     "id": 381,
@@ -6153,8 +5779,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.carbon.2015.08.113&size=100x100"
+    "key_points": null
   },
   {
     "id": 382,
@@ -6169,8 +5794,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3791%2F53021&size=100x100"
+    "key_points": null
   },
   {
     "id": 383,
@@ -6185,8 +5809,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F2.0721507jes&size=100x100"
+    "key_points": null
   },
   {
     "id": 384,
@@ -6201,8 +5824,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.ijheatmasstransfer.2015.02.073&size=100x100"
+    "key_points": null
   },
   {
     "id": 385,
@@ -6217,8 +5839,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.elecom.2015.02.005&size=100x100"
+    "key_points": null
   },
   {
     "id": 386,
@@ -6233,8 +5854,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs11664-014-3375-z&size=100x100"
+    "key_points": null
   },
   {
     "id": 387,
@@ -6249,8 +5869,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1107%2FS160057751401604X&size=100x100"
+    "key_points": null
   },
   {
     "id": 388,
@@ -6265,8 +5884,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1109%2FTVCG.2012.200&size=100x100"
+    "key_points": null
   },
   {
     "id": 389,
@@ -6281,8 +5899,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.2138%2Frmg.2013.77.8&size=100x100"
+    "key_points": null
   },
   {
     "id": 390,
@@ -6297,8 +5914,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1109%2FMCSE.2014.77&size=100x100"
+    "key_points": null
   },
   {
     "id": 391,
@@ -6313,8 +5929,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.corsci.2014.03.010&size=100x100"
+    "key_points": null
   },
   {
     "id": 392,
@@ -6329,8 +5944,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fadfm.201400451&size=100x100"
+    "key_points": null
   },
   {
     "id": 393,
@@ -6345,8 +5959,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jmatprotec.2014.06.005&size=100x100"
+    "key_points": null
   },
   {
     "id": 394,
@@ -6361,8 +5974,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.ijggc.2014.04.001&size=100x100"
+    "key_points": null
   },
   {
     "id": 395,
@@ -6377,8 +5989,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.ijggc.2014.01.004&size=100x100"
+    "key_points": null
   },
   {
     "id": 396,
@@ -6393,8 +6004,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F2.0511503jes&size=100x100"
+    "key_points": null
   },
   {
     "id": 397,
@@ -6409,8 +6019,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.matlet.2013.04.048&size=100x100"
+    "key_points": null
   },
   {
     "id": 398,
@@ -6425,8 +6034,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Fam403793x&size=100x100"
+    "key_points": null
   },
   {
     "id": 399,
@@ -6441,8 +6049,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fjbmr.2172&size=100x100"
+    "key_points": null
   },
   {
     "id": 400,
@@ -6457,8 +6064,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1093%2Faob%2Fmct294&size=100x100"
+    "key_points": null
   },
   {
     "id": 401,
@@ -6473,8 +6079,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1107%2FS1600577513024715&size=100x100"
+    "key_points": null
   },
   {
     "id": 402,
@@ -6489,8 +6094,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1149%2F2.0501711jes&size=100x100"
+    "key_points": null
   },
   {
     "id": 403,
@@ -6505,8 +6109,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fnmat3793&size=100x100"
+    "key_points": null
   },
   {
     "id": 404,
@@ -6521,8 +6124,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1163%2F22941932-00000033&size=100x100"
+    "key_points": null
   },
   {
     "id": 405,
@@ -6537,8 +6139,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs00410-013-0961-7&size=100x100"
+    "key_points": null
   },
   {
     "id": 406,
@@ -6553,8 +6154,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.precamres.2013.05.015&size=100x100"
+    "key_points": null
   },
   {
     "id": 407,
@@ -6569,8 +6169,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs10853-013-7738-2&size=100x100"
+    "key_points": null
   },
   {
     "id": 408,
@@ -6585,8 +6184,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.advwatres.2013.09.008&size=100x100"
+    "key_points": null
   },
   {
     "id": 409,
@@ -6601,8 +6199,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fadfm.201301121&size=100x100"
+    "key_points": null
   },
   {
     "id": 410,
@@ -6617,8 +6214,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.actbio.2012.08.029&size=100x100"
+    "key_points": null
   },
   {
     "id": 411,
@@ -6633,8 +6229,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fadfm.201002030&size=100x100"
+    "key_points": null
   },
   {
     "id": 412,
@@ -6649,8 +6244,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.actbio.2011.06.030&size=100x100"
+    "key_points": null
   },
   {
     "id": 413,
@@ -6662,13 +6256,10 @@
     "beamlines": "8.3.2",
     "year": "2011",
     "high_impact": 1,
-    "category": "geoscience and environment",
-    "images": [
-      "https://res.cloudinary.com/dv7kssxdi/image/upload/v1753738662/easypublication/publication_1753738662043_41914891.jpg"
-    ],
-    "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1063%2F1.3628342&size=100x100"
+    "category": "General",
+    "images": [],
+    "abstract": "",
+    "key_points": []
   },
   {
     "id": 414,
@@ -6683,8 +6274,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jvolgeores.2013.04.001&size=100x100"
+    "key_points": null
   },
   {
     "id": 415,
@@ -6699,8 +6289,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1063%2F1.4813518&size=100x100"
+    "key_points": null
   },
   {
     "id": 416,
@@ -6715,8 +6304,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1126%2Fscitranslmed.3006286&size=100x100"
+    "key_points": null
   },
   {
     "id": 417,
@@ -6731,8 +6319,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3389%2Ffpls.2013.00285&size=100x100"
+    "key_points": null
   },
   {
     "id": 418,
@@ -6747,8 +6334,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jtbi.2013.05.021&size=100x100"
+    "key_points": null
   },
   {
     "id": 419,
@@ -6763,8 +6349,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3791%2F50162&size=100x100"
+    "key_points": null
   },
   {
     "id": 420,
@@ -6779,8 +6364,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1104%2Fpp.112.212712&size=100x100"
+    "key_points": null
   },
   {
     "id": 421,
@@ -6795,8 +6379,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1130%2FG33685.1&size=100x100"
+    "key_points": null
   },
   {
     "id": 422,
@@ -6811,8 +6394,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Fmz300651a&size=100x100"
+    "key_points": null
   },
   {
     "id": 423,
@@ -6827,8 +6409,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.actbio.2012.12.026&size=100x100"
+    "key_points": null
   },
   {
     "id": 424,
@@ -6843,8 +6424,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fj.1551-2916.2011.04802.x&size=100x100"
+    "key_points": null
   },
   {
     "id": 425,
@@ -6859,8 +6439,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1107%2FS0909049512044354&size=100x100"
+    "key_points": null
   },
   {
     "id": 426,
@@ -6875,8 +6454,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fnmat3497&size=100x100"
+    "key_points": null
   },
   {
     "id": 427,
@@ -6891,8 +6469,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs00603-012-0336-9&size=100x100"
+    "key_points": null
   },
   {
     "id": 428,
@@ -6907,8 +6484,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.ijggc.2012.12.026&size=100x100"
+    "key_points": null
   },
   {
     "id": 429,
@@ -6923,8 +6499,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fj.1469-8137.2012.04244.x&size=100x100"
+    "key_points": null
   },
   {
     "id": 430,
@@ -6939,8 +6514,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.3732%2Fajb.1100606&size=100x100"
+    "key_points": null
   },
   {
     "id": 431,
@@ -6955,8 +6529,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.actamat.2012.07.053&size=100x100"
+    "key_points": null
   },
   {
     "id": 432,
@@ -6971,8 +6544,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.ijggc.2012.12.031&size=100x100"
+    "key_points": null
   },
   {
     "id": 433,
@@ -6987,8 +6559,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1029%2F2012JB009496&size=100x100"
+    "key_points": null
   },
   {
     "id": 434,
@@ -7003,8 +6574,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fembor.2010.135&size=100x100"
+    "key_points": null
   },
   {
     "id": 435,
@@ -7019,8 +6589,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fajpa.22103&size=100x100"
+    "key_points": null
   },
   {
     "id": 436,
@@ -7035,8 +6604,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Fes3012723&size=100x100"
+    "key_points": null
   },
   {
     "id": 437,
@@ -7051,8 +6619,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.chemgeo.2012.05.010&size=100x100"
+    "key_points": null
   },
   {
     "id": 438,
@@ -7067,8 +6634,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.chemgeo.2012.05.014&size=100x100"
+    "key_points": null
   },
   {
     "id": 439,
@@ -7083,8 +6649,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1080%2F02724634.2012.672388&size=100x100"
+    "key_points": null
   },
   {
     "id": 440,
@@ -7099,8 +6664,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs10853-012-6598-5&size=100x100"
+    "key_points": null
   },
   {
     "id": 441,
@@ -7115,8 +6679,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs11837-012-0298-0&size=100x100"
+    "key_points": null
   },
   {
     "id": 442,
@@ -7131,8 +6694,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1088%2F0029-5515%2F52%2F6%2F062001&size=100x100"
+    "key_points": null
   },
   {
     "id": 443,
@@ -7147,8 +6709,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fj.1365-3040.2012.02524.x&size=100x100"
+    "key_points": null
   },
   {
     "id": 444,
@@ -7163,8 +6724,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.scriptamat.2011.07.002&size=100x100"
+    "key_points": null
   },
   {
     "id": 445,
@@ -7179,8 +6739,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jmbbm.2011.05.020&size=100x100"
+    "key_points": null
   },
   {
     "id": 446,
@@ -7195,8 +6754,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Fes104312h&size=100x100"
+    "key_points": null
   },
   {
     "id": 447,
@@ -7211,8 +6769,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fj.1469-8137.2011.03754.x&size=100x100"
+    "key_points": null
   },
   {
     "id": 448,
@@ -7227,8 +6784,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.pepi.2011.03.009&size=100x100"
+    "key_points": null
   },
   {
     "id": 449,
@@ -7243,8 +6799,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1029%2F2011GL046916&size=100x100"
+    "key_points": null
   },
   {
     "id": 450,
@@ -7259,8 +6814,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.2136%2Fvzj2008.0090&size=100x100"
+    "key_points": null
   },
   {
     "id": 451,
@@ -7275,8 +6829,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.biomaterials.2011.08.013&size=100x100"
+    "key_points": null
   },
   {
     "id": 452,
@@ -7291,8 +6844,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1073%2Fpnas.1107966108&size=100x100"
+    "key_points": null
   },
   {
     "id": 453,
@@ -7307,8 +6859,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Fes102566j&size=100x100"
+    "key_points": null
   },
   {
     "id": 454,
@@ -7323,8 +6874,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs00603-009-0071-z&size=100x100"
+    "key_points": null
   },
   {
     "id": 455,
@@ -7339,8 +6889,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1186%2F1467-4866-12-7&size=100x100"
+    "key_points": null
   },
   {
     "id": 456,
@@ -7355,8 +6904,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs11242-010-9636-2&size=100x100"
+    "key_points": null
   },
   {
     "id": 457,
@@ -7371,8 +6919,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.actbio.2010.08.025&size=100x100"
+    "key_points": null
   },
   {
     "id": 458,
@@ -7387,8 +6934,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1029%2F2009WR008375&size=100x100"
+    "key_points": null
   },
   {
     "id": 459,
@@ -7403,8 +6949,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.biomaterials.2009.06.017&size=100x100"
+    "key_points": null
   },
   {
     "id": 460,
@@ -7419,8 +6964,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fj.1749-6632.2009.05232.x&size=100x100"
+    "key_points": null
   },
   {
     "id": 461,
@@ -7435,8 +6979,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1104%2Fpp.110.162396&size=100x100"
+    "key_points": null
   },
   {
     "id": 462,
@@ -7451,8 +6994,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.actbio.2009.11.026&size=100x100"
+    "key_points": null
   },
   {
     "id": 463,
@@ -7467,8 +7009,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.actamat.2009.03.003&size=100x100"
+    "key_points": null
   },
   {
     "id": 464,
@@ -7483,8 +7024,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.bone.2010.02.025&size=100x100"
+    "key_points": null
   },
   {
     "id": 465,
@@ -7499,8 +7039,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1130%2FG30199A.1&size=100x100"
+    "key_points": null
   },
   {
     "id": 466,
@@ -7515,8 +7054,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fjbm.a.31237&size=100x100"
+    "key_points": null
   },
   {
     "id": 467,
@@ -7531,8 +7069,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1029%2F2008JF001060&size=100x100"
+    "key_points": null
   },
   {
     "id": 468,
@@ -7547,8 +7084,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.cemconcomp.2008.12.007&size=100x100"
+    "key_points": null
   },
   {
     "id": 469,
@@ -7563,8 +7099,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.jmps.2011.11.010&size=100x100"
+    "key_points": null
   },
   {
     "id": 470,
@@ -7579,8 +7114,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1130%2FGES00560.1&size=100x100"
+    "key_points": null
   },
   {
     "id": 471,
@@ -7595,8 +7129,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1021%2Fes8020827&size=100x100"
+    "key_points": null
   },
   {
     "id": 472,
@@ -7611,8 +7144,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1371%2Fjournal.pone.0005275&size=100x100"
+    "key_points": null
   },
   {
     "id": 473,
@@ -7627,8 +7159,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.apgeochem.2008.08.011&size=100x100"
+    "key_points": null
   },
   {
     "id": 474,
@@ -7643,8 +7174,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1007%2Fs10596-009-9130-5&size=100x100"
+    "key_points": null
   },
   {
     "id": 475,
@@ -7659,8 +7189,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1038%2Fnmat2221&size=100x100"
+    "key_points": null
   },
   {
     "id": 476,
@@ -7675,8 +7204,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1002%2Fart.22976&size=100x100"
+    "key_points": null
   },
   {
     "id": 477,
@@ -7691,8 +7219,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1111%2Fj.1475-1305.2006.00282.x&size=100x100"
+    "key_points": null
   },
   {
     "id": 478,
@@ -7707,8 +7234,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.msec.2005.08.021&size=100x100"
+    "key_points": null
   },
   {
     "id": 479,
@@ -7723,8 +7249,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1242%2Fdev.015081&size=100x100"
+    "key_points": null
   },
   {
     "id": 480,
@@ -7739,8 +7264,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1029%2F2007GL030497&size=100x100"
+    "key_points": null
   },
   {
     "id": 481,
@@ -7755,8 +7279,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1029%2F2006GL027224&size=100x100"
+    "key_points": null
   },
   {
     "id": 482,
@@ -7771,8 +7294,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.bone.2006.03.008&size=100x100"
+    "key_points": null
   },
   {
     "id": 483,
@@ -7787,8 +7309,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.bone.2004.09.023&size=100x100"
+    "key_points": null
   },
   {
     "id": 484,
@@ -7803,8 +7324,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1073%2Fpnas.0507417102&size=100x100"
+    "key_points": null
   },
   {
     "id": 485,
@@ -7819,8 +7339,7 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.biomaterials.2004.09.004&size=100x100"
+    "key_points": null
   },
   {
     "id": 486,
@@ -7835,7 +7354,6 @@
     "category": "General",
     "images": [],
     "abstract": null,
-    "key_points": null,
-    "doi_qr_code": "https://api.qrserver.com/v1/create-qr-code/?data=10.1016%2Fj.bone.2004.07.016&size=100x100"
+    "key_points": null
   }
 ]
