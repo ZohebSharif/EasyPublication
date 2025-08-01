@@ -394,6 +394,42 @@ app.get('/api/publications/:category', async (req, res) => {
   }
 });
 
+// Add a route to list all available endpoints for debugging
+app.get('/api/routes', (req, res) => {
+  const routes = [];
+  app._router.stack.forEach((middleware) => {
+    if (middleware.route) {
+      routes.push({
+        path: middleware.route.path,
+        methods: Object.keys(middleware.route.methods)
+      });
+    }
+  });
+  res.json({ routes });
+});
+
+// Fallback handler for API routes
+app.use('/api/*', (req, res) => {
+  res.status(404).json({ error: 'Route not found', requestedPath: req.path });
+});
+
+// Basic route for server info
+app.get('/', (req, res) => {
+  res.json({
+    message: 'EasyPublication API Server',
+    version: '1.0.0',
+    endpoints: {
+      health: '/api/health',
+      publications: '/api/publications',
+      publicationsByCategory: '/api/publications/:category',
+      upload: '/api/upload',
+      updatePublication: '/api/update-publication',
+      groqKey: '/api/groq-key',
+      routes: '/api/routes'
+    }
+  });
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
