@@ -18,13 +18,14 @@ interface SearchResult {
   matchType: 'doi' | 'title' | 'authors' | 'journal';
 }
 
-function LiveSearch() {
+export default function LiveSearch() {
   const [searchTerm, setSearchTerm] = useState('');
   const [publications, setPublications] = useState<PublicationData[]>([]);
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [showResults, setShowResults] = useState(false);
   const [loading, setLoading] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
+  const [error, setError] = useState<string | null>(null);
 
   // Load publications data
   useEffect(() => {
@@ -185,5 +186,3 @@ function LiveSearch() {
     </div>
   );
 }
-
-export default LiveSearch;

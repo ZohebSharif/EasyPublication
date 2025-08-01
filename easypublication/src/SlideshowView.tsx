@@ -31,7 +31,7 @@ export default function SlideshowView() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
   const [isDark, setIsDark] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [, setError] = useState<string | null>(null);
   const currentPub = publications[currentIndex];
 
   // Helper function to format DOI link - same as PublicationCard

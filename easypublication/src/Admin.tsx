@@ -24,13 +24,27 @@ import DoiLiveSearch from "./DoiLiveSearch";
   
 const GROQ_API_ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
 
+interface Publication {
+  id: number;
+  title: string;
+  authors: string;
+  journal: string;
+  online_pub_date: string;
+  doi: string;
+  beamlines: string;
+  year: string;
+  high_impact: number;
+  category?: string;
+}
+
 function Admin() {
   const currentBeamline = 'Beamline 8.3.2'
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);  // Keep this since it's used
   const [groqApiKey, setGroqApiKey] = useState<string | null>(null);
   const [apiKeyError, setApiKeyError] = useState<string | null>(null);
+  const [serverError, setServerError] = useState<string | null>(null);  // Add error state setter
   
   // Form state
   const [formData, setFormData] = useState({
@@ -211,17 +225,7 @@ function Admin() {
   };
   
 
-  const handlePublicationSelect = async (publication: {
-    id: number;
-    title: string;
-    authors: string;
-    journal: string;
-    online_pub_date: string;
-    doi: string;
-    beamlines: string;
-    year: string;
-    high_impact: number;
-  }) => {
+  const handlePublicationSelect = async (publication: Publication) => {
     
     // First update basic info
     setFormData(prev => ({
@@ -346,7 +350,7 @@ function Admin() {
       });
 
       if (updateResponse.ok) {
-        const result = await updateResponse.json();
+        await updateResponse.json();
         alert(`🎉 Success! Publication has been assigned to the "${formData.categories}" category and will appear in the carousel immediately. The page will refresh to show the changes.`);
         
         // Refresh the page to show updated publications

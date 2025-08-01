@@ -30,6 +30,7 @@ function DoiLiveSearch({ value, onChange, onSelectPublication }: DoiSearchProps)
   const [showResults, setShowResults] = useState(false);
   const [loading, setLoading] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
+  const [error, setError] = useState<string | null>(null);
 
   // Load publications data
   useEffect(() => {
