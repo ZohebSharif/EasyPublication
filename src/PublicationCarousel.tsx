@@ -162,9 +162,17 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
   useEffect(() => {
     const loadPublications = async () => {
       try {
-        // Adjust path based on environment
-        const basePath = import.meta.env.MODE === 'development' ? '' : '/EasyPublication';
-        const response = await fetch(`${basePath}/data/all-publications.json`);
+        // Use API endpoint to get all publications with proper data
+        let response;
+        try {
+          response = await fetch(createApiUrl(API_ENDPOINTS.ALL_PUBLICATIONS));
+        } catch (apiError) {
+          // Fallback to static file if API fails (for development)
+          console.warn('API failed, falling back to static file:', apiError);
+          const basePath = import.meta.env.MODE === 'development' ? '' : '/EasyPublication';
+          response = await fetch(`${basePath}/data/all-publications.json`);
+        }
+        
         if (!response.ok) {
           throw new Error('Failed to load publications data');
         }

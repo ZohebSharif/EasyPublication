@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import SearchIcon from './assets/search.svg?react';
+import { createApiUrl, API_ENDPOINTS } from './config';
 
 interface PublicationData {
   id: number;
@@ -36,13 +37,26 @@ function DoiLiveSearch({ value, onChange, onSelectPublication }: DoiSearchProps)
   useEffect(() => {
     const loadPublications = async () => {
       try {
-        // Use proper base URL for static assets
+        // In production, use the API endpoint; in development, fall back to static file
         const isDevelopment = import.meta.env.DEV;
-        const baseUrl = isDevelopment 
-          ? '' // Use relative path in development - Vite will serve static files
-          : 'https://zohebsharif.github.io/EasyPublication';
+        let response;
         
-        const response = await fetch(`${baseUrl}/data/all-publications.json`);
+        if (isDevelopment) {
+          // Try API first in development (if server is running)
+          try {
+            response = await fetch(createApiUrl(API_ENDPOINTS.ALL_PUBLICATIONS));
+            if (!response.ok) {
+              throw new Error('API not available');
+            }
+          } catch {
+            // Fall back to static file in development if API isn't available
+            response = await fetch('/data/all-publications.json');
+          }
+        } else {
+          // In production, always use the API
+          response = await fetch(createApiUrl(API_ENDPOINTS.ALL_PUBLICATIONS));
+        }
+        
         if (!response.ok) {
           throw new Error('Failed to load publications data');
         }

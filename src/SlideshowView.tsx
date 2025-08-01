@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import styles from './SlideshowView.module.css';
+import { createApiUrl, API_ENDPOINTS } from './config';
 
 interface Publication {
   id: number;
@@ -43,7 +44,16 @@ export default function SlideshowView() {
   useEffect(() => {
     const fetchPublications = async () => {
       try {
-        const response = await fetch('/public/data/all-publications.json');
+        // Use API endpoint to get all publications with proper data
+        let response;
+        try {
+          response = await fetch(createApiUrl(API_ENDPOINTS.ALL_PUBLICATIONS));
+        } catch (apiError) {
+          // Fallback to static file if API fails
+          console.warn('API failed, falling back to static file:', apiError);
+          response = await fetch('/public/data/all-publications.json');
+        }
+        
         if (!response.ok) {
           throw new Error('Failed to load publications');
         }

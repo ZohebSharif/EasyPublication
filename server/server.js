@@ -95,24 +95,28 @@ async function deleteFromCloudinary(imageUrls) {
 }
 
 // Update publication in database
-async function updatePublicationInDatabase(publicationId, newCategory, imagePaths = [], abstract = '', keyPoints = []) {
+// Function to update a publication in the database
+async function updatePublicationInDatabase(publicationId, newCategory, imagePaths, abstract, keyPoints) {
   try {
     const SQL = await initSqlJs();
     const dbPath = path.join(__dirname, 'als-publications.db');
     const fileBuffer = readFileSync(dbPath);
     const db = new SQL.Database(fileBuffer);
 
-    // Update the publication with new data
-    db.exec(`
+    // Update the publication with new data using proper SQL.js syntax
+    const stmt = db.prepare(`
       UPDATE publications 
       SET category = ?, 
           images = ?,
           abstract = ?,
           key_points = ?,
           ai_abstract = ?,
-          ai_key_points = ?
+          ai_key_points = ?,
+          last_summary_update = CURRENT_TIMESTAMP
       WHERE id = ?
-    `, [
+    `);
+    
+    stmt.run([
       newCategory,
       JSON.stringify(imagePaths),
       abstract,
@@ -121,16 +125,20 @@ async function updatePublicationInDatabase(publicationId, newCategory, imagePath
       JSON.stringify(keyPoints),
       publicationId
     ]);
+    
+    stmt.free();
 
     // Write the changes back to the file
     const data = db.export();
     writeFileSync(dbPath, Buffer.from(data));
+    db.close();
     
     // Export updated data to JSON
     await exportDatabaseToJson();
 
     return { success: true };
   } catch (error) {
+    console.error('Database update error:', error);
     return { success: false, error: error.message };
   }
 }
@@ -223,18 +231,23 @@ app.post('/api/update-publication', async (req, res) => {
     const fileBuffer = readFileSync(dbPath);
     const db = new SQL.Database(fileBuffer);
 
-    const result = db.exec(`
+    // Search for publication using proper SQL.js syntax
+    const stmt = db.prepare(`
       SELECT id FROM publications 
       WHERE LOWER(title) LIKE LOWER(?) 
       OR LOWER(title) = LOWER(?)
       LIMIT 1
-    `, [`%${title}%`, title]);
+    `);
+    
+    const result = stmt.get([`%${title}%`, title]);
+    stmt.free();
+    db.close();
 
-    if (!result || !result[0] || !result[0].values || !result[0].values[0]) {
-      throw new Error('Publication not found');
+    if (!result || !result.id) {
+      return res.status(404).json({ error: 'Publication not found' });
     }
 
-    const publicationId = result[0].values[0][0];
+    const publicationId = result.id;
     
     const updateResult = await updatePublicationInDatabase(
       publicationId,
@@ -278,7 +291,10 @@ app.get('/api/publications', async (req, res) => {
     const db = new SQL.Database(fileBuffer);
     
     const stmt = db.prepare(`
-      SELECT id, title, authors, journal, online_pub_date, doi, beamlines, year, high_impact
+      SELECT id, title, authors, journal, online_pub_date, doi, beamlines, year, high_impact,
+             category, images, 
+             COALESCE(abstract, ai_abstract) as abstract,
+             COALESCE(key_points, ai_key_points) as key_points
       FROM publications 
       ORDER BY year DESC, title ASC
     `);
@@ -286,6 +302,28 @@ app.get('/api/publications', async (req, res) => {
     const publications = [];
     while (stmt.step()) {
       const row = stmt.getAsObject();
+      
+      // Parse JSON fields
+      if (row.images) {
+        try {
+          row.images = JSON.parse(row.images);
+        } catch (e) {
+          row.images = [];
+        }
+      } else {
+        row.images = [];
+      }
+      
+      if (row.key_points) {
+        try {
+          row.key_points = JSON.parse(row.key_points);
+        } catch (e) {
+          row.key_points = [];
+        }
+      } else {
+        row.key_points = [];
+      }
+      
       publications.push(row);
     }
     stmt.free();
@@ -295,6 +333,64 @@ app.get('/api/publications', async (req, res) => {
   } catch (error) {
     console.error('Error fetching publications:', error);
     res.status(500).json({ error: 'Failed to fetch publications' });
+  }
+});
+
+// Get publications by category endpoint for carousels and slideshow
+app.get('/api/publications/:category', async (req, res) => {
+  try {
+    const { category } = req.params;
+    const dbPath = path.join(__dirname, 'als-publications.db');
+    const fileBuffer = readFileSync(dbPath);
+    const SQL = await initSqlJs();
+    const db = new SQL.Database(fileBuffer);
+    
+    const stmt = db.prepare(`
+      SELECT id, title, authors, journal, online_pub_date, doi, beamlines, year, high_impact,
+             category, images, 
+             COALESCE(abstract, ai_abstract) as abstract,
+             COALESCE(key_points, ai_key_points) as key_points
+      FROM publications 
+      WHERE LOWER(category) = LOWER(?)
+      ORDER BY year DESC, title ASC
+    `);
+    
+    const publications = [];
+    stmt.bind([category]);
+    
+    while (stmt.step()) {
+      const row = stmt.getAsObject();
+      
+      // Parse JSON fields
+      if (row.images) {
+        try {
+          row.images = JSON.parse(row.images);
+        } catch (e) {
+          row.images = [];
+        }
+      } else {
+        row.images = [];
+      }
+      
+      if (row.key_points) {
+        try {
+          row.key_points = JSON.parse(row.key_points);
+        } catch (e) {
+          row.key_points = [];
+        }
+      } else {
+        row.key_points = [];
+      }
+      
+      publications.push(row);
+    }
+    stmt.free();
+    db.close();
+    
+    res.json(publications);
+  } catch (error) {
+    console.error('Error fetching publications by category:', error);
+    res.status(500).json({ error: 'Failed to fetch publications by category' });
   }
 });
 

@@ -16,5 +16,7 @@ export const API_ENDPOINTS = {
   GROQ_KEY: '/api/groq-key',
   UPDATE_PUBLICATION: '/api/update-publication',
   UPLOAD: '/api/upload',
-  HEALTH: '/api/health'
+  HEALTH: '/api/health',
+  ALL_PUBLICATIONS: '/api/publications',
+  PUBLICATIONS_BY_CATEGORY: '/api/publications'  // Will append category to this
 } as const;
