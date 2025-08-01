@@ -36,7 +36,13 @@ function DoiLiveSearch({ value, onChange, onSelectPublication }: DoiSearchProps)
   useEffect(() => {
     const loadPublications = async () => {
       try {
-        const response = await fetch('/data/all-publications.json');
+        // Use proper base URL for static assets
+        const isDevelopment = import.meta.env.DEV;
+        const baseUrl = isDevelopment 
+          ? '' // Use relative path in development - Vite will serve static files
+          : 'https://zohebsharif.github.io/EasyPublication';
+        
+        const response = await fetch(`${baseUrl}/data/all-publications.json`);
         if (!response.ok) {
           throw new Error('Failed to load publications data');
         }
@@ -191,6 +197,16 @@ function DoiLiveSearch({ value, onChange, onSelectPublication }: DoiSearchProps)
               fontStyle: 'italic'
             }}>
               Searching...
+            </div>
+          ) : error ? (
+            <div style={{
+              padding: '12px',
+              textAlign: 'center',
+              color: '#d32f2f',
+              fontSize: '12px',
+              fontStyle: 'italic'
+            }}>
+              {error}
             </div>
           ) : searchResults.length > 0 ? (
             searchResults.map(({ publication, matchType }) => (
