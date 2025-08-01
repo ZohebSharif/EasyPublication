@@ -222,6 +222,8 @@ app.post('/api/update-publication', async (req, res) => {
   try {
     const { title, authors, category, imagePaths = [], abstract = '', keyPoints = [] } = req.body;
     
+    console.log('Update publication request:', { title, category, abstract: abstract?.substring(0, 50) });
+    
     if (!title || !category) {
       return res.status(400).json({ error: 'Title and category are required' });
     }
@@ -239,10 +241,15 @@ app.post('/api/update-publication', async (req, res) => {
       LIMIT 1
     `);
     
+    console.log('Searching for publication with title patterns:', [`%${title}%`, title]);
+    
     stmt.bind([`%${title}%`, title]);
     let result = null;
     if (stmt.step()) {
       result = stmt.getAsObject();
+      console.log('Found publication:', result);
+    } else {
+      console.log('No publication found');
     }
     stmt.free();
     db.close();
