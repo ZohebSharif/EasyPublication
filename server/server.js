@@ -239,7 +239,11 @@ app.post('/api/update-publication', async (req, res) => {
       LIMIT 1
     `);
     
-    const result = stmt.get([`%${title}%`, title]);
+    stmt.bind([`%${title}%`, title]);
+    let result = null;
+    if (stmt.step()) {
+      result = stmt.getAsObject();
+    }
     stmt.free();
     db.close();
 
