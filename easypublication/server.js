@@ -3,7 +3,7 @@ import multer from 'multer';
 import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import initSqlJs from 'sql.js';
 import { v2 as cloudinary } from 'cloudinary';
 import dotenv from 'dotenv';
@@ -22,6 +22,10 @@ cloudinary.config({
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Create data directory if it doesn't exist
+const dataDir = path.join(__dirname, '..', 'public', 'data');
+mkdirSync(dataDir, { recursive: true });
 
 const app = express();
 const PORT = 3001;
@@ -165,7 +169,7 @@ async function exportDatabaseToJson() {
         return pub;
       });
       
-      const jsonPath = path.join(__dirname, 'public', 'data', 'all-publications.json');
+      const jsonPath = path.join(__dirname, '..', 'public', 'data', 'all-publications.json');
       writeFileSync(jsonPath, JSON.stringify(publications, null, 2));
     }
     
@@ -267,5 +271,5 @@ app.get('/api/health', (req, res) => {
 
 // Start the server
 app.listen(PORT, () => {
-  // Server is running
+  console.log(`Server running on port ${PORT}`);
 });

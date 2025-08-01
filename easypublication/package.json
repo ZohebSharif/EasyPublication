@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "server": "node server.js",
+    "server": "cd server && node server.js",
     "dev:full": "concurrently \"npm run server\" \"npm run dev\"",
     "build": "tsc -p tsconfig.build.json && vite build",
     "lint": "eslint .",

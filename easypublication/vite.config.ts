@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react'
 import svgr from "vite-plugin-svgr"
 
 // https://vite.dev/config/
-export default defineConfig({
-  base: '/EasyPublication/',
+export default defineConfig(({ command }) => ({
+  base: command === 'serve' ? '/' : '/EasyPublication/',
   plugins: [react(), svgr()],
   server: {
     proxy: {
@@ -20,4 +20,4 @@ export default defineConfig({
     exclude: ['sql.js']
   },
   assetsInclude: ['**/*.wasm']
-})
+}))
