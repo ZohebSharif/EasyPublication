@@ -269,6 +269,35 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'Server is running', timestamp: new Date().toISOString() });
 });
 
+// Get all publications endpoint for DOI search
+app.get('/api/publications', async (req, res) => {
+  try {
+    const dbPath = path.join(__dirname, 'als-publications.db');
+    const fileBuffer = readFileSync(dbPath);
+    const SQL = await initSqlJs();
+    const db = new SQL.Database(fileBuffer);
+    
+    const stmt = db.prepare(`
+      SELECT id, title, authors, journal, online_pub_date, doi, beamlines, year, high_impact
+      FROM publications 
+      ORDER BY year DESC, title ASC
+    `);
+    
+    const publications = [];
+    while (stmt.step()) {
+      const row = stmt.getAsObject();
+      publications.push(row);
+    }
+    stmt.free();
+    db.close();
+    
+    res.json(publications);
+  } catch (error) {
+    console.error('Error fetching publications:', error);
+    res.status(500).json({ error: 'Failed to fetch publications' });
+  }
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
