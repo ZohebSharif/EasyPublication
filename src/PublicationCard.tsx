@@ -1,6 +1,7 @@
 import styles from './Card.module.css';
 import BerkeleyLabLogo from './assets/lblLogo.png';
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from './config';
 interface Publication {
   id: number;
   title: string;
@@ -68,7 +69,7 @@ function PublicationCard({ publication, isAdminMode = false, onDelete }: Publica
     
     // Legacy local server paths
     if (firstImage.startsWith('/images/')) {
-      return `http://localhost:3001${firstImage}`;
+      return `${API_BASE_URL}${firstImage}`;
     }
     
     // Fallback - return the path as-is

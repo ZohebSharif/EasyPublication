@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import PublicationCard from './PublicationCard';
 import LeftArrow from './assets/arrow-left-circle.png';
 import RightArrow from './assets/arrow-right-circle.png';
+import { createApiUrl, API_ENDPOINTS } from './config';
 
 interface PublicationData {
   id: number;
@@ -241,7 +242,7 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
 
       // Reset the publication's category back to "General" and clear images
       try {
-        const resetResponse = await fetch('http://localhost:3001/api/update-publication', {
+        const resetResponse = await fetch(createApiUrl(API_ENDPOINTS.UPDATE_PUBLICATION), {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

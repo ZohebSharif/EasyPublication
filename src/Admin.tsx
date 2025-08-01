@@ -8,6 +8,7 @@ import AddButton from './assets/add-button.png';
 import FacebookIcon from './assets/facebook.svg?react';
 import InstagramIcon from './assets/instagram.svg?react';
 import XIcon from './assets/x.svg?react';
+import { createApiUrl, API_ENDPOINTS } from './config';
 import SearchIcon from './assets/search.svg?react';
 import YoutubeIcon from './assets/youtube.svg?react';
 import EmailIcon from './assets/email.svg?react';
@@ -62,7 +63,7 @@ function Admin() {
   useEffect(() => {
     const loadApiKey = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/groq-key');
+        const response = await fetch(createApiUrl(API_ENDPOINTS.GROQ_KEY));
         if (!response.ok) {
           const errorText = await response.text();
           throw new Error(errorText);
@@ -254,7 +255,7 @@ function Admin() {
 
       // Automatically update the publication in the database with the generated content
       try {
-        const updateResponse = await fetch('http://localhost:3001/api/update-publication', {
+        const updateResponse = await fetch(createApiUrl(API_ENDPOINTS.UPDATE_PUBLICATION), {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -287,7 +288,7 @@ function Admin() {
         formData.append('files', file);
       });
 
-      const response = await fetch('http://localhost:3001/api/upload', {
+      const response = await fetch(createApiUrl(API_ENDPOINTS.UPLOAD), {
         method: 'POST',
         body: formData
       });
@@ -334,7 +335,7 @@ function Admin() {
       }
 
       // Update publication in database automatically via server API
-      const updateResponse = await fetch('http://localhost:3001/api/update-publication', {
+      const updateResponse = await fetch(createApiUrl(API_ENDPOINTS.UPDATE_PUBLICATION), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -381,7 +382,7 @@ function Admin() {
       
       // Check if server is running
       try {
-        const healthCheck = await fetch('http://localhost:3001/api/health');
+        const healthCheck = await fetch(createApiUrl(API_ENDPOINTS.HEALTH));
         if (!healthCheck.ok) {
           throw new Error('Server not responding');
         }
