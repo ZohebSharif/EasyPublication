@@ -161,8 +161,9 @@ function PublicationCarousel({ category, isAdminMode = false }: PublicationCarou
   useEffect(() => {
     const loadPublications = async () => {
       try {
-        // Load all publications from the database and filter by tags/category
-        const response = await fetch('/data/all-publications.json');
+        // Adjust path based on environment
+        const basePath = import.meta.env.MODE === 'development' ? '' : '/EasyPublication';
+        const response = await fetch(`${basePath}/data/all-publications.json`);
         if (!response.ok) {
           throw new Error('Failed to load publications data');
         }
