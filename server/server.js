@@ -416,8 +416,9 @@ app.use('/api/*', (req, res) => {
 // Basic route for server info
 app.get('/', (req, res) => {
   res.json({
-    message: 'EasyPublication API Server',
-    version: '1.0.0',
+    message: 'EasyPublication API Server - UPDATED VERSION',
+    version: '1.0.2',
+    buildDate: new Date().toISOString(),
     endpoints: {
       health: '/api/health',
       publications: '/api/publications',
