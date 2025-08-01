@@ -61,8 +61,9 @@ export default function SlideshowView() {
         
         // Filter publications with images
         const pubsWithImages = data.filter((pub: Publication) => {
-          const images = typeof pub.images === 'string' ? JSON.parse(pub.images) : pub.images;
-          return images && images.length > 0;
+          // Images come as arrays from the API
+          const images = pub.images || [];
+          return images.length > 0;
         });
 
         setPublications(pubsWithImages);
