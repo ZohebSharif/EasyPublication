@@ -1,7 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import styles from './SlideshowView.module.css';
 import { createApiUrl, API_ENDPOINTS } from './config';
+
+// Add interface for touch events tracking
+interface TouchPosition {
+  startX: number;
+  startY: number;
+  startTime: number;
+}
 
 interface Publication {
   id: number;
@@ -31,7 +38,32 @@ export default function SlideshowView() {
   const [imageIndex, setImageIndex] = useState(0);
   const isDark = false;
   const [, setError] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
   const currentPub = publications[currentIndex];
+  
+  // Touch event handling
+  const touchRef = useRef<TouchPosition | null>(null);
+  const [showSwipeHint, setShowSwipeHint] = useState<boolean>(true);
+  
+  // Handle window resize to adapt mobile layout
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Hide swipe hint after showing briefly
+  useEffect(() => {
+    if (isMobile && showSwipeHint) {
+      const timer = setTimeout(() => {
+        setShowSwipeHint(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [isMobile, showSwipeHint]);
 
   // Helper function to format DOI link - same as PublicationCard
   const getDoiLink = (doi: string) => {
@@ -51,12 +83,12 @@ export default function SlideshowView() {
           console.warn('API failed, falling back to static file:', apiError);
           response = await fetch('/public/data/all-publications.json');
         }
-        
+
         if (!response.ok) {
           throw new Error('Failed to load publications');
         }
         const data = await response.json();
-        
+
         // Filter publications with images
         const pubsWithImages = data.filter((pub: Publication) => {
           // Images come as arrays from the API
@@ -108,22 +140,92 @@ export default function SlideshowView() {
     setImageIndex(idx => idx < currentPub.images.length - 1 ? idx + 1 : 0);
   };
 
+  // Handle touch start event
+  const handleTouchStart = (e: React.TouchEvent) => {
+    const touch = e.touches[0];
+    touchRef.current = {
+      startX: touch.clientX,
+      startY: touch.clientY,
+      startTime: Date.now()
+    };
+  };
+
+  // Handle touch end event for swipe navigation
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchRef.current) return;
+    
+    const touch = e.changedTouches[0];
+    const deltaX = touch.clientX - touchRef.current.startX;
+    const deltaY = touch.clientY - touchRef.current.startY;
+    const deltaTime = Date.now() - touchRef.current.startTime;
+    
+    // Check if the gesture is a horizontal swipe (more horizontal than vertical)
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50 && deltaTime < 300) {
+      if (deltaX > 0) {
+        handlePrev(); // Swipe right to go to previous
+      } else {
+        handleNext(); // Swipe left to go to next
+      }
+    }
+    
+    touchRef.current = null;
+  };
+
+  // Handle image touch events for swipe navigation between images
+  const handleImageTouchStart = (e: React.TouchEvent) => {
+    if (!currentPub?.images || currentPub.images.length <= 1) return;
+    
+    const touch = e.touches[0];
+    touchRef.current = {
+      startX: touch.clientX,
+      startY: touch.clientY,
+      startTime: Date.now()
+    };
+    // Prevent default to avoid image dragging on mobile
+    e.preventDefault();
+  };
+
+  const handleImageTouchEnd = (e: React.TouchEvent) => {
+    if (!touchRef.current || !currentPub?.images || currentPub.images.length <= 1) return;
+    
+    const touch = e.changedTouches[0];
+    const deltaX = touch.clientX - touchRef.current.startX;
+    const deltaTime = Date.now() - touchRef.current.startTime;
+    
+    // Only trigger if it's a horizontal swipe and fast enough to be intentional
+    if (Math.abs(deltaX) > 50 && deltaTime < 300) {
+      if (deltaX > 0) {
+        handleImagePrev();
+      } else {
+        handleImageNext();
+      }
+    }
+    
+    touchRef.current = null;
+  };
+
+  // Handle touch move to prevent scrolling when swiping images
+  const handleTouchMove = (e: React.TouchEvent) => {
+    // Implementation can be added if needed to prevent default scrolling
+  };
+
   return (
     <div className={styles.slideshowContainer}>
       {/* Header with Title */}
-      <div style={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'center', 
-        padding: '20px 40px', 
-        position: 'relative' 
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '20px 20px', /* Reduced side padding for mobile */
+        position: 'relative',
+        flexWrap: 'wrap' /* Allow wrapping on small screens */
       }}>
-        <h1 style={{ 
-          fontSize: '2.2em',
+        <h1 style={{
+          fontSize: 'clamp(1.4em, 5vw, 2.2em)', /* Responsive font size */
           margin: 0,
           fontFamily: 'monospace',
           fontWeight: 'bold',
-          maxWidth: '100%',
+          width: '100%',
           overflow: 'hidden',
           textOverflow: 'ellipsis',
           display: '-webkit-box',
@@ -138,64 +240,86 @@ export default function SlideshowView() {
       </div>
 
       {/* Main Content Container */}
-      <div style={{
-        position: 'relative',
-        display: 'flex', 
-        flexDirection: 'row', 
-        justifyContent: 'flex-start',
-        gap: '20px',
-        padding: '0 20px',
-        marginTop: '-5px',
-        height: 'calc(100vh - 120px)',
-        overflow: 'hidden'
-      }}>
-        {/* Publication Navigation Arrows - Left and Right sides (smaller size) */}
+      <div className={`${styles.mobileColumn}`} 
+        style={{
+          position: 'relative',
+          display: 'flex', 
+          flexDirection: isMobile ? 'column' : 'row',
+          justifyContent: 'flex-start',
+          gap: '20px',
+          padding: isMobile ? '0 10px' : '0 20px',
+          marginTop: '-5px',
+          height: 'calc(100vh - 120px)',
+          overflow: 'auto' /* Changed from hidden to allow scrolling on mobile */
+        }}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        {/* Mobile-only swipe hint that fades out */}
+        {isMobile && showSwipeHint && (
+          <div className={styles.swipeHint}>
+            <span>← Swipe to navigate →</span>
+          </div>
+        )}        {/* Publication Navigation Arrows - Left and Right sides (smaller size) */}
         <button onClick={handlePrev} style={{
           position: 'absolute',
-          left: '10px',
+          left: isMobile ? '5px' : '10px',
           top: '50%',
           transform: 'translateY(-50%)',
           background: 'rgba(0, 0, 0, 0.6)',
           border: 'none',
           cursor: 'pointer',
           zIndex: 40,
-          padding: '12px',
+          padding: isMobile ? '10px' : '12px',
+          width: isMobile ? '36px' : '48px',
+          height: isMobile ? '36px' : '48px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
           borderRadius: '50%',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.25)'
+          boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
+          touchAction: 'manipulation' /* Improves touch responsiveness */
         }}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5">
+          <svg width={isMobile ? "20" : "24"} height={isMobile ? "20" : "24"} viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5">
             <polyline points="15,18 9,12 15,6"/>
           </svg>
         </button>
         
         <button onClick={handleNext} style={{
           position: 'absolute',
-          right: '10px',
+          right: isMobile ? '5px' : '10px',
           top: '50%',
           transform: 'translateY(-50%)',
           background: 'rgba(0, 0, 0, 0.6)',
           border: 'none',
           cursor: 'pointer',
           zIndex: 40,
-          padding: '12px',
+          padding: isMobile ? '10px' : '12px',
+          width: isMobile ? '36px' : '48px',
+          height: isMobile ? '36px' : '48px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
           borderRadius: '50%',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.25)'
+          boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
+          touchAction: 'manipulation' /* Improves touch responsiveness */
         }}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5">
+          <svg width={isMobile ? "20" : "24"} height={isMobile ? "20" : "24"} viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5">
             <polyline points="9,18 15,12 9,6"/>
           </svg>
         </button>
 
         {/* Left Sidebar - Publication Info */}
-        <div style={{
-          width: '480px',
-          height: '100%',
+        <div className={`${styles.mobileFullWidth}`} style={{
+          width: isMobile ? '100%' : '480px',
+          height: isMobile ? 'auto' : '100%',
+          maxHeight: isMobile ? '60vh' : '100%',
           background: isDark ? '#181d27' : 'white',
           color: isDark ? '#fff' : '#181d27',
-          padding: '40px',
+          padding: isMobile ? '20px' : '40px',
           display: 'flex',
           flexDirection: 'column',
-          overflow: 'hidden',
+          overflow: 'auto',
           borderRadius: '12px',
           boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
           zIndex: 10
@@ -207,7 +331,7 @@ export default function SlideshowView() {
             alignItems: 'flex-start',
             marginBottom: '30px'
           }}>
-            <button onClick={handleClose} style={{ 
+            <button onClick={handleClose} style={{
               background: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)',
               border: `1px solid ${isDark ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.1)'}`,
               fontSize: '20px',
@@ -228,7 +352,7 @@ export default function SlideshowView() {
               ✕
             </button>
 
-            <div style={{ 
+            <div style={{
               color: isDark ? '#bfc6d1' : '#414651',
               fontFamily: 'monospace',
               fontSize: '0.9em',
@@ -252,18 +376,18 @@ export default function SlideshowView() {
             <div style={{
               flex: '0 0 auto'
             }}>
-              <h3 style={{ 
-                fontWeight: 600, 
-                fontSize: '1.3rem', 
-                marginBottom: '16px', 
+              <h3 style={{
+                fontWeight: 600,
+                fontSize: '1.3rem',
+                marginBottom: '16px',
                 color: isDark ? '#fff' : '#181d27',
                 marginTop: 0
               }}>
                 Abstract
               </h3>
-              <div style={{ 
-                color: isDark ? '#bfc6d1' : '#414651', 
-                fontSize: '1rem', 
+              <div style={{
+                color: isDark ? '#bfc6d1' : '#414651',
+                fontSize: '1rem',
                 textAlign: 'left',
                 lineHeight: '1.6',
                 whiteSpace: 'pre-wrap',
@@ -282,10 +406,10 @@ export default function SlideshowView() {
               flexDirection: 'column',
               minHeight: 0
             }}>
-              <h3 style={{ 
-                fontWeight: 600, 
-                fontSize: '1.3rem', 
-                marginBottom: '16px', 
+              <h3 style={{
+                fontWeight: 600,
+                fontSize: '1.3rem',
+                marginBottom: '16px',
                 color: isDark ? '#fff' : '#181d27',
                 marginTop: 0
               }}>
@@ -296,16 +420,16 @@ export default function SlideshowView() {
                 overflow: 'auto',
                 paddingRight: '10px'
               }}>
-                <ul style={{ 
-                  listStyle: 'disc', 
-                  paddingLeft: '18px', 
+                <ul style={{
+                  listStyle: 'disc',
+                  paddingLeft: '18px',
                   margin: 0,
                   lineHeight: '1.6'
                 }}>
                   {(currentPub?.key_points || []).map((point, idx) => (
-                    <li key={idx} style={{ 
-                      fontSize: '1rem', 
-                      color: isDark ? '#bfc6d1' : '#414651', 
+                    <li key={idx} style={{
+                      fontSize: '1rem',
+                      color: isDark ? '#bfc6d1' : '#414651',
                       marginBottom: '14px',
                       whiteSpace: 'pre-wrap'
                     }}>
@@ -313,9 +437,9 @@ export default function SlideshowView() {
                     </li>
                   ))}
                   {(!currentPub?.key_points || currentPub.key_points.length === 0) && (
-                    <li style={{ 
-                      fontSize: '1rem', 
-                      color: isDark ? '#bfc6d1' : '#414651', 
+                    <li style={{
+                      fontSize: '1rem',
+                      color: isDark ? '#bfc6d1' : '#414651',
                       marginBottom: '14px',
                       fontStyle: 'italic'
                     }}>
@@ -329,7 +453,7 @@ export default function SlideshowView() {
         </div>
 
         {/* Main Image Area */}
-        <div style={{
+        <div className={`${styles.mobileImageContainer}`} style={{
           flex: '1 1 auto',
           height: '100%',
           background: '#000',
@@ -344,7 +468,7 @@ export default function SlideshowView() {
           {/* Image Display */}
           {currentPub?.images && currentPub.images.length > 0 && (
             <>
-              <img 
+              <img
                 src={currentPub.images[imageIndex]}
                 alt={`Publication figure ${imageIndex + 1}`}
                 style={{
@@ -354,21 +478,23 @@ export default function SlideshowView() {
                   display: 'block',
                   borderRadius: '8px'
                 }}
+                onTouchStart={handleImageTouchStart}
+                onTouchEnd={handleImageTouchEnd}
               />
-              
+
               {/* Image Navigation Controls (only show if multiple images) */}
               {currentPub.images.length > 1 && (
                 <>
                   {/* Previous Image Button */}
                   <button onClick={handleImagePrev} style={{
                     position: 'absolute',
-                    left: '20px',
-                    bottom: '20px',
+                    left: window.innerWidth < 768 ? '10px' : '20px',
+                    bottom: window.innerWidth < 768 ? '10px' : '20px',
                     background: 'rgba(255, 255, 255, 0.9)',
                     border: 'none',
                     cursor: 'pointer',
                     zIndex: 20,
-                    padding: '10px',
+                    padding: window.innerWidth < 480 ? '8px' : '10px',
                     borderRadius: '50%',
                     boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
                     transition: 'all 0.2s ease'
@@ -386,17 +512,17 @@ export default function SlideshowView() {
                       <polyline points="15,18 9,12 15,6"/>
                     </svg>
                   </button>
-                  
+
                   {/* Next Image Button */}
                   <button onClick={handleImageNext} style={{
                     position: 'absolute',
-                    left: '80px',
-                    bottom: '20px',
+                    left: window.innerWidth < 768 ? '60px' : '80px',
+                    bottom: window.innerWidth < 768 ? '10px' : '20px',
                     background: 'rgba(255, 255, 255, 0.9)',
                     border: 'none',
                     cursor: 'pointer',
                     zIndex: 20,
-                    padding: '10px',
+                    padding: window.innerWidth < 480 ? '8px' : '10px',
                     borderRadius: '50%',
                     boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
                     transition: 'all 0.2s ease'
@@ -414,7 +540,7 @@ export default function SlideshowView() {
                       <polyline points="9,18 15,12 9,6"/>
                     </svg>
                   </button>
-                  
+
                   {/* Image Counter and Title */}
                   <div style={{
                     position: 'absolute',
@@ -430,6 +556,19 @@ export default function SlideshowView() {
                   }}>
                     Figure {imageIndex + 1} of {currentPub.images.length}
                   </div>
+                  
+                  {/* Image indicators for mobile */}
+                  {isMobile && (
+                    <div className={styles.imageIndicators}>
+                      {currentPub.images.map((_, idx) => (
+                        <span 
+                          key={idx} 
+                          className={`${styles.indicator} ${idx === imageIndex ? styles.indicatorActive : ''}`}
+                          onClick={() => setImageIndex(idx)}
+                        />
+                      ))}
+                    </div>
+                  )}
                 </>
               )}
 
@@ -452,7 +591,7 @@ export default function SlideshowView() {
               )}
             </>
           )}
-          
+
           {/* No Image State */}
           {(!currentPub?.images || currentPub.images.length === 0) && (
             <div style={{
@@ -469,7 +608,7 @@ export default function SlideshowView() {
 
         {/* QR Code - Positioned at bottom left of the figure */}
         {currentPub && (
-          <div style={{
+          <div className={`${styles.mobileQRCode}`} style={{
             position: 'absolute',
             bottom: '20px',
             left: '450px', /* Positioned at left side of figure area (accounting for sidebar width + padding) */
@@ -504,7 +643,7 @@ export default function SlideshowView() {
             }}>
               View Article
             </div>
-            <img 
+            <img
               src={`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(getDoiLink(currentPub.doi))}&size=70x70`}
               alt="Article QR Code"
               style={{

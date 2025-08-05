@@ -242,43 +242,70 @@
   .imageSection {
     height: 180px;
   }
+  
+  .contentSection {
+    padding: 15px;
+  }
+  
+  .buttonContainer {
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 600px) {
   .card {
-    width: 280px;
-    margin: 8px;
+    width: 85%;
+    min-width: 280px;
+    max-width: 340px;
+    margin: 8px auto;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .userName {
+    font-size: 0.9rem;
+  }
+  
+  .userRole {
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .card {
-    width: 260px;
-    margin: 6px;
+    width: 90%;
+    margin: 6px auto;
+    /* Increased touch area with padding */
+    padding-bottom: 6px;
   }
   
-  .cardWrapper {
-    padding: 0;
+  /* Make image container more responsive */
+  .imageContainer {
+    height: auto;
+    min-height: 150px;
+    max-height: 200px;
   }
   
-  .profileSection {
-    padding: 16px;
-  }
-  
-  .contentSection {
-    padding: 16px;
-  }
-  
+  /* Optimized text for smaller screens */
   .title {
-    font-size: 16px;
+    font-size: 0.95rem;
+    -webkit-line-clamp: 2; /* Show only 2 lines on mobile */
+    line-clamp: 2;
   }
   
-  .subtitle {
-    font-size: 13px;
+  .authors {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 1; /* Show only 1 line on mobile */
+    line-clamp: 1;
   }
   
-  .description {
-    font-size: 13px;
+  /* Improve spacing on smaller screens */
+  .contentSection {
+    padding: 12px;
+    gap: 6px;
   }
 }
 
@@ -306,5 +333,24 @@
   
   .description {
     font-size: 12px;
+  }
+}
+
+/* Touch feedback for mobile devices */
+@media (hover: none) {
+  .card:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  
+  .slideshowButton:active {
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+  
+  /* Larger touch targets for mobile */
+  .actionButton {
+    min-height: 44px;
+    min-width: 44px;
   }
 }

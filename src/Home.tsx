@@ -41,13 +41,13 @@ function Home() {
         </div>
 
         <div className="headerLinks">
-            <strong>
+            <strong className="headerLink">
                 <a href="https://als.lbl.gov/">ALS</a>
             </strong>
-            <strong>
+            <strong className="headerLink">
                 <a href="https://als.lbl.gov/beamlines/">Beamlines</a>
             </strong>
-            <strong>
+            <strong className="headerLink">
                 <a href="https://als.lbl.gov/beamlines/8.3.2/">{currentBeamline}</a>
             </strong>
         </div>

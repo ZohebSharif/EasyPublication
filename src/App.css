@@ -273,6 +273,49 @@ body, html{
         padding: 15px 40px 35px 40px;
         min-height: 450px;
     }
+    
+    /* Improved header responsiveness */
+    .header {
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 80px;
+        padding-bottom: 10px;
+    }
+    
+    .searchbox {
+        position: static;
+        margin: 10px auto;
+        width: 80%;
+        max-width: 280px;
+    }
+    
+    .headerLinks {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px;
+    }
+    
+    .headerLink {
+        margin: 0 8px;
+    }
+    
+    /* Adjust button container */
+    .buttonContainer {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 15px;
+    }
+    
+    /* Make buttons more tap-friendly on mobile */
+    .buttonOne, .buttonTwo {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 600px) {
@@ -280,6 +323,20 @@ body, html{
         gap: 15px;
         padding: 15px 30px 30px 30px;
         min-height: 400px;
+    }
+    
+    /* Stacked header elements */
+    .headerLinks {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    /* Center the logo */
+    .AppTopHeader .headerImage {
+        padding-left: 0;
+        margin: 0 auto;
+        display: block;
     }
 }
 
@@ -289,16 +346,171 @@ body, html{
         padding: 10px 20px 25px 20px;
         min-height: 350px;
     }
-}
-
-@media (max-width: 360px) {
-    .Carousel {
-        gap: 5px;
-        padding: 10px 15px 20px 15px;
-        min-height: 300px;
+    
+    /* Further optimized small screen styles */
+    .AppTopHeader {
+        min-height: 50px;
+    }
+    
+    .AppTopHeader .headerImage {
+        max-width: 220px;
+        padding-top: 12px;
+    }
+    
+    .headerLinks {
+        gap: 10px;
+    }
+    
+    .headerLink {
+        font-size: 16px;
+        margin: 0 5px;
+    }
+    
+    /* Make buttons smaller but still tap-friendly */
+    .buttonOne, .buttonTwo {
+        min-width: 80px;
+        height: 36px;
+    }
+    
+    .textOne, .textTwo {
+        font-size: 11px;
+    }
+    
+    .selected {
+        margin-left: 0;
+        font-size: 14px;
+        justify-content: center;
+        width: 100%;
+        margin-top: 5px;
     }
 }
 
+/* SVG Color Utilities */
+.svg-white {
+    filter: brightness(0) invert(1);
+}
+
+.svg-black {
+    filter: brightness(0) invert(0);
+}
+
+.svg-blue {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+.svg-green {
+    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+.svg-red {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(97%) saturate(7404%) hue-rotate(356deg) brightness(91%) contrast(135%);
+}
+
+.svg-yellow {
+    filter: brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(1028%) hue-rotate(358deg) brightness(104%) contrast(98%);
+}
+
+.svg-orange {
+    filter: brightness(0) saturate(100%) invert(55%) sepia(89%) saturate(1353%) hue-rotate(357deg) brightness(119%) contrast(119%);
+}
+
+.svg-purple {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(2223%) hue-rotate(249deg) brightness(92%) contrast(143%);
+}
+
+.svg-gray {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(95%);
+}
+
+.svg-berkeley-teal {
+    filter: brightness(0) saturate(100%) invert(18%) sepia(25%) saturate(1011%) hue-rotate(160deg) brightness(96%) contrast(96%);
+}
+
+/* Category Labels */
+.carousel-category-label {
+    position: absolute;
+    top: 50px; /* Adjusted for new carousel padding */
+    left: 120px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.48px;
+    text-align: left;
+    color: #00313c;
+    z-index: 20;
+}
+
+@media (max-width: 1600px) {
+    .carousel-category-label {
+        left: 110px;
+        font-size: 23px;
+        letter-spacing: 0.46px;
+        top: 45px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .carousel-category-label {
+        left: 100px;
+        font-size: 22px;
+        letter-spacing: 0.44px;
+        top: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .carousel-category-label {
+        left: 80px;
+        font-size: 20px;
+        letter-spacing: 0.4px;
+        top: 35px;
+    }
+}
+
+@media (max-width: 900px) {
+    .carousel-category-label {
+        left: 60px;
+        font-size: 18px;
+        letter-spacing: 0.36px;
+        top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-category-label {
+        left: 40px;
+        font-size: 16px;
+        letter-spacing: 0.32px;
+        top: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-category-label {
+        left: 30px;
+        font-size: 14px;
+        letter-spacing: 0.28px;
+        top: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-category-label {
+        left: 20px;
+        font-size: 12px;
+        letter-spacing: 0.24px;
+        top: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .carousel-category-label {
+        left: 15px;
+        font-size: 10px;
+        letter-spacing: 0.2px;
+        top: 20px;
+    }
+}
 .Footer {
     width: 100%;
     background: linear-gradient(to bottom, #00313C 0%, #00313C 420px, #FFFFFF 420px, #FFFFFF 571px, #f1f3f3 571px);
@@ -940,133 +1152,6 @@ body, html{
     
     .selected p, .selected u {
         font-size: 12px;
-    }
-}
-
-/* SVG Color Utilities */
-.svg-white {
-    filter: brightness(0) invert(1);
-}
-
-.svg-black {
-    filter: brightness(0) invert(0);
-}
-
-.svg-blue {
-    filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
-}
-
-.svg-green {
-    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
-}
-
-.svg-red {
-    filter: brightness(0) saturate(100%) invert(17%) sepia(97%) saturate(7404%) hue-rotate(356deg) brightness(91%) contrast(135%);
-}
-
-.svg-yellow {
-    filter: brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(1028%) hue-rotate(358deg) brightness(104%) contrast(98%);
-}
-
-.svg-orange {
-    filter: brightness(0) saturate(100%) invert(55%) sepia(89%) saturate(1353%) hue-rotate(357deg) brightness(119%) contrast(119%);
-}
-
-.svg-purple {
-    filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(2223%) hue-rotate(249deg) brightness(92%) contrast(143%);
-}
-
-.svg-gray {
-    filter: brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(95%);
-}
-
-.svg-berkeley-teal {
-    filter: brightness(0) saturate(100%) invert(18%) sepia(25%) saturate(1011%) hue-rotate(160deg) brightness(96%) contrast(96%);
-}
-
-/* Category Labels */
-.carousel-category-label {
-    position: absolute;
-    top: 50px; /* Adjusted for new carousel padding */
-    left: 120px;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: 0.48px;
-    text-align: left;
-    color: #00313c;
-    z-index: 20;
-}
-
-@media (max-width: 1600px) {
-    .carousel-category-label {
-        left: 110px;
-        font-size: 23px;
-        letter-spacing: 0.46px;
-        top: 45px;
-    }
-}
-
-@media (max-width: 1400px) {
-    .carousel-category-label {
-        left: 100px;
-        font-size: 22px;
-        letter-spacing: 0.44px;
-        top: 40px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .carousel-category-label {
-        left: 80px;
-        font-size: 20px;
-        letter-spacing: 0.4px;
-        top: 35px;
-    }
-}
-
-@media (max-width: 900px) {
-    .carousel-category-label {
-        left: 60px;
-        font-size: 18px;
-        letter-spacing: 0.36px;
-        top: 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    .carousel-category-label {
-        left: 40px;
-        font-size: 16px;
-        letter-spacing: 0.32px;
-        top: 25px;
-    }
-}
-
-@media (max-width: 600px) {
-    .carousel-category-label {
-        left: 30px;
-        font-size: 14px;
-        letter-spacing: 0.28px;
-        top: 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    .carousel-category-label {
-        left: 20px;
-        font-size: 12px;
-        letter-spacing: 0.24px;
-        top: 20px;
-    }
-}
-
-@media (max-width: 360px) {
-    .carousel-category-label {
-        left: 15px;
-        font-size: 10px;
-        letter-spacing: 0.2px;
-        top: 20px;
     }
 }
 
