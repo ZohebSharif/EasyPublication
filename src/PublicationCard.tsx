@@ -315,7 +315,7 @@ function PublicationCard({ publication, isAdminMode = false, onDelete }: Publica
                   style={{ textDecoration: 'none', color: 'inherit' }}
                 >
                   <div className={styles.tagText}>
-                    {publication.doi ? 'View DOI' : 'View'}
+                    {publication.doi ? 'View Article' : 'View'}
                   </div>
                 </a>
               </div>

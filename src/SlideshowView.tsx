@@ -467,12 +467,12 @@ export default function SlideshowView() {
           )}
         </div>
 
-        {/* QR Code - Bottom right corner */}
+        {/* QR Code - Moved to bottom left */}
         {currentPub && (
           <div style={{
             position: 'absolute',
             bottom: '20px',
-            right: '20px',
+            left: '170px', /* Moved from right to left side */
             backgroundColor: 'white',
             padding: '12px',
             borderRadius: '12px',
@@ -506,7 +506,7 @@ export default function SlideshowView() {
             </div>
             <img 
               src={`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(getDoiLink(currentPub.doi))}&size=90x90`}
-              alt="DOI QR Code"
+              alt="Article QR Code"
               style={{
                 width: '90px',
                 height: '90px',
