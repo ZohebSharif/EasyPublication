@@ -21,8 +21,6 @@ interface Publication {
   doi_qr_code?: string;
 }
 
-const MAX_BULLETS = 4;
-
 export default function SlideshowView() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -31,7 +29,7 @@ export default function SlideshowView() {
   const [publications, setPublications] = useState<Publication[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
-  const [isDark, setIsDark] = useState(false);
+  const isDark = false;
   const [, setError] = useState<string | null>(null);
   const currentPub = publications[currentIndex];
 
@@ -100,13 +98,7 @@ export default function SlideshowView() {
   const handleClose = () => {
     navigate('/');
   };
-  const handleWebView = () => {
-    setIsDark(false);
-    navigate('/');
-  };
-  const handleSlideshowView = () => {
-    setIsDark(false);
-  };
+
   const handleImagePrev = () => {
     if (!currentPub?.images) return;
     setImageIndex(idx => idx > 0 ? idx - 1 : currentPub.images.length - 1);
@@ -118,21 +110,19 @@ export default function SlideshowView() {
 
   return (
     <div className={styles.slideshowContainer}>
-      {/* Header with Title and View Buttons */}
+      {/* Header with Title */}
       <div style={{ 
         display: 'flex', 
         alignItems: 'center', 
         justifyContent: 'center', 
-        padding: '20px', 
+        padding: '20px 40px', 
         position: 'relative' 
       }}>
         <h1 style={{ 
-          fontSize: '2em',
+          fontSize: '2.2em',
           margin: 0,
           fontFamily: 'monospace',
-          fontWeight: 'normal',
-          paddingLeft: '320px',
-          paddingRight: '20px',
+          fontWeight: 'bold',
           maxWidth: '100%',
           overflow: 'hidden',
           textOverflow: 'ellipsis',
@@ -141,40 +131,10 @@ export default function SlideshowView() {
           WebkitBoxOrient: 'vertical',
           lineHeight: '1.2',
           maxHeight: '2.4em',
-          textAlign: 'left'
+          textAlign: 'center'
         }}>
           {currentPub?.title || '3D Data Visual'}
         </h1>
-
-        <div style={{ position: 'absolute', left: '20px', zIndex: 2 }}>
-          <button onClick={handleWebView} style={{ 
-            background: isDark ? '#181d27' : '#fff', 
-            color: isDark ? '#fff' : '#181d27', 
-            border: isDark ? '2px solid #fff' : '2px solid #181d27', 
-            fontWeight: 700, 
-            fontFamily: 'Inter, Arial, sans-serif',
-            minWidth: 'fit-content',
-            padding: '8px 16px',
-            borderRadius: '6px',
-            cursor: 'pointer',
-            marginRight: '8px'
-          }}>
-            Web View
-          </button>
-          <button onClick={handleSlideshowView} style={{ 
-            background: isDark ? '#fff' : '#181d27', 
-            color: isDark ? '#181d27' : '#fff', 
-            border: isDark ? '2px solid #fff' : '2px solid #181d27', 
-            fontWeight: 700, 
-            fontFamily: 'Inter, Arial, sans-serif',
-            minWidth: 'fit-content',
-            padding: '8px 16px',
-            borderRadius: '6px',
-            cursor: 'pointer'
-          }}>
-            Slideshow View
-          </button>
-        </div>
       </div>
 
       {/* Main Content Container */}
@@ -182,230 +142,347 @@ export default function SlideshowView() {
         position: 'relative',
         display: 'flex', 
         flexDirection: 'row', 
-        justifyContent: 'center',
-        gap: '24px',
-        padding: '0 24px',
+        justifyContent: 'flex-start',
+        gap: '20px',
+        padding: '0 20px',
         marginTop: '-5px',
-        height: 'calc(100vh - 140px)'
+        height: 'calc(100vh - 120px)',
+        overflow: 'hidden'
       }}>
-        {/* Navigation Arrows */}
+        {/* Publication Navigation Arrows - Left and Right sides */}
         <button onClick={handlePrev} style={{
           position: 'absolute',
-          left: '24px',
+          left: '10px',
           top: '50%',
           transform: 'translateY(-50%)',
-          background: 'none',
+          background: 'rgba(0, 0, 0, 0.8)',
           border: 'none',
           cursor: 'pointer',
-          zIndex: 10,
-          padding: '8px'
+          zIndex: 40,
+          padding: '20px',
+          borderRadius: '50%',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
         }}>
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke={isDark ? '#fff' : '#181d27'} strokeWidth="2">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="12,8 8,12 12,16"/>
-            <line x1="16" y1="12" x2="8" y2="12"/>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3">
+            <polyline points="15,18 9,12 15,6"/>
           </svg>
         </button>
         
         <button onClick={handleNext} style={{
           position: 'absolute',
-          right: '24px',
+          right: '10px',
           top: '50%',
           transform: 'translateY(-50%)',
-          background: 'none',
+          background: 'rgba(0, 0, 0, 0.8)',
           border: 'none',
           cursor: 'pointer',
-          zIndex: 10,
-          padding: '8px'
+          zIndex: 40,
+          padding: '20px',
+          borderRadius: '50%',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
         }}>
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke={isDark ? '#fff' : '#181d27'} strokeWidth="2">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="12,8 16,12 12,16"/>
-            <line x1="8" y1="12" x2="16" y2="12"/>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3">
+            <polyline points="9,18 15,12 9,6"/>
           </svg>
         </button>
 
-        {/* Main Content Box */}
+        {/* Left Sidebar - Publication Info */}
         <div style={{
-          background: isDark ? '#181d27' : 'white', 
-          color: isDark ? '#fff' : '#181d27', 
-          borderRadius: '18px', 
-          boxShadow: '0 8px 32px rgba(0,0,0,0.12)', 
-          width: '800px',
-          maxWidth: '65vw', 
-          height: 'fit-content',
-          maxHeight: '100%',
-          position: 'relative', 
-          display: 'flex', 
-          flexDirection: 'column', 
-          padding: '32px', 
-          fontSize: '1rem'
+          width: '480px',
+          height: '100%',
+          background: isDark ? '#181d27' : 'white',
+          color: isDark ? '#fff' : '#181d27',
+          padding: '40px',
+          display: 'flex',
+          flexDirection: 'column',
+          overflow: 'hidden',
+          borderRadius: '12px',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
+          zIndex: 10
         }}>
-          {/* Category and Close Button */}
-          <div style={{ 
+          {/* Header with close button and category */}
+          <div style={{
             display: 'flex',
-            alignItems: 'center',
-            gap: '20px',
-            marginBottom: '24px'
+            justifyContent: 'space-between',
+            alignItems: 'flex-start',
+            marginBottom: '30px'
           }}>
             <button onClick={handleClose} style={{ 
-              background: 'none',
-              border: 'none',
-              fontSize: '24px',
+              background: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)',
+              border: `1px solid ${isDark ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.1)'}`,
+              fontSize: '20px',
               cursor: 'pointer',
               color: isDark ? '#fff' : '#000',
-              padding: '0',
-              lineHeight: '1'
-            }}>
-              ×
+              padding: '8px 12px',
+              lineHeight: '1',
+              borderRadius: '8px',
+              transition: 'all 0.2s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = isDark ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.1)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)';
+            }}
+            >
+              ✕
             </button>
-            <a href="#" style={{ 
+
+            <div style={{ 
               color: isDark ? '#bfc6d1' : '#414651',
-              textDecoration: 'none',
-              borderBottom: '1px solid',
               fontFamily: 'monospace',
-              fontSize: '0.9em'
+              fontSize: '0.9em',
+              backgroundColor: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)',
+              padding: '8px 16px',
+              borderRadius: '20px',
+              border: `1px solid ${isDark ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.1)'}`
             }}>
               {currentPub?.category || 'Physics and Condensed Matter'}
-            </a>
+            </div>
           </div>
 
-          {/* Image Section */}
-          <div style={{ 
-            width: '100%', 
-            display: 'flex', 
+          {/* Abstract and Key Points Container */}
+          <div style={{
+            flex: '1 1 auto',
+            display: 'flex',
             flexDirection: 'column',
-            marginBottom: '24px'
+            minHeight: 0,
+            gap: '20px'
           }}>
-            {/* Main Image */}
-            <div style={{ 
-              width: '100%', 
-              display: 'flex', 
-              alignItems: 'center', 
-              justifyContent: 'center', 
-              minHeight: '400px', 
-              height: '400px',
-              marginBottom: '16px'
+            <div style={{
+              flex: '0 0 auto'
             }}>
-              {currentPub?.images && currentPub.images.length > 0 && (
-                <img 
-                  src={currentPub.images[imageIndex]} 
-                  alt={`Figure ${imageIndex + 1}`} 
-                  style={{ 
-                    height: '100%', 
-                    maxHeight: '400px', 
-                    maxWidth: '100%', 
-                    borderRadius: '12px', 
-                    boxShadow: '0 4px 20px rgba(0,0,0,0.1)', 
-                    objectFit: 'contain' 
-                  }} 
-                />
-              )}
-            </div>
-            
-            {/* Image Controls Row */}
-            <div style={{ 
-              display: 'flex', 
-              justifyContent: 'space-between', 
-              alignItems: 'center',
-              paddingTop: '8px'
-            }}>
-              {/* Figure Number */}
-              <div style={{ 
+              <h3 style={{ 
                 fontWeight: 600, 
-                fontSize: '1.1rem', 
-                color: isDark ? '#fff' : '#181d27', 
-                padding: '8px 16px', 
-                borderRadius: '8px', 
-                background: isDark ? '#23283a' : '#f5f5f5', 
-                boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+                fontSize: '1.3rem', 
+                marginBottom: '16px', 
+                color: isDark ? '#fff' : '#181d27',
+                marginTop: 0
               }}>
-                {currentPub?.images && currentPub.images.length > 0 ? `Figure ${imageIndex + 1} of ${currentPub.images.length}` : ''}
-              </div>
-              
-              {/* Image Navigation Arrows */}
+                Abstract
+              </h3>
               <div style={{ 
-                display: 'flex', 
-                gap: '8px', 
-                alignItems: 'center'
+                color: isDark ? '#bfc6d1' : '#414651', 
+                fontSize: '1rem', 
+                textAlign: 'left',
+                lineHeight: '1.6',
+                whiteSpace: 'pre-wrap',
+                maxHeight: '200px',
+                overflow: 'auto',
+                paddingRight: '10px'
               }}>
-                <button onClick={handleImagePrev} style={{ 
-                  background: isDark ? '#23283a' : '#f5f5f5', 
-                  border: 'none', 
-                  cursor: 'pointer', 
-                  padding: '8px',
-                  borderRadius: '6px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={isDark ? '#fff' : '#181d27'} strokeWidth="2">
-                    <polyline points="15,18 9,12 15,6"/>
-                  </svg>
-                </button>
-                <button onClick={handleImageNext} style={{ 
-                  background: isDark ? '#23283a' : '#f5f5f5', 
-                  border: 'none', 
-                  cursor: 'pointer', 
-                  padding: '8px',
-                  borderRadius: '6px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={isDark ? '#fff' : '#181d27'} strokeWidth="2">
-                    <polyline points="9,18 15,12 9,6"/>
-                  </svg>
-                </button>
+                {currentPub?.abstract || 'No abstract available.'}
               </div>
             </div>
-          </div>
 
-          {/* Abstract */}
-          <div style={{ 
-            marginBottom: '24px',
-            color: isDark ? '#bfc6d1' : '#414651', 
-            fontSize: '1rem', 
-            textAlign: 'left',
-            lineHeight: '1.5',
-            flexGrow: 1,
-            whiteSpace: 'pre-wrap'
-          }}>
-            {currentPub?.abstract || 'No abstract available.'}
-          </div>
-
-          {/* Bottom Row: Logos */}
-          <div style={{ 
-            display: 'flex', 
-            alignItems: 'flex-end',
-            marginTop: 'auto'
-          }}>
-            {/* Logos */}
-            <div style={{ 
-              display: 'flex', 
-              gap: '8px', 
-              flexWrap: 'wrap',
-              alignItems: 'center'
+            {/* Key Points Section */}
+            <div style={{
+              flex: '1 1 auto',
+              display: 'flex',
+              flexDirection: 'column',
+              minHeight: 0
             }}>
-
-
+              <h3 style={{ 
+                fontWeight: 600, 
+                fontSize: '1.3rem', 
+                marginBottom: '16px', 
+                color: isDark ? '#fff' : '#181d27',
+                marginTop: 0
+              }}>
+                Key Points
+              </h3>
+              <div style={{
+                flex: '1 1 auto',
+                overflow: 'auto',
+                paddingRight: '10px'
+              }}>
+                <ul style={{ 
+                  listStyle: 'disc', 
+                  paddingLeft: '18px', 
+                  margin: 0,
+                  lineHeight: '1.6'
+                }}>
+                  {(currentPub?.key_points || []).map((point, idx) => (
+                    <li key={idx} style={{ 
+                      fontSize: '1rem', 
+                      color: isDark ? '#bfc6d1' : '#414651', 
+                      marginBottom: '14px',
+                      whiteSpace: 'pre-wrap'
+                    }}>
+                      {point}
+                    </li>
+                  ))}
+                  {(!currentPub?.key_points || currentPub.key_points.length === 0) && (
+                    <li style={{ 
+                      fontSize: '1rem', 
+                      color: isDark ? '#bfc6d1' : '#414651', 
+                      marginBottom: '14px',
+                      fontStyle: 'italic'
+                    }}>
+                      No key points available.
+                    </li>
+                  )}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* QR Code - Fixed to bottom right of screen */}
+        {/* Main Image Area */}
+        <div style={{
+          flex: '1 1 auto',
+          height: '100%',
+          background: '#000',
+          position: 'relative',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: '12px',
+          overflow: 'hidden',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.12)'
+        }}>
+          {/* Image Display */}
+          {currentPub?.images && currentPub.images.length > 0 && (
+            <>
+              <img 
+                src={currentPub.images[imageIndex]}
+                alt={`Publication figure ${imageIndex + 1}`}
+                style={{
+                  maxWidth: '95%',
+                  maxHeight: '95%',
+                  objectFit: 'contain',
+                  display: 'block',
+                  borderRadius: '8px'
+                }}
+              />
+              
+              {/* Image Navigation Controls (only show if multiple images) */}
+              {currentPub.images.length > 1 && (
+                <>
+                  {/* Previous Image Button */}
+                  <button onClick={handleImagePrev} style={{
+                    position: 'absolute',
+                    left: '20px',
+                    bottom: '20px',
+                    background: 'rgba(255, 255, 255, 0.9)',
+                    border: 'none',
+                    cursor: 'pointer',
+                    zIndex: 20,
+                    padding: '10px',
+                    borderRadius: '50%',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 1)';
+                    e.currentTarget.style.transform = 'scale(1.1)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.9)';
+                    e.currentTarget.style.transform = 'scale(1)';
+                  }}
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#333" strokeWidth="2">
+                      <polyline points="15,18 9,12 15,6"/>
+                    </svg>
+                  </button>
+                  
+                  {/* Next Image Button */}
+                  <button onClick={handleImageNext} style={{
+                    position: 'absolute',
+                    left: '80px',
+                    bottom: '20px',
+                    background: 'rgba(255, 255, 255, 0.9)',
+                    border: 'none',
+                    cursor: 'pointer',
+                    zIndex: 20,
+                    padding: '10px',
+                    borderRadius: '50%',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 1)';
+                    e.currentTarget.style.transform = 'scale(1.1)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.9)';
+                    e.currentTarget.style.transform = 'scale(1)';
+                  }}
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#333" strokeWidth="2">
+                      <polyline points="9,18 15,12 9,6"/>
+                    </svg>
+                  </button>
+                  
+                  {/* Image Counter and Title */}
+                  <div style={{
+                    position: 'absolute',
+                    top: '20px',
+                    left: '20px',
+                    background: 'rgba(0, 0, 0, 0.8)',
+                    color: 'white',
+                    padding: '8px 16px',
+                    borderRadius: '20px',
+                    fontSize: '14px',
+                    zIndex: 20,
+                    fontWeight: '500'
+                  }}>
+                    Figure {imageIndex + 1} of {currentPub.images.length}
+                  </div>
+                </>
+              )}
+
+              {/* Single image indicator */}
+              {currentPub.images.length === 1 && (
+                <div style={{
+                  position: 'absolute',
+                  top: '20px',
+                  left: '20px',
+                  background: 'rgba(0, 0, 0, 0.8)',
+                  color: 'white',
+                  padding: '8px 16px',
+                  borderRadius: '20px',
+                  fontSize: '14px',
+                  zIndex: 20,
+                  fontWeight: '500'
+                }}>
+                  Figure
+                </div>
+              )}
+            </>
+          )}
+          
+          {/* No Image State */}
+          {(!currentPub?.images || currentPub.images.length === 0) && (
+            <div style={{
+              color: '#666',
+              fontSize: '1.2rem',
+              textAlign: 'center',
+              padding: '40px'
+            }}>
+              <div style={{ fontSize: '3rem', marginBottom: '20px', opacity: 0.3 }}>📊</div>
+              No visualization available
+            </div>
+          )}
+        </div>
+
+        {/* QR Code - Bottom right corner */}
         {currentPub && (
           <div style={{
             position: 'absolute',
             bottom: '20px',
             right: '20px',
             backgroundColor: 'white',
-            padding: '10px',
-            borderRadius: '8px',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-            zIndex: 10,
+            padding: '12px',
+            borderRadius: '12px',
+            boxShadow: '0 4px 16px rgba(0,0,0,0.15)',
+            zIndex: 30,
             cursor: 'pointer',
             transition: 'transform 0.2s ease',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
           }}
           onClick={() => {
             window.open(getDoiLink(currentPub.doi), '_blank', 'noopener,noreferrer');
@@ -418,69 +495,26 @@ export default function SlideshowView() {
           }}
           title="Click to view publication"
           >
+            <div style={{
+              fontSize: '11px',
+              fontWeight: 'bold',
+              color: '#333',
+              marginBottom: '6px',
+              textAlign: 'center'
+            }}>
+              View Article
+            </div>
             <img 
-              src={`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(getDoiLink(currentPub.doi))}&size=100x100`}
+              src={`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(getDoiLink(currentPub.doi))}&size=90x90`}
               alt="DOI QR Code"
               style={{
-                width: '100px',
-                height: '100px',
+                width: '90px',
+                height: '90px',
                 display: 'block'
               }}
             />
           </div>
         )}
-
-        {/* Right: Key Points */}
-        <div style={{
-          background: isDark ? '#181d27' : 'white', 
-          color: isDark ? '#fff' : '#181d27', 
-          borderRadius: '18px', 
-          boxShadow: '0 8px 32px rgba(0,0,0,0.12)', 
-          width: '280px',
-          maxWidth: '25vw', 
-          height: 'fit-content',
-          maxHeight: '100%',
-          padding: '32px', 
-          display: 'flex', 
-          flexDirection: 'column'
-        }}>
-          <h3 style={{ 
-            fontWeight: 600, 
-            fontSize: '1.2rem', 
-            marginBottom: '20px', 
-            color: isDark ? '#fff' : '#181d27',
-            marginTop: 0
-          }}>
-            Key Points
-          </h3>
-          <ul style={{ 
-            listStyle: 'disc', 
-            paddingLeft: '18px', 
-            margin: 0,
-            lineHeight: '1.6'
-          }}>
-            {(currentPub?.key_points || []).slice(0, MAX_BULLETS).map((point, idx) => (
-              <li key={idx} style={{ 
-                fontSize: '1rem', 
-                color: isDark ? '#bfc6d1' : '#414651', 
-                marginBottom: '12px',
-                whiteSpace: 'pre-wrap'
-              }}>
-                {point}
-              </li>
-            ))}
-            {(!currentPub?.key_points || currentPub.key_points.length === 0) && (
-              <li style={{ 
-                fontSize: '1rem', 
-                color: isDark ? '#bfc6d1' : '#414651', 
-                marginBottom: '12px',
-                fontStyle: 'italic'
-              }}>
-                No key points available.
-              </li>
-            )}
-          </ul>
-        </div>
       </div>
     </div>
   );
