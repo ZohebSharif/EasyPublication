@@ -149,21 +149,21 @@ export default function SlideshowView() {
         height: 'calc(100vh - 120px)',
         overflow: 'hidden'
       }}>
-        {/* Publication Navigation Arrows - Left and Right sides */}
+        {/* Publication Navigation Arrows - Left and Right sides (smaller size) */}
         <button onClick={handlePrev} style={{
           position: 'absolute',
           left: '10px',
           top: '50%',
           transform: 'translateY(-50%)',
-          background: 'rgba(0, 0, 0, 0.8)',
+          background: 'rgba(0, 0, 0, 0.6)',
           border: 'none',
           cursor: 'pointer',
           zIndex: 40,
-          padding: '20px',
+          padding: '12px',
           borderRadius: '50%',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
+          boxShadow: '0 2px 8px rgba(0,0,0,0.25)'
         }}>
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5">
             <polyline points="15,18 9,12 15,6"/>
           </svg>
         </button>
@@ -173,15 +173,15 @@ export default function SlideshowView() {
           right: '10px',
           top: '50%',
           transform: 'translateY(-50%)',
-          background: 'rgba(0, 0, 0, 0.8)',
+          background: 'rgba(0, 0, 0, 0.6)',
           border: 'none',
           cursor: 'pointer',
           zIndex: 40,
-          padding: '20px',
+          padding: '12px',
           borderRadius: '50%',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
+          boxShadow: '0 2px 8px rgba(0,0,0,0.25)'
         }}>
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5">
             <polyline points="9,18 15,12 9,6"/>
           </svg>
         </button>
@@ -467,17 +467,17 @@ export default function SlideshowView() {
           )}
         </div>
 
-        {/* QR Code - Moved to bottom left */}
+        {/* QR Code - Positioned at bottom left of the figure */}
         {currentPub && (
           <div style={{
             position: 'absolute',
             bottom: '20px',
-            left: '170px', /* Moved from right to left side */
+            left: '450px', /* Positioned at left side of figure area (accounting for sidebar width + padding) */
             backgroundColor: 'white',
-            padding: '12px',
+            padding: '10px',
             borderRadius: '12px',
             boxShadow: '0 4px 16px rgba(0,0,0,0.15)',
-            zIndex: 30,
+            zIndex: 50, /* Increased z-index to ensure it's above other elements */
             cursor: 'pointer',
             transition: 'transform 0.2s ease',
             display: 'flex',
@@ -505,11 +505,11 @@ export default function SlideshowView() {
               View Article
             </div>
             <img 
-              src={`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(getDoiLink(currentPub.doi))}&size=90x90`}
+              src={`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(getDoiLink(currentPub.doi))}&size=70x70`}
               alt="Article QR Code"
               style={{
-                width: '90px',
-                height: '90px',
+                width: '70px',
+                height: '70px',
                 display: 'block'
               }}
             />
