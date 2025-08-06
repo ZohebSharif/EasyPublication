@@ -58,3 +58,10 @@ npm run dev
 npm run server
 ```
 ```
+
+
+### Diagrams
+
+# Admin Upload - Sequence Diagram
+
+<div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embedded/b9e81ee3-78ca-4802-b0a4-a03c5d9f6b3e" id="76WECkcHF4rW"></iframe></div>
