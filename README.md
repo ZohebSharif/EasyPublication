@@ -64,5 +64,7 @@ npm run server
 
 # Admin Upload - Sequence Diagram
 
-[View Diagram on Lucid](https://lucid.app/documents/embedded/b9e81ee3-78ca-4802-b0a4-a03c5d9f6b3e)
+[View Diagram on Lucid]([https://lucid.app/documents/embedded/b9e81ee3-78ca-4802-b0a4-a03c5d9f6b3e](https://lucid.app/publicSegments/view/f6e79b29-9245-48fc-a1f8-f2d811c0e564/image.png))
 
+# User View - Sequence Diagram
+[View Diagram on Lucid] (https://lucid.app/publicSegments/view/0d19c55a-e8da-4f12-b3c7-fb1b09df5f41/image.png)
