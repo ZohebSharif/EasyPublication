@@ -68,3 +68,60 @@ npm run server
 
 # User View - Sequence Diagram
 [View Diagram on Lucid] (https://lucid.app/publicSegments/view/0d19c55a-e8da-4f12-b3c7-fb1b09df5f41/image.png)
+
+## Database Management
+
+### Refreshing Publications Data
+
+EasyPublication includes a script to automatically fetch new publications from the ALS database without overwriting existing data:
+
+```bash
+# Run the publications refresh script
+node scripts/refresh_publications.js
+
+I'll create a new section in the README.md specifically to document how to use the publication refresh script. Let me first check the current content of the README to see where this section would fit best. I'm still having issues with the file reading tool. Let me create a comprehensive README section that you can manually add to your README.md file. This section will document how to use the refresh_publications.js script:
+
+```markdown
+## Database Management
+
+### Refreshing Publications Data
+
+EasyPublication includes a script to automatically fetch new publications from the ALS database without overwriting existing data:
+
+```bash
+# Run the publications refresh script
+node scripts/refresh_publications.js
+```
+
+This script performs the following operations:
+
+1. Loads the existing database or creates a new one if needed
+2. Fetches the latest beamline data from the ALS API
+3. Fetches publications for beamline 8.3.2
+4. Adds only new publications that don't already exist in the database
+5. Updates the JSON exports for the frontend application
+
+#### Requirements
+
+- Node.js 16.0 or higher
+- Internet connection (to access the ALS API)
+- Sufficient permissions to write to the als-publications.db file
+
+#### Options
+
+The script is currently configured to only fetch publications from beamline 8.3.2. To add additional beamlines:
+
+1. Open refresh_publications.js
+2. Locate the fetch URL for publications
+3. Add additional fetch calls for other beamlines or modify the URL parameter
+
+#### Manual Database Export
+
+You can manually run:
+
+```bash
+cd server
+node export-database-to-json.js
+```
+
+This will update all necessary JSON files that the frontend uses to display publications.
