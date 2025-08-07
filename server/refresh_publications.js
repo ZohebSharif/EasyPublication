@@ -202,7 +202,7 @@ async function refreshPublications() {
     console.log('\n📤 Updating JSON exports...');
     try {
       // Import the export script
-      const { default: exportToJson } = await import('../server/export-database-to-json.js');
+      const { default: exportToJson } = await import('./export-database-to-json.js');
       await exportToJson();
       console.log('✅ JSON exports updated successfully');
     } catch (error) {
