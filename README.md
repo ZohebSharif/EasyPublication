@@ -125,3 +125,39 @@ node export-database-to-json.js
 ```
 
 This will update all necessary JSON files that the frontend uses to display publications.
+
+### EasyPublication Server Documentation
+
+# Server Environment 
+URL: https://easypublication.onrender.com
+Platform: Render web service
+
+# Environment Variables
+CLOUDINARY_CLOUD_NAME, 
+CLOUDINARY_API_KEY, 
+CLOUDINARY_API_SECRET: Image storage 
+GROQ_API_KEY: AI features integration 
+PORT: Server port configuration
+
+# Key Components 
+Media Storage: Cloudinary (images/figures)
+Database: SQLite (embedded, persistent on Render) 
+AI Services: Groq for content analysis 
+
+# Security Status
+No authentication currently implemented
+Admin interface accessible without login
+API endpoints unprotected
+
+# Maintenance
+Environment variables managed via Render dashboard
+Database included in deployment package
+Image management through Cloudinary console
+
+# Future Improvements 
+*Add authentication system 
+Implement role-based access
+Add security logging and monitoring
+
+
+
